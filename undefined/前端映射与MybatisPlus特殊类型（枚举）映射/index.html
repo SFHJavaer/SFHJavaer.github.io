@@ -116,11 +116,12 @@
     
 
     
-      <!-- gitment start -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
-      <!-- gitment end -->
-    
 
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
     
   
 
@@ -138,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://www.sfhjavaer.tech/undefined/前端映射与MybatisPlus特殊类型（枚举）映射/">
+  <link rel="canonical" href="https://qq2428670182.github.io/undefined/前端映射与MybatisPlus特殊类型（枚举）映射/">
   <title>
     
-      前端映射与MybatisPlus特殊类型（枚举）映射 - 一入Java深似海
+      前端映射与MybatisPlus特殊类型（枚举）映射 - 一如Java深似海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -238,7 +239,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">HOME</a>
+            <a href="/">首页</a>
           </li>
 
           
@@ -248,7 +249,7 @@
           <li>
             <a href="/about/">
               
-              ABOUT
+              关于
               
               
             </a>
@@ -259,7 +260,7 @@
           <li>
             <a href="/archive/">
               
-              ARCHIVES
+              归档
               
               
             </a>
@@ -270,7 +271,7 @@
           <li>
             <a href="/categories/">
               
-              CATEGORIES
+              分类
               
               
             </a>
@@ -281,7 +282,7 @@
           <li>
             <a href="/tags/">
               
-              TAGS
+              标签
               
               
             </a>
@@ -292,7 +293,7 @@
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span>SEARCH</a>
+              <span class="search-icon"></span>搜索</a>
           </li>
           
 
@@ -523,7 +524,7 @@
 <div class="tip">
   <p>
     
-      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
     
   </p>
 </div>
@@ -560,7 +561,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=前端映射与MybatisPlus特殊类型（枚举）映射&body=Hi,I found this website and thought you might like it http://www.sfhjavaer.tech/undefined/前端映射与MybatisPlus特殊类型（枚举）映射/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=前端映射与MybatisPlus特殊类型（枚举）映射&body=Hi,I found this website and thought you might like it https://qq2428670182.github.io/undefined/前端映射与MybatisPlus特殊类型（枚举）映射/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -578,63 +579,58 @@
         <!-- comments start -->
         <!-- 1. gitalk comment -->
 
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
 
-<!-- 2. gitment comment -->
+  <div id="gitalk-container"></div>
 
-  <!-- gitment start -->
-  <!-- Docs:https://github.com/imsun/gitment -->
-
-  <div id="blog_comments"></div>
-  <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
-
-  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
 
   <script>
-    const myTheme = {
-      render(state, instance) {
-        const container = document.createElement('div')
-        container.lang = "en-US"
-        container.className = 'gitment-container gitment-root-container'
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Apr 11 2024 22:26:48 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
 
-        // your custom component
-        container.appendChild(instance.renderSomething(state, instance))
-        container.appendChild(instance.renderHeader(state, instance))
-        container.appendChild(instance.renderEditor(state, instance))
-        container.appendChild(instance.renderComments(state, instance))
-        container.appendChild(instance.renderFooter(state, instance))
-        return container
-      },
-      renderSomething(state, instance) {
-        const container = document.createElement('div')
-        container.lang = "en-US"
-        container.className = 'hello_visitor'
-        if (state.user.login) {
-          container.innerText = `Hello ${state.user.login}, Welcome to comment system`
-        }
-        return container
-      }
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
     }
-
-    const gitment = new Gitment({
-      id: 'Thu Apr 11 2024 22:26:48 GMT+0800', // optional
-      owner: 'SFHJavaer',
-      repo: 'SFHJavaer',
-      oauth: {
-        client_id: 'beed42a108cae24cf4a7',
-        client_secret: '8576330fb6385d5fd5dc0c2770869a07310aa3e5'
-      },
-      desc: '',
-      perPage: '10',
-      maxCommentHeight: '250',
-      theme: myTheme,
-      // ... For more available options, check out the documentation below
-    })
-
-    gitment.render('blog_comments')
-    // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
   </script>
 
-  <!-- gitment end -->
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
 
 
 <!-- 3. disqus comment -->
@@ -651,7 +647,7 @@
     
       <aside id="sidebar">
         <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
+        <strong class="toc-title">目录</strong>
         
           <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#KRXnn"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">首先，能不能接收到？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Xk3mN"><span class="toc-nav-number"></span> <span class="toc-nav-text">使用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#IV69G"><span class="toc-nav-number"></span> <span class="toc-nav-text">扩展</span></a>
         
@@ -672,7 +668,7 @@
         <section>
           <!-- no hr -->
           <h5>
-            <a href="/tags/">FEATURED TAGS</a>
+            <a href="/tags/">特色标签</a>
           </h5>
           <div class="tags">
             
@@ -683,12 +679,12 @@
         <!-- Friends Blog -->
         
         <hr>
-        <h5>FRIENDS</h5>
+        <h5>链友</h5>
         <ul class="list-inline">
 
           
           <li>
-            <a href="https://SFHJavaer.github.io/" target="_blank">Futari</a>
+            <a href="https://qq2428670182.github.io/" target="_blank">Futari</a>
           </li>
           
           <li>
@@ -770,7 +766,7 @@
 
           
             <li>
-              <a target="_blank" href="https://github.com/SFHJavaer">
+              <a target="_blank" href="https://github.com/qq2428670182">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -781,7 +777,7 @@
 
           
             <li>
-              <a target="_blank" href="https://twitter.com/SFHJavaer">
+              <a target="_blank" href="https://twitter.com/qq2428670182">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -792,7 +788,7 @@
 
           
             <li>
-              <a target="_blank" href="https://www.instagram.com/SFHJavaer">
+              <a target="_blank" href="https://www.instagram.com/qq2428670182">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
@@ -809,7 +805,7 @@
 
           
             <li>
-              <a target="_blank" href="http://weibo.com/SFHJavaer">
+              <a target="_blank" href="http://weibo.com/qq2428670182">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
@@ -821,7 +817,7 @@
         </ul>
         <p class="copyright text-muted">
           Copyright &copy;
-          SFHJavaer
+          Mr.Vincent
           2025
           <br>
           Theme by
@@ -927,7 +923,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://www.sfhjavaer.tech/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://qq2428670182.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -948,7 +944,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
