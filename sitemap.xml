@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.sfhjavaer.tech/undefined/%E6%B3%A8%E8%A7%A3-JsonTypeInfo%E5%9D%91/</loc>
+    
+    <lastmod>2023-08-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.sfhjavaer.tech/undefined/uni-app/</loc>
     
     <lastmod>2023-03-07</lastmod>
@@ -431,7 +438,7 @@
 
   <url>
     <loc>http://www.sfhjavaer.tech/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -439,266 +446,266 @@
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Docker/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/python-%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/HTML-CSS/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/MYSQL/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Markdown/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Java-Spring/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Java-SpringMVC/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/SpringBoot/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/SpringMVC/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/SpringBoot-RESTFUL/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Redis/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Elasticsearch/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/SpringBoot-RabbitMQ-Redis/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Spring-quarrz-task/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Spring-RabbitMQ/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Dubbo/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Git/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/IO/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Maven/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Java-spring/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E6%B3%A8%E8%A7%A3/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E7%AC%94%E8%AF%95/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/JVM/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Mybatis/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E7%B4%A2%E5%BC%95/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/MinIO/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Linux/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/MVCC/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/BFS/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E8%B4%AA%E5%BF%83-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/Spring/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/tags/%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -707,126 +714,126 @@
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/IO/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/Maven/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/Java-spring/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E7%AC%94%E8%AF%95/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/JVM/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/Mybatis/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E7%B4%A2%E5%BC%95/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/MinIO/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/Linux/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/MVCC/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/BFS/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E8%B4%AA%E5%BF%83-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/Spring/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.sfhjavaer.tech/categories/%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2023-03-14</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
