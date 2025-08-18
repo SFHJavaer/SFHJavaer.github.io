@@ -477,33 +477,28 @@
   <!-- top end -->
   
 
-  <a href="/cn/树-算法做题总结/">
+  <a href="/undefined/注解-JsonTypeInfo坑/">
     <h2 class="post-title">
-      树-算法做题总结
+      注解@JsonTypeInfo坑
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-白板写题和普通题的区别就是
-1.需要自己自定义类和方法，基础结构一定不能写错，哪里是中括号，哪里是小括号
-2.自定义Scanner输入，自己Sout输出打印结果
-3.类名一般是Main，方法名一般自定义
+      注解@JsonTypeInfo坑
+对于多抽象类的多态序列化，一般使用@JsonTypeInfo和@JsonSubTypes配合解决
 
-算法：二叉树的遍历
-题目要求：返回的是一个int数组，但是在树遍历中树的节点的数量是无法确定的，所以如果要返回int[]只能先用ArrayList存完再进行for转换。
-一般来说可以这样......
+根据传入报文的属性进行反序列化，使用的use = JsonTypeInfo.Id.Name，指定property = “属性名”
+@JsonSubTypes中指定name为属性的具体值，对应了其value属性的值为Class类
+123@JsonTypeInfo......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
-    2022-06-03
+    2023-08-09
   </p>
   <div class="tags">
-    
-    <a href="/tags/#算法" title="算法">算法</a>
     
   </div>
   
@@ -518,26 +513,57 @@
   <!-- top end -->
   
 
-  <a href="/cn/滑动窗口和双指针/">
+  <a href="/undefined/uni-app/">
     <h2 class="post-title">
-      滑动窗口和双指针
+      uni-app
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      滑动窗口和双指针很像但不一样，双指针（非对撞且匀速）一般是以单指针不动作为基准，然后另一个指针一般是再从左指针的位置继续向后遍历（当然双指针的应用范围比较广，相比滑动窗口一般只用在求最大或最小长度上效率最高），而滑动窗口一般是一个窗口在不停的扩展或者伸缩，不会突然的压缩到长度为一或者伸长，就像一个动态变化的窗口，而双指针是可以急剧移动指针位置的。
+      uni-app
+项目结构：
+1234567891011121314151617┌─cloudfunctions        云函数目录（阿里云为aliyun，腾讯云为tcb，详见uniCloud）│─components            符合vue组件规范的uni-app组件目录│  └─comp-a.vue         可复用的a组件├─hybrid              ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2023-03-07
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/Rocket/">
+    <h2 class="post-title">
+      Rocket
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Rocket入门
 ...
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-05-25
+    Posted by Futari on
+    2023-03-01
   </p>
   <div class="tags">
-    
-    <a href="/tags/#滑动窗口" title="滑动窗口">滑动窗口</a>
     
   </div>
   
@@ -552,71 +578,28 @@
   <!-- top end -->
   
 
-  <a href="/cn/操作系统上的进程与线程/">
+  <a href="/undefined/Sentinel/">
     <h2 class="post-title">
-      操作系统上的进程与线程
-    </h2>
-    <h3 class="post-subtitle">
-      操作系统上的进程与线程
-    </h3>
-    <div class="post-content-preview">
-      进程控制块：英文缩写PCB
-PCB是一块内存空间，里面记录了操作系统所需要的、描述进程状态的、以及控制进程运行的所有信息。
-作用：
-PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运行的程序，成为一个可以独立运行的单位，我们也叫做一个进程，OS根据PCB对并发执行的进程进行控制和管理，包括进程同步，通信，访问文件，进程状态（暂停等）。系统创建进程时，随之创建一个PCB，进程结束时回......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-05-19
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#操作系统" title="操作系统">操作系统</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/服务器搭建MinIo环境/">
-    <h2 class="post-title">
-      Linux手动搭建MinIo分布式存储步骤
+      Sentinel
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      Linux搭建MinIo环境详细步骤
+      雪崩效应和Sentinel流控雪崩效应是多个服务之间来进行调用时，如果被调用的服务。不可用，那么就会导致调用服务的服务器的线程不断的累积，直到资源崩溃，偶尔产生雪崩，由于是服务之间的级联，所以也叫做级联失效或级联故障 （cascading failure）
 
-1.去minIO官网下载安装包，或者使用wget直接进行下载,选择自己合适的版本
+服务容错为了避免产生雪崩效应，所以说我们产生了服务容错的思想，服务容错我们常用的有。超时，限流，仓壁模式，断路器模式
+&gt;
 
-1wget https://dl.min.io/server/minio/release/linux-amd64/minio
-
-2.给minio文件赋予可执行的权限
-
-1chomd +x minio
-
-3.启动minio server端（后面的路径指定具体的文件存储目录......
+超时......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-05-06
+    Posted by Futari on
+    2023-02-23
   </p>
   <div class="tags">
-    
-    <a href="/tags/#MinIO" title="MinIO">MinIO</a>
     
   </div>
   
@@ -631,67 +614,27 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
   <!-- top end -->
   
 
-  <a href="/cn/Maven依赖冲突解决方法/">
+  <a href="/undefined/IDEA之Bean报红问题的分析与解决/">
     <h2 class="post-title">
-      Maven依赖冲突解决方法
-    </h2>
-    <h3 class="post-subtitle">
-      Maven依赖冲突解决方法
-    </h3>
-    <div class="post-content-preview">
-      Maven依赖冲突解决方法
-项目的pom.xml形如下：
-项目会引用5.2.7.RELEASE的spring core jar包
-123456789101112131415&lt;dependencies&gt;       &lt;dependency&gt;           &lt;groupId&gt;org.springframework&lt;/groupId&gt;     ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-28
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Maven" title="Maven">Maven</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/关于单例设计模式/">
-    <h2 class="post-title">
-      常见单例模式五种设计方式
+      IDEA之Bean报红问题的分析与解决
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      常见单例模式五种设计方式：
-1.饿汉式（相对于懒汉式）
-饿汉即没有调用getIntance时就已经创建了对象了，因为是静态的被初始化了
-构造方法必须是私有的，除了本类不能调用；
-提供一个静态的成员变量，值为用私有构造出创建的对象；
-提供一个静态的方法getIntance用来返回静态实例，每一次调用该方法都是得到的同一对象
-注意问题：静态块和变量在加载的时候就会执行和初始化，所以像下面的代码，......
+      这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。
+现象如下图：
+
+比如作为Dao的Bean爆红线但是可以正常注入运行，我们之前知道了使用@Resource解决，原因就是@Autowired是Spring提供的，他只能检测到Spring本身的类，如果你使用Mybatis而不对Mapper类加上@Dao注解
+那么其实就是没有将类加入到容器中，所以使用JDK提供的@Reso......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-17
+    Posted by Futari on
+    2023-02-12
   </p>
   <div class="tags">
-    
-    <a href="/tags/#设计模式" title="设计模式">设计模式</a>
     
   </div>
   
@@ -706,28 +649,26 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
   <!-- top end -->
   
 
-  <a href="/cn/关于Mybatis二级缓存/">
+  <a href="/undefined/Cloud Alibaba从入门到进阶/">
     <h2 class="post-title">
-      关于Mybatis二级缓存
+      Cloud Alibaba从入门到进阶
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率
-1.一级缓存
-一级缓存是SqlSession级别的一个缓存，也就是用户会话级别的，一个用户都需要创建一个SqlSession来执行，一级缓存也叫本地缓存，mybatis会将查询成功获得的数据缓存到一级缓存中，后续的Sql在命中缓存的情况下，直接从本地缓存读
-2.二级缓存......
+      Cloud Alibaba从入门到进阶对于大型复杂系统、高并发系统、需求变更很快的系统都可以使用Cloud进行搭建。
+Cloud Alibaba属于Cloud的子项目，可以理解成是一直由阿里巴巴维护的新项目，是一个正在孵化的项目，并没有完全进入SpringCloud正式项目中。
+Cloud Alibaba的主要功能如下（来源于官方文档）
+Cloud的版本兼容性（和SpringBoot）这里涉......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-12
+    Posted by Futari on
+    2023-02-05
   </p>
   <div class="tags">
-    
-    <a href="/tags/#Mybatis" title="Mybatis">Mybatis</a>
     
   </div>
   
@@ -742,48 +683,25 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
   <!-- top end -->
   
 
-  <a href="/cn/关于数据库索引/">
+  <a href="/undefined/Nacos和Ribbon小记/">
     <h2 class="post-title">
-      关于数据库索引
+      Nacos和Ribbon小记
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      从数据结构的角度对索引进行分类
+      引入注册中心NacosCloud提供了一个类DiscoveryClient作为注册发现中心的客户端，用于Client端对注册中心服务的查询，导入包之后直接Autowired即可，注意是Cloud提供的，即使不使用nacos，使用其他的注册中心，这个Api同样可用。
 
-B+tree
-Hash
-Full-texts索引
-
-从物理存储的角度对索引进行分类
-
-聚簇索引
-二级索引(辅助索引)
-
-从索引字段特性角度分类
-
-主键索引
-唯一索引
-普通索引
-前缀索引
-
-从组成索引的字段个数角度分类
-
-单列索引
-联合索引（复合索引）
-
-...
+常用的方法有getInstances(String 服务名即serviceId) 和 getServices(String s......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-07
+    Posted by Futari on
+    2023-01-19
   </p>
   <div class="tags">
-    
-    <a href="/tags/#索引" title="索引">索引</a>
     
   </div>
   
@@ -798,29 +716,25 @@ Full-texts索引
   <!-- top end -->
   
 
-  <a href="/cn/正确理解MVCC/">
+  <a href="/undefined/Feign/">
     <h2 class="post-title">
-      正确理解MVCC
+      Feign
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      MVCC详解
-MVCC也就是多版本并发控制，也就是一种并发控制的方法
-快照读和当前读
-当前读是指比如共享锁和独占锁这些操作，读取的是最新的版本，保证其他事务不能修改当前事务，对读取事务进行加锁
-快照锁是指不进行加（读写）锁的非阻塞的操作，一定不是可串行的隔离级别，因为可串行的级别下会退化成当前读，也就是阻塞操作，快照读是为了提高并发性能，基于MVCC，避免加锁的开销，也就是基于多版本，相当于......
+      Feign使用原本使用RestTemplate直接发送请求存在以下问题。
+
+使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、不需要像原来一样使用name属性(服务名)和参数分开的形式，也不需要占位......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-07
+    Posted by Futari on
+    2023-01-08
   </p>
   <div class="tags">
-    
-    <a href="/tags/#MVCC" title="MVCC">MVCC</a>
     
   </div>
   
@@ -835,28 +749,60 @@ MVCC也就是多版本并发控制，也就是一种并发控制的方法
   <!-- top end -->
   
 
-  <a href="/cn/关于JVM/">
+  <a href="/cn/景区抢票平台爬虫以及对美团的破解思路/">
     <h2 class="post-title">
-      JVM内存结构的探索
+      景区抢票平台爬虫以及对美团的破解思路
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      JVM内存结构
+      严禁用于非法用途，本教程仅供交流使用
+为了维护商家权益，关键信息会进行打码处理，严禁用于非法用途
+PS：文中接口再2022年7月已失效1.寻找景区链接首先打开微信公众号中的我们的订单页面，url为
+https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
+进入到页面我们自动跳转会发现是商铺的登录界面，需要重新进行登录......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-12-17
+  </p>
+  <div class="tags">
+    
+  </div>
+  
 
-先将java代码转换为java字节码，然后通过类加载的机制将字节码加载到内存中的方法区中，执行中类的加载类似于懒加载（延迟加载），即只有当线程执行时调用到了没有的类才会通过双亲委派区查找需要的类去加载，由类new出来的成员对象存储在JVM内存的堆中，而局部变量和方法参数等占用的内存在虚拟机栈中，一个线程一个栈（比如main）
-方法分为两类：一类是普通的java方法，另一类是......
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/对Process构建的思考和项目调试中的理解与问题/">
+    <h2 class="post-title">
+      对Process构建的思考和项目调试中的理解与问题
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      对Process构建的思考和项目调试中的理解与问题在项目接口测试中，请求体中的数据不能在param添加，因为不是@RequestParam的，要根据接口进行提交，选择的请求体类型一般是x-www-form-urlencoded或者是Json，前者一般是from表单的请求体，后者是一般的json通用请求类型一个联调安卓端的小问题：安装完adb和aapt之后，配置环境变量，在项目中可以通过JDK......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by SFHJavaer on
-    2022-04-05
+    2022-09-16
   </p>
   <div class="tags">
     
-    <a href="/tags/#JVM" title="JVM">JVM</a>
+    <a href="/tags/#项目" title="项目">项目</a>
     
   </div>
   
@@ -1154,24 +1100,24 @@ MVCC也就是多版本并发控制，也就是一种并发控制的方法
 <div class="widget">
   <ul>
     
-    <a href="../../undefined/%E6%B3%A8%E8%A7%A3-JsonTypeInfo%E5%9D%91/">
-      <li>注解@JsonTypeInfo坑</li>
+    <a href="../../undefined/%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+      <li>线程并发问题记录</li>
     </a>
     
-    <a href="../../undefined/uni-app/">
-      <li>uni-app</li>
+    <a href="../../undefined/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
+      <li>以太坊开发：Solidity语言入门</li>
     </a>
     
-    <a href="../../undefined/Rocket/">
-      <li>Rocket</li>
+    <a href="../../undefined/%E5%85%B3%E4%BA%8E%E5%AF%B9Java%E8%AF%AD%E6%B3%95%E7%B3%96%E7%9A%84%E7%90%86%E8%A7%A3/">
+      <li>关于对Java语法糖的理解</li>
     </a>
     
-    <a href="../../undefined/Sentinel/">
-      <li>Sentinel</li>
+    <a href="../../undefined/No-qualifying-bean-of-type-Bean-available%E6%B7%B1%E5%BA%A6%E6%80%9D%E8%80%83/">
+      <li>No qualifying bean of type &#39;Bean&#39; available深度思考</li>
     </a>
     
-    <a href="../../undefined/IDEA%E4%B9%8BBean%E6%8A%A5%E7%BA%A2%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%A7%A3%E5%86%B3/">
-      <li>IDEA之Bean报红问题的分析与解决</li>
+    <a href="../../undefined/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/">
+      <li>Java文件上传基础原理</li>
     </a>
     
   </ul>
@@ -1202,7 +1148,7 @@ MVCC也就是多版本并发控制，也就是一种并发控制的方法
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
