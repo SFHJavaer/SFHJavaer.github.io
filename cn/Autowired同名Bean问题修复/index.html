@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://sfhjavaer.github.io/cn/Autowired同名Bean问题修复/">
+  <link rel="canonical" href="http://example.com/cn/Autowired同名Bean问题修复/">
   <title>
     
       \@Autowired同名Bean问题修复 - 一入Java深似海
@@ -472,10 +472,10 @@
         <h3 id="Autowired同名Bean问题修复">@Autowired同名Bean问题修复</h3>
 <p>新建一个SpringDemo项目，注意先修改好发行版，出错都是因为出场Setting没设置对，以及自动生成SpringBoot项目时，xml中指定了&lt;java.version&gt;，要将其去掉或修改为8，不然import Maven又会使设置生效。</p>
 <p>新建两个不同包下的同名类Test，类结构如图：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695288946165-9654b0a6-5e79-4c05-a32e-10cb2edc68da.png" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695288946165-9654b0a6-5e79-4c05-a32e-10cb2edc68da.png" alt="a"></p>
 <p>Application：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289149568-4acc6196-b5aa-4160-8bde-7863fc740010.png" alt=""></p>
-<p>Real类：<img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289158611-edeae84b-0d4c-4d31-9edc-2ce7711efb56.png" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289149568-4acc6196-b5aa-4160-8bde-7863fc740010.png" alt="a"></p>
+<p>Real类：<img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289158611-edeae84b-0d4c-4d31-9edc-2ce7711efb56.png" alt="a"></p>
 <p>这里不把@autowired写到Application中是因为写了也不会注入，SpringBoot会把Application的注入忽略，</p>
 <p>所以把@Autowired写到了Real类中，new去使用它。</p>
 <p><font style="background-color:#FBDE28;">以上图结构run,返回以下结果，很容易看出是在Bean产生了冲突：</font></p>
@@ -483,7 +483,7 @@
 <p><font style="color:#01B2BC;">如何判断是@Autowired注入时冲突还是容器都放不进去？</font></p>
 <p><font style="background-color:#FBDE28;">注释掉@Autowired，发现仍然报该错，说明Factory不允许创建同类名Bean不加以区分</font></p>
 <p>现在创建一个子项目，作为demo的依赖模块的demo2，并将test2的类移动到demo2模块下，且添加两模块间的依赖关系，如下图：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289684290-a406a39a-a7ab-40c6-bad9-1904f1d5d29b.png" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289684290-a406a39a-a7ab-40c6-bad9-1904f1d5d29b.png" alt="a"></p>
 <p><font style="color:#5C8D07;">不加</font><font style="color:#5C8D07;">执行结果：</font></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">49</span>:<span class="number">31.990</span>  INFO <span class="number">34544</span> --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication using Java <span class="number">1.8</span><span class="number">.0_333</span> on DESKTOP-7TNR5U5 with PID <span class="number">34544</span> (D:\IdeaProjects\demo\demo2\target\classes started by hspcadmin in D:\IdeaProjects\demo)</span><br><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">49</span>:<span class="number">31.995</span>  INFO <span class="number">34544</span> --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to <span class="number">1</span> <span class="keyword">default</span> profile: <span class="string">&quot;default&quot;</span></span><br><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">49</span>:<span class="number">32.652</span>  INFO <span class="number">34544</span> --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : <span class="function">Tomcat initialized with <span class="title">port</span><span class="params">(s)</span>: 8080 <span class="params">(http)</span></span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.658  INFO 34544 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]</span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.658  INFO 34544 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]</span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.761  INFO 34544 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext</span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.761  INFO 34544 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 720 ms</span></span><br><span class="line"><span class="function">2023-09-21 17:49:33.020  INFO 34544 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on <span class="title">port</span><span class="params">(s)</span>: 8080 <span class="params">(http)</span> with context path &#x27;&#x27;</span></span><br><span class="line"><span class="function">2023-09-21 17:49:33.027  INFO 34544 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 1.401 <span class="title">seconds</span> <span class="params">(JVM running <span class="keyword">for</span> <span class="number">2.902</span>)</span></span></span><br></pre></td></tr></table></figure>
 <p><font style="color:#DF2A3F;">发现并没有报错！说明Factory的错没有报出，但不知道此时bean，添加打印BeanName</font></p>
@@ -559,7 +559,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=\@Autowired同名Bean问题修复&body=Hi,I found this website and thought you might like it https://sfhjavaer.github.io/cn/Autowired同名Bean问题修复/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=\@Autowired同名Bean问题修复&body=Hi,I found this website and thought you might like it http://example.com/cn/Autowired同名Bean问题修复/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -954,7 +954,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://sfhjavaer.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://example.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
