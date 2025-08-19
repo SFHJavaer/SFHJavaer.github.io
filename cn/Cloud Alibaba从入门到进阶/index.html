@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="java,Futari,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- gitment start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+      <!-- gitment end -->
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://example.com/cn/Cloud Alibaba从入门到进阶/">
+  <title>
+    
+      Cloud Alibaba从入门到进阶 - 一入Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+            </div>
+            <h1>Cloud Alibaba从入门到进阶</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Futari on
+              2023-02-05
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">4</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h3 id="Cloud-Alibaba从入门到进阶">Cloud Alibaba从入门到进阶</h3>
+<p>对于大型复杂系统、高并发系统、需求变更很快的系统都可以使用Cloud进行搭建。</p>
+<p>Cloud Alibaba属于Cloud的子项目，可以理解成是一直由阿里巴巴维护的新项目，是一个正在孵化的项目，并没有完全进入SpringCloud正式项目中。</p>
+<h6 id="Cloud-Alibaba的主要功能如下（来源于官方文档）">Cloud Alibaba的主要功能如下（来源于官方文档）</h6>
+<p><img src="Snipaste_2023-02-15_11-16-33.png" alt="Cloud Alibaba的主要功能"></p>
+<h4 id="Cloud的版本兼容性（和SpringBoot）">Cloud的版本兼容性（和SpringBoot）</h4>
+<p>这里涉及到一个比较重要的概念那就是版本控制</p>
+<h6 id="有语义化的版本控制-比如我们在安卓上常见的1-2-3-release">有语义化的版本控制,比如我们在安卓上常见的1.2.3.release</h6>
+<blockquote>
+<p>1代表主版本,代表了第几代产品,一般在架构上都进行了大的改动</p>
+<p>二代表次版本主要是一些功能的增加,架构没有发生大的变化,都是兼容的</p>
+<p>三代表增量版本,比如一些bug的修复</p>
+<p>Release代表里程碑在release之前呢有M1 M2版本,另外还有snapshot代表开发版</p>
+</blockquote>
+<h6 id="而Spring-cloud的版本控制和普通的语义化的版本控制有一些区别">而Spring cloud的版本控制和普通的语义化的版本控制有一些区别</h6>
+<h6 id="Spring-cloud的版本采用了各个英国伦敦站的地名作为大版本-然后采用release-SR1-2-3-4等来进行具体小版本的表示">Spring cloud的版本采用了各个英国伦敦站的地名作为大版本,然后采用release SR1,2,3,4等来进行具体小版本的表示</h6>
+<h6 id="release代表正式版-Sr代表service-release-bug修复版本">release代表正式版,Sr代表service release(bug修复版本)</h6>
+<p><img src="%E7%89%88%E6%9C%AC%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%92%8C%E7%BB%84%E4%BB%B6%E7%89%88%E6%9C%AC.png" alt="版本依赖关系和组件版本.png"></p>
+<h4 id="在生产环境中的在生产环境中的注意事项版本注意事项">在生产环境中的在生产环境中的注意事项版本注意事项</h4>
+<p><img src="Snipaste_2023-02-15_11-34-51.png" alt="Snipaste_2023-02-15_11-34-51.png"></p>
+<p>尽量使用最新一代的版本的原因是release版本是属于第一个正式版，注意我们此时用的是生产环境,release并没有经过一个大量的测试，而SR版本一般经过了大量的企业测试，并且经过了几次的bug修复说明可以得到大范围的一个应用</p>
+<h4 id="微服务项目如何进行拆分？">微服务项目如何进行拆分？</h4>
+<p>业界理论拆分原则：</p>
+<blockquote>
+<p>DDD(Domain Driven Design)：领取驱动设计，相比较面向对象设计分工更复杂，强调各分工使用统一的语言，比如UML</p>
+<p>面向对象，一般是三层的实体架构，byName/byVerb，类似于根据实体的状态和动作设计模式。</p>
+</blockquote>
+<p>在具体实践设计上分为以下两种：</p>
+<h6 id="面向程序职责设计-或者-面向通用性设计">面向程序职责设计  或者   面向通用性设计</h6>
+<h6 id="以下为解读：">以下为解读：</h6>
+<h6 id="比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。">比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。</h6>
+<p>附一下我们设计项目架构的常用思路，有两种：</p>
+<p><img src="QQ%E5%9B%BE%E7%89%8720230213141705.jpg" alt="架构"></p>
+<p>可以看到design数据库等步骤是位于之后的，所以对于我们学习中遇到的首先设计数据库是不对的，要先确定业务流程，后来设计对应的数据库</p>
+<h4 id="微服务之间的调用">微服务之间的调用</h4>
+<p>我们知道微服务之间是通过轻量级的进程进行调用的（比如A服务byId查询出userId来发送给服务B进行获取具体的用户信息），而服务又是通过MVC也就是API调用的，</p>
+<p>我们在此项目中使用的是http连接，也就是TCP建立连接基础上访问资源路径也就是接口（即调用服务）。</p>
+<p>前面我们在远程调用服务使用的一般是RPC，也就是将服务进行注册然后Reference调用，是需要一体完全配置好服务的，而我们这里可能只需要get一下接口就好了，不需要对被调用服务进行管理，那么我们直接使用RestTemplate。</p>
+<h4 id="RestTemplate">RestTemplate</h4>
+<h6 id="RestTemplate这个类是-Spring-框架提供的一个工具类，RestTemplate-提供高度封装的接口，RestTemplate-是一个同步的-Rest-API-客户端。">RestTemplate这个类是 Spring 框架提供的一个工具类，RestTemplate 提供高度封装的接口，RestTemplate 是一个同步的 Rest API 客户端。</h6>
+<blockquote>
+<p>方法我们大致可以分为三组：</p>
+<ul>
+<li>getForObject — optionsForAllow 分为一组，这类方法是常规的 Rest API（GET、POST、DELETE 等）方法调用；这里只是获取返回对象，如果需要的是一个Response整体，如需要获取StatusCode，那么需要用Entity方法，获取到一个Entity&lt;Object类型&gt;的对象，this.object就相当于getForObject结果。</li>
+<li>exchange：接收一个 <code>RequestEntity</code> 参数，可以自己设置 HTTP method，URL，headers 和 body，返回 ResponseEntity；</li>
+<li>execute：通过 callback 接口，可以对请求和返回做更加全面的自定义控制。</li>
+</ul>
+</blockquote>
+<h4 id="普通项目升级微服务项目的三个要点">普通项目升级微服务项目的三个要点</h4>
+<h6 id="服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）">服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）</h6>
+<h6 id="如何实现服务的实例之间的负载均衡？">如何实现服务的实例之间的负载均衡？</h6>
+<h6 id="如果微服务中心挂掉怎么办？（实现高可用）">如果微服务中心挂掉怎么办？（实现高可用）</h6>
+<h4 id="微服务问题优化一般的解决思路：">微服务问题优化一般的解决思路：</h4>
+<p>查看已有问题–&gt;进入微服务组件（拆分微服务）–&gt;架构上的继续优化</p>
+<h5 id="PS：修改Linux环境变量位置">PS：修改Linux环境变量位置</h5>
+<p>全局：/etc/profile</p>
+<p>个人用户：~/.bash_profile       直接export PATH = “路径”即可添加</p>
+<p>添加完之后source 某文件  刷新一下。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/IDEA之Bean报红问题的分析与解决/" data-toggle="tooltip" data-placement="top" title="IDEA之Bean报红问题的分析与解决">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/Nacos和Ribbon小记/" data-toggle="tooltip" data-placement="top" title="Nacos和Ribbon小记">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Cloud Alibaba从入门到进阶&body=Hi,I found this website and thought you might like it http://example.com/cn/Cloud Alibaba从入门到进阶/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+  <!-- gitment start -->
+  <!-- Docs:https://github.com/imsun/gitment -->
+
+  <div id="blog_comments"></div>
+  <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+
+  <script>
+    const myTheme = {
+      render(state, instance) {
+        const container = document.createElement('div')
+        container.lang = "en-US"
+        container.className = 'gitment-container gitment-root-container'
+
+        // your custom component
+        container.appendChild(instance.renderSomething(state, instance))
+        container.appendChild(instance.renderHeader(state, instance))
+        container.appendChild(instance.renderEditor(state, instance))
+        container.appendChild(instance.renderComments(state, instance))
+        container.appendChild(instance.renderFooter(state, instance))
+        return container
+      },
+      renderSomething(state, instance) {
+        const container = document.createElement('div')
+        container.lang = "en-US"
+        container.className = 'hello_visitor'
+        if (state.user.login) {
+          container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+        }
+        return container
+      }
+    }
+
+    const gitment = new Gitment({
+      id: 'Sun Feb 05 2023 14:20:51 GMT+0800', // optional
+      owner: 'SFHJavaer',
+      repo: 'SFHJavaer',
+      oauth: {
+        client_id: 'beed42a108cae24cf4a7',
+        client_secret: '8576330fb6385d5fd5dc0c2770869a07310aa3e5'
+      },
+      desc: '',
+      perPage: '10',
+      maxCommentHeight: '250',
+      theme: myTheme,
+      // ... For more available options, check out the documentation below
+    })
+
+    gitment.render('blog_comments')
+    // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
+  </script>
+
+  <!-- gitment end -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cloud-Alibaba%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%BF%9B%E9%98%B6"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Cloud Alibaba从入门到进阶</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Cloud-Alibaba%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E5%A6%82%E4%B8%8B%EF%BC%88%E6%9D%A5%E6%BA%90%E4%BA%8E%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%EF%BC%89"><span class="toc-nav-number">1.0.0.1.</span> <span class="toc-nav-text">Cloud Alibaba的主要功能如下（来源于官方文档）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Cloud%E7%9A%84%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E6%80%A7%EF%BC%88%E5%92%8CSpringBoot%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Cloud的版本兼容性（和SpringBoot）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9C%89%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-%E6%AF%94%E5%A6%82%E6%88%91%E4%BB%AC%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E5%B8%B8%E8%A7%81%E7%9A%841-2-3-release"><span class="toc-nav-number">1.1.0.1.</span> <span class="toc-nav-text">有语义化的版本控制,比如我们在安卓上常见的1.2.3.release</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%80%8CSpring-cloud%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%92%8C%E6%99%AE%E9%80%9A%E7%9A%84%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%9C%89%E4%B8%80%E4%BA%9B%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">1.1.0.2.</span> <span class="toc-nav-text">而Spring cloud的版本控制和普通的语义化的版本控制有一些区别</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Spring-cloud%E7%9A%84%E7%89%88%E6%9C%AC%E9%87%87%E7%94%A8%E4%BA%86%E5%90%84%E4%B8%AA%E8%8B%B1%E5%9B%BD%E4%BC%A6%E6%95%A6%E7%AB%99%E7%9A%84%E5%9C%B0%E5%90%8D%E4%BD%9C%E4%B8%BA%E5%A4%A7%E7%89%88%E6%9C%AC-%E7%84%B6%E5%90%8E%E9%87%87%E7%94%A8release-SR1-2-3-4%E7%AD%89%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%85%B7%E4%BD%93%E5%B0%8F%E7%89%88%E6%9C%AC%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.1.0.3.</span> <span class="toc-nav-text">Spring cloud的版本采用了各个英国伦敦站的地名作为大版本,然后采用release SR1,2,3,4等来进行具体小版本的表示</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#release%E4%BB%A3%E8%A1%A8%E6%AD%A3%E5%BC%8F%E7%89%88-Sr%E4%BB%A3%E8%A1%A8service-release-bug%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC"><span class="toc-nav-number">1.1.0.4.</span> <span class="toc-nav-text">release代表正式版,Sr代表service release(bug修复版本)</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9C%A8%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84%E5%9C%A8%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E7%89%88%E6%9C%AC%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">在生产环境中的在生产环境中的注意事项版本注意事项</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E6%8B%86%E5%88%86%EF%BC%9F"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">微服务项目如何进行拆分？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E9%9D%A2%E5%90%91%E7%A8%8B%E5%BA%8F%E8%81%8C%E8%B4%A3%E8%AE%BE%E8%AE%A1-%E6%88%96%E8%80%85-%E9%9D%A2%E5%90%91%E9%80%9A%E7%94%A8%E6%80%A7%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">1.3.0.1.</span> <span class="toc-nav-text">面向程序职责设计  或者   面向通用性设计</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%BB%A5%E4%B8%8B%E4%B8%BA%E8%A7%A3%E8%AF%BB%EF%BC%9A"><span class="toc-nav-number">1.3.0.2.</span> <span class="toc-nav-text">以下为解读：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%AF%94%E5%A6%82%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%EF%BC%8C%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E4%B8%BA%E5%85%B6%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97%EF%BC%8C%E9%82%A3%E4%B9%88%E8%AF%A5%E6%A8%A1%E5%9D%97%E6%A0%B9%E6%8D%AE%E8%81%8C%E8%B4%A3%E8%AE%BE%E8%AE%A1%E5%8F%AF%E4%BB%A5%E8%AE%BE%E8%AE%A1%E6%88%90%E6%97%A5%E5%BF%97%E8%AF%BB%E5%92%8C%E6%97%A5%E5%BF%97%E5%86%99%E4%B8%A4%E4%B8%AA%E6%9C%8D%E5%8A%A1%EF%BC%8C%E5%BD%93%E7%84%B6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E7%BB%AD%E6%8B%86%E5%88%86%E6%88%96%E8%80%85%E5%90%88%E5%B9%B6%EF%BC%8C%E8%80%8C%E9%9D%A2%E5%90%91%E9%80%9A%E7%94%A8%E6%80%A7%E7%9A%84%E7%B2%92%E5%BA%A6%E6%9B%B4%E5%A4%A7%EF%BC%8C%E7%9B%B4%E6%8E%A5%E5%B0%86%E6%97%A5%E5%BF%97%E8%AE%BE%E8%AE%A1%E6%88%90%E4%B8%80%E4%B8%AA%E9%80%9A%E7%94%A8%E6%A8%A1%E5%9D%97%EF%BC%8C%E4%B8%8D%E5%AF%B9%E5%85%B6%E4%B8%AD%E8%BF%9B%E8%A1%8C%E7%BB%86%E5%88%86%E3%80%82"><span class="toc-nav-number">1.3.0.3.</span> <span class="toc-nav-text">比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B0%83%E7%94%A8"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">微服务之间的调用</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#RestTemplate"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">RestTemplate</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#RestTemplate%E8%BF%99%E4%B8%AA%E7%B1%BB%E6%98%AF-Spring-%E6%A1%86%E6%9E%B6%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8CRestTemplate-%E6%8F%90%E4%BE%9B%E9%AB%98%E5%BA%A6%E5%B0%81%E8%A3%85%E7%9A%84%E6%8E%A5%E5%8F%A3%EF%BC%8CRestTemplate-%E6%98%AF%E4%B8%80%E4%B8%AA%E5%90%8C%E6%AD%A5%E7%9A%84-Rest-API-%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%82"><span class="toc-nav-number">1.5.0.1.</span> <span class="toc-nav-text">RestTemplate这个类是 Spring 框架提供的一个工具类，RestTemplate 提供高度封装的接口，RestTemplate 是一个同步的 Rest API 客户端。</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%99%AE%E9%80%9A%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%89%E4%B8%AA%E8%A6%81%E7%82%B9"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">普通项目升级微服务项目的三个要点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9C%8D%E5%8A%A1%E4%B9%8B%E9%97%B4%E6%98%AF%E8%BF%9B%E8%A1%8C%E8%B0%83%E7%94%A8%E7%9A%84%EF%BC%8C%E9%82%A3%E4%B9%88%E5%A6%82%E6%9E%9C%E6%9F%90%E4%B8%AA%E6%9C%8D%E5%8A%A1%E5%9C%B0%E5%9D%80%E5%8F%91%E7%94%9F%E5%8F%98%E5%8C%96%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E6%AF%94%E5%A6%82%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8D%87%E7%BA%A7%E6%8D%A2%E9%AB%98%E9%85%8D%E5%BE%88%E6%AD%A3%E5%B8%B8%EF%BC%8C%E4%BD%86%E6%98%AF%E8%B0%83%E7%94%A8%E5%9C%B0%E5%9D%80url%E6%98%AF%E5%86%99%E6%AD%BB%E7%9A%84%EF%BC%89"><span class="toc-nav-number">1.6.0.1.</span> <span class="toc-nav-text">服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%AE%9E%E4%BE%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%9F"><span class="toc-nav-number">1.6.0.2.</span> <span class="toc-nav-text">如何实现服务的实例之间的负载均衡？</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%A6%82%E6%9E%9C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E5%BF%83%E6%8C%82%E6%8E%89%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%EF%BC%88%E5%AE%9E%E7%8E%B0%E9%AB%98%E5%8F%AF%E7%94%A8%EF%BC%89"><span class="toc-nav-number">1.6.0.3.</span> <span class="toc-nav-text">如果微服务中心挂掉怎么办？（实现高可用）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96%E4%B8%80%E8%88%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">微服务问题优化一般的解决思路：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#PS%EF%BC%9A%E4%BF%AE%E6%94%B9Linux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%BD%8D%E7%BD%AE"><span class="toc-nav-number">1.7.1.</span> <span class="toc-nav-text">PS：修改Linux环境变量位置</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://SFHJavaer.github.io/" target="_blank">Futari</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          SFHJavaer
+          2025
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/mouseclick.js"  content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "SFHJavaer";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/Cloud Alibaba从入门到进阶/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://example.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

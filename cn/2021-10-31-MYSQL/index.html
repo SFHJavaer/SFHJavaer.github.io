@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="java,Futari,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- gitment start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+      <!-- gitment end -->
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://example.com/cn/2021-10-31-MYSQL/">
+  <title>
+    
+      MYSQL重点知识点梳理 - 一入Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#MYSQL" title="MYSQL">MYSQL</a>
+              
+            </div>
+            <h1>MYSQL重点知识点梳理</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Futari on
+              2021-10-31
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">8</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="MYSQL重点知识点梳理">MYSQL重点知识点梳理</h2>
+<p>distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写</p>
+<p>order by：按某字段进行排序，asc为顺序，多个字段或多个顺序规则，使用逗号分隔，当然先按后面条件的前面的顺序进行排序</p>
+<p>where查询要确定要查询条件的类型。如果是数字可以直接输，如果是字符串需要加引号</p>
+<p>对查询的字段锁定（规定）在某些数据的话，使用in关键字，当用到多个字段属于并列关系时用逗号直接分割，多个条件同时满足时使用and来同时满足</p>
+<p>大于：&gt;= 							小于：&lt;=</p>
+<p>模糊查询：</p>
+<p>like: %代表任意长度的通配符，注意不是* （ *代表所有），NOT like代表字符串不匹配时则满足当前条件，_下划线代表单个字符，这个字符的长度不能为0，like默认匹配不区分大小写，如果要精确区分的话在匹配字符串前加 binary字段</p>
+<p>mysql当sum与groupby联合使用时，sum计算的是各个分组的各自的sum</p>
+<p>select from 表名 join 表名 on 条件，注意join和on是两个不同的运算符，只不过可以放一起使用，join和on的运行级别在from之后where之前</p>
+<p><strong>CONCAT</strong> 函数用于将两个字符串连接为一个字符串</p>
+<p>upper将小写转换为大写，lower将大写转换为小写，mysql没有乘法，可以通过对数相加的方式实现乘法，然后用exp去log，默认log的底是e，将数直接用log函数包裹起来就相当于变成对数了。</p>
+<p><strong>union：关键字可以将查询结果相加(mysql不区分大小写)</strong></p>
+<p>（主要用于将两张不同的表的结果进行拼接，当然column前提得一致）</p>
+<p><strong>案例；找出工作岗位是salesman和manager的员工</strong></p>
+<p><strong>方法一：select ename,job from emp where job = ‘manager’ or job = ‘salesman’;</strong></p>
+<p><strong>±-------±---------+</strong><br>
+<strong>| ename  | job      |</strong><br>
+<strong>±-------±---------+</strong><br>
+<strong>| ALLEN  | SALESMAN |</strong><br>
+<strong>| WARD   | SALESMAN |</strong><br>
+<strong>| JONES  | MANAGER  |</strong><br>
+<strong>| MARTIN | SALESMAN |</strong><br>
+<strong>| BLAKE  | MANAGER  |</strong><br>
+<strong>| CLARK  | MANAGER  |</strong><br>
+<strong>| TURNER | SALESMAN |</strong><br>
+<strong>±-------±---------+</strong><br>
+<strong>7 rows in set (0.00 sec)</strong></p>
+<p><strong>方法二（使用in或or）：select ename,job from emp where job in (‘manager’,‘salesman’);</strong></p>
+<p><strong>select ename,job from emp wher job = ‘manager’ or job = ‘sqlesman’（可以设置取不同字段，区别于in）</strong></p>
+<p><strong>方法三（union将查询结果进行相加）：select ename,job from emp where job = “manager”</strong></p>
+<p><strong>union</strong></p>
+<p><strong>select ename,job from emp where job = ‘salesman’;</strong></p>
+<hr>
+<p>limit关键字：进行分页查询，去结果集中的部分数据                				语法：limit   起始位置	取几个（长度）</p>
+<p>注意limit是mysql中特有的关键字</p>
+<p>示例：select ename,sal from emp order by sal desc; 			(降序)</p>
+<p>select ename,sal from emp order by sal desc limit 0,5;</p>
+<p>select ename,sal from emp order by sal desc limit 5;(不写就是默认从零开始取)</p>
+<p>注意：limit关键字的执行顺序优先级最低</p>
+<p>执行顺序：select				5进行查询数据结果</p>
+<p>from				1先从某一张表中取数据</p>
+<p>where				2要取哪一个字段（在分组前进行过滤过滤）</p>
+<p>group by				3先进行分组</p>
+<p>having				4 使用having在分组后进行过滤（having后面可以使用聚合函数（sql基本函数count等））</p>
+<p>order by				6对查询出的数据进行排序</p>
+<p>limit				7最后对数据进行截取</p>
+<blockquote>
+<p>从上面可以看出SQL的执行顺序和书写顺序大概是一致的，也就是除了select基本都符合顺序。</p>
+</blockquote>
+<p>通用的标准分页sql：</p>
+<p>每页显示pagesize条记录，则第pageno页为：（pageno-1）*pagesize，pagesize</p>
+<p>——————————————————————————————————————————————————</p>
+<p>创建表</p>
+<p>语法格式：create table 表名(</p>
+<p>​					字段名			数据类型，</p>
+<p>​					…</p>
+<p>);</p>
+<p>数据类型：</p>
+<p>varchar：根据存入的数据动态的分配空间</p>
+<p>而char(x)是指定填入的数据的长度为x，超过则报错,但是char的处理效率极高，所以确定了长度的数据就用char，注意char在c语言中是占一个字节的，Java中是unicode也就是utf-16，是占两个字节。</p>
+<p>date：对应java中的java.sql.date</p>
+<p>BLOB:二进制大对象，类似于java.object，使用io流进行存取</p>
+<p>CLOB：字符大对象（用的不多，图片资源一般不放数据库里）</p>
+<p>表在数据库中：一般以t_或者tbl_开头</p>
+<p>学生表：</p>
+<p>create table t_student(</p>
+<p>​		no bigint,</p>
+<p>​		name varchar(255),</p>
+<p>​		sex char(1),</p>
+<p>​		classno varchar(255),</p>
+<p>​		birth char(10)</p>
+<p>);</p>
+<h4 id="表的复制：">表的复制：</h4>
+<p>create table 表名 as select语句; 									将一张表的查询结果as为一张新的表</p>
+<p>更新语句：update</p>
+<p>语法格式：update 表名 set 字段名1 = 值1,字段名2 = 值2 where 条件;（根据条件设置（更新）字段的值）</p>
+<p>ps：如果没有条件约束的话，自动会把整张表的字段全部修改为值x</p>
+<h4 id="删除语句：delete">删除语句：delete</h4>
+<p>delete from 表名   约束条件；（同理无约束条件默认删除整张表的所有数据（列级删除））</p>
+<h4 id="表级删除（表被截断或清空）：truncate-table-表名；">表级删除（表被截断或清空）：truncate table 表名；</h4>
+<h4 id="删除整个表（表头以至整个被删除）：drop命令">删除整个表（表头以至整个被删除）：drop命令</h4>
+<p>drop table if exists t_student;</p>
+<p>如果 表名  存在的话  那么删除</p>
+<p>先删除，后创建（先删除子目录后删除父目录）</p>
+<h3 id="约束：">约束：</h3>
+<p>非空约束：not null</p>
+<p>唯一约束：unique 唯一性约束可以为null，注意null !=null，unique是列级约束，写在表结构语句上（直接写在字段后面或者在所有字段后面进行指定哪些字段）</p>
+<p>主键约束：primary key（非空且不唯一 = not null + unique）列级约束</p>
+<p>外键约束：foreign key</p>
+<p>检查约束：check(mysql不支持该约束，oracle有)</p>
+<h4 id="主键术语：">主键术语：</h4>
+<p>主键约束：primary key</p>
+<p>主键值:主键字段中的每一个值都是主键值</p>
+<p>主键字段：被添加主键的字段</p>
+<h4 id="特性：只要主键的值不一样，那么这就是完全不同的两条语句">特性：只要主键的值不一样，那么这就是完全不同的两条语句</h4>
+<h5 id="主键分类：">主键分类：</h5>
+<h6 id="单一主键">单一主键</h6>
+<p>复合主键：primary key（字段一，字段二）（复合的意思是只有两个全部想通过才算是同一个，符合的部分只要有一个不同，那么就是不同的主键）（复合主键违背三范式）</p>
+<p>自然主键：一般把从1开始的自然数作为主键（最常用）</p>
+<p>业务主键：把某个唯一的数据字段作为主键，比如公民的身份证号，不推荐，因为作为主键后续修改很麻烦</p>
+<h3 id="注意一张表的主键约束只能有一个（重点）">注意一张表的主键约束只能有一个（重点）</h3>
+<h4 id="主键可以设置自增：auto-increment（推荐）">主键可以设置自增：auto_increment（推荐）</h4>
+<p>外键：foreign key</p>
+<p>外键中引用的字段所在的表是子表，而被引用的表是父表（一定注意在操作子父表的时候要注意操作的顺序，不能直接操作）</p>
+<p>外键语法格式：</p>
+<p>create table 表一（</p>
+<p>foreign key (字段名) reference 表二（字段名）</p>
+<p>）；                                                       reference：引用</p>
+<h4 id="父表的被引用的字段值必须包括子表引用的所有字段值">父表的被引用的字段值必须包括子表引用的所有字段值</h4>
+<p>注意注意：外键值可以为null，被引用的字段必须至少具有unique约束，不然在连接时发挥不了外键的连接作用</p>
+<p>mysql default charset = utf8</p>
+<p>几种常见的存储引擎（了解）：</p>
+<p>innodb：支持事务，并且保证数据安全性（默认engine）</p>
+<p>myisam：常用的engine，速度中等，但是不支持事务和其他功能</p>
+<p>memory：数据存储在内存中，所以易丢失但是速度最快，不支持事务</p>
+<h4 id="事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）">事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）</h4>
+<p>MYSQl中的事务是自动提交的，如果下个要手动开启一段事务，需要输入：start transaction</p>
+<p>后续只有输入了commit才标志了一段事务的结束</p>
+<h4 id="事务的四大特性：ACID">事务的四大特性：ACID</h4>
+<p>原子性：事务是最小的工作单元</p>
+<p>一致性：事务必须保证多条DML语句同时成功或者失败（必须）</p>
+<p>隔离性：这里最重要，分为四个等级</p>
+<p>持久性：持久化存储（到硬盘），这里才算是事务的结束</p>
+<h4 id="隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）">隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）</h4>
+<p>读未提交： read uncommited  隔离性最低</p>
+<p>其他线程未提交就可以看见数据的修改</p>
+<p>读已提交：read commited</p>
+<p>其他事务提交之后才可以看得见</p>
+<p>可重复读：repeatable read</p>
+<p>读到的数据不受其他新开期的事务对原本事务数据的影响</p>
+<p>序列化读/串行化读：</p>
+<p>新事务的开启必须没有旧事务的存在，否则新事务无法进行操作</p>
+<p>但是缺点是效率低，因为要排队</p>
+<p>设置全局的隔离等级: set global transaction isolation level 隔离等级</p>
+<p>事务的两个方法：commit和rollback</p>
+<h4 id="索引：">索引：</h4>
+<p>explain写在语句前，显示该语句的执行计划</p>
+<p>创建索引（对象）：create index 索引名称 on 表名（字段名）</p>
+<p>ps：给某一个查询字段设置索引</p>
+<p>索引底层采用的数据结构是：B+ Tree</p>
+<p>通过给字段设置索引，索引会定位到数据对应的物理地址，即查询语句where = 物理地址</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/2021-11-03-Markdown快速入门/" data-toggle="tooltip" data-placement="top" title="Markdown快速入门">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/2021-10-30-HTML CSS/" data-toggle="tooltip" data-placement="top" title="利用HTML和CSS实现简单的淘宝购物车前端">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=MYSQL重点知识点梳理&body=Hi,I found this website and thought you might like it http://example.com/cn/2021-10-31-MYSQL/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+  <!-- gitment start -->
+  <!-- Docs:https://github.com/imsun/gitment -->
+
+  <div id="blog_comments"></div>
+  <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+
+  <script>
+    const myTheme = {
+      render(state, instance) {
+        const container = document.createElement('div')
+        container.lang = "en-US"
+        container.className = 'gitment-container gitment-root-container'
+
+        // your custom component
+        container.appendChild(instance.renderSomething(state, instance))
+        container.appendChild(instance.renderHeader(state, instance))
+        container.appendChild(instance.renderEditor(state, instance))
+        container.appendChild(instance.renderComments(state, instance))
+        container.appendChild(instance.renderFooter(state, instance))
+        return container
+      },
+      renderSomething(state, instance) {
+        const container = document.createElement('div')
+        container.lang = "en-US"
+        container.className = 'hello_visitor'
+        if (state.user.login) {
+          container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+        }
+        return container
+      }
+    }
+
+    const gitment = new Gitment({
+      id: 'Sun Oct 31 2021 00:00:00 GMT+0800', // optional
+      owner: 'SFHJavaer',
+      repo: 'SFHJavaer',
+      oauth: {
+        client_id: 'beed42a108cae24cf4a7',
+        client_secret: '8576330fb6385d5fd5dc0c2770869a07310aa3e5'
+      },
+      desc: '',
+      perPage: '10',
+      maxCommentHeight: '250',
+      theme: myTheme,
+      // ... For more available options, check out the documentation below
+    })
+
+    gitment.render('blog_comments')
+    // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
+  </script>
+
+  <!-- gitment end -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#MYSQL" title="MYSQL">MYSQL</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://SFHJavaer.github.io/" target="_blank">Futari</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          SFHJavaer
+          2025
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/mouseclick.js"  content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "SFHJavaer";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/2021-10-31-MYSQL/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://example.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="java,Futari,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- gitment start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+      <!-- gitment end -->
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://example.com/cn/关于Mybatis二级缓存/">
+  <title>
+    
+      关于Mybatis二级缓存 - 一入Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io//img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io//img/header_img/lml_bg.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Mybatis" title="Mybatis">Mybatis</a>
+              
+            </div>
+            <h1>关于Mybatis二级缓存</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by SFHJavaer on
+              2022-04-12
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">5</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h6 id="Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率">Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率</h6>
+<h4 id="1-一级缓存">1.一级缓存</h4>
+<p>一级缓存是SqlSession级别的一个缓存，也就是用户会话级别的，一个用户都需要创建一个SqlSession来执行，一级缓存也叫本地缓存，mybatis会将查询成功获得的数据缓存到一级缓存中，后续的Sql在命中缓存的情况下，直接从本地缓存读</p>
+<h5 id="2-二级缓存（跨SqlSession的缓存）">2.二级缓存（跨SqlSession的缓存）</h5>
+<p><img src="Snipaste_2022-04-22_18-42-22.png" alt="开启二级缓存"></p>
+<p>只要有一个用户的SqlSession拿到了数据，就会将其存入到二级缓存中</p>
+<h4 id="一二级缓存的实现原理">一二级缓存的实现原理</h4>
+<p>先看一级缓存：在SqlSession中会支持有一个Executor，每一个Executor又有一个LocalCache的对象，当用户发起请求的时候，Mybatis根据语句到localCache中进行查询，当然命中了就会返回数据，没有命中再到数据库中进行查询，查询完之后将其存入到SqlSessiond的LocalCache中，所以一级缓存的生命周期是SqlSession的生命周期，注意在多线程情况下一级缓存可能产生脏读。</p>
+<p><img src="Snipaste_2022-04-22_18-49-58.png" alt="一二级缓存示意图"></p>
+<p>再看二级缓存（全局缓存）：在原来的Executor上加了一个装饰，引入了一个装饰器叫CachingExecutor，在进入一级缓存之前先进行二级缓存的查询（通过上面的装饰器），最后进行数据库的查询，缓存粒度控制在了nameSpace命名空间的级别，并且可以通过Cache这个接口实现不同缓存实现类的一个组合，提高对Cache的一个可控性。</p>
+<p><img src="Snipaste_2022-04-22_18-32-39.png" alt="二级缓存实现图"></p>
+<h2 id="MySQL-Query-Cache">MySQL Query Cache</h2>
+<p>首先要明白一个概念，二级缓存是基于Mybatis的，也是基于SqlSession的，而我们在慢查询中所需要关闭的Cache则是Mysql的查询缓存，两者完全不一样</p>
+<h6 id="Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis-memcache，因为后者的外置缓存支持分布式环境">Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis/memcache，因为后者的外置缓存支持分布式环境</h6>
+<h5 id="font-color-blue-MySQL-Query-Cache的实现原理-font"><font color = "blue" >MySQL Query Cache的实现原理</font></h5>
+<p>Mysql会将查询的select语句以及其查询结果集，实现类似于Map的K-V结构的存储，也就是存在了一个Hash映射，当SQL进行查询时，查找逻辑是先对Sql进行权限校验，使用Query Cache来查找结果，（SQL必须完全相同，一个空格都不行，字符集也必须完全相同是严格的Sql映射）</p>
+<p>如果映射中没有，会将查询结果放入缓存表，所以在存入时以及查找时会有额外的性能消耗。</p>
+<h6 id="最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8-0被取消了">最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8.0被取消了</h6>
+<p><font color = 'green'>不确定的数据不会被缓存，比如使用了Date()函数等情况</font></p>
+<h6 id="查看缓存参数状态-SHOW-VARIABLES-LIKE-‘-query-cache-’">查看缓存参数状态                             &gt; SHOW VARIABLES LIKE ‘%query_cache%’;</h6>
+<blockquote>
+<p>缓存的映射关系是基于表的，所以当一张表的结构发生改变的时候，或者表处于写入的状态（被锁住），那么此时的缓存都是失效的，当然修改数据也会使查询到数据的SQL缓存失效而产生大量额外损耗</p>
+</blockquote>
+<h3 id="对于写频繁的系统，适合用mysql查询缓存么？">对于写频繁的系统，适合用mysql查询缓存么？</h3>
+<h5 id="不适合：对于某些写频繁的系统，开启Query-Cache功能可能并不能让系统性能有提升，有时反而会有下降。">不适合：对于某些写频繁的系统，开启Query Cache功能可能并不能让系统性能有提升，有时反而会有下降。</h5>
+<p>原因是MySql为了保证Query Cache缓存的内容和实际数据绝对一致，当某个数据表发生了更新、删除及插入操作，MySql都会强制使所有引用到该表的查询SQL的Query Cache失效。对于密集写操作，启用查询缓存后很可能造成频繁的缓存失效，间接引发内存激增及CPU飙升，对已经非常忙碌的数据库系统这是一种极大的负担。</p>
+<h3 id="官方在Mysql5-6进行了联合索引优化：索引（条件）下推">官方在Mysql5.6进行了联合索引优化：索引（条件）下推</h3>
+<p><font color = 'blue'>索引下推</font>也就是条件的向下推断，在查询二级索引时，判断并列的查找条件是不是满足。</p>
+<p>其实从底层讲是不准确的</p>
+<p><font color = "red">索引下推的下推其实就是指将部分上层（服务层）负责的事情，交给了下层（引擎层）去处理。</font></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/52288fa925f84cef937bb0b46d27c60a~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="索引下推"></p>
+<h5 id="以查询条件为前面模糊查询的同时进行其他的等值判断为例">以查询条件为前面模糊查询的同时进行其他的等值判断为例</h5>
+<blockquote>
+<p><strong>select</strong> * <strong>from</strong> tuser <strong>where</strong> name <strong>like</strong> ‘张%’ <strong>and</strong> age=10;</p>
+</blockquote>
+<p>数据库表，表里创建联合索引（name, age）。：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1b49ff7a5bff433688d7640d1ca64fb4~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="数据库"></p>
+<h6 id="在没有使用ICP的情况下，MySQL的查询：">在没有使用ICP的情况下，MySQL的查询：</h6>
+<ul>
+<li>
+<p>在MySQL 5.6之前，存储引擎根据通过联合索引找到<code>name like '张%'</code> 的主键id（1、4），逐一进行回表扫描，去聚簇索引找到完整的行记录，server层再对数据根据<code>age=10进行筛选</code>。</p>
+</li>
+<li>
+<p>进行了两次回表操作，一条数据一次，<font color = 'red'>把我们联合索引的另一个字段<code>age</code>浪费了。</font></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c97ed6c5e395416181cb57591151fb09~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="回表"></p>
+</li>
+</ul>
+<h6 id="使用ICP的情况下，查询过程-注意借助了联合索引-：">使用ICP的情况下，查询过程(注意借助了联合索引)：</h6>
+<ul>
+<li>存储引擎根据（name，age）联合索引，找到<code>name like '张%'</code>，由于联合索引中包含<code>age</code>列，所以存储引擎直接再联合索引里按照<code>age=10</code>过滤。按照过滤后的数据再一一进行回表扫描。</li>
+</ul>
+<p>利用索引快的特点进行过滤，相对于索引来说回表就相当于又进行了一次查询，是非常麻烦的</p>
+<h6 id="这里我们将不符合的-“张猛”给筛掉之后，直接进行一次回表就可以了">这里我们将不符合的 “张猛”给筛掉之后，直接进行一次回表就可以了</h6>
+<h5 id="为什么张三还要回表呢？模糊查询和等值查询不都满足了吗">为什么张三还要回表呢？模糊查询和等值查询不都满足了吗</h5>
+<p>对于数据库是不知道的，而且这里举的例子是查询条件正好是联合索引，如果还有其他的非索引数据，当然还要进行回表进行判断了，索引下推只是借助联合索引尽量减少资源浪费的优化手段。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/关于单例设计模式/" data-toggle="tooltip" data-placement="top" title="常见单例模式五种设计方式">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/关于数据库索引/" data-toggle="tooltip" data-placement="top" title="关于数据库索引">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=关于Mybatis二级缓存&body=Hi,I found this website and thought you might like it http://example.com/cn/关于Mybatis二级缓存/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+  <!-- gitment start -->
+  <!-- Docs:https://github.com/imsun/gitment -->
+
+  <div id="blog_comments"></div>
+  <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+
+  <script>
+    const myTheme = {
+      render(state, instance) {
+        const container = document.createElement('div')
+        container.lang = "en-US"
+        container.className = 'gitment-container gitment-root-container'
+
+        // your custom component
+        container.appendChild(instance.renderSomething(state, instance))
+        container.appendChild(instance.renderHeader(state, instance))
+        container.appendChild(instance.renderEditor(state, instance))
+        container.appendChild(instance.renderComments(state, instance))
+        container.appendChild(instance.renderFooter(state, instance))
+        return container
+      },
+      renderSomething(state, instance) {
+        const container = document.createElement('div')
+        container.lang = "en-US"
+        container.className = 'hello_visitor'
+        if (state.user.login) {
+          container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+        }
+        return container
+      }
+    }
+
+    const gitment = new Gitment({
+      id: 'Tue Apr 12 2022 02:34:17 GMT+0800', // optional
+      owner: 'SFHJavaer',
+      repo: 'SFHJavaer',
+      oauth: {
+        client_id: 'beed42a108cae24cf4a7',
+        client_secret: '8576330fb6385d5fd5dc0c2770869a07310aa3e5'
+      },
+      desc: '',
+      perPage: '10',
+      maxCommentHeight: '250',
+      theme: myTheme,
+      // ... For more available options, check out the documentation below
+    })
+
+    gitment.render('blog_comments')
+    // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
+  </script>
+
+  <!-- gitment end -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Mybatis%E4%B8%AD%E6%9C%89%E4%B8%A4%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%8C%E7%BC%93%E5%AD%98%E7%9A%84%E7%9B%AE%E7%9A%84%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%AE%A9%E6%AF%8F%E4%B8%80%E6%AC%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E9%83%BD%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%EF%BC%8C%E5%87%8F%E5%B0%91%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BF%E9%97%AE%E4%B8%8E%E4%BA%A4%E4%BA%92%EF%BC%8C%E6%8F%90%E9%AB%98%E4%BA%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%A3%80%E7%B4%A2%E6%95%88%E7%8E%87"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-nav-number"></span> <span class="toc-nav-text">1.一级缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%88%E8%B7%A8SqlSession%E7%9A%84%E7%BC%93%E5%AD%98%EF%BC%89"><span class="toc-nav-number"></span> <span class="toc-nav-text">2.二级缓存（跨SqlSession的缓存）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-nav-number"></span> <span class="toc-nav-text">一二级缓存的实现原理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MySQL-Query-Cache"><span class="toc-nav-number"></span> <span class="toc-nav-text">MySQL Query Cache</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Mysql%E7%9A%84%E6%9F%A5%E8%AF%A2%E7%BC%93%E5%AD%98%E5%9B%A0%E4%B8%BA%E5%AD%98%E5%9C%A8%E7%9A%84%E5%BC%8A%E7%AB%AF%E5%9F%BA%E6%9C%AC%E4%B8%8D%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%BA%86%EF%BC%8C%E5%BB%BA%E8%AE%AE%E9%87%87%E7%94%A8%E5%85%B6%E4%BB%96%E7%9A%84%E5%A4%96%E7%BD%AE%E7%BC%93%E5%AD%98%EF%BC%8C%E6%AF%94%E5%A6%82Redis-memcache%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%90%8E%E8%80%85%E7%9A%84%E5%A4%96%E7%BD%AE%E7%BC%93%E5%AD%98%E6%94%AF%E6%8C%81%E5%88%86%E5%B8%83%E5%BC%8F%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis&#x2F;memcache，因为后者的外置缓存支持分布式环境</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#font-color-blue-MySQL-Query-Cache%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86-font"><span class="toc-nav-number"></span> <span class="toc-nav-text">MySQL Query Cache的实现原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9C%80%E4%B8%BB%E8%A6%81%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E5%A6%82%E6%9E%9C%E5%9C%A8%E6%98%A0%E5%B0%84%E4%B8%AD%E8%83%BD%E7%9B%B4%E6%8E%A5%E6%9F%A5%E5%88%B0%E5%B0%B1%E5%A5%BD%E4%BA%86%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%B1%E4%BA%8E%E8%BF%99%E7%A7%8D%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%A4%AA%E5%A4%A7%EF%BC%8C%E6%89%80%E4%BB%A58-0%E8%A2%AB%E5%8F%96%E6%B6%88%E4%BA%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8.0被取消了</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%BC%93%E5%AD%98%E5%8F%82%E6%95%B0%E7%8A%B6%E6%80%81-SHOW-VARIABLES-LIKE-%E2%80%98-query-cache-%E2%80%99"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">查看缓存参数状态                             &gt; SHOW VARIABLES LIKE ‘%query_cache%’;</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%86%99%E9%A2%91%E7%B9%81%E7%9A%84%E7%B3%BB%E7%BB%9F%EF%BC%8C%E9%80%82%E5%90%88%E7%94%A8mysql%E6%9F%A5%E8%AF%A2%E7%BC%93%E5%AD%98%E4%B9%88%EF%BC%9F"><span class="toc-nav-number"></span> <span class="toc-nav-text">对于写频繁的系统，适合用mysql查询缓存么？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%8D%E9%80%82%E5%90%88%EF%BC%9A%E5%AF%B9%E4%BA%8E%E6%9F%90%E4%BA%9B%E5%86%99%E9%A2%91%E7%B9%81%E7%9A%84%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%90%AFQuery-Cache%E5%8A%9F%E8%83%BD%E5%8F%AF%E8%83%BD%E5%B9%B6%E4%B8%8D%E8%83%BD%E8%AE%A9%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%9C%89%E6%8F%90%E5%8D%87%EF%BC%8C%E6%9C%89%E6%97%B6%E5%8F%8D%E8%80%8C%E4%BC%9A%E6%9C%89%E4%B8%8B%E9%99%8D%E3%80%82"><span class="toc-nav-number"></span> <span class="toc-nav-text">不适合：对于某些写频繁的系统，开启Query Cache功能可能并不能让系统性能有提升，有时反而会有下降。</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%98%E6%96%B9%E5%9C%A8Mysql5-6%E8%BF%9B%E8%A1%8C%E4%BA%86%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96%EF%BC%9A%E7%B4%A2%E5%BC%95%EF%BC%88%E6%9D%A1%E4%BB%B6%EF%BC%89%E4%B8%8B%E6%8E%A8"><span class="toc-nav-number"></span> <span class="toc-nav-text">官方在Mysql5.6进行了联合索引优化：索引（条件）下推</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A5%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E4%B8%BA%E5%89%8D%E9%9D%A2%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%90%8C%E6%97%B6%E8%BF%9B%E8%A1%8C%E5%85%B6%E4%BB%96%E7%9A%84%E7%AD%89%E5%80%BC%E5%88%A4%E6%96%AD%E4%B8%BA%E4%BE%8B"><span class="toc-nav-number"></span> <span class="toc-nav-text">以查询条件为前面模糊查询的同时进行其他的等值判断为例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%9C%A8%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8ICP%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8CMySQL%E7%9A%84%E6%9F%A5%E8%AF%A2%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">在没有使用ICP的情况下，MySQL的查询：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8ICP%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E6%9F%A5%E8%AF%A2%E8%BF%87%E7%A8%8B-%E6%B3%A8%E6%84%8F%E5%80%9F%E5%8A%A9%E4%BA%86%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95-%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">使用ICP的情况下，查询过程(注意借助了联合索引)：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%BF%99%E9%87%8C%E6%88%91%E4%BB%AC%E5%B0%86%E4%B8%8D%E7%AC%A6%E5%90%88%E7%9A%84-%E2%80%9C%E5%BC%A0%E7%8C%9B%E2%80%9D%E7%BB%99%E7%AD%9B%E6%8E%89%E4%B9%8B%E5%90%8E%EF%BC%8C%E7%9B%B4%E6%8E%A5%E8%BF%9B%E8%A1%8C%E4%B8%80%E6%AC%A1%E5%9B%9E%E8%A1%A8%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">这里我们将不符合的 “张猛”给筛掉之后，直接进行一次回表就可以了</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%A0%E4%B8%89%E8%BF%98%E8%A6%81%E5%9B%9E%E8%A1%A8%E5%91%A2%EF%BC%9F%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E5%92%8C%E7%AD%89%E5%80%BC%E6%9F%A5%E8%AF%A2%E4%B8%8D%E9%83%BD%E6%BB%A1%E8%B6%B3%E4%BA%86%E5%90%97"><span class="toc-nav-number"></span> <span class="toc-nav-text">为什么张三还要回表呢？模糊查询和等值查询不都满足了吗</span></a>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Mybatis" title="Mybatis">Mybatis</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://SFHJavaer.github.io/" target="_blank">Futari</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          SFHJavaer
+          2025
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/mouseclick.js"  content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "SFHJavaer";
+    let ghPages = gh + ".github.io";
+    let pagePath = "cn/关于Mybatis二级缓存/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://example.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
