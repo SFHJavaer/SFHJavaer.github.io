@@ -1450,11 +1450,17 @@ MVCC也就是多版本并发控制，也就是一种并发控制的方法
     }
     imgUrl.forEach(item => {
       let oldUrl = item.getAttribute("src");
-      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
-      item.setAttribute("src", newUrl);
+
+      // 添加判断：只处理不以http/https开头的相对路径图片
+      if (!oldUrl.startsWith('http://') && !oldUrl.startsWith('https://')) {
+        let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+        item.setAttribute("src", newUrl);
+      }
+      // 如果是绝对路径的图片，不做任何处理
     });
   </script>
   <!-- CDN: jsdelivr end -->
+
 
 
 

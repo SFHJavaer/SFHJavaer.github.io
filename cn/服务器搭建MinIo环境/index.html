@@ -927,11 +927,17 @@ PS:如果打不开服务器具体地址，说明防火墙没有打开，如果�
     }
     imgUrl.forEach(item => {
       let oldUrl = item.getAttribute("src");
-      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
-      item.setAttribute("src", newUrl);
+
+      // 添加判断：只处理不以http/https开头的相对路径图片
+      if (!oldUrl.startsWith('http://') && !oldUrl.startsWith('https://')) {
+        let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+        item.setAttribute("src", newUrl);
+      }
+      // 如果是绝对路径的图片，不做任何处理
     });
   </script>
   <!-- CDN: jsdelivr end -->
+
 
 
 

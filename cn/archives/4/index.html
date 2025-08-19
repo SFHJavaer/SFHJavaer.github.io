@@ -1429,11 +1429,17 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
     }
     imgUrl.forEach(item => {
       let oldUrl = item.getAttribute("src");
-      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
-      item.setAttribute("src", newUrl);
+
+      // 添加判断：只处理不以http/https开头的相对路径图片
+      if (!oldUrl.startsWith('http://') && !oldUrl.startsWith('https://')) {
+        let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+        item.setAttribute("src", newUrl);
+      }
+      // 如果是绝对路径的图片，不做任何处理
     });
   </script>
   <!-- CDN: jsdelivr end -->
+
 
 
 

@@ -926,11 +926,17 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
     }
     imgUrl.forEach(item => {
       let oldUrl = item.getAttribute("src");
-      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
-      item.setAttribute("src", newUrl);
+
+      // 添加判断：只处理不以http/https开头的相对路径图片
+      if (!oldUrl.startsWith('http://') && !oldUrl.startsWith('https://')) {
+        let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+        item.setAttribute("src", newUrl);
+      }
+      // 如果是绝对路径的图片，不做任何处理
     });
   </script>
   <!-- CDN: jsdelivr end -->
+
 
 
 
