@@ -16,7 +16,7 @@ Gitee 仓库地址：https://gitee.com/V_Vincen/hexo-theme-livemylife
 
 ![LiveMyLife Desktop](/source/_posts/en/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
 
-## 快速开始
+## 快速开始 
 为了方便起见，我发布了整个项目，因此您可以按照下面的说明进行操作，然后就可以轻松自定义您自己的博客！
 
 让我们开始!!!
