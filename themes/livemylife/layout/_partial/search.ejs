@@ -116,7 +116,9 @@
             var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
             var imgUrl = data.header_img;
             <% if(config['jsdelivr']) { %>
-              imgUrl = '<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io' + imgUrl;
+              if (!imgUrl.startsWith('http://') && !imgUrl.startsWith('https://')) {
+                imgUrl = '<%- config.jsdelivr.jsdelivr_url %><%- config.jsdelivr.github_username %>/<%- config.jsdelivr.github_username %>.github.io' + imgUrl;
+              }
             <% } %>
 
 
