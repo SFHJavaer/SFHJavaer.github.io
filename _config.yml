@@ -26,7 +26,7 @@ langselect:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-# url: http://www.sfhjavaer.tech      # Note: don't forget to modify the CNAME file to your url
+url: http://www.sfhjavaer.github.io      # Note: don't forget to modify the CNAME file to your url
 root: /
 permalink: :lang/:title/
 permalink_defaults:

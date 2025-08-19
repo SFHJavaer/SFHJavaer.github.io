@@ -13,13 +13,13 @@ date: 2023-09-21 22:08:03
 
 新建两个不同包下的同名类Test，类结构如图：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695288946165-9654b0a6-5e79-4c05-a32e-10cb2edc68da.png)
+![a](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695288946165-9654b0a6-5e79-4c05-a32e-10cb2edc68da.png)
 
 Application：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289149568-4acc6196-b5aa-4160-8bde-7863fc740010.png)
+![a](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289149568-4acc6196-b5aa-4160-8bde-7863fc740010.png)
 
-Real类：![](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289158611-edeae84b-0d4c-4d31-9edc-2ce7711efb56.png)
+Real类：![a](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289158611-edeae84b-0d4c-4d31-9edc-2ce7711efb56.png)
 
 这里不把@autowired写到Application中是因为写了也不会注入，SpringBoot会把Application的注入忽略，
 
@@ -69,7 +69,7 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 
 现在创建一个子项目，作为demo的依赖模块的demo2，并将test2的类移动到demo2模块下，且添加两模块间的依赖关系，如下图：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289684290-a406a39a-a7ab-40c6-bad9-1904f1d5d29b.png)
+![a](https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289684290-a406a39a-a7ab-40c6-bad9-1904f1d5d29b.png)
 
 <font style="color:#5C8D07;">不加</font><font style="color:#5C8D07;">执行结果：</font>
 
