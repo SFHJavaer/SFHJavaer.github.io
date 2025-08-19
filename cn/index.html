@@ -479,25 +479,23 @@
   <!-- top end -->
   
 
-  <a href="/cn/景区抢票平台爬虫以及对美团的破解思路/">
+  <a href="/cn/线程并发问题记录/">
     <h2 class="post-title">
-      景区抢票平台爬虫以及对美团的破解思路
+      线程并发问题记录
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      严禁用于非法用途，本教程仅供交流使用
-为了维护商家权益，关键信息会进行打码处理，严禁用于非法用途
-PS：文中接口再2022年7月已失效1.寻找景区链接首先打开微信公众号中的我们的订单页面，url为
-https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
-进入到页面我们自动跳转会发现是商铺的登录界面，需要重新进行登录......
+      使用ajax同时对一接口发送两个请求，报文不一样，结果应当不同，但是返回结果却有一定几率相同。
+排查思路：MP SQL是否错误—&gt;Cloud问题------&gt;Client请求是否遗漏
+测试结果：发起双请求——&gt;Controller接收到两个------&gt;Cloud只处理了一个结果，不放掉cloud请求的时候，前端两个结果都不能拿到响应，放掉同时拿到，说明和RPC并发问......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
-    2022-12-17
+    2025-09-25
   </p>
   <div class="tags">
     
@@ -514,25 +512,38 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
   <!-- top end -->
   
 
-  <a href="/cn/对Process构建的思考和项目调试中的理解与问题/">
+  <a href="/cn/以太坊开发：Solidity语言入门/">
     <h2 class="post-title">
-      对Process构建的思考和项目调试中的理解与问题
+      以太坊开发：Solidity语言入门
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      对Process构建的思考和项目调试中的理解与问题在项目接口测试中，请求体中的数据不能在param添加，因为不是@RequestParam的，要根据接口进行提交，选择的请求体类型一般是x-www-form-urlencoded或者是Json，前者一般是from表单的请求体，后者是一般的json通用请求类型一个联调安卓端的小问题：安装完adb和aapt之后，配置环境变量，在项目中可以通过JDK......
+      两个前提
+
+说明软件许可
+声明源文件版本
+
+常用基础数据类型
+
+理解上和Java相似
+
+
+int：整型
+uint(不是unit) = unsigned int 无符号整型，即正整数
+string：均为小写开头，字符串型
+bool：布尔，逻辑运算符和Java一致（也有短路规则）
+enum：枚举，可以和unit（0,1,2,3）按顺序转换，用的很少，用.调用
+address：EVM地址类型，40......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-09-16
+    Posted by Futari on
+    2025-04-13
   </p>
   <div class="tags">
-    
-    <a href="/tags/#项目" title="项目">项目</a>
     
   </div>
   
@@ -547,28 +558,274 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
   <!-- top end -->
   
 
-  <a href="/cn/关于SpringClassLoader的一些思考/">
+  <a href="/cn/关于对Java语法糖的理解/">
     <h2 class="post-title">
-      关于SpringClassLoader的一些思考
+      关于对Java语法糖的理解
     </h2>
     <h3 class="post-subtitle">
-      关于SpringClassLoader的一些思考
+      
     </h3>
     <div class="post-content-preview">
-      关于SpringClassLoader的一些思考
-看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的
-看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader
-看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactor......
+      
+switch 在1.8支持case String类型，class中其实是根据hashCode和equals判断的，为什么需要equals，因为仅凭hashCode可能发生哈希碰撞。
+泛型，没有泛型对应的class类型，java阶段的泛型都会在class阶段擦除，如HashMap&lt;String,String&gt;会被擦除为Hash Map.Class，而&lt;A extends C......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-09-03
+    Posted by Futari on
+    2025-02-05
   </p>
   <div class="tags">
     
-    <a href="/tags/#Spring" title="Spring">Spring</a>
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/No-qualifying-bean-of-type-Bean-available深度思考/">
+    <h2 class="post-title">
+      No qualifying bean of type 'Bean' available深度思考
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在多工程项目中，我们常常遇到这个问题。
+No qualifying bean of type ‘XXXXBean’ available  ，其实首先要理解错误的意思，这里的XXXXBean一般是具体某个接口或抽象类，如IXXXService，翻译过来就是    没有可用的   满足IOpicsService接口类型的Bean
+:::info
+解读：也就是说Bean确实是没有，但是并不是IOp......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-11-18
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Java文件上传基础原理/">
+    <h2 class="post-title">
+      Java文件上传基础原理
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      POST请求前端form表单在最初只能提交文本数据，即为application/x-www-form-urlencoded(默认值)
+在1995年multipart/form-data，在form表单的enctype属性进行指定
+在一个HTML文档中，一个表单的标准格式如下：
+12345&lt;form action=&quot;http://localhost:8080/repositor......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-09-14
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/基础思维：内外网排查思路/">
+    <h2 class="post-title">
+      基础思维：内外网排查思路
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      内网报错：先查看响应的具体错误和查内网日志，打印栈信息直接定位到目标代码位置。
+内网直接连debug，如果有人展占用端口了，启动本地debug
+外网报错
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-08-18
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Oracle连接串解读/">
+    <h2 class="post-title">
+      Oracle连接串解读
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      我们在常常在SpringBoot配置文件中配置连接数据库，如图:
+
+首先：Oracle JDBC连接一共有三种方式，分别是：SERVICE_NAME、SID和TNSName。
+
+我们常常使用的是服务名，只有在旧版本使用SID，原因是一个SID对应一个一个Oracle实例，而服务名是在集群多实例的情况下诞生的，所以一个服务对应多个实例，我们连接串port后的默认就是服务名
+:::success......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-07-02
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/国产数据库信创：多数据库对比/">
+    <h2 class="post-title">
+      国产数据库信创：多数据库对比
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      脚本
+TDSQL：
+腾讯MySQL内核，语法通用
+MySQL：
+12345678910DELIMITER $$DROP FUNCTION IF EXISTS NVL;CREATE FUNCTION NVL (expression VARCHAR(255), replacement VARCHAR(255))    RETURNS VARCHAR(255)    DETERMINISTICBE......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-05-12
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/本地打包时的一些疑问/">
+    <h2 class="post-title">
+      本地打包时的一些疑问
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      注意一点，debug的非本工程的代码，也就是jar包中的代码，有可能不是最新的，所以有时候开发仓库没有最新包也没人打的时候，可以打本地的，切换到对应工程拉最新代码，install即可。
+所以由于可能具有不一致性，所以报错如果没有蓝标，即非本工程代码，那么代码行数即使从IDEA中点进去，和实际的执行行数的内容也是对不上的。
+问题
+
+可是本地启动的工程，引本地的包应该也没错啊？为什么对不上呢？
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-05-09
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/前端映射与MybatisPlus特殊类型（枚举）映射/">
+    <h2 class="post-title">
+      前端映射与MybatisPlus特殊类型（枚举）映射
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      我们处理后端Crud时，如果直接将前端的报文应用到数据库动态SQL拼接时，如果传入的RequestDTO某些属性使用枚举接收，那么往往容易报错。
+我们知道，这样是可以映射的：
+
+那么比如前端传入交易状态这个字段，后端是有可以使用的枚举的，直接使用DealStatusEnum接收，会发生什么？
+首先，能不能接收到？
+
+
+
+如果枚举如上图所示，invType是可以映射到枚举对象上的，原因是枚举在......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-04-11
+  </p>
+  <div class="tags">
     
   </div>
   
@@ -580,6 +837,10 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
   <!-- Pager -->
   <ul class="pager">
     
+    
+    <li class="next">
+      <a href="/cn/archives/2/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -618,6 +879,150 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
 <section>
   <h5><a href="/tags/">特色标签</a></h5>
   <div class="tags">
+    
+    
+    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
+    
+    
+    
+    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
+    
+    
+    
+    <a href="/tags/#HTML CSS" title="HTML CSS" rel="1">HTML CSS</a>
+    
+    
+    
+    <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
+    
+    
+    
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    
+    
+    
+    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
+    
+    
+    
+    <a href="/tags/#Java SpringMVC" title="Java SpringMVC" rel="2">Java SpringMVC</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    
+    
+    
+    <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
+    
+    
+    
+    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#Elasticsearch" title="Elasticsearch" rel="1">Elasticsearch</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RabbitMQ Redis" title="SpringBoot RabbitMQ Redis" rel="1">SpringBoot RabbitMQ Redis</a>
+    
+    
+    
+    <a href="/tags/#Spring quarrz task" title="Spring quarrz task" rel="1">Spring quarrz task</a>
+    
+    
+    
+    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
+    
+    
+    
+    <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
+    
+    
+    
+    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
+    
+    
+    
+    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    
+    
+    
+    <a href="/tags/#IO" title="IO" rel="1">IO</a>
+    
+    
+    
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    
+    
+    
+    <a href="/tags/#Maven" title="Maven" rel="1">Maven</a>
+    
+    
+    
+    <a href="/tags/#Java spring" title="Java spring" rel="1">Java spring</a>
+    
+    
+    
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    
+    
+    
+    <a href="/tags/#笔试" title="笔试" rel="1">笔试</a>
+    
+    
+    
+    <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
+    
+    
+    
+    <a href="/tags/#Mybatis" title="Mybatis" rel="2">Mybatis</a>
+    
+    
+    
+    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
+    
+    
+    
+    <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#MinIO" title="MinIO" rel="1">MinIO</a>
+    
+    
+    
+    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
+    
+    
+    
+    <a href="/tags/#Linux" title="Linux" rel="1">Linux</a>
+    
+    
+    
+    <a href="/tags/#算法" title="算法" rel="2">算法</a>
+    
+    
+    
+    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
+    
+    
+    
+    <a href="/tags/#滑动窗口" title="滑动窗口" rel="1">滑动窗口</a>
+    
+    
+    
+    <a href="/tags/#BFS" title="BFS" rel="1">BFS</a>
+    
+    
+    
+    <a href="/tags/#贪心 动态规划" title="贪心 动态规划" rel="1">贪心 动态规划</a>
+    
     
     
     <a href="/tags/#Spring" title="Spring" rel="1">Spring</a>
@@ -714,23 +1119,23 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
 <div class="widget">
   <ul>
     
-    <a href="../undefined/%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+    <a href="%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
       <li>线程并发问题记录</li>
     </a>
     
-    <a href="../undefined/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
+    <a href="%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
       <li>以太坊开发：Solidity语言入门</li>
     </a>
     
-    <a href="../undefined/%E5%85%B3%E4%BA%8E%E5%AF%B9Java%E8%AF%AD%E6%B3%95%E7%B3%96%E7%9A%84%E7%90%86%E8%A7%A3/">
+    <a href="%E5%85%B3%E4%BA%8E%E5%AF%B9Java%E8%AF%AD%E6%B3%95%E7%B3%96%E7%9A%84%E7%90%86%E8%A7%A3/">
       <li>关于对Java语法糖的理解</li>
     </a>
     
-    <a href="../undefined/No-qualifying-bean-of-type-Bean-available%E6%B7%B1%E5%BA%A6%E6%80%9D%E8%80%83/">
+    <a href="No-qualifying-bean-of-type-Bean-available%E6%B7%B1%E5%BA%A6%E6%80%9D%E8%80%83/">
       <li>No qualifying bean of type &#39;Bean&#39; available深度思考</li>
     </a>
     
-    <a href="../undefined/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/">
+    <a href="Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/">
       <li>Java文件上传基础原理</li>
     </a>
     
@@ -762,7 +1167,7 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/09/">September 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/08/">August 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/05/">May 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/09/">September 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/08/">August 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/05/">May 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -773,6 +1178,70 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
 <h5><a href="/categories/">categories</a></h5>
 <div class="widget">
   <ul>
+    
+    <a href="/categories/#IO">
+      <li>IO</li>
+    </a>
+    
+    <a href="/categories/#多线程">
+      <li>多线程</li>
+    </a>
+    
+    <a href="/categories/#Maven">
+      <li>Maven</li>
+    </a>
+    
+    <a href="/categories/#Java spring">
+      <li>Java spring</li>
+    </a>
+    
+    <a href="/categories/#笔试">
+      <li>笔试</li>
+    </a>
+    
+    <a href="/categories/#JVM">
+      <li>JVM</li>
+    </a>
+    
+    <a href="/categories/#Mybatis">
+      <li>Mybatis</li>
+    </a>
+    
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
+    </a>
+    
+    <a href="/categories/#索引">
+      <li>索引</li>
+    </a>
+    
+    <a href="/categories/#MinIO">
+      <li>MinIO</li>
+    </a>
+    
+    <a href="/categories/#操作系统">
+      <li>操作系统</li>
+    </a>
+    
+    <a href="/categories/#Linux">
+      <li>Linux</li>
+    </a>
+    
+    <a href="/categories/#MVCC">
+      <li>MVCC</li>
+    </a>
+    
+    <a href="/categories/#滑动窗口">
+      <li>滑动窗口</li>
+    </a>
+    
+    <a href="/categories/#BFS">
+      <li>BFS</li>
+    </a>
+    
+    <a href="/categories/#贪心 动态规划">
+      <li>贪心 动态规划</li>
+    </a>
     
     <a href="/categories/#Spring">
       <li>Spring</li>

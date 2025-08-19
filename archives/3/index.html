@@ -479,7 +479,7 @@
   <!-- top end -->
   
 
-  <a href="/undefined/注解-JsonTypeInfo坑/">
+  <a href="/cn/注解-JsonTypeInfo坑/">
     <h2 class="post-title">
       注解@JsonTypeInfo坑
     </h2>
@@ -515,7 +515,7 @@
   <!-- top end -->
   
 
-  <a href="/undefined/uni-app/">
+  <a href="/cn/uni-app/">
     <h2 class="post-title">
       uni-app
     </h2>
@@ -548,7 +548,7 @@
   <!-- top end -->
   
 
-  <a href="/undefined/Rocket/">
+  <a href="/cn/Rocket/">
     <h2 class="post-title">
       Rocket
     </h2>
@@ -580,7 +580,7 @@
   <!-- top end -->
   
 
-  <a href="/undefined/Sentinel/">
+  <a href="/cn/Sentinel/">
     <h2 class="post-title">
       Sentinel
     </h2>
@@ -588,12 +588,13 @@
       
     </h3>
     <div class="post-content-preview">
-      雪崩效应和Sentinel流控雪崩效应是多个服务之间来进行调用时，如果被调用的服务。不可用，那么就会导致调用服务的服务器的线程不断的累积，直到资源崩溃，偶尔产生雪崩，由于是服务之间的级联，所以也叫做级联失效或级联故障 （cascading failure）
+      雪崩效应和Sentinel流控
+雪崩效应是多个服务之间来进行调用时，如果被调用的服务。不可用，那么就会导致调用服务的服务器的线程不断的累积，直到资源崩溃，偶尔产生雪崩，由于是服务之间的级联，所以也叫做级联失效或级联故障 （cascading failure）
 
-服务容错为了避免产生雪崩效应，所以说我们产生了服务容错的思想，服务容错我们常用的有。超时，限流，仓壁模式，断路器模式
-&gt;
+服务容错
+为了避免产生雪崩效应，所以说我们产生了服务容错的思想，服务容错我们常用的有。超时，限流，仓壁模式，断路器模式
 
-超时......
+超时是指如......
     </div>
   </a>
   
@@ -616,7 +617,7 @@
   <!-- top end -->
   
 
-  <a href="/undefined/IDEA之Bean报红问题的分析与解决/">
+  <a href="/cn/IDEA之Bean报红问题的分析与解决/">
     <h2 class="post-title">
       IDEA之Bean报红问题的分析与解决
     </h2>
@@ -651,7 +652,7 @@
   <!-- top end -->
   
 
-  <a href="/undefined/Cloud Alibaba从入门到进阶/">
+  <a href="/cn/Cloud Alibaba从入门到进阶/">
     <h2 class="post-title">
       Cloud Alibaba从入门到进阶
     </h2>
@@ -659,10 +660,13 @@
       
     </h3>
     <div class="post-content-preview">
-      Cloud Alibaba从入门到进阶对于大型复杂系统、高并发系统、需求变更很快的系统都可以使用Cloud进行搭建。
+      Cloud Alibaba从入门到进阶
+对于大型复杂系统、高并发系统、需求变更很快的系统都可以使用Cloud进行搭建。
 Cloud Alibaba属于Cloud的子项目，可以理解成是一直由阿里巴巴维护的新项目，是一个正在孵化的项目，并没有完全进入SpringCloud正式项目中。
 Cloud Alibaba的主要功能如下（来源于官方文档）
-Cloud的版本兼容性（和SpringBoot）这里涉......
+
+Cloud的版本兼容性（和SpringBoot）
+......
     </div>
   </a>
   
@@ -685,7 +689,7 @@ Cloud的版本兼容性（和SpringBoot）这里涉......
   <!-- top end -->
   
 
-  <a href="/undefined/Nacos和Ribbon小记/">
+  <a href="/cn/Nacos和Ribbon小记/">
     <h2 class="post-title">
       Nacos和Ribbon小记
     </h2>
@@ -693,9 +697,10 @@ Cloud的版本兼容性（和SpringBoot）这里涉......
       
     </h3>
     <div class="post-content-preview">
-      引入注册中心NacosCloud提供了一个类DiscoveryClient作为注册发现中心的客户端，用于Client端对注册中心服务的查询，导入包之后直接Autowired即可，注意是Cloud提供的，即使不使用nacos，使用其他的注册中心，这个Api同样可用。
+      引入注册中心Nacos
+Cloud提供了一个类DiscoveryClient作为注册发现中心的客户端，用于Client端对注册中心服务的查询，导入包之后直接Autowired即可，注意是Cloud提供的，即使不使用nacos，使用其他的注册中心，这个Api同样可用。
 
-常用的方法有getInstances(String 服务名即serviceId) 和 getServices(String s......
+常用的方法有getInstances(String 服务名即serviceId) 和 getServices(String ......
     </div>
   </a>
   
@@ -718,7 +723,7 @@ Cloud的版本兼容性（和SpringBoot）这里涉......
   <!-- top end -->
   
 
-  <a href="/undefined/Feign/">
+  <a href="/cn/Feign/">
     <h2 class="post-title">
       Feign
     </h2>
@@ -726,9 +731,11 @@ Cloud的版本兼容性（和SpringBoot）这里涉......
       
     </h3>
     <div class="post-content-preview">
-      Feign使用原本使用RestTemplate直接发送请求存在以下问题。
+      Feign使用
+原本使用RestTemplate直接发送请求存在以下问题。
 
-使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、不需要像原来一样使用name属性(服务名)和参数分开的形式，也不需要占位......
+使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、
+不需要像原来一样使用name属性(服务名)和参数分开的形式，也不需要......
     </div>
   </a>
   
@@ -761,9 +768,11 @@ Cloud的版本兼容性（和SpringBoot）这里涉......
     <div class="post-content-preview">
       严禁用于非法用途，本教程仅供交流使用
 为了维护商家权益，关键信息会进行打码处理，严禁用于非法用途
-PS：文中接口再2022年7月已失效1.寻找景区链接首先打开微信公众号中的我们的订单页面，url为
+PS：文中接口再2022年7月已失效
+1.寻找景区链接
+首先打开微信公众号中的我们的订单页面，url为
 https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
-进入到页面我们自动跳转会发现是商铺的登录界面，需要重新进行登录......
+进入到页面我们自动跳转会发现是商铺的登录界面，需要重新进行......
     </div>
   </a>
   
@@ -864,6 +873,150 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
   <div class="tags">
     
     
+    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
+    
+    
+    
+    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
+    
+    
+    
+    <a href="/tags/#HTML CSS" title="HTML CSS" rel="1">HTML CSS</a>
+    
+    
+    
+    <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
+    
+    
+    
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    
+    
+    
+    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
+    
+    
+    
+    <a href="/tags/#Java SpringMVC" title="Java SpringMVC" rel="2">Java SpringMVC</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    
+    
+    
+    <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
+    
+    
+    
+    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#Elasticsearch" title="Elasticsearch" rel="1">Elasticsearch</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RabbitMQ Redis" title="SpringBoot RabbitMQ Redis" rel="1">SpringBoot RabbitMQ Redis</a>
+    
+    
+    
+    <a href="/tags/#Spring quarrz task" title="Spring quarrz task" rel="1">Spring quarrz task</a>
+    
+    
+    
+    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
+    
+    
+    
+    <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
+    
+    
+    
+    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
+    
+    
+    
+    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    
+    
+    
+    <a href="/tags/#IO" title="IO" rel="1">IO</a>
+    
+    
+    
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    
+    
+    
+    <a href="/tags/#Maven" title="Maven" rel="1">Maven</a>
+    
+    
+    
+    <a href="/tags/#Java spring" title="Java spring" rel="1">Java spring</a>
+    
+    
+    
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    
+    
+    
+    <a href="/tags/#笔试" title="笔试" rel="1">笔试</a>
+    
+    
+    
+    <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
+    
+    
+    
+    <a href="/tags/#Mybatis" title="Mybatis" rel="2">Mybatis</a>
+    
+    
+    
+    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
+    
+    
+    
+    <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#MinIO" title="MinIO" rel="1">MinIO</a>
+    
+    
+    
+    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
+    
+    
+    
+    <a href="/tags/#Linux" title="Linux" rel="1">Linux</a>
+    
+    
+    
+    <a href="/tags/#算法" title="算法" rel="2">算法</a>
+    
+    
+    
+    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
+    
+    
+    
+    <a href="/tags/#滑动窗口" title="滑动窗口" rel="1">滑动窗口</a>
+    
+    
+    
+    <a href="/tags/#BFS" title="BFS" rel="1">BFS</a>
+    
+    
+    
+    <a href="/tags/#贪心 动态规划" title="贪心 动态规划" rel="1">贪心 动态规划</a>
+    
+    
+    
     <a href="/tags/#Spring" title="Spring" rel="1">Spring</a>
     
     
@@ -958,23 +1111,23 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
 <div class="widget">
   <ul>
     
-    <a href="../../undefined/%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+    <a href="../../cn/%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
       <li>线程并发问题记录</li>
     </a>
     
-    <a href="../../undefined/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
+    <a href="../../cn/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
       <li>以太坊开发：Solidity语言入门</li>
     </a>
     
-    <a href="../../undefined/%E5%85%B3%E4%BA%8E%E5%AF%B9Java%E8%AF%AD%E6%B3%95%E7%B3%96%E7%9A%84%E7%90%86%E8%A7%A3/">
+    <a href="../../cn/%E5%85%B3%E4%BA%8E%E5%AF%B9Java%E8%AF%AD%E6%B3%95%E7%B3%96%E7%9A%84%E7%90%86%E8%A7%A3/">
       <li>关于对Java语法糖的理解</li>
     </a>
     
-    <a href="../../undefined/No-qualifying-bean-of-type-Bean-available%E6%B7%B1%E5%BA%A6%E6%80%9D%E8%80%83/">
+    <a href="../../cn/No-qualifying-bean-of-type-Bean-available%E6%B7%B1%E5%BA%A6%E6%80%9D%E8%80%83/">
       <li>No qualifying bean of type &#39;Bean&#39; available深度思考</li>
     </a>
     
-    <a href="../../undefined/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/">
+    <a href="../../cn/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/">
       <li>Java文件上传基础原理</li>
     </a>
     
@@ -1006,7 +1159,7 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1017,6 +1170,70 @@ https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
 <h5><a href="/categories/">categories</a></h5>
 <div class="widget">
   <ul>
+    
+    <a href="/categories/#IO">
+      <li>IO</li>
+    </a>
+    
+    <a href="/categories/#多线程">
+      <li>多线程</li>
+    </a>
+    
+    <a href="/categories/#Maven">
+      <li>Maven</li>
+    </a>
+    
+    <a href="/categories/#Java spring">
+      <li>Java spring</li>
+    </a>
+    
+    <a href="/categories/#笔试">
+      <li>笔试</li>
+    </a>
+    
+    <a href="/categories/#JVM">
+      <li>JVM</li>
+    </a>
+    
+    <a href="/categories/#Mybatis">
+      <li>Mybatis</li>
+    </a>
+    
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
+    </a>
+    
+    <a href="/categories/#索引">
+      <li>索引</li>
+    </a>
+    
+    <a href="/categories/#MinIO">
+      <li>MinIO</li>
+    </a>
+    
+    <a href="/categories/#操作系统">
+      <li>操作系统</li>
+    </a>
+    
+    <a href="/categories/#Linux">
+      <li>Linux</li>
+    </a>
+    
+    <a href="/categories/#MVCC">
+      <li>MVCC</li>
+    </a>
+    
+    <a href="/categories/#滑动窗口">
+      <li>滑动窗口</li>
+    </a>
+    
+    <a href="/categories/#BFS">
+      <li>BFS</li>
+    </a>
+    
+    <a href="/categories/#贪心 动态规划">
+      <li>贪心 动态规划</li>
+    </a>
     
     <a href="/categories/#Spring">
       <li>Spring</li>
