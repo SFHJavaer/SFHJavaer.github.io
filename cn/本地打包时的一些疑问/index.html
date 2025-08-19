@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       本地打包时的一些疑问 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -407,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">663</span> In Total
+              Words <span class="post-count">662</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,10 +475,12 @@
         <p><strong>注意一点，debug的非本工程的代码，也就是jar包中的代码，有可能不是最新的，所以有时候开发仓库没有最新包也没人打的时候，可以打本地的，切换到对应工程拉最新代码，install即可。</strong></p>
 <p><strong>所以由于可能具有不一致性，所以报错如果没有蓝标，即非本工程代码，那么代码行数即使从IDEA中点进去，和实际的执行行数的内容也是对不上的。</strong></p>
 <h3 id="t303e">问题</h3>
+
 <blockquote>
 <p>可是本地启动的工程，引本地的包应该也没错啊？为什么对不上呢？</p>
 </blockquote>
 <h3 id="nxhqD">答案：</h3>
+
 <p>我知道了，是因为jar包中的类都是字节码class文件，而idea加载出来的都是经过将class反编译显示出来的代码，所以行数等等，逻辑都会发生变化，所以不再准确,而报错给出的行数，是源代码执行的行数的日志</p>
 <p>所以你debug jar包代码的时候，和行数是没有关系的，只是拦截到你断点的位置，如果你在此时查看IDEA运行的行数，你会发现实际源代码运行行数和class文件运行（你debug的行数）是不一致的</p>
 <p>今天又遇到了这个问题，tail -f查看线上的一体化包的日志时，不确定报错行数是否准确的了，因为又联想到入口和报错处是不是引用jar的关系，陷入了错误逻辑，抓住一个点：<strong>堆栈</strong><font style="color:#DF2A3F;">打印的代码行一定源代码的代码行</font></p>
@@ -485,14 +490,12 @@
 <p><strong>第66行：下图仅方法调用，所以直接确定是Bean为null</strong></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1726054916597-52aa8d1c-25e5-4fe4-8aea-f870a370ef1f.png" alt=""></p>
 <p>使用arthas时，打印的错误信息也是Java堆栈打印的，所以一定是源代码行，和编译器，编译后优化都无关。</p>
-<p>:::success<br>
-错误点：</p>
+<p>:::success<br>错误点：</p>
 <p>1.刚开始不更新代码，从错误的代码行看了半天</p>
 <p>2.更新之后不确定是否是Bean没注入，认为Bean没注入就一定启动不起来</p>
 <p>:::</p>
-<p>:::success<br>
-<strong>为什么后来刷了一下MVN，重启一下就好了？</strong></p>
-<p>原因是和Maven没关系，在启动的时候拉的代码，变量的修改不能热编译，所以更新下代码就能复现bug了</p>
+<p>:::success<br><strong>为什么后来刷了一下MVN，重启一下就好了？</strong></p>
+<p> 原因是和Maven没关系，在启动的时候拉的代码，变量的修改不能热编译，所以更新下代码就能复现bug了</p>
 <p>:::</p>
 <p>最后搜索SpringUtils可以获取Bean，Autowired注入却为null的情况，得出结论：</p>
 <p>这个调用是某地方通过new出来的实例对象的调用，所以和Spring-Bean脱离了</p>
@@ -952,6 +955,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

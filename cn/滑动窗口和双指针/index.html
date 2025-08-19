@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       滑动窗口和双指针 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,8 +474,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h6 id="滑动窗口和双指针很像但不一样，双指针（非对撞且匀速）一般是以单指针不动作为基准，然后另一个指针一般是再从左指针的位置继续向后遍历（当然双指针的应用范围比较广，相比滑动窗口一般只用在求最大或最小长度上效率最高），而滑动窗口一般是一个窗口在不停的扩展或者伸缩，不会突然的压缩到长度为一或者伸长，就像一个动态变化的窗口，而双指针是可以急剧移动指针位置的。">滑动窗口和双指针很像但不一样，双指针（非对撞且匀速）一般是以单指针不动作为基准，然后另一个指针一般是再从左指针的位置继续向后遍历（当然双指针的应用范围比较广，相比滑动窗口一般只用在求最大或最小长度上效率最高），而滑动窗口一般是一个窗口在不停的扩展或者伸缩，不会突然的压缩到长度为一或者伸长，就像一个动态变化的窗口，而双指针是可以急剧移动指针位置的。</h6>
-
+        <h6 id="滑动窗口和双指针很像但不一样，双指针（非对撞且匀速）一般是以单指针不动作为基准，然后另一个指针一般是再从左指针的位置继续向后遍历（当然双指针的应用范围比较广，相比滑动窗口一般只用在求最大或最小长度上效率最高），而滑动窗口一般是一个窗口在不停的扩展或者伸缩，不会突然的压缩到长度为一或者伸长，就像一个动态变化的窗口，而双指针是可以急剧移动指针位置的。"><a href="#滑动窗口和双指针很像但不一样，双指针（非对撞且匀速）一般是以单指针不动作为基准，然后另一个指针一般是再从左指针的位置继续向后遍历（当然双指针的应用范围比较广，相比滑动窗口一般只用在求最大或最小长度上效率最高），而滑动窗口一般是一个窗口在不停的扩展或者伸缩，不会突然的压缩到长度为一或者伸长，就像一个动态变化的窗口，而双指针是可以急剧移动指针位置的。" class="headerlink" title="滑动窗口和双指针很像但不一样，双指针（非对撞且匀速）一般是以单指针不动作为基准，然后另一个指针一般是再从左指针的位置继续向后遍历（当然双指针的应用范围比较广，相比滑动窗口一般只用在求最大或最小长度上效率最高），而滑动窗口一般是一个窗口在不停的扩展或者伸缩，不会突然的压缩到长度为一或者伸长，就像一个动态变化的窗口，而双指针是可以急剧移动指针位置的。"></a>滑动窗口和双指针很像但不一样，双指针（非对撞且匀速）一般是以单指针不动作为基准，然后另一个指针一般是再从左指针的位置继续向后遍历（当然双指针的应用范围比较广，相比滑动窗口一般只用在求最大或最小长度上效率最高），而滑动窗口一般是一个窗口在不停的扩展或者伸缩，不会突然的压缩到长度为一或者伸长，就像一个动态变化的窗口，而双指针是可以急剧移动指针位置的。</h6>
 
         <hr>
         <!-- Pager -->
@@ -930,6 +932,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

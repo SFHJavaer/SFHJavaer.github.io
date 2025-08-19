@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       区块快速入门笔记 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -487,23 +490,37 @@
 <p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1703053428868-638465b1-480e-4962-b1c3-318d107916d1.png" alt=""></p>
 <p>侧链：可以与其他的主链进行交互，分担主链的交易压力以及完成扩展</p>
 <blockquote>
-<p><font style="color:rgb(25, 27, 31);">RSK（Rootstock）：RSK 是 BTC 的侧链，旨在实现智能合约功能，与 BTC 网络互操作。</font></p>
-<p><font style="color:rgb(25, 27, 31);">Plasma： Plasma 是 ETH 的侧链框架，用于扩展 ETH 的吞吐量和实现更多功能。</font></p>
-<p><font style="color:rgb(25, 27, 31);">Liquid： Liquid 是 BTC 的侧链，为加密货币交易所和金融机构提供快速和可信赖的交易解决方案。</font></p>
+<font style="color:rgb(25, 27, 31);">RSK（Rootstock）：RSK 是 BTC 的侧链，旨在实现智能合约功能，与 BTC 网络互操作。</font>
+
+<font style="color:rgb(25, 27, 31);">Plasma： Plasma 是 ETH 的侧链框架，用于扩展 ETH 的吞吐量和实现更多功能。</font>
+
+<font style="color:rgb(25, 27, 31);">Liquid： Liquid 是 BTC 的侧链，为加密货币交易所和金融机构提供快速和可信赖的交易解决方案。</font>
+
 </blockquote>
-<p><font style="color:rgb(77, 77, 77);">如果说侧链是通过“外部嫁接”到主链，那分片就是将主链进行“内部分割”，将内部整个处理单元切分成很多小单元单独处理加快速度，显然后者的实现难度要比前者复杂的多</font></p>
-<p><font style="color:rgb(77, 77, 77);"></font></p>
-<p><font style="color:rgb(77, 77, 77);"></font></p>
+<font style="color:rgb(77, 77, 77);">如果说侧链是通过“外部嫁接”到主链，那分片就是将主链进行“内部分割”，将内部整个处理单元切分成很多小单元单独处理加快速度，显然后者的实现难度要比前者复杂的多</font>
+
+<font style="color:rgb(77, 77, 77);"></font>
+
+<font style="color:rgb(77, 77, 77);"></font>
+
 <h3 id="B9P39"><font style="color:rgb(77, 77, 77);">LUNA崩盘关键分析</font></h3>
-<p><font style="color:rgb(77, 77, 77);">两个币完全没有价值支撑，只是提供了一种算法稳定的方式。</font></p>
+
+<font style="color:rgb(77, 77, 77);">两个币完全没有价值支撑，只是提供了一种算法稳定的方式。</font>
+
 <blockquote>
-<p><font style="color:rgb(0, 0, 0);">这个游戏设计了几个规则：1．一个 UST=价值1美元的Luna。意思是，如果Luna价格为1美元可以换一个UST，如果Luna价格涨到了100美元，则可以换100个UST。2． UST和Luna是“双向销毁铸造”的关系。意思是，当你在用Luna换UST时，市场上就少了一美元的Luna多了一个UST，当用UST换Luna时，市场上就少了一个UST。供应量增加、价格下降，供应量减少、价格上涨。3.UST都是由Luna铸造，Luna规划的发币上限是10亿枚。</font></p>
+<font style="color:rgb(0, 0, 0);">这个游戏设计了几个规则：1．一个 UST=价值1美元的Luna。意思是，如果Luna价格为1美元可以换一个UST，如果Luna价格涨到了100美元，则可以换100个UST。2． UST和Luna是“双向销毁铸造”的关系。意思是，当你在用Luna换UST时，市场上就少了一美元的Luna多了一个UST，当用UST换Luna时，市场上就少了一个UST。供应量增加、价格下降，供应量减少、价格上涨。3.UST都是由Luna铸造，Luna规划的发币上限是10亿枚。</font>
+
 </blockquote>
-<p><font style="color:rgb(0, 0, 0);">上面的规则不重要，重要的是很容易理解两个币种之间存在着套利空间，保持UST在1U就可以了，1美元的Luna不管是多少个，怎么涨怎么跌，你都可以拿到项目方这里换成一个UST，目标就是保证UST的稳定</font></p>
-<p><font style="color:rgb(0, 0, 0);">不同于AMM方式的提供流行性的做市机制，项目方采用了高APR的UST质押吸引用户，所以想要有UST必须买LUNA，导致LUNA也被买起来了,UST也一直稳定</font></p>
-<p><font style="color:rgb(0, 0, 0);">但是这种方式导致最后大多的UST都进行了高APR的UST质押挖矿，当人们不想挖了换回USDT时，在外部市场上大量抛售UST导致UST下跌脱钩（为啥要抛售不换成Luna，因为你是稳定币我换成USDT不能拦我吧，谁规定只能换成Luna，是可以但不是必须）</font></p>
-<p><font style="color:rgb(0, 0, 0);">UST不可能立刻回归1U，同时人们担心UST大幅脱钩，很多套利者也不敢拿Luna换成UST来提升UST的价格，因为UST已经脱勾了，赎回从项目方手里换出来的Luna拿到市场上太多也不值钱了，大家又开始卖Luna，所以导致了Luna的双因素暴跌，当Luna价格持续下跌，市值接近或者小于UST时，大家就开始恐慌并大量卖掉UST,UST原本就脱勾了，现在越来越崩。</font></p>
-<p><font style="color:rgb(0, 0, 0);">这时候，死亡螺旋就会开始，造成的后果就是Luna和UST全部跌进深渊。</font></p>
+<font style="color:rgb(0, 0, 0);">上面的规则不重要，重要的是很容易理解两个币种之间存在着套利空间，保持UST在1U就可以了，1美元的Luna不管是多少个，怎么涨怎么跌，你都可以拿到项目方这里换成一个UST，目标就是保证UST的稳定</font>
+
+<font style="color:rgb(0, 0, 0);">不同于AMM方式的提供流行性的做市机制，项目方采用了高APR的UST质押吸引用户，所以想要有UST必须买LUNA，导致LUNA也被买起来了,UST也一直稳定</font>
+
+<font style="color:rgb(0, 0, 0);">但是这种方式导致最后大多的UST都进行了高APR的UST质押挖矿，当人们不想挖了换回USDT时，在外部市场上大量抛售UST导致UST下跌脱钩（为啥要抛售不换成Luna，因为你是稳定币我换成USDT不能拦我吧，谁规定只能换成Luna，是可以但不是必须）</font>
+
+<font style="color:rgb(0, 0, 0);">UST不可能立刻回归1U，同时人们担心UST大幅脱钩，很多套利者也不敢拿Luna换成UST来提升UST的价格，因为UST已经脱勾了，赎回从项目方手里换出来的Luna拿到市场上太多也不值钱了，大家又开始卖Luna，所以导致了Luna的双因素暴跌，当Luna价格持续下跌，市值接近或者小于UST时，大家就开始恐慌并大量卖掉UST,UST原本就脱勾了，现在越来越崩。</font>
+
+<font style="color:rgb(0, 0, 0);">这时候，死亡螺旋就会开始，造成的后果就是Luna和UST全部跌进深渊。</font>
+
 
 
         <hr>
@@ -960,6 +977,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

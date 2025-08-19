@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       回溯问题 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">641</span> In Total
+              Words <span class="post-count">670</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,28 +474,30 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="回溯问题">回溯问题</h3>
-<p>回溯问题可以理解为树搜索问题，之所以回溯可以剪枝就是基于树的概念，不断的深度遍历到叶子端，然后返回上一节点进行递归（回溯）</p>
-<p><font color = "red">对于回溯的时间复杂度的分析，可能从树的角度不好分析，那么就先找到应该有多少种结果的情况，每一种情况的消耗复杂度（这里均指O的量级复杂度）是多少，最后相乘</font></p>
-<p><font color = 'blue'>空间复杂度如果没有额外的空间开辟，那么就是树的深度</font>&gt;</p>
-<h2 id="比如：子集问题">比如：子集问题</h2>
-<h5 id="其时间复杂度是O-n-2的n次方-，为什么？数据规模是n，即求n个数的子集">其时间复杂度是O(n*2的n次方)，为什么？数据规模是n，即求n个数的子集</h5>
-<p>理解为树，不要从回溯的方式上去想，递归的深度是n，如n=3时，递归深度也为3（从第0层开始）</p>
-<p><img src="https://img-blog.csdnimg.cn/20190724155127277.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dhb3J1dGFvMDkyMw==,size_16,color_FFFFFF,t_70" alt="回溯"></p>
-<p>每一层的操作数据规模（数据规模方面不好想，明显底层的被操作的次数是最多的）</p>
-<h6 id="font-color-blue-每一个元素的状态不是取就是不取，所以产生一共-公式-种状态-font"><font color = 'blue'>每一个元素的状态不是取就是不取，所以产生一共<img src="https://www.zhihu.com/equation?tex=2%5En" alt="[公式]"> 种状态</font></h6>
-<h6 id="而且每一种状态都需要On的时间复杂度去构造（因为是n个元素的排列，实际中可能是小于这个复杂度或者是大于，但是在数量级上还是O（n）的）">而且每一种状态都需要On的时间复杂度去构造（因为是n个元素的排列，实际中可能是小于这个复杂度或者是大于，但是在数量级上还是O（n）的）</h6>
-<h2 id="排列问题分析：">排列问题分析：</h2>
-<p><strong>时间复杂度：</strong>： <img src="https://www.zhihu.com/equation?tex=O%28n%5Ctimes+n%21%29" alt="[公式]"> 。因为一共<img src="https://www.zhihu.com/equation?tex=n%21" alt="[公式]"> 种排列，每种排列都需要 <img src="https://www.zhihu.com/equation?tex=O%28n%29" alt="[公式]"> 的构造时间，最终时间复杂度为 <img src="https://www.zhihu.com/equation?tex=O%28n%5Ctimes+n%21%29" alt="[公式]"> 。</p>
+        <h3 id="回溯问题"><a href="#回溯问题" class="headerlink" title="回溯问题"></a>回溯问题</h3><p>回溯问题可以理解为树搜索问题，之所以回溯可以剪枝就是基于树的概念，不断的深度遍历到叶子端，然后返回上一节点进行递归（回溯）</p>
+<font color = "red">对于回溯的时间复杂度的分析，可能从树的角度不好分析，那么就先找到应该有多少种结果的情况，每一种情况的消耗复杂度（这里均指O的量级复杂度）是多少，最后相乘</font>
+
+<font color = 'blue'>空间复杂度如果没有额外的空间开辟，那么就是树的深度</font>>
+
+## 比如：子集问题
+
+##### 其时间复杂度是O(n*2的n次方)，为什么？数据规模是n，即求n个数的子集
+
+理解为树，不要从回溯的方式上去想，递归的深度是n，如n=3时，递归深度也为3（从第0层开始）
+
+![回溯](https://img-blog.csdnimg.cn/20190724155127277.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dhb3J1dGFvMDkyMw==,size_16,color_FFFFFF,t_70)
+
+每一层的操作数据规模（数据规模方面不好想，明显底层的被操作的次数是最多的）
+
+###### <font color = 'blue'>每一个元素的状态不是取就是不取，所以产生一共![[公式]](https://www.zhihu.com/equation?tex=2%5En) 种状态</font>
+
+<h6 id="而且每一种状态都需要On的时间复杂度去构造（因为是n个元素的排列，实际中可能是小于这个复杂度或者是大于，但是在数量级上还是O（n）的）"><a href="#而且每一种状态都需要On的时间复杂度去构造（因为是n个元素的排列，实际中可能是小于这个复杂度或者是大于，但是在数量级上还是O（n）的）" class="headerlink" title="而且每一种状态都需要On的时间复杂度去构造（因为是n个元素的排列，实际中可能是小于这个复杂度或者是大于，但是在数量级上还是O（n）的）"></a>而且每一种状态都需要On的时间复杂度去构造（因为是n个元素的排列，实际中可能是小于这个复杂度或者是大于，但是在数量级上还是O（n）的）</h6><h2 id="排列问题分析："><a href="#排列问题分析：" class="headerlink" title="排列问题分析："></a>排列问题分析：</h2><p><strong>时间复杂度：</strong>： <img src="https://www.zhihu.com/equation?tex=O%28n%5Ctimes+n%21%29" alt="[公式]"> 。因为一共<img src="https://www.zhihu.com/equation?tex=n%21" alt="[公式]"> 种排列，每种排列都需要 <img src="https://www.zhihu.com/equation?tex=O%28n%29" alt="[公式]"> 的构造时间，最终时间复杂度为 <img src="https://www.zhihu.com/equation?tex=O%28n%5Ctimes+n%21%29" alt="[公式]"> 。</p>
 <p><strong>空间复杂度</strong>： <img src="https://www.zhihu.com/equation?tex=O%28n%29" alt="[公式]"> ，递归深度为n，所以系统栈所用空间为 <img src="https://www.zhihu.com/equation?tex=O%28n%29" alt="[公式]"> 。</p>
-<h2 id="组合问题分析：">组合问题分析：</h2>
-<p><strong>时间复杂度：</strong> <img src="https://www.zhihu.com/equation?tex=O%28C_n%5Ek+%5Ctimes+k%29" alt="[公式]"> ，总共有 <img src="https://www.zhihu.com/equation?tex=C_n%5Ek" alt="[公式]"> 种组合，每种组合需要 <img src="https://www.zhihu.com/equation?tex=O%28k%29" alt="[公式]"> 的时间复杂度。另一方面，组合问题其实就是一种子集的问题，所以组合问题最坏的情况，也不会超过子集问题的时间复杂度 <img src="https://www.zhihu.com/equation?tex=O%28n%5Ctimes+2%5En%29" alt="[公式]"> 。</p>
+<h2 id="组合问题分析："><a href="#组合问题分析：" class="headerlink" title="组合问题分析："></a>组合问题分析：</h2><p><strong>时间复杂度：</strong> <img src="https://www.zhihu.com/equation?tex=O%28C_n%5Ek+%5Ctimes+k%29" alt="[公式]"> ，总共有 <img src="https://www.zhihu.com/equation?tex=C_n%5Ek" alt="[公式]"> 种组合，每种组合需要 <img src="https://www.zhihu.com/equation?tex=O%28k%29" alt="[公式]"> 的时间复杂度。另一方面，组合问题其实就是一种子集的问题，所以组合问题最坏的情况，也不会超过子集问题的时间复杂度 <img src="https://www.zhihu.com/equation?tex=O%28n%5Ctimes+2%5En%29" alt="[公式]"> 。</p>
 <p><strong>空间复杂度</strong>： <img src="https://www.zhihu.com/equation?tex=O%28n%29" alt="[公式]"> ，递归深度为n，所以系统栈所用空间为 <img src="https://www.zhihu.com/equation?tex=O%28n%29" alt="[公式]"> 。</p>
-<h2 id="N皇后问题分析">N皇后问题分析</h2>
-<p><strong>时间复杂度：</strong> <img src="https://www.zhihu.com/equation?tex=O%28N%21%29" alt="[公式]"> ，其中 N 是皇后数量，由于每个皇后必须位于不同列，因此已经放置的皇后所在的列不能放置别的皇后。第一个皇后有 N 列可以选择，第二个皇后最多有 N-1列可以选择…。</p>
+<h2 id="N皇后问题分析"><a href="#N皇后问题分析" class="headerlink" title="N皇后问题分析"></a>N皇后问题分析</h2><p><strong>时间复杂度：</strong> <img src="https://www.zhihu.com/equation?tex=O%28N%21%29" alt="[公式]"> ，其中 N 是皇后数量，由于每个皇后必须位于不同列，因此已经放置的皇后所在的列不能放置别的皇后。第一个皇后有 N 列可以选择，第二个皇后最多有 N-1列可以选择…。</p>
 <p><strong>空间复杂度</strong>： <img src="https://www.zhihu.com/equation?tex=O%28N%29" alt="[公式]"> ，递归深度为n，所以系统栈所用空间为 <img src="https://www.zhihu.com/equation?tex=O%28N%29" alt="[公式]"> 。</p>
-<h2 id="解数独问题分析">解数独问题分析</h2>
-<p><strong>时间复杂度：</strong> <img src="https://www.zhihu.com/equation?tex=O%289%5Em%29" alt="[公式]"> ，m是’.'的数目。</p>
+<h2 id="解数独问题分析"><a href="#解数独问题分析" class="headerlink" title="解数独问题分析"></a>解数独问题分析</h2><p><strong>时间复杂度：</strong> <img src="https://www.zhihu.com/equation?tex=O%289%5Em%29" alt="[公式]"> ，m是’.’的数目。</p>
 <p><strong>空间复杂度：</strong> <img src="https://www.zhihu.com/equation?tex=O%28n%5E2%29" alt="[公式]"> ，n是数独盘子的大小，递归的深度是 <img src="https://www.zhihu.com/equation?tex=n%5E2" alt="[公式]"> 。</p>
 
 
@@ -941,6 +946,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

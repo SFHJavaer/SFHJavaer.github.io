@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Docker与微服务小记 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">865</span> In Total
+              Words <span class="post-count">864</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,29 +474,21 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="Docker与微服务">Docker与微服务</h4>
-<p>在软件开发的最初是单体架构，那么服务都耦合在一起，进行服务升级、部署都要整体的进行瀑布式的开发模型。</p>
+        <h4 id="Docker与微服务"><a href="#Docker与微服务" class="headerlink" title="Docker与微服务"></a>Docker与微服务</h4><p>在软件开发的最初是单体架构，那么服务都耦合在一起，进行服务升级、部署都要整体的进行瀑布式的开发模型。</p>
 <p>在发展一段时间后，面向服务架构产生了，也就是我们常用的将服务进行分散，分散到不同的机器上，单独维护某一个服务。所以说面向服务架构也就是分布式，不管是水平拆分还是垂直拆分都算是分布式。</p>
 <blockquote>
 <p>水平拆分的话就像是我们用Dubbo调服务一样，把service层放进一个服务器，请求层使用服务时使用Dubbo等RPC进行@Reference进行消费。</p>
-</blockquote>
-<blockquote>
 <p>垂直拆分就是按模块来进行拆分，比如根据业务逻辑，将“电商项目”拆分成“订单项目”、“用户项目”和“秒杀项目”。显然这三个拆分后的项目，仍然可以作为独立的项目使用。</p>
 </blockquote>
 <p><strong>什么是微服务呢？</strong></p>
 <p>从名字就能知道，“微服务”就是非常<strong>微小</strong>的<strong>服务</strong>。</p>
 <p>可以理解是在垂直拆分的基础上继续拆分，比如将订单模块继续拆分，拆成购物项目，结算项目和售后项目。</p>
 <p><img src="https://pic4.zhimg.com/80/v2-5ac8c1aaca336a8e6182e96ccb50b553_720w.jpg" alt="微服务"></p>
-<h6 id="微服务应该是不能再拆的“微小”服务，类似于“原子性”，类似于，当然服务之间的调度还是RPC通信。">微服务应该是不能再拆的“微小”服务，类似于“原子性”，类似于，当然服务之间的调度还是RPC通信。</h6>
-<h5 id="那么微服务和docker的关系呢">那么微服务和docker的关系呢</h5>
-<p>正是因为docker的出现，为每一个应用程序都提供了一个独立的运行环境，而且是轻量级的，占用空间小（KB级）启动时间短（秒级），所以可以在一台机器上就实现了微服务，每一个服务都作为一个容器独立运行，不再是局限于分布式机器的操作系统隔离。</p>
+<h6 id="微服务应该是不能再拆的“微小”服务，类似于“原子性”，类似于，当然服务之间的调度还是RPC通信。"><a href="#微服务应该是不能再拆的“微小”服务，类似于“原子性”，类似于，当然服务之间的调度还是RPC通信。" class="headerlink" title="微服务应该是不能再拆的“微小”服务，类似于“原子性”，类似于，当然服务之间的调度还是RPC通信。"></a>微服务应该是不能再拆的“微小”服务，类似于“原子性”，类似于，当然服务之间的调度还是RPC通信。</h6><h5 id="那么微服务和docker的关系呢"><a href="#那么微服务和docker的关系呢" class="headerlink" title="那么微服务和docker的关系呢"></a>那么微服务和docker的关系呢</h5><p>正是因为docker的出现，为每一个应用程序都提供了一个独立的运行环境，而且是轻量级的，占用空间小（KB级）启动时间短（秒级），所以可以在一台机器上就实现了微服务，每一个服务都作为一个容器独立运行，不再是局限于分布式机器的操作系统隔离。</p>
 <p>docker的流程也就是他的口号，<strong>Build, Ship and Run</strong>，搭建发送运行，也就是自己先编写程序，之后搭建为镜像，发送到docker仓库上，最后包装为容器进行运行，而且docker是支持将build的镜像分布式使用的，也就是镜像是随意交换的，只需要有了image就可以运行出对应的容器，所以docker有官方仓库专去管理着这些image。</p>
-<h5 id="font-color-blue-科普一下k8s-font"><font color = "blue">科普一下k8s</font></h5>
-<blockquote>
-<h5 id="K8S，就是基于容器的集群管理平台，它的全称，是kubernetes。-也就是用来管理docker的">**K8S，就是基于容器的集群管理平台，它的全称，是kubernetes。,也就是用来管理docker的</h5>
-</blockquote>
-<h5 id="Nacos也是微服务的管理工具">Nacos也是微服务的管理工具</h5>
-<p>是对服务进行管理的，在spring导入依赖时需要导入SpringCloud和SpringCloud Alibaba，为什么导入两个依赖，原因是前面是构建的，后面的才是具体实施的</p>
+<h5 id="科普一下k8s"><a href="#科普一下k8s" class="headerlink" title="科普一下k8s"></a><font color = "blue">科普一下k8s</font></h5><blockquote>
+<h5 id="K8S，就是基于容器的集群管理平台，它的全称，是kubernetes。-也就是用来管理docker的"><a href="#K8S，就是基于容器的集群管理平台，它的全称，是kubernetes。-也就是用来管理docker的" class="headerlink" title="**K8S，就是基于容器的集群管理平台，它的全称，是kubernetes。,也就是用来管理docker的"></a>**K8S，就是基于容器的集群管理平台，它的全称，是kubernetes。,也就是用来管理docker的</h5></blockquote>
+<h5 id="Nacos也是微服务的管理工具"><a href="#Nacos也是微服务的管理工具" class="headerlink" title="Nacos也是微服务的管理工具"></a>Nacos也是微服务的管理工具</h5><p>是对服务进行管理的，在spring导入依赖时需要导入SpringCloud和SpringCloud Alibaba，为什么导入两个依赖，原因是前面是构建的，后面的才是具体实施的</p>
 <blockquote>
 <p>阿里为 SpringCloud 贡献了一个子项目，叫做 <strong>SpringCloud Alibaba</strong>，其中包括了微服务开发中的几个基础组件，Nacos 就是此项目中的一项技术。</p>
 </blockquote>
@@ -947,6 +942,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

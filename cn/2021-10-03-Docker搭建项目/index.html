@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Docker部署项目到服务器上 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">324</span> In Total
+              Words <span class="post-count">322</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,27 +474,15 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Docker部署项目到服务器上">Docker部署项目到服务器上</h2>
-<blockquote>
+        <h2 id="Docker部署项目到服务器上"><a href="#Docker部署项目到服务器上" class="headerlink" title="Docker部署项目到服务器上"></a>Docker部署项目到服务器上</h2><blockquote>
 <p>这里以青龙面板为例，部署青龙面板到服务器的5700端口</p>
 <p>首先自己需要有服务器，公网或内网均可，登录xshell或finalshell</p>
 <p>我这里以Finalshell为例，登录之后为下图</p>
 </blockquote>
 <p><img src="https://i.loli.net/2021/11/26/yCIdAkcg593lvRG.png" alt="image-20211118110214336.png"></p>
 <blockquote>
-<p>首先更新下yum源</p>
-</blockquote>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum <span class="keyword">check</span>-<span class="keyword">update</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>安装docker</p>
-</blockquote>
-<figure class="highlight plain"><figcaption><span>-fsSL</span><a target="_blank" rel="noopener" href="https://get.docker.com/">| sh</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker	&#x2F;&#x2F;root启动docker</span><br><span class="line">sudo systemctl status docker&#x2F;&#x2F;查看docker服务状态</span><br><span class="line">sudo systemctl enable docker&#x2F;&#x2F;设置docker开机自启</span><br><span class="line">  或者使用一键安装代码：</span><br><span class="line">sudo curl -sSL https:&#x2F;&#x2F;get.daocloud.io&#x2F;docker | sh</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用镜像创建青龙面板容器</p>
-</blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit \					</span><br><span class="line"><span class="comment">#-dit，参数意义分别为后台运行容器并返回容器id、有交互模式运行容器、为容器分配一个伪输入终端。</span></span><br><span class="line">				  --name QL \</span><br><span class="line">				  --hostname QL \</span><br><span class="line">				  --restart always \</span><br><span class="line">				  -p <span class="number">5700</span>:<span class="number">5700</span> \</span><br><span class="line">				  <span class="comment">#端口映射关系为  容器端口：宿主机端口</span></span><br><span class="line">				  <span class="comment">#下面使用-v来确定容器与宿主机的文件挂载关系</span></span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>config:<span class="regexp">/ql/</span>config \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>log:<span class="regexp">/ql/</span>log \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>db:<span class="regexp">/ql/</span>db \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>scripts:<span class="regexp">/ql/</span>scripts \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>jbot:<span class="regexp">/ql/</span>jbot \</span><br><span class="line">				  whyour/qinglong:latest</span><br><span class="line">					<span class="comment">#使用最新版的青龙镜像</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>配置好面板以后，使用浏览器输入ip:5700即可登录到青龙面板</p>
+<p>首先更新下yum源<br><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum <span class="keyword">check</span>-<span class="keyword">update</span></span><br></pre></td></tr></table></figure><br>安装docker<br><figure class="highlight plain"><figcaption><span>-fsSL</span><a target="_blank" rel="noopener" href="https://get.docker.com/">| sh</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker	&#x2F;&#x2F;root启动docker</span><br><span class="line">sudo systemctl status docker&#x2F;&#x2F;查看docker服务状态</span><br><span class="line">sudo systemctl enable docker&#x2F;&#x2F;设置docker开机自启</span><br><span class="line">  或者使用一键安装代码：</span><br><span class="line">sudo curl -sSL https:&#x2F;&#x2F;get.daocloud.io&#x2F;docker | sh</span><br></pre></td></tr></table></figure></p>
+<p>使用镜像创建青龙面板容器<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit \					</span><br><span class="line"><span class="comment">#-dit，参数意义分别为后台运行容器并返回容器id、有交互模式运行容器、为容器分配一个伪输入终端。</span></span><br><span class="line">				  --name QL \</span><br><span class="line">				  --hostname QL \</span><br><span class="line">				  --restart always \</span><br><span class="line">				  -p <span class="number">5700</span>:<span class="number">5700</span> \</span><br><span class="line">				  <span class="comment">#端口映射关系为  容器端口：宿主机端口</span></span><br><span class="line">				  <span class="comment">#下面使用-v来确定容器与宿主机的文件挂载关系</span></span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>config:<span class="regexp">/ql/</span>config \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>log:<span class="regexp">/ql/</span>log \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>db:<span class="regexp">/ql/</span>db \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>scripts:<span class="regexp">/ql/</span>scripts \</span><br><span class="line">				  -v <span class="variable">$PWD</span><span class="regexp">/QL/</span>jbot:<span class="regexp">/ql/</span>jbot \</span><br><span class="line">				  whyour/qinglong:latest</span><br><span class="line">					<span class="comment">#使用最新版的青龙镜像</span></span><br></pre></td></tr></table></figure><br>配置好面板以后，使用浏览器输入ip:5700即可登录到青龙面板</p>
 </blockquote>
 <p><img src="https://i.loli.net/2021/11/26/2DX8sO4IojbHKR5.png" alt="image-20211118111454845.png"></p>
 <p>接下来去网上找个库拉就可以食用了</p>
@@ -942,6 +933,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

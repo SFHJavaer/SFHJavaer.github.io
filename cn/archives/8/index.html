@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -487,11 +490,9 @@
       
     </h3>
     <div class="post-content-preview">
-      对称加密：
-加密和解密使用的是同一个密钥，计算量小，常见的DES、AES
+      对称加密：加密和解密使用的是同一个密钥，计算量小，常见的DES、AES
 12345优点：计算量小，简单快速，适合于对海量数据进行加密处理；缺点：加密人和解密人需要拥有同一把秘钥，那秘钥如果通过 不安全的通道进行传输，就存在被黑客窃听的风险，安全性丧失；            同时双方还需要好好管理秘钥，不能泄露秘钥，否则也不安全了，管理秘钥成本较高。
-非对称加密：
-需要公钥和私钥，公钥对数......
+非对称加密：需要公钥和私钥，公钥对数据进......
     </div>
   </a>
   
@@ -524,13 +525,8 @@
       
     </h3>
     <div class="post-content-preview">
-      使用Freemarker
-在pom中加依赖
-创建模板文件（模板文件中有四种元素）：
-123456789101.文本，直接输出2.注释，不会输出3.插值表达式，即$&#123;&#125;，使用数据模型中的部分代替输出4.freemarker指令，名字前面加#予以区分，不输出FreeMarker文件后缀名为ftl
-Freemarker指令
-4.1 assign指令
-assign指令用于在页面上......
+      使用Freemarker在pom中加依赖创建模板文件（模板文件中有四种元素）：123456789101.文本，直接输出2.注释，不会输出3.插值表达式，即$&#123;&#125;，使用数据模型中的部分代替输出4.freemarker指令，名字前面加#予以区分，不输出FreeMarker文件后缀名为ftl
+Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变......
     </div>
   </a>
   
@@ -565,10 +561,11 @@ assign指令用于在页面上......
     <div class="post-content-preview">
       Dubbo整合Spring：在xml配置文件中声明Dubbo的配置项
 整合SpringBoot的配置项的名称与Spring中一致，区别是导入starter之后位置不同，直接在配置文件中写就可以
-服务提供方的XML配置项,具体配置标签的属性：
-1.指定当前服务/应用的名称(dubbo:application)
-2.指定注册中心位置（dubbo:registry）
-3.指定通信规则，duboo支......
+服务提供方的XML配置项,具体配置标签的属性：1.指定当前服务/应用的名称()
+2.指定注册中心位置（）
+3.指定通信规则，duboo支持多种通信协议，一般建议使用dubbo协议
+
+ 即在dubbo:......
     </div>
   </a>
   
@@ -601,9 +598,8 @@ assign指令用于在页面上......
       
     </h3>
     <div class="post-content-preview">
-      代码为传智博客医疗项目，代码在我Github
-我在测试Curd时总结了所有报错的情况，研究了大半天终于修好了，总结一下：
-1.新建窗口点确定后无响应，开发者工具显示add.do请求404，在RequestMapping路径正常的情况下，首先检查Controller（讲义的代码中Controller的RequestMapping默认不修改就是正确的），其次如果自己建的项目包不是com.ithe......
+      代码为传智博客医疗项目，代码在我Github我在测试Curd时总结了所有报错的情况，研究了大半天终于修好了，总结一下：
+1.新建窗口点确定后无响应，开发者工具显示add.do请求404，在RequestMapping路径正常的情况下，首先检查Controller（讲义的代码中Controller的RequestMapping默认不修改就是正确的），其次如果自己建的项目包不是com.ithei......
     </div>
   </a>
   
@@ -637,12 +633,10 @@ assign指令用于在页面上......
     </h3>
     <div class="post-content-preview">
       最近重新深入多线程中的细节问题进行了深入，在死锁、终止线程、Guava、线程池以及队列又有了深入的思考。
+ 在线程的生命周期中，我们常说的其实就五个状态，其中阻塞态包括了sleep以及wait都可以当作处于阻塞态，当然两种方法产生的效果当然是不同的
 
-在线程的生命周期中，我们常说的其实就五个状态，其中阻塞态包括了sleep以及wait都可以当作处于阻塞态，当然两种方法产生的效果当然是不同的
-
-对阻塞态即blocked状态进行细分：
-等待阻塞：wait()方法调用，这种属于主动调用
-同步阻塞：线程在获取synchronized锁时没拿......
+对阻塞态即blocked状态进行细分：等待阻塞：wait()方法调用，这种属于主动调用
+同步阻塞：线程在获取synchronized锁时没拿到......
     </div>
   </a>
   
@@ -675,12 +669,11 @@ assign指令用于在页面上......
       Java 多线程
     </h3>
     <div class="post-content-preview">
-      线程池
-总体来说，线程池有如下的优势：
+      线程池总体来说，线程池有如下的优势：
 （1）降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。
 （2）提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。
 （3）提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。
-线程池的真正实现类是 ThreadPoolExecuto......
+线程池的真正实现类是 ThreadPoolExecutor......
     </div>
   </a>
   
@@ -713,16 +706,12 @@ assign指令用于在页面上......
       Java IO流、集合类重要知识
     </h3>
     <div class="post-content-preview">
-      Java IO流
-英文字母在windows中占1个字节   比如：'a’字符
+      Java IO流英文字母在windows中占1个字节   比如：’a’字符
 中文汉字在windows中占2个字节   比如：“中”字符
 字节流一次读取一个字节
 字符流一次读取一个字符
 IO流四大家族的首领：
-java.io.InputStream				字节输入流
-java.io.OutputStream				字节输出流
-java.io.Reader 				字符输入流
-java.io.......
+java.io.InputStream                字节输入流java.io.OutputStream                字节输出流java.io.Read......
     </div>
   </a>
   
@@ -788,11 +777,11 @@ java.io.......
   <div class="tags">
     
     
-    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
-    
-    
-    
     <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
+    
+    
+    
+    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
     
     
     
@@ -800,19 +789,11 @@ java.io.......
     
     
     
-    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
-    
-    
-    
     <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
     
     
     
-    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
-    
-    
-    
-    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
     
     
     
@@ -820,15 +801,23 @@ java.io.......
     
     
     
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    
+    
+    
     <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
     
     
     
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
+    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
     
     
     
     <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
     
     
     
@@ -848,11 +837,11 @@ java.io.......
     
     
     
-    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
-    
-    
-    
     <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
+    
+    
+    
+    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
     
     
     
@@ -860,7 +849,7 @@ java.io.......
     
     
     
-    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    <a href="/tags/#IO" title="IO" rel="1">IO</a>
     
     
     
@@ -868,7 +857,7 @@ java.io.......
     
     
     
-    <a href="/tags/#IO" title="IO" rel="1">IO</a>
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
     
     
     
@@ -880,6 +869,10 @@ java.io.......
     
     
     
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    
+    
+    
     <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
     
     
@@ -888,19 +881,15 @@ java.io.......
     
     
     
-    <a href="/tags/#注解" title="注解" rel="2">注解</a>
-    
-    
-    
     <a href="/tags/#Spring" title="Spring" rel="1">Spring</a>
     
     
     
-    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
-    
-    
-    
     <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
     
     
     
@@ -1086,16 +1075,16 @@ java.io.......
 <div class="widget">
   <ul>
     
-    <a href="/categories/#多线程">
-      <li>多线程</li>
+    <a href="/categories/#IO">
+      <li>IO</li>
     </a>
     
     <a href="/categories/#Maven">
       <li>Maven</li>
     </a>
     
-    <a href="/categories/#IO">
-      <li>IO</li>
+    <a href="/categories/#多线程">
+      <li>多线程</li>
     </a>
     
     <a href="/categories/#笔试">
@@ -1118,12 +1107,12 @@ java.io.......
       <li>Spring</li>
     </a>
     
-    <a href="/categories/#设计模式">
-      <li>设计模式</li>
-    </a>
-    
     <a href="/categories/#索引">
       <li>索引</li>
+    </a>
+    
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
     </a>
     
     <a href="/categories/#项目">
@@ -1368,6 +1357,7 @@ java.io.......
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

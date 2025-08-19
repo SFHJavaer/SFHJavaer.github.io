@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       SSM医疗后台Curd过程中出现的问题 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1k</span> In Total
+              Words <span class="post-count">998</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,17 +474,14 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h6 id="代码为传智博客医疗项目，代码在我Github">代码为传智博客医疗项目，代码在我Github</h6>
-<p>我在测试Curd时总结了所有报错的情况，研究了大半天终于修好了，总结一下：</p>
+        <h6 id="代码为传智博客医疗项目，代码在我Github"><a href="#代码为传智博客医疗项目，代码在我Github" class="headerlink" title="代码为传智博客医疗项目，代码在我Github"></a>代码为传智博客医疗项目，代码在我Github</h6><p>我在测试Curd时总结了所有报错的情况，研究了大半天终于修好了，总结一下：</p>
 <p>1.新建窗口点确定后无响应，开发者工具显示add.do请求404，在RequestMapping路径正常的情况下，首先检查Controller（讲义的代码中Controller的RequestMapping默认不修改就是正确的），其次如果自己建的项目包不是com.itheima却直接复制了讲义代码,请打开SpringMvc.xml修改&lt;dubbo:annotation的package为自己的包，还有dubbo的生产者和消费者指定的包路径都要自行修改，不知能直接复制</p>
 <p>2.老版课件里文件名带有（1）导致无法识别的的请查看错误提示自行修改</p>
-<p>3.点击确定按钮后新建失败的，报异常Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: com.mysql.cj.jdbc.Driver<br>
-org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction;因为windows上安装的是mysql8而parent的pom文件中驱动时mysql5，version修改为&lt;mysql.version&gt;8.0.11&lt;/mysql.version&gt;，并且将“spring-dao.xml”中driverClassName修改为支持mysql8的com.mysql.cj.jdbc.Driver即可解决</p>
-<p>4.报错com.alibaba.dubbo.rpc.RpcException: No provider available from registry 120.25.85.89:2181 for service com.itheima.service.CheckItemService on consumer 192.168.60.1 use dubbo version 2.6.0, may be providers disabled or not registered ?这里登录到7001端口也可以看到只注册了一个health_backend消费者却没有对应的service生产者，其实和zookeeper和dubbo和Dao都没有关系，是Service内部出了问题不能作为provider，health_provider中的web.xml文件的<context-param>属性的param-value构建时为classpath*:applicationContext.xml应当修改为classpath*:spring*.xml，因为我们resource中配置文件的编写统一使用的是spring-xxx.xml,不然根本扫描不到Spring容器的配置文件，前面包名出现问题的请把itheima改为自己的包写在&lt;dubbo:annotation中，修改完成后如果错误变更为Could not create connection to database server，请参考第3条</p>
+<p>3.点击确定按钮后新建失败的，报异常Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: com.mysql.cj.jdbc.Driver<br>org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction;因为windows上安装的是mysql8而parent的pom文件中驱动时mysql5，version修改为<mysql.version>8.0.11&lt;/mysql.version&gt;，并且将“spring-dao.xml”中driverClassName修改为支持mysql8的com.mysql.cj.jdbc.Driver即可解决</p>
+<p>4.报错com.alibaba.dubbo.rpc.RpcException: No provider available from registry 120.25.85.89:2181 for service com.itheima.service.CheckItemService on consumer 192.168.60.1 use dubbo version 2.6.0, may be providers disabled or not registered ?这里登录到7001端口也可以看到只注册了一个health_backend消费者却没有对应的service生产者，其实和zookeeper和dubbo和Dao都没有关系，是Service内部出了问题不能作为provider，health_provider中的web.xml文件的<context-param>属性的param-value构建时为classpath<em>:applicationContext.xml应当修改为classpath</em>:spring*.xml，因为我们resource中配置文件的编写统一使用的是spring-xxx.xml,不然根本扫描不到Spring容器的配置文件，前面包名出现问题的请把itheima改为自己的包写在&lt;dubbo:annotation中，修改完成后如果错误变更为Could not create connection to database server，请参考第3条</p>
 <p>5.时区出现错误The server time zone value ‘ÖÐ¹ú±ê×¼Ê±¼ä’ is unrecognized or represents more than one time zone.按照提示添加时区（百度一下）</p>
 <p>6.其它简单的报错信息请根据错误提示自行排查，谢谢！</p>
-<h6 id="右侧泛型中写-默认为简写，以左侧规定的泛型为准">右侧泛型中写~默认为简写，以左侧规定的泛型为准</h6>
-<p>@RequestBody可以接收POST请求content-type为application/json的参数，消息体中的参数为json格式，springmvc会使用MappingJackson2HttpMessageConverter将json格式的参数转换为java对象,MappingJackson2HttpMessageConverter默认支持的格式为content-type:application/json</p>
+<h6 id="右侧泛型中写-默认为简写，以左侧规定的泛型为准"><a href="#右侧泛型中写-默认为简写，以左侧规定的泛型为准" class="headerlink" title="右侧泛型中写~默认为简写，以左侧规定的泛型为准"></a>右侧泛型中写~默认为简写，以左侧规定的泛型为准</h6><p>@RequestBody可以接收POST请求content-type为application/json的参数，消息体中的参数为json格式，springmvc会使用MappingJackson2HttpMessageConverter将json格式的参数转换为java对象,MappingJackson2HttpMessageConverter默认支持的格式为content-type:application/json</p>
 <ul>
 <li>在GET请求中，不能使用@RequestBody。</li>
 <li>在POST请求，可以使用@RequestBody和@RequestParam，但是如果使用@RequestBody，对于参数转化的配置必须统一。</li>
@@ -939,6 +939,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

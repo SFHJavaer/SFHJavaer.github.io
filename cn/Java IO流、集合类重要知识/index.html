@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Java IO流 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,42 +474,31 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Java-IO流">Java IO流</h2>
-<p>英文字母在windows中占1个字节   比如：'a’字符</p>
+        <h2 id="Java-IO流"><a href="#Java-IO流" class="headerlink" title="Java IO流"></a>Java IO流</h2><p>英文字母在windows中占1个字节   比如：’a’字符</p>
 <p>中文汉字在windows中占2个字节   比如：“中”字符</p>
 <p>字节流一次读取一个字节</p>
 <p>字符流一次读取一个字符</p>
 <p>IO流四大家族的首领：</p>
-<h5 id="java-io-InputStream字节输入流">java.io.InputStream				字节输入流</h5>
-<h5 id="java-io-OutputStream字节输出流">java.io.OutputStream				字节输出流</h5>
-<h5 id="java-io-Reader-字符输入流">java.io.Reader 				字符输入流</h5>
-<h5 id="java-io-Writer字符输出流">java.io.Writer					字符输出流</h5>
-<p><strong>注意：在Java中只要类名以Stream结尾的都是字节流，以Reader或者Writer结尾的都是字符流</strong></p>
+<h5 id="java-io-InputStream-字节输入流"><a href="#java-io-InputStream-字节输入流" class="headerlink" title="java.io.InputStream                字节输入流"></a>java.io.InputStream                字节输入流</h5><h5 id="java-io-OutputStream-字节输出流"><a href="#java-io-OutputStream-字节输出流" class="headerlink" title="java.io.OutputStream                字节输出流"></a>java.io.OutputStream                字节输出流</h5><h5 id="java-io-Reader-字符输入流"><a href="#java-io-Reader-字符输入流" class="headerlink" title="java.io.Reader                 字符输入流"></a>java.io.Reader                 字符输入流</h5><h5 id="java-io-Writer-字符输出流"><a href="#java-io-Writer-字符输出流" class="headerlink" title="java.io.Writer                    字符输出流"></a>java.io.Writer                    字符输出流</h5><p><strong>注意：在Java中只要类名以Stream结尾的都是字节流，以Reader或者Writer结尾的都是字符流</strong></p>
 <p><strong>所有的流都实现了Java.io.Closeable接口，都是可关闭的，都有close方法，流是一个管道，用完之后一定要关闭</strong></p>
 <p><strong>flush（）是刷新方法，输出流实现了它（java.io.flush接口），输入流没有实现（注意硬盘上的文件读取到内存到读（内存读）），所以用完输出流之后也要刷新一下，刷新表示将未输出的数据强行输出完（清空管道）</strong></p>
-<p>需要掌握的几个主要的流：文件专属流		转换流		数据流		标准输出流		对象专属流</p>
+<p>需要掌握的几个主要的流：文件专属流        转换流        数据流        标准输出流        对象专属流</p>
 <p>下面的展示了FileInputStream读取文件的基本代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.java.io;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">//读和写是把内存作为主体</span></span><br><span class="line"><span class="comment">//路径：/ 代表的路径是根目录；. 代表的路径是当前Java项目的根目录,idea默认相对路径也是从工程的根目录开始。所以开头直接可以指定到src</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileInputStreamText</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        FileInputStream file = <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">//创建文件字节输入流,main方法异常一般直接try catch</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            file = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;src/com/java/io/File.txt&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//方法一：下面的read方法只能读取单字节，可以利用自建一个byte数组来读取多个字节</span></span><br><span class="line">            <span class="comment">//            int readData = 0;</span></span><br><span class="line"><span class="comment">//            while((readData = file.read()) != -1)&#123;</span></span><br><span class="line"><span class="comment">//                System.out.println(readData);</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line">            <span class="comment">//方法二最终版</span></span><br><span class="line">            <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">4</span>];</span><br><span class="line">            <span class="keyword">int</span> readCount = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>((readCount = file.read(bytes)) != -<span class="number">1</span>)&#123;</span><br><span class="line">                System.out.print(<span class="keyword">new</span> String(bytes,<span class="number">0</span>,readCount));</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//下面是方法二</span></span><br><span class="line"><span class="comment">//            while(true)&#123;</span></span><br><span class="line"><span class="comment">//                //读取一个数组返回的是一次读取字节的数量，而不是字节值</span></span><br><span class="line"><span class="comment">//                int readCount = file.read(bytes);</span></span><br><span class="line"><span class="comment">//                if(readCount == -1)&#123;</span></span><br><span class="line"><span class="comment">//                    break;</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"><span class="comment">//                //把读到的readCount个数据打印出来，因为用数组存储字节，对第上一轮数据没有覆盖的话，数组中未被覆盖的字节还会保留。</span></span><br><span class="line"><span class="comment">//                System.out.print(new String(bytes,0,readCount));</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//在finally中关闭流,关闭流的前提是 流不是空，避免空指针异常</span></span><br><span class="line">            <span class="keyword">if</span> (file != <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    file.close();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>arraylist里具体元素处没有元素是不能set的，会报数组越界异常，先要用add添加元素</p>
 <p>set是覆盖原来索引处的数据，而add的话，如果是已经有数据的地方add，那么会将原来存在的数据往后移，联系Arraylist的线性结构就能理解</p>
-<h3 id="集合类：">集合类：</h3>
-<p>HashMap的key和value都可以是null，但是hashtable均不能为null</p>
+<h3 id="集合类："><a href="#集合类：" class="headerlink" title="集合类："></a>集合类：</h3><p>HashMap的key和value都可以是null，但是hashtable均不能为null</p>
 <p>Arraylist底层是动态数组，arrayList的访问速度要比Linkedlist快（直接根据下标就能找到，并且对象是有序排列的，一个接一个就可以），所以在增删的时候为了要保证元素在内存上的连续性，需要进行重排</p>
 <p>链表修改和删除的速度要快LinkedList底层是双向链表（在内存上不是连续的），根据Index大小判断从前往后还是从后往前遍历（顺着链条），所以时间复杂度是O(n)，增删只需要修改要操作位置的前后指针即可，不需要进行重排和其他操作。</p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java的数组之间是不能直接用强制类型转换的，想强转只能一个元素一个元素转</span><br><span class="line"></span><br><span class="line">java直接使用toArray方法而不指定参数得到的是一个<span class="keyword">Object</span>数组，可以指定它的参数为一个具体的数组对象，然后直接赋值给具体需要的数组对象即可，如list.toArray(<span class="keyword">new</span> <span class="keyword">String</span>[list.<span class="built_in">size</span>()]);,对象转换为之后原本的引用不在适用，当然用一个新的引用来指向它</span><br><span class="line"></span><br><span class="line">去重一种思路是用<span class="built_in">set</span>集合来去除重复的元素，如果对顺序有一定要求的修改从前还是从后遍历即可</span><br></pre></td></tr></table></figure>
-<h4 id="Java基础知识">Java基础知识</h4>
-<p>final不能修饰接口，因为接口需要被实现，也不能修饰抽象类，因为抽象类需要被继承，final修饰的方法可以被重载，但是可以被重写，重载的关联比较小，而重写关联大，不可重写</p>
+<h4 id="Java基础知识"><a href="#Java基础知识" class="headerlink" title="Java基础知识"></a>Java基础知识</h4><p>final不能修饰接口，因为接口需要被实现，也不能修饰抽象类，因为抽象类需要被继承，final修饰的方法可以被重载，但是可以被重写，重载的关联比较小，而重写关联大，不可重写</p>
 <p>在JDK8之前，接口中的方法都是没有方法体的方法，都需要实现类去实现所有的方法</p>
 <p>在1.8之后，出现了default方法，就可以在接口中书写方法体，注意default方法在接口的实现类中可以不被（重写）实现，实现类当然会继承default方法，当然如果一个类实现了多个接口，其中有重复的default方法，那么此时就需要去重写，统一使用重写后的方法，不然不知道到底该使用哪一个接口的default方法</p>
-<h4 id="JDK8-Date新特性">JDK8   Date新特性</h4>
-<p>SimpleDateFormatter被更新为DateTimeFormatter，采用了ISO 8061标准的日期格式化输出，可以使用of接收参数或者parse直接解析转化。</p>
-<h6 id="同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime">同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime</h6>
-<p>三者可以使用toxxx()转换，拼接成DateTime类底层是通过DateTime的构造方法new出来对象的。</p>
+<h4 id="JDK8-Date新特性"><a href="#JDK8-Date新特性" class="headerlink" title="JDK8   Date新特性"></a>JDK8   Date新特性</h4><p>SimpleDateFormatter被更新为DateTimeFormatter，采用了ISO 8061标准的日期格式化输出，可以使用of接收参数或者parse直接解析转化。</p>
+<h6 id="同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime"><a href="#同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime" class="headerlink" title="同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime"></a>同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime</h6><p>三者可以使用toxxx()转换，拼接成DateTime类底层是通过DateTime的构造方法new出来对象的。</p>
 <p>日期类可以使用plusxxxx()和minusXXXX()进行年月日的加减操作，当然调整之后不符合时间规范会报错或者自动优化为符合时间。</p>
-<p><strong>配合类：</strong></p>
-<h6 id="Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。">Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。</h6>
-<h6 id="Peroid类代表时间间隔，使用a-util-b-取间隔。">Peroid类代表时间间隔，使用a.util(b)取间隔。</h6>
-
+<p><strong>配合类：</strong>           </p>
+<h6 id="Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。"><a href="#Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。" class="headerlink" title="Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。"></a>Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。</h6><h6 id="Peroid类代表时间间隔，使用a-util-b-取间隔。"><a href="#Peroid类代表时间间隔，使用a-util-b-取间隔。" class="headerlink" title="Peroid类代表时间间隔，使用a.util(b)取间隔。"></a>Peroid类代表时间间隔，使用a.util(b)取间隔。</h6>
 
         <hr>
         <!-- Pager -->
@@ -656,7 +648,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-IO%E6%B5%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Java IO流</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-InputStream%E5%AD%97%E8%8A%82%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.1.</span> <span class="toc-nav-text">java.io.InputStream				字节输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-OutputStream%E5%AD%97%E8%8A%82%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.2.</span> <span class="toc-nav-text">java.io.OutputStream				字节输出流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Reader-%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.3.</span> <span class="toc-nav-text">java.io.Reader 				字符输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Writer%E5%AD%97%E7%AC%A6%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.4.</span> <span class="toc-nav-text">java.io.Writer					字符输出流</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%EF%BC%9A"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">集合类：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">Java基础知识</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JDK8-Date%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">JDK8   Date新特性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%90%8C%E6%97%B6%E5%BC%95%E5%85%A5%E4%BA%86%E6%96%B0%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E7%B1%BB%EF%BC%8CLocalDate%E6%88%96%E8%80%85LocalTime%E6%88%96%E8%80%85LocalDateTime"><span class="toc-nav-number">1.1.2.0.1.</span> <span class="toc-nav-text">同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Duiaton%E7%B1%BB%E4%BB%A3%E8%A1%A8%E6%97%A5%E6%9C%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%97%B4%E9%9A%94%EF%BC%8C%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95between%E5%8F%96%E9%97%B4%E9%9A%94%E3%80%82"><span class="toc-nav-number">1.1.2.0.2.</span> <span class="toc-nav-text">Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Peroid%E7%B1%BB%E4%BB%A3%E8%A1%A8%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%EF%BC%8C%E4%BD%BF%E7%94%A8a-util-b-%E5%8F%96%E9%97%B4%E9%9A%94%E3%80%82"><span class="toc-nav-number">1.1.2.0.3.</span> <span class="toc-nav-text">Peroid类代表时间间隔，使用a.util(b)取间隔。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-IO%E6%B5%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Java IO流</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-InputStream-%E5%AD%97%E8%8A%82%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.1.</span> <span class="toc-nav-text">java.io.InputStream                字节输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-OutputStream-%E5%AD%97%E8%8A%82%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.2.</span> <span class="toc-nav-text">java.io.OutputStream                字节输出流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Reader-%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.3.</span> <span class="toc-nav-text">java.io.Reader                 字符输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Writer-%E5%AD%97%E7%AC%A6%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.4.</span> <span class="toc-nav-text">java.io.Writer                    字符输出流</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%EF%BC%9A"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">集合类：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">Java基础知识</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JDK8-Date%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">JDK8   Date新特性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%90%8C%E6%97%B6%E5%BC%95%E5%85%A5%E4%BA%86%E6%96%B0%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E7%B1%BB%EF%BC%8CLocalDate%E6%88%96%E8%80%85LocalTime%E6%88%96%E8%80%85LocalDateTime"><span class="toc-nav-number">1.1.2.0.1.</span> <span class="toc-nav-text">同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Duiaton%E7%B1%BB%E4%BB%A3%E8%A1%A8%E6%97%A5%E6%9C%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%97%B4%E9%9A%94%EF%BC%8C%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95between%E5%8F%96%E9%97%B4%E9%9A%94%E3%80%82"><span class="toc-nav-number">1.1.2.0.2.</span> <span class="toc-nav-text">Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Peroid%E7%B1%BB%E4%BB%A3%E8%A1%A8%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%EF%BC%8C%E4%BD%BF%E7%94%A8a-util-b-%E5%8F%96%E9%97%B4%E9%9A%94%E3%80%82"><span class="toc-nav-number">1.1.2.0.3.</span> <span class="toc-nav-text">Peroid类代表时间间隔，使用a.util(b)取间隔。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -960,6 +952,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

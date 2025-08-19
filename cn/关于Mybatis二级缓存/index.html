@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       关于Mybatis二级缓存 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,61 +474,46 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h6 id="Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率">Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率</h6>
-<h4 id="1-一级缓存">1.一级缓存</h4>
-<p>一级缓存是SqlSession级别的一个缓存，也就是用户会话级别的，一个用户都需要创建一个SqlSession来执行，一级缓存也叫本地缓存，mybatis会将查询成功获得的数据缓存到一级缓存中，后续的Sql在命中缓存的情况下，直接从本地缓存读</p>
-<h5 id="2-二级缓存（跨SqlSession的缓存）">2.二级缓存（跨SqlSession的缓存）</h5>
-<p><img src="Snipaste_2022-04-22_18-42-22.png" alt="开启二级缓存"></p>
+        <h6 id="Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率"><a href="#Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率" class="headerlink" title="Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率"></a>Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率</h6><h4 id="1-一级缓存"><a href="#1-一级缓存" class="headerlink" title="1.一级缓存"></a>1.一级缓存</h4><p>一级缓存是SqlSession级别的一个缓存，也就是用户会话级别的，一个用户都需要创建一个SqlSession来执行，一级缓存也叫本地缓存，mybatis会将查询成功获得的数据缓存到一级缓存中，后续的Sql在命中缓存的情况下，直接从本地缓存读</p>
+<h5 id="2-二级缓存（跨SqlSession的缓存）"><a href="#2-二级缓存（跨SqlSession的缓存）" class="headerlink" title="2.二级缓存（跨SqlSession的缓存）"></a>2.二级缓存（跨SqlSession的缓存）</h5><p><img src="Snipaste_2022-04-22_18-42-22.png" alt="开启二级缓存"></p>
 <p>只要有一个用户的SqlSession拿到了数据，就会将其存入到二级缓存中</p>
-<h4 id="一二级缓存的实现原理">一二级缓存的实现原理</h4>
-<p>先看一级缓存：在SqlSession中会支持有一个Executor，每一个Executor又有一个LocalCache的对象，当用户发起请求的时候，Mybatis根据语句到localCache中进行查询，当然命中了就会返回数据，没有命中再到数据库中进行查询，查询完之后将其存入到SqlSessiond的LocalCache中，所以一级缓存的生命周期是SqlSession的生命周期，注意在多线程情况下一级缓存可能产生脏读。</p>
+<h4 id="一二级缓存的实现原理"><a href="#一二级缓存的实现原理" class="headerlink" title="一二级缓存的实现原理"></a>一二级缓存的实现原理</h4><p>先看一级缓存：在SqlSession中会支持有一个Executor，每一个Executor又有一个LocalCache的对象，当用户发起请求的时候，Mybatis根据语句到localCache中进行查询，当然命中了就会返回数据，没有命中再到数据库中进行查询，查询完之后将其存入到SqlSessiond的LocalCache中，所以一级缓存的生命周期是SqlSession的生命周期，注意在多线程情况下一级缓存可能产生脏读。</p>
 <p><img src="Snipaste_2022-04-22_18-49-58.png" alt="一二级缓存示意图"></p>
 <p>再看二级缓存（全局缓存）：在原来的Executor上加了一个装饰，引入了一个装饰器叫CachingExecutor，在进入一级缓存之前先进行二级缓存的查询（通过上面的装饰器），最后进行数据库的查询，缓存粒度控制在了nameSpace命名空间的级别，并且可以通过Cache这个接口实现不同缓存实现类的一个组合，提高对Cache的一个可控性。</p>
 <p><img src="Snipaste_2022-04-22_18-32-39.png" alt="二级缓存实现图"></p>
-<h2 id="MySQL-Query-Cache">MySQL Query Cache</h2>
-<p>首先要明白一个概念，二级缓存是基于Mybatis的，也是基于SqlSession的，而我们在慢查询中所需要关闭的Cache则是Mysql的查询缓存，两者完全不一样</p>
-<h6 id="Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis-memcache，因为后者的外置缓存支持分布式环境">Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis/memcache，因为后者的外置缓存支持分布式环境</h6>
-<h5 id="font-color-blue-MySQL-Query-Cache的实现原理-font"><font color = "blue" >MySQL Query Cache的实现原理</font></h5>
-<p>Mysql会将查询的select语句以及其查询结果集，实现类似于Map的K-V结构的存储，也就是存在了一个Hash映射，当SQL进行查询时，查找逻辑是先对Sql进行权限校验，使用Query Cache来查找结果，（SQL必须完全相同，一个空格都不行，字符集也必须完全相同是严格的Sql映射）</p>
+<h2 id="MySQL-Query-Cache"><a href="#MySQL-Query-Cache" class="headerlink" title="MySQL Query Cache"></a>MySQL Query Cache</h2><p>首先要明白一个概念，二级缓存是基于Mybatis的，也是基于SqlSession的，而我们在慢查询中所需要关闭的Cache则是Mysql的查询缓存，两者完全不一样</p>
+<h6 id="Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis-memcache，因为后者的外置缓存支持分布式环境"><a href="#Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis-memcache，因为后者的外置缓存支持分布式环境" class="headerlink" title="Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis/memcache，因为后者的外置缓存支持分布式环境"></a>Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis/memcache，因为后者的外置缓存支持分布式环境</h6><h5 id="MySQL-Query-Cache的实现原理"><a href="#MySQL-Query-Cache的实现原理" class="headerlink" title="MySQL Query Cache的实现原理"></a><font color = "blue" >MySQL Query Cache的实现原理</font></h5><p>Mysql会将查询的select语句以及其查询结果集，实现类似于Map的K-V结构的存储，也就是存在了一个Hash映射，当SQL进行查询时，查找逻辑是先对Sql进行权限校验，使用Query Cache来查找结果，（SQL必须完全相同，一个空格都不行，字符集也必须完全相同是严格的Sql映射）</p>
 <p>如果映射中没有，会将查询结果放入缓存表，所以在存入时以及查找时会有额外的性能消耗。</p>
-<h6 id="最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8-0被取消了">最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8.0被取消了</h6>
-<p><font color = 'green'>不确定的数据不会被缓存，比如使用了Date()函数等情况</font></p>
-<h6 id="查看缓存参数状态-SHOW-VARIABLES-LIKE-‘-query-cache-’">查看缓存参数状态                             &gt; SHOW VARIABLES LIKE ‘%query_cache%’;</h6>
-<blockquote>
+<h6 id="最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8-0被取消了"><a href="#最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8-0被取消了" class="headerlink" title="最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8.0被取消了"></a>最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8.0被取消了</h6><font color = 'green'>不确定的数据不会被缓存，比如使用了Date()函数等情况</font>
+
+<h6 id="查看缓存参数状态-gt-SHOW-VARIABLES-LIKE-‘-query-cache-’"><a href="#查看缓存参数状态-gt-SHOW-VARIABLES-LIKE-‘-query-cache-’" class="headerlink" title="查看缓存参数状态                             &gt; SHOW VARIABLES LIKE ‘%query_cache%’;"></a>查看缓存参数状态                             &gt; SHOW VARIABLES LIKE ‘%query_cache%’;</h6><blockquote>
 <p>缓存的映射关系是基于表的，所以当一张表的结构发生改变的时候，或者表处于写入的状态（被锁住），那么此时的缓存都是失效的，当然修改数据也会使查询到数据的SQL缓存失效而产生大量额外损耗</p>
 </blockquote>
-<h3 id="对于写频繁的系统，适合用mysql查询缓存么？">对于写频繁的系统，适合用mysql查询缓存么？</h3>
-<h5 id="不适合：对于某些写频繁的系统，开启Query-Cache功能可能并不能让系统性能有提升，有时反而会有下降。">不适合：对于某些写频繁的系统，开启Query Cache功能可能并不能让系统性能有提升，有时反而会有下降。</h5>
-<p>原因是MySql为了保证Query Cache缓存的内容和实际数据绝对一致，当某个数据表发生了更新、删除及插入操作，MySql都会强制使所有引用到该表的查询SQL的Query Cache失效。对于密集写操作，启用查询缓存后很可能造成频繁的缓存失效，间接引发内存激增及CPU飙升，对已经非常忙碌的数据库系统这是一种极大的负担。</p>
-<h3 id="官方在Mysql5-6进行了联合索引优化：索引（条件）下推">官方在Mysql5.6进行了联合索引优化：索引（条件）下推</h3>
-<p><font color = 'blue'>索引下推</font>也就是条件的向下推断，在查询二级索引时，判断并列的查找条件是不是满足。</p>
-<p>其实从底层讲是不准确的</p>
-<p><font color = "red">索引下推的下推其实就是指将部分上层（服务层）负责的事情，交给了下层（引擎层）去处理。</font></p>
+<h3 id="对于写频繁的系统，适合用mysql查询缓存么？"><a href="#对于写频繁的系统，适合用mysql查询缓存么？" class="headerlink" title="对于写频繁的系统，适合用mysql查询缓存么？"></a>对于写频繁的系统，适合用mysql查询缓存么？</h3><h5 id="不适合：对于某些写频繁的系统，开启Query-Cache功能可能并不能让系统性能有提升，有时反而会有下降。"><a href="#不适合：对于某些写频繁的系统，开启Query-Cache功能可能并不能让系统性能有提升，有时反而会有下降。" class="headerlink" title="不适合：对于某些写频繁的系统，开启Query Cache功能可能并不能让系统性能有提升，有时反而会有下降。"></a>不适合：对于某些写频繁的系统，开启Query Cache功能可能并不能让系统性能有提升，有时反而会有下降。</h5><p>原因是MySql为了保证Query Cache缓存的内容和实际数据绝对一致，当某个数据表发生了更新、删除及插入操作，MySql都会强制使所有引用到该表的查询SQL的Query Cache失效。对于密集写操作，启用查询缓存后很可能造成频繁的缓存失效，间接引发内存激增及CPU飙升，对已经非常忙碌的数据库系统这是一种极大的负担。</p>
+<h3 id="官方在Mysql5-6进行了联合索引优化：索引（条件）下推"><a href="#官方在Mysql5-6进行了联合索引优化：索引（条件）下推" class="headerlink" title="官方在Mysql5.6进行了联合索引优化：索引（条件）下推"></a>官方在Mysql5.6进行了联合索引优化：索引（条件）下推</h3><font color = 'blue'>索引下推</font>也就是条件的向下推断，在查询二级索引时，判断并列的查找条件是不是满足。
+
+其实从底层讲是不准确的
+
+<font color = "red">索引下推的下推其实就是指将部分上层（服务层）负责的事情，交给了下层（引擎层）去处理。</font>
+
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/52288fa925f84cef937bb0b46d27c60a~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="索引下推"></p>
-<h5 id="以查询条件为前面模糊查询的同时进行其他的等值判断为例">以查询条件为前面模糊查询的同时进行其他的等值判断为例</h5>
-<blockquote>
-<p><strong>select</strong> * <strong>from</strong> tuser <strong>where</strong> name <strong>like</strong> ‘张%’ <strong>and</strong> age=10;</p>
+<h5 id="以查询条件为前面模糊查询的同时进行其他的等值判断为例"><a href="#以查询条件为前面模糊查询的同时进行其他的等值判断为例" class="headerlink" title="以查询条件为前面模糊查询的同时进行其他的等值判断为例"></a>以查询条件为前面模糊查询的同时进行其他的等值判断为例</h5><blockquote>
+<p><strong>select</strong> <em> <strong>from</strong> tuser <strong>where</strong> name <strong>like</strong> ‘张%’ <em>*and</em></em> age=10;</p>
 </blockquote>
 <p>数据库表，表里创建联合索引（name, age）。：</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1b49ff7a5bff433688d7640d1ca64fb4~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="数据库"></p>
-<h6 id="在没有使用ICP的情况下，MySQL的查询：">在没有使用ICP的情况下，MySQL的查询：</h6>
-<ul>
-<li>
-<p>在MySQL 5.6之前，存储引擎根据通过联合索引找到<code>name like '张%'</code> 的主键id（1、4），逐一进行回表扫描，去聚簇索引找到完整的行记录，server层再对数据根据<code>age=10进行筛选</code>。</p>
+<h6 id="在没有使用ICP的情况下，MySQL的查询："><a href="#在没有使用ICP的情况下，MySQL的查询：" class="headerlink" title="在没有使用ICP的情况下，MySQL的查询："></a>在没有使用ICP的情况下，MySQL的查询：</h6><ul>
+<li><p>在MySQL 5.6之前，存储引擎根据通过联合索引找到<code>name like &#39;张%&#39;</code> 的主键id（1、4），逐一进行回表扫描，去聚簇索引找到完整的行记录，server层再对数据根据<code>age=10进行筛选</code>。</p>
 </li>
-<li>
-<p>进行了两次回表操作，一条数据一次，<font color = 'red'>把我们联合索引的另一个字段<code>age</code>浪费了。</font></p>
+<li><p>进行了两次回表操作，一条数据一次，<font color = 'red'>把我们联合索引的另一个字段<code>age</code>浪费了。</font></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c97ed6c5e395416181cb57591151fb09~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="回表"></p>
 </li>
 </ul>
-<h6 id="使用ICP的情况下，查询过程-注意借助了联合索引-：">使用ICP的情况下，查询过程(注意借助了联合索引)：</h6>
-<ul>
-<li>存储引擎根据（name，age）联合索引，找到<code>name like '张%'</code>，由于联合索引中包含<code>age</code>列，所以存储引擎直接再联合索引里按照<code>age=10</code>过滤。按照过滤后的数据再一一进行回表扫描。</li>
+<h6 id="使用ICP的情况下，查询过程-注意借助了联合索引-："><a href="#使用ICP的情况下，查询过程-注意借助了联合索引-：" class="headerlink" title="使用ICP的情况下，查询过程(注意借助了联合索引)："></a>使用ICP的情况下，查询过程(注意借助了联合索引)：</h6><ul>
+<li>存储引擎根据（name，age）联合索引，找到<code>name like &#39;张%&#39;</code>，由于联合索引中包含<code>age</code>列，所以存储引擎直接再联合索引里按照<code>age=10</code>过滤。按照过滤后的数据再一一进行回表扫描。</li>
 </ul>
 <p>利用索引快的特点进行过滤，相对于索引来说回表就相当于又进行了一次查询，是非常麻烦的</p>
-<h6 id="这里我们将不符合的-“张猛”给筛掉之后，直接进行一次回表就可以了">这里我们将不符合的 “张猛”给筛掉之后，直接进行一次回表就可以了</h6>
-<h5 id="为什么张三还要回表呢？模糊查询和等值查询不都满足了吗">为什么张三还要回表呢？模糊查询和等值查询不都满足了吗</h5>
-<p>对于数据库是不知道的，而且这里举的例子是查询条件正好是联合索引，如果还有其他的非索引数据，当然还要进行回表进行判断了，索引下推只是借助联合索引尽量减少资源浪费的优化手段。</p>
+<h6 id="这里我们将不符合的-“张猛”给筛掉之后，直接进行一次回表就可以了"><a href="#这里我们将不符合的-“张猛”给筛掉之后，直接进行一次回表就可以了" class="headerlink" title="这里我们将不符合的 “张猛”给筛掉之后，直接进行一次回表就可以了"></a>这里我们将不符合的 “张猛”给筛掉之后，直接进行一次回表就可以了</h6><h5 id="为什么张三还要回表呢？模糊查询和等值查询不都满足了吗"><a href="#为什么张三还要回表呢？模糊查询和等值查询不都满足了吗" class="headerlink" title="为什么张三还要回表呢？模糊查询和等值查询不都满足了吗"></a>为什么张三还要回表呢？模糊查询和等值查询不都满足了吗</h5><p>对于数据库是不知道的，而且这里举的例子是查询条件正好是联合索引，如果还有其他的非索引数据，当然还要进行回表进行判断了，索引下推只是借助联合索引尽量减少资源浪费的优化手段。</p>
 
 
         <hr>
@@ -680,7 +668,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Mybatis%E4%B8%AD%E6%9C%89%E4%B8%A4%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%8C%E7%BC%93%E5%AD%98%E7%9A%84%E7%9B%AE%E7%9A%84%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%AE%A9%E6%AF%8F%E4%B8%80%E6%AC%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E9%83%BD%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%EF%BC%8C%E5%87%8F%E5%B0%91%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BF%E9%97%AE%E4%B8%8E%E4%BA%A4%E4%BA%92%EF%BC%8C%E6%8F%90%E9%AB%98%E4%BA%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%A3%80%E7%B4%A2%E6%95%88%E7%8E%87"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-nav-number"></span> <span class="toc-nav-text">1.一级缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%88%E8%B7%A8SqlSession%E7%9A%84%E7%BC%93%E5%AD%98%EF%BC%89"><span class="toc-nav-number"></span> <span class="toc-nav-text">2.二级缓存（跨SqlSession的缓存）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-nav-number"></span> <span class="toc-nav-text">一二级缓存的实现原理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MySQL-Query-Cache"><span class="toc-nav-number"></span> <span class="toc-nav-text">MySQL Query Cache</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Mysql%E7%9A%84%E6%9F%A5%E8%AF%A2%E7%BC%93%E5%AD%98%E5%9B%A0%E4%B8%BA%E5%AD%98%E5%9C%A8%E7%9A%84%E5%BC%8A%E7%AB%AF%E5%9F%BA%E6%9C%AC%E4%B8%8D%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%BA%86%EF%BC%8C%E5%BB%BA%E8%AE%AE%E9%87%87%E7%94%A8%E5%85%B6%E4%BB%96%E7%9A%84%E5%A4%96%E7%BD%AE%E7%BC%93%E5%AD%98%EF%BC%8C%E6%AF%94%E5%A6%82Redis-memcache%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%90%8E%E8%80%85%E7%9A%84%E5%A4%96%E7%BD%AE%E7%BC%93%E5%AD%98%E6%94%AF%E6%8C%81%E5%88%86%E5%B8%83%E5%BC%8F%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis&#x2F;memcache，因为后者的外置缓存支持分布式环境</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#font-color-blue-MySQL-Query-Cache%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86-font"><span class="toc-nav-number"></span> <span class="toc-nav-text">MySQL Query Cache的实现原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9C%80%E4%B8%BB%E8%A6%81%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E5%A6%82%E6%9E%9C%E5%9C%A8%E6%98%A0%E5%B0%84%E4%B8%AD%E8%83%BD%E7%9B%B4%E6%8E%A5%E6%9F%A5%E5%88%B0%E5%B0%B1%E5%A5%BD%E4%BA%86%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%B1%E4%BA%8E%E8%BF%99%E7%A7%8D%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%A4%AA%E5%A4%A7%EF%BC%8C%E6%89%80%E4%BB%A58-0%E8%A2%AB%E5%8F%96%E6%B6%88%E4%BA%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8.0被取消了</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%BC%93%E5%AD%98%E5%8F%82%E6%95%B0%E7%8A%B6%E6%80%81-SHOW-VARIABLES-LIKE-%E2%80%98-query-cache-%E2%80%99"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">查看缓存参数状态                             &gt; SHOW VARIABLES LIKE ‘%query_cache%’;</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%86%99%E9%A2%91%E7%B9%81%E7%9A%84%E7%B3%BB%E7%BB%9F%EF%BC%8C%E9%80%82%E5%90%88%E7%94%A8mysql%E6%9F%A5%E8%AF%A2%E7%BC%93%E5%AD%98%E4%B9%88%EF%BC%9F"><span class="toc-nav-number"></span> <span class="toc-nav-text">对于写频繁的系统，适合用mysql查询缓存么？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%8D%E9%80%82%E5%90%88%EF%BC%9A%E5%AF%B9%E4%BA%8E%E6%9F%90%E4%BA%9B%E5%86%99%E9%A2%91%E7%B9%81%E7%9A%84%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%90%AFQuery-Cache%E5%8A%9F%E8%83%BD%E5%8F%AF%E8%83%BD%E5%B9%B6%E4%B8%8D%E8%83%BD%E8%AE%A9%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%9C%89%E6%8F%90%E5%8D%87%EF%BC%8C%E6%9C%89%E6%97%B6%E5%8F%8D%E8%80%8C%E4%BC%9A%E6%9C%89%E4%B8%8B%E9%99%8D%E3%80%82"><span class="toc-nav-number"></span> <span class="toc-nav-text">不适合：对于某些写频繁的系统，开启Query Cache功能可能并不能让系统性能有提升，有时反而会有下降。</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%98%E6%96%B9%E5%9C%A8Mysql5-6%E8%BF%9B%E8%A1%8C%E4%BA%86%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96%EF%BC%9A%E7%B4%A2%E5%BC%95%EF%BC%88%E6%9D%A1%E4%BB%B6%EF%BC%89%E4%B8%8B%E6%8E%A8"><span class="toc-nav-number"></span> <span class="toc-nav-text">官方在Mysql5.6进行了联合索引优化：索引（条件）下推</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A5%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E4%B8%BA%E5%89%8D%E9%9D%A2%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%90%8C%E6%97%B6%E8%BF%9B%E8%A1%8C%E5%85%B6%E4%BB%96%E7%9A%84%E7%AD%89%E5%80%BC%E5%88%A4%E6%96%AD%E4%B8%BA%E4%BE%8B"><span class="toc-nav-number"></span> <span class="toc-nav-text">以查询条件为前面模糊查询的同时进行其他的等值判断为例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%9C%A8%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8ICP%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8CMySQL%E7%9A%84%E6%9F%A5%E8%AF%A2%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">在没有使用ICP的情况下，MySQL的查询：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8ICP%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E6%9F%A5%E8%AF%A2%E8%BF%87%E7%A8%8B-%E6%B3%A8%E6%84%8F%E5%80%9F%E5%8A%A9%E4%BA%86%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95-%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">使用ICP的情况下，查询过程(注意借助了联合索引)：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%BF%99%E9%87%8C%E6%88%91%E4%BB%AC%E5%B0%86%E4%B8%8D%E7%AC%A6%E5%90%88%E7%9A%84-%E2%80%9C%E5%BC%A0%E7%8C%9B%E2%80%9D%E7%BB%99%E7%AD%9B%E6%8E%89%E4%B9%8B%E5%90%8E%EF%BC%8C%E7%9B%B4%E6%8E%A5%E8%BF%9B%E8%A1%8C%E4%B8%80%E6%AC%A1%E5%9B%9E%E8%A1%A8%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">这里我们将不符合的 “张猛”给筛掉之后，直接进行一次回表就可以了</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%A0%E4%B8%89%E8%BF%98%E8%A6%81%E5%9B%9E%E8%A1%A8%E5%91%A2%EF%BC%9F%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E5%92%8C%E7%AD%89%E5%80%BC%E6%9F%A5%E8%AF%A2%E4%B8%8D%E9%83%BD%E6%BB%A1%E8%B6%B3%E4%BA%86%E5%90%97"><span class="toc-nav-number"></span> <span class="toc-nav-text">为什么张三还要回表呢？模糊查询和等值查询不都满足了吗</span></a>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Mybatis%E4%B8%AD%E6%9C%89%E4%B8%A4%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%8C%E7%BC%93%E5%AD%98%E7%9A%84%E7%9B%AE%E7%9A%84%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%AE%A9%E6%AF%8F%E4%B8%80%E6%AC%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E9%83%BD%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%EF%BC%8C%E5%87%8F%E5%B0%91%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BF%E9%97%AE%E4%B8%8E%E4%BA%A4%E4%BA%92%EF%BC%8C%E6%8F%90%E9%AB%98%E4%BA%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%A3%80%E7%B4%A2%E6%95%88%E7%8E%87"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-nav-number"></span> <span class="toc-nav-text">1.一级缓存</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%88%E8%B7%A8SqlSession%E7%9A%84%E7%BC%93%E5%AD%98%EF%BC%89"><span class="toc-nav-number"></span> <span class="toc-nav-text">2.二级缓存（跨SqlSession的缓存）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-nav-number"></span> <span class="toc-nav-text">一二级缓存的实现原理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MySQL-Query-Cache"><span class="toc-nav-number"></span> <span class="toc-nav-text">MySQL Query Cache</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Mysql%E7%9A%84%E6%9F%A5%E8%AF%A2%E7%BC%93%E5%AD%98%E5%9B%A0%E4%B8%BA%E5%AD%98%E5%9C%A8%E7%9A%84%E5%BC%8A%E7%AB%AF%E5%9F%BA%E6%9C%AC%E4%B8%8D%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%BA%86%EF%BC%8C%E5%BB%BA%E8%AE%AE%E9%87%87%E7%94%A8%E5%85%B6%E4%BB%96%E7%9A%84%E5%A4%96%E7%BD%AE%E7%BC%93%E5%AD%98%EF%BC%8C%E6%AF%94%E5%A6%82Redis-memcache%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%90%8E%E8%80%85%E7%9A%84%E5%A4%96%E7%BD%AE%E7%BC%93%E5%AD%98%E6%94%AF%E6%8C%81%E5%88%86%E5%B8%83%E5%BC%8F%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mysql的查询缓存因为存在的弊端基本不在使用了，建议采用其他的外置缓存，比如Redis&#x2F;memcache，因为后者的外置缓存支持分布式环境</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#MySQL-Query-Cache%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-nav-number"></span> <span class="toc-nav-text">MySQL Query Cache的实现原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9C%80%E4%B8%BB%E8%A6%81%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E5%A6%82%E6%9E%9C%E5%9C%A8%E6%98%A0%E5%B0%84%E4%B8%AD%E8%83%BD%E7%9B%B4%E6%8E%A5%E6%9F%A5%E5%88%B0%E5%B0%B1%E5%A5%BD%E4%BA%86%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%B1%E4%BA%8E%E8%BF%99%E7%A7%8D%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%A4%AA%E5%A4%A7%EF%BC%8C%E6%89%80%E4%BB%A58-0%E8%A2%AB%E5%8F%96%E6%B6%88%E4%BA%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">最主要的作用是如果在映射中能直接查到就好了，但是由于这种不确定性太大，所以8.0被取消了</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%BC%93%E5%AD%98%E5%8F%82%E6%95%B0%E7%8A%B6%E6%80%81-gt-SHOW-VARIABLES-LIKE-%E2%80%98-query-cache-%E2%80%99"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">查看缓存参数状态                             &gt; SHOW VARIABLES LIKE ‘%query_cache%’;</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%86%99%E9%A2%91%E7%B9%81%E7%9A%84%E7%B3%BB%E7%BB%9F%EF%BC%8C%E9%80%82%E5%90%88%E7%94%A8mysql%E6%9F%A5%E8%AF%A2%E7%BC%93%E5%AD%98%E4%B9%88%EF%BC%9F"><span class="toc-nav-number"></span> <span class="toc-nav-text">对于写频繁的系统，适合用mysql查询缓存么？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%8D%E9%80%82%E5%90%88%EF%BC%9A%E5%AF%B9%E4%BA%8E%E6%9F%90%E4%BA%9B%E5%86%99%E9%A2%91%E7%B9%81%E7%9A%84%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%90%AFQuery-Cache%E5%8A%9F%E8%83%BD%E5%8F%AF%E8%83%BD%E5%B9%B6%E4%B8%8D%E8%83%BD%E8%AE%A9%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%9C%89%E6%8F%90%E5%8D%87%EF%BC%8C%E6%9C%89%E6%97%B6%E5%8F%8D%E8%80%8C%E4%BC%9A%E6%9C%89%E4%B8%8B%E9%99%8D%E3%80%82"><span class="toc-nav-number"></span> <span class="toc-nav-text">不适合：对于某些写频繁的系统，开启Query Cache功能可能并不能让系统性能有提升，有时反而会有下降。</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%98%E6%96%B9%E5%9C%A8Mysql5-6%E8%BF%9B%E8%A1%8C%E4%BA%86%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96%EF%BC%9A%E7%B4%A2%E5%BC%95%EF%BC%88%E6%9D%A1%E4%BB%B6%EF%BC%89%E4%B8%8B%E6%8E%A8"><span class="toc-nav-number"></span> <span class="toc-nav-text">官方在Mysql5.6进行了联合索引优化：索引（条件）下推</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BB%A5%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E4%B8%BA%E5%89%8D%E9%9D%A2%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%90%8C%E6%97%B6%E8%BF%9B%E8%A1%8C%E5%85%B6%E4%BB%96%E7%9A%84%E7%AD%89%E5%80%BC%E5%88%A4%E6%96%AD%E4%B8%BA%E4%BE%8B"><span class="toc-nav-number"></span> <span class="toc-nav-text">以查询条件为前面模糊查询的同时进行其他的等值判断为例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%9C%A8%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8ICP%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8CMySQL%E7%9A%84%E6%9F%A5%E8%AF%A2%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">在没有使用ICP的情况下，MySQL的查询：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8ICP%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E6%9F%A5%E8%AF%A2%E8%BF%87%E7%A8%8B-%E6%B3%A8%E6%84%8F%E5%80%9F%E5%8A%A9%E4%BA%86%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95-%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">使用ICP的情况下，查询过程(注意借助了联合索引)：</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E8%BF%99%E9%87%8C%E6%88%91%E4%BB%AC%E5%B0%86%E4%B8%8D%E7%AC%A6%E5%90%88%E7%9A%84-%E2%80%9C%E5%BC%A0%E7%8C%9B%E2%80%9D%E7%BB%99%E7%AD%9B%E6%8E%89%E4%B9%8B%E5%90%8E%EF%BC%8C%E7%9B%B4%E6%8E%A5%E8%BF%9B%E8%A1%8C%E4%B8%80%E6%AC%A1%E5%9B%9E%E8%A1%A8%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">这里我们将不符合的 “张猛”给筛掉之后，直接进行一次回表就可以了</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%A0%E4%B8%89%E8%BF%98%E8%A6%81%E5%9B%9E%E8%A1%A8%E5%91%A2%EF%BC%9F%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E5%92%8C%E7%AD%89%E5%80%BC%E6%9F%A5%E8%AF%A2%E4%B8%8D%E9%83%BD%E6%BB%A1%E8%B6%B3%E4%BA%86%E5%90%97"><span class="toc-nav-number"></span> <span class="toc-nav-text">为什么张三还要回表呢？模糊查询和等值查询不都满足了吗</span></a>
         
         </div>
       </aside>
@@ -984,6 +972,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

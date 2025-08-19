@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -523,9 +526,9 @@
     <div class="post-content-preview">
       切面方案
 
-**定义注解 ****InternationalizedField**：
+定义注解 **InternationalizedField**：
 
-12345678910import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.ann......
+12345678910import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.annotat......
     </div>
   </a>
   
@@ -557,13 +560,15 @@
     </h3>
     <div class="post-content-preview">
       数组
+
 今天在前端发送某个属性值为[]时，后端接收到的为空的ArrayList对象。
 首先清楚，在MVC框架下，后端接收到什么参数，完全取决于序列化框架，原因是参数对象一定是反序列化变为对象的，而对于大多数序列化框架，规则基本是一致的，所以建议记忆。
 这里Jackson的序列化规则就是[],最后被反序列化为ArrayList而不是null;
 
 这些接收到的都是ArayList
 枚举
-对于前端传......
+
+对于前......
     </div>
   </a>
   
@@ -668,10 +673,12 @@ execution：一般用于指定方法的执行......
     </h3>
     <div class="post-content-preview">
       设置主键
+
 MySQL设置或者后续新增主键，都需要包含主键字段为not null，否则不允许创建
 Oracle后续alter增加主键，如果被设置为主键的字段没有显式设置初始not null，那么新增的主键会自动将该字段设置为not null，在创建表的时候，字段之后直接跟上primary key也是默认隐式的增加了not null约束
 Case-When
-使用数据库原生的判断，case whe......
+
+使用数据库原生的判断，case w......
     </div>
   </a>
   
@@ -775,14 +782,13 @@ BTC的几个关键点：
       
     </h3>
     <div class="post-content-preview">
-      @Autowired同名Bean问题修复
-新建一个SpringDemo项目，注意先修改好发行版，出错都是因为出场Setting没设置对，以及自动生成SpringBoot项目时，xml中指定了&lt;java.version&gt;，要将其去掉或修改为8，不然import Maven又会使设置生效。
+      @Autowired同名Bean问题修复新建一个SpringDemo项目，注意先修改好发行版，出错都是因为出场Setting没设置对，以及自动生成SpringBoot项目时，xml中指定了，要将其去掉或修改为8，不然import Maven又会使设置生效。
 新建两个不同包下的同名类Test，类结构如图：
 
 Application：
 
 Real类：
-这......
+这里不把@autowired写到Applic......
     </div>
   </a>
   
@@ -813,11 +819,10 @@ Real类：
       
     </h3>
     <div class="post-content-preview">
-      :::info
-💡  根据 遗忘曲线：如果没有记录和回顾，6天后便会忘记75%的内容
+      :::info💡  根据 遗忘曲线：如果没有记录和回顾，6天后便会忘记75%的内容
 :::
 XPath获取结果是一个列表，原因是最终定位到某个标签，但是这个标签可能有多个，所以形成了单层列表，但是如果为/td/tr类型，td和tr都能定位到多个，所以就会依次类推形成多层list。（结果是多层的，为了返回出来当然只能返回list啦）
-Python创建多线程的方式和Java类似，但是手动需要......
+Python创建多线程的方式和Java类似，但是手动需要导......
     </div>
   </a>
   
@@ -885,11 +890,11 @@ Python创建多线程的方式和Java类似，但是手动需要......
   <div class="tags">
     
     
-    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
-    
-    
-    
     <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
+    
+    
+    
+    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
     
     
     
@@ -897,19 +902,11 @@ Python创建多线程的方式和Java类似，但是手动需要......
     
     
     
-    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
-    
-    
-    
     <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
     
     
     
-    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
-    
-    
-    
-    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
     
     
     
@@ -917,15 +914,23 @@ Python创建多线程的方式和Java类似，但是手动需要......
     
     
     
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    
+    
+    
     <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
     
     
     
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
+    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
     
     
     
     <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
     
     
     
@@ -945,11 +950,11 @@ Python创建多线程的方式和Java类似，但是手动需要......
     
     
     
-    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
-    
-    
-    
     <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
+    
+    
+    
+    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
     
     
     
@@ -957,7 +962,7 @@ Python创建多线程的方式和Java类似，但是手动需要......
     
     
     
-    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    <a href="/tags/#IO" title="IO" rel="1">IO</a>
     
     
     
@@ -965,7 +970,7 @@ Python创建多线程的方式和Java类似，但是手动需要......
     
     
     
-    <a href="/tags/#IO" title="IO" rel="1">IO</a>
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
     
     
     
@@ -977,6 +982,10 @@ Python创建多线程的方式和Java类似，但是手动需要......
     
     
     
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    
+    
+    
     <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
     
     
@@ -985,19 +994,15 @@ Python创建多线程的方式和Java类似，但是手动需要......
     
     
     
-    <a href="/tags/#注解" title="注解" rel="2">注解</a>
-    
-    
-    
     <a href="/tags/#Spring" title="Spring" rel="1">Spring</a>
     
     
     
-    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
-    
-    
-    
     <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
     
     
     
@@ -1183,16 +1188,16 @@ Python创建多线程的方式和Java类似，但是手动需要......
 <div class="widget">
   <ul>
     
-    <a href="/categories/#多线程">
-      <li>多线程</li>
+    <a href="/categories/#IO">
+      <li>IO</li>
     </a>
     
     <a href="/categories/#Maven">
       <li>Maven</li>
     </a>
     
-    <a href="/categories/#IO">
-      <li>IO</li>
+    <a href="/categories/#多线程">
+      <li>多线程</li>
     </a>
     
     <a href="/categories/#笔试">
@@ -1215,12 +1220,12 @@ Python创建多线程的方式和Java类似，但是手动需要......
       <li>Spring</li>
     </a>
     
-    <a href="/categories/#设计模式">
-      <li>设计模式</li>
-    </a>
-    
     <a href="/categories/#索引">
       <li>索引</li>
+    </a>
+    
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
     </a>
     
     <a href="/categories/#项目">
@@ -1465,6 +1470,7 @@ Python创建多线程的方式和Java类似，但是手动需要......
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

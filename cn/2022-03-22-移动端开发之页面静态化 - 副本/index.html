@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       移动端开发之页面静态化. - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,32 +474,24 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="使用Freemarker">使用Freemarker</h3>
-<h5 id="在pom中加依赖">在pom中加依赖</h5>
-<h5 id="创建模板文件（模板文件中有四种元素）：">创建模板文件（模板文件中有四种元素）：</h5>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1.文本，直接输出</span><br><span class="line"></span><br><span class="line">2.注释，不会输出</span><br><span class="line"></span><br><span class="line">3.插值表达式，即$&#123;&#125;，使用数据模型中的部分代替输出</span><br><span class="line"></span><br><span class="line">4.freemarker指令，名字前面加#予以区分，不输出</span><br><span class="line"></span><br><span class="line">FreeMarker文件后缀名为ftl</span><br></pre></td></tr></table></figure>
-<h3 id="Freemarker指令">Freemarker指令</h3>
-<h3 id="4-1-assign指令">4.1 assign指令</h3>
-<p>assign指令用于在页面上定义一个变量</p>
+        <h3 id="使用Freemarker"><a href="#使用Freemarker" class="headerlink" title="使用Freemarker"></a>使用Freemarker</h3><h5 id="在pom中加依赖"><a href="#在pom中加依赖" class="headerlink" title="在pom中加依赖"></a>在pom中加依赖</h5><h5 id="创建模板文件（模板文件中有四种元素）："><a href="#创建模板文件（模板文件中有四种元素）：" class="headerlink" title="创建模板文件（模板文件中有四种元素）："></a>创建模板文件（模板文件中有四种元素）：</h5><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1.文本，直接输出</span><br><span class="line"></span><br><span class="line">2.注释，不会输出</span><br><span class="line"></span><br><span class="line">3.插值表达式，即$&#123;&#125;，使用数据模型中的部分代替输出</span><br><span class="line"></span><br><span class="line">4.freemarker指令，名字前面加#予以区分，不输出</span><br><span class="line"></span><br><span class="line">FreeMarker文件后缀名为ftl</span><br></pre></td></tr></table></figure>
+<h3 id="Freemarker指令"><a href="#Freemarker指令" class="headerlink" title="Freemarker指令"></a>Freemarker指令</h3><h3 id="4-1-assign指令"><a href="#4-1-assign指令" class="headerlink" title="4.1 assign指令"></a>4.1 assign指令</h3><p>assign指令用于在页面上定义一个变量</p>
 <p>（1）定义简单类型</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;#assign linkman=&quot;周先生&quot;&gt;</span><br><span class="line">联系人：$&#123;linkman&#125;</span><br></pre></td></tr></table></figure>
 <p>（2）定义对象类型</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;#assign info=&#123;&quot;mobile&quot;:&quot;13812345678&quot;,&#x27;address&#x27;:&#x27;北京市昌平区&#x27;&#125; &gt;</span><br><span class="line">电话：$&#123;info.mobile&#125;  地址：$&#123;info.address&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-2-include指令">4.2 include指令</h3>
-<p>include指令用于模板文件的嵌套</p>
+<h3 id="4-2-include指令"><a href="#4-2-include指令" class="headerlink" title="4.2 include指令"></a>4.2 include指令</h3><p>include指令用于模板文件的嵌套</p>
 <p>（1）创建模板文件head.ftl</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>黑马程序员<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>（2）修改入门案例中的test.ftl，在test.ftl模板文件中使用include指令引入上面的模板文件</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;#include &quot;head.ftl&quot;/&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="4-3-if指令">4.3 if指令</h3>
-<p>if指令用于判断</p>
+<h3 id="4-3-if指令"><a href="#4-3-if指令" class="headerlink" title="4.3 if指令"></a>4.3 if指令</h3><p>if指令用于判断</p>
 <p>（1）在模板文件中使用if指令进行判断</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;#if success=true&gt;</span><br><span class="line">  你已通过实名认证</span><br><span class="line">&lt;#else&gt;  </span><br><span class="line">  你未通过实名认证</span><br><span class="line">&lt;/#if&gt;</span><br></pre></td></tr></table></figure>
 <p>（2）在java代码中为success变量赋值</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map.put(<span class="string">&quot;success&quot;</span>, <span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
 <p>在freemarker的判断中，可以使用= 也可以使用==</p>
-<h3 id="4-4-list指令">4.4 list指令</h3>
-<p>list指令用于遍历</p>
+<h3 id="4-4-list指令"><a href="#4-4-list指令" class="headerlink" title="4.4 list指令"></a>4.4 list指令</h3><p>list指令用于遍历</p>
 <p>（1）在模板文件中使用list指令进行遍历</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;#list goodsList as goods&gt;</span><br><span class="line">  商品名称： $&#123;goods.name&#125; 价格：$&#123;goods.price&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">&lt;/#list&gt;</span><br></pre></td></tr></table></figure>
 <p>（2）在java代码中为goodsList赋值</p>
@@ -952,6 +947,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

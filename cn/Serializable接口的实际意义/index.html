@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Serializable接口的实际意义 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -484,13 +487,15 @@
 </blockquote>
 <p>不管是内部序列化还是进行外部传输（比如RPC远调），即使serializable是一个空接口，实现它代表该类可以<font style="color:#DF2A3F;">以JDK自带的序列化方式进行解析并进行序列化</font></p>
 <p>如果项目Controller统一返回MVC Json，那么既不实现Serializable也不使用@JonGenerator自定义序列化器只有项目存在对本对象手动序列化操作时才会报错</p>
-<p><font style="color:#DF2A3F;">（所以不管对象多么复杂，如果不在内部手动序列化，直接通过MVC返回Json，那么都可以将其看成一个String，都无需实现什么序列化接口）</font></p>
+<font style="color:#DF2A3F;">（所以不管对象多么复杂，如果不在内部手动序列化，直接通过MVC返回Json，那么都可以将其看成一个String，都无需实现什么序列化接口）</font>
+
 <h3 id="Pf2GP">为什么入库不需要实现？</h3>
+
 <p>基本entity都不需要实现，原因是Entity在规范上不需要进行外部传输，入库本质上是将数据通过SQL的方式插入到数据库中，并不是通过将原对象进行序列化来实现持久化的</p>
 <p>今天就碰到了这个问题，交易大对象中的一个小引用对象没有实现Serializable接口</p>
 <p><img src="https://cdn.nlark.com/yuque/0/2025/png/35478834/1736500162480-c4339a3c-554b-4f05-9457-3f787b9f15e1.png" alt=""></p>
 <p>可以看到这个其实还是内部基架处理的专门针对交易对象的序列化，所以不实现Serializable此时抛出：</p>
-<p>NoSerializableException异常--------&gt; :没实现序列化接口</p>
+<p>NoSerializableException异常————&gt; :没实现序列化接口</p>
 
 
         <hr>
@@ -947,6 +952,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

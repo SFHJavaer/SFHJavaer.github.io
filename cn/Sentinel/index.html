@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Sentinel - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -469,11 +472,10 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="雪崩效应和Sentinel流控">雪崩效应和Sentinel流控</h3>
-<p>雪崩效应是多个服务之间来进行调用时，如果被调用的服务。不可用，那么就会导致调用服务的服务器的线程不断的累积，直到资源崩溃，偶尔产生雪崩，由于是服务之间的级联，所以也叫做级联失效或级联故障 （cascading failure）</p>
+        <h3 id="雪崩效应和Sentinel流控"><a href="#雪崩效应和Sentinel流控" class="headerlink" title="雪崩效应和Sentinel流控"></a>雪崩效应和Sentinel流控</h3><p>雪崩效应是多个服务之间来进行调用时，如果被调用的服务。不可用，那么就会导致调用服务的服务器的线程不断的累积，直到资源崩溃，偶尔产生雪崩，由于是服务之间的级联，所以也叫做级联失效或级联故障 （cascading failure）</p>
 <p><img src="Snipaste_2023-02-23_18-14-19.png" alt="Snipaste_2023-02-23_18-14-19.png"></p>
-<h3 id="服务容错">服务容错</h3>
-<p>为了避免产生雪崩效应，所以说我们产生了服务容错的思想，服务容错我们常用的有。超时，限流，仓壁模式，断路器模式</p>
+<h3 id="服务容错"><a href="#服务容错" class="headerlink" title="服务容错"></a>服务容错</h3><p>为了避免产生雪崩效应，所以说我们产生了服务容错的思想，服务容错我们常用的有。超时，限流，仓壁模式，断路器模式</p>
+<p>&gt;</p>
 <blockquote>
 <p>超时是指如果我们发送请求在一定的时间没有收到回应，那么我们就认为被调用方不可用，那么我们就将该进程标记为失败</p>
 <p>限流也就是我们规定好在一段时间内的一个请求次数，超过之后直接启用我们的拒绝策略</p>
@@ -485,13 +487,8 @@
 <p><img src="Snipaste_2023-02-23_18-27-04.png" alt="Snipaste_2023-02-23_18-27-04.png"></p>
 <p>下载我们的sentinelServer，打开我们的8080端口，登录到控制台页面，可以发现我们使用到的接口或者被访问过的路径都会进入到我们的流控规则里。</p>
 <p><img src="Snipaste_2023-02-23_18-29-02.png" alt="Snipaste_2023-02-23_18-29-02.png"></p>
-<h4 id="配置流控规则">配置流控规则</h4>
-<p>我们的资源名一般默认是路径，但是我们只要做到唯一区分其实就可以了</p>
-<h6 id="针对来源我们可以default默认是所有的应用，我们可以单独设置A服务，那么代表我们这个流控规则呢，仅对a服务的请求起流控作用">针对来源我们可以default默认是所有的应用，我们可以单独设置A服务，那么代表我们这个流控规则呢，仅对a服务的请求起流控作用</h6>
-<h5 id="流控模式我们可以选择直接关联或者是链路"><strong>流控模式我们可以选择直接关联或者是链路</strong></h5>
-<p>（1）直接代表就是对本服务的一个限流<br>
-（2）关联我们要添加关联路径也就是服务路径，假如关联路径的服务到达了预值，那么我们就限流本服务，这个应用的范围很广泛，比如说我们一个查询一个新增服务，假如说我们的新增到达了预值，那么我们就去限流我们的查询来减轻服务器的压力<br>
-（3）链路要规定好入口资源，其实和针对来源很像，但是针对来源的我们是针对的微服务的来源，写的是服务名，而我们的入口资源呢则是写的接口名，所以链路流控呢是针对来源的更细粒度的流控。</p>
+<h4 id="配置流控规则"><a href="#配置流控规则" class="headerlink" title="配置流控规则"></a>配置流控规则</h4><p>我们的资源名一般默认是路径，但是我们只要做到唯一区分其实就可以了</p>
+<h6 id="针对来源我们可以default默认是所有的应用，我们可以单独设置A服务，那么代表我们这个流控规则呢，仅对a服务的请求起流控作用"><a href="#针对来源我们可以default默认是所有的应用，我们可以单独设置A服务，那么代表我们这个流控规则呢，仅对a服务的请求起流控作用" class="headerlink" title="针对来源我们可以default默认是所有的应用，我们可以单独设置A服务，那么代表我们这个流控规则呢，仅对a服务的请求起流控作用"></a>针对来源我们可以default默认是所有的应用，我们可以单独设置A服务，那么代表我们这个流控规则呢，仅对a服务的请求起流控作用</h6><h5 id="流控模式我们可以选择直接关联或者是链路"><a href="#流控模式我们可以选择直接关联或者是链路" class="headerlink" title="流控模式我们可以选择直接关联或者是链路"></a><strong>流控模式我们可以选择直接关联或者是链路</strong></h5><p>（1）直接代表就是对本服务的一个限流<br>（2）关联我们要添加关联路径也就是服务路径，假如关联路径的服务到达了预值，那么我们就限流本服务，这个应用的范围很广泛，比如说我们一个查询一个新增服务，假如说我们的新增到达了预值，那么我们就去限流我们的查询来减轻服务器的压力<br>（3）链路要规定好入口资源，其实和针对来源很像，但是针对来源的我们是针对的微服务的来源，写的是服务名，而我们的入口资源呢则是写的接口名，所以链路流控呢是针对来源的更细粒度的流控。</p>
 <p><img src="Snipaste_2023-02-23_18-29-52.png" alt="Snipaste_2023-02-23_18-29-52.png"></p>
 <p>至于流控效果，快速失败也就是直接拒绝，而warm up如下：</p>
 <blockquote>
@@ -501,8 +498,7 @@
 <p><img src="Snipaste_2023-02-23_18-37-35.png" alt="Snipaste_2023-02-23_18-37-35.png"></p>
 <p>排队等待如下所示，但是呢要自己设定一个超时时间，假如说匀速排队超过了自己的时间，还没有排上队，那么就会将该请求扔掉</p>
 <p><img src="Snipaste_2023-02-23_18-42-13.png" alt="Snipaste_2023-02-23_18-42-13.png"></p>
-<h3 id="降级规则">降级规则</h3>
-<p>降级规则其实也就是断路器模式，rt是平均响应时间</p>
+<h3 id="降级规则"><a href="#降级规则" class="headerlink" title="降级规则"></a>降级规则</h3><p>降级规则其实也就是断路器模式，rt是平均响应时间</p>
 <p><img src="Snipaste_2023-02-23_18-50-41.png" alt="Snipaste_2023-02-23_18-50-41.png"></p>
 <p>上图代表：</p>
 <p><img src="Snipaste_2023-02-23_18-51-40.png" alt="Snipaste_2023-02-23_18-51-40.png"></p>
@@ -510,72 +506,48 @@
 <p>异常数和异常比例其实都是统计，但是可能统计的量度不同</p>
 <p><img src="Snipaste_2023-02-23_18-53-01.png" alt="Snipaste_2023-02-23_18-53-01.png"></p>
 <p><img src="Snipaste_2023-02-23_18-53-27.png" alt="Snipaste_2023-02-23_18-53-27.png"></p>
-<h3 id="热点规则">热点规则</h3>
-<p>热点规则类似于流控规则，只不过可以理解成更细粒度的流控规则，因为我们的热点规则其实针对于接口，也就是API，如下图所示。<br>
-因为我们的方法参数有很多，所以我们的参数索引从0开始标记<br>
-<em>参数例外项是指我们规定好的热点限流的某个参数，如果我们想要针对特定的值，比如说1或者是2或者是3，规定好他的一个阈值不在上面的一个范围内，就可以单独设立他的预值</em></p>
+<h3 id="热点规则"><a href="#热点规则" class="headerlink" title="热点规则"></a>热点规则</h3><p>热点规则类似于流控规则，只不过可以理解成更细粒度的流控规则，因为我们的热点规则其实针对于接口，也就是API，如下图所示。<br>因为我们的方法参数有很多，所以我们的参数索引从0开始标记<br><em>参数例外项是指我们规定好的热点限流的某个参数，如果我们想要针对特定的值，比如说1或者是2或者是3，规定好他的一个阈值不在上面的一个范围内，就可以单独设立他的预值</em></p>
 <p><strong>注意我们的热点规则参数类型只适合于我们的一个string和八大基本数据类型</strong></p>
 <p><img src="Snipaste_2023-02-23_19-21-49.png" alt="Snipaste_2023-02-23_19-21-49.png"></p>
-<h2 id="系统规则（意如其名）">系统规则（意如其名）</h2>
-<p><img src="Snipaste_2023-02-26_17-31-00.png" alt="Snipaste_2023-02-26_17-31-00.png"></p>
+<h2 id="系统规则（意如其名）"><a href="#系统规则（意如其名）" class="headerlink" title="系统规则（意如其名）"></a>系统规则（意如其名）</h2><p><img src="Snipaste_2023-02-26_17-31-00.png" alt="Snipaste_2023-02-26_17-31-00.png"></p>
 <p><img src="Snipaste_2023-02-26_17-32-02.png" alt="Snipaste_2023-02-26_17-32-02.png"></p>
 <p><img src="Snipaste_2023-02-26_17-32-42.png" alt="Snipaste_2023-02-26_17-32-42.png"></p>
-<h2 id="授权规则（资源的）">授权规则（资源的）</h2>
-<p>授权规则就是指使用流控应用是否可以访问具体的资源，相当于设定了权限</p>
-<h6 id="PS：-Sentinel其实是支持代码配置的，我们可以通过配置具体的属性类来进行配置，所以说我们在控制台来进行配置，只是一种可视化的方式，配置模式上还是使用类来进行配置">PS：             Sentinel其实是支持代码配置的，我们可以通过配置具体的属性类来进行配置，所以说我们在控制台来进行配置，只是一种可视化的方式，配置模式上还是使用类来进行配置</h6>
-<h3 id="Sentinel控制台和微服务通信原理">Sentinel控制台和微服务通信原理</h3>
-<h5 id="类似于服务发现机制">类似于服务发现机制</h5>
-<p><img src="Snipaste_2023-02-26_17-51-48.png" alt="Snipaste_2023-02-26_17-51-48.png"></p>
-<h4 id="客户端和控制台配置项">客户端和控制台配置项</h4>
-<p><img src="Snipaste_2023-02-26_17-52-47.png" alt="Snipaste_2023-02-26_17-52-47.png"></p>
+<h2 id="授权规则（资源的）"><a href="#授权规则（资源的）" class="headerlink" title="授权规则（资源的）"></a>授权规则（资源的）</h2><p>授权规则就是指使用流控应用是否可以访问具体的资源，相当于设定了权限</p>
+<h6 id="PS：-Sentinel其实是支持代码配置的，我们可以通过配置具体的属性类来进行配置，所以说我们在控制台来进行配置，只是一种可视化的方式，配置模式上还是使用类来进行配置"><a href="#PS：-Sentinel其实是支持代码配置的，我们可以通过配置具体的属性类来进行配置，所以说我们在控制台来进行配置，只是一种可视化的方式，配置模式上还是使用类来进行配置" class="headerlink" title="PS：             Sentinel其实是支持代码配置的，我们可以通过配置具体的属性类来进行配置，所以说我们在控制台来进行配置，只是一种可视化的方式，配置模式上还是使用类来进行配置"></a>PS：             Sentinel其实是支持代码配置的，我们可以通过配置具体的属性类来进行配置，所以说我们在控制台来进行配置，只是一种可视化的方式，配置模式上还是使用类来进行配置</h6><h3 id="Sentinel控制台和微服务通信原理"><a href="#Sentinel控制台和微服务通信原理" class="headerlink" title="Sentinel控制台和微服务通信原理"></a>Sentinel控制台和微服务通信原理</h3><h5 id="类似于服务发现机制"><a href="#类似于服务发现机制" class="headerlink" title="类似于服务发现机制"></a>类似于服务发现机制</h5><p><img src="Snipaste_2023-02-26_17-51-48.png" alt="Snipaste_2023-02-26_17-51-48.png"></p>
+<h4 id="客户端和控制台配置项"><a href="#客户端和控制台配置项" class="headerlink" title="客户端和控制台配置项"></a>客户端和控制台配置项</h4><p><img src="Snipaste_2023-02-26_17-52-47.png" alt="Snipaste_2023-02-26_17-52-47.png"></p>
 <p>启动jar包也就是启动控制台时加入后缀配置选项</p>
 <p><img src="Snipaste_2023-02-26_17-54-43.png" alt="Snipaste_2023-02-26_17-54-43.png"></p>
-<h2 id="API">API</h2>
-<p><img src="Snipaste_2023-02-26_19-17-11.png" alt="Snipaste_2023-02-26_19-17-11.png"><br>
-第一个API是最核心的API，用于定义资源，让资源受到监控并保护资源</p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p><img src="Snipaste_2023-02-26_19-17-11.png" alt="Snipaste_2023-02-26_19-17-11.png"><br>第一个API是最核心的API，用于定义资源，让资源受到监控并保护资源</p>
 <p>第二个可以对传入的参数。也就是具体的异常进行统计</p>
 <p>第三个可以实现调用来源，标记调用，比如在限流规则中配置来源时就可以直接传入自己在第三个API传入的。来源名</p>
-<h2 id="SentinelResource（注解类的底层还是API）">@SentinelResource（注解类的底层还是API）</h2>
-<p><img src="Snipaste_2023-02-26_19-27-52.png" alt="Snipaste_2023-02-26_19-27-52.png"></p>
+<h2 id="SentinelResource（注解类的底层还是API）"><a href="#SentinelResource（注解类的底层还是API）" class="headerlink" title="@SentinelResource（注解类的底层还是API）"></a>@SentinelResource（注解类的底层还是API）</h2><p><img src="Snipaste_2023-02-26_19-27-52.png" alt="Snipaste_2023-02-26_19-27-52.png"></p>
 <p><img src="Snipaste_2023-02-26_19-29-25.png" alt="Snipaste_2023-02-26_19-29-25.png"></p>
-<h2 id="RestTemplate整合Sentinel">RestTemplate整合Sentinel</h2>
-<p><img src="/C:/Users/24286/AppData/Roaming/Typora/draftsRecover/Sentinel/Snipaste_2023-03-01_10-17-07.png" alt="Snipaste_2023-03-01_10-17-07.png"></p>
+<h2 id="RestTemplate整合Sentinel"><a href="#RestTemplate整合Sentinel" class="headerlink" title="RestTemplate整合Sentinel"></a>RestTemplate整合Sentinel</h2><p><img src="/C:/Users/24286/AppData/Roaming/Typora/draftsRecover/Sentinel/Snipaste_2023-03-01_10-17-07.png" alt="Snipaste_2023-03-01_10-17-07.png"></p>
 <blockquote>
 <p>添加该注解之后可以直接配置流控规则，原因是该注解完成了Sentinel与http客户端的整合，底层使用了mvc的拦截器，源码在的后置处理器中，对于页面的异常展示，因为该注解里面有很多的属性，我们仍然可以通过配置blockhandler和fallback。等属性配置异常处理器</p>
 </blockquote>
-<h2 id="Feign整合Sentinel">Feign整合Sentinel</h2>
-<p><img src="Snipaste_2023-03-01_11-38-29.png" alt="Snipaste_2023-03-01_11-38-29.png"></p>
+<h2 id="Feign整合Sentinel"><a href="#Feign整合Sentinel" class="headerlink" title="Feign整合Sentinel"></a>Feign整合Sentinel</h2><p><img src="Snipaste_2023-03-01_11-38-29.png" alt="Snipaste_2023-03-01_11-38-29.png"></p>
 <p>使用方法：需要在加@feignclient的接口上，将该注解的属性添加fallback或Fallbackfactory，指向具体类名，那么具体类就去实现这个接口即可</p>
 <p><img src="Snipaste_2023-03-01_11-44-13.png" alt="Snipaste_2023-03-01_11-44-13.png"></p>
-<h2 id="总结">总结</h2>
-<p><img src="Snipaste_2023-03-01_11-49-26.png" alt="Snipaste_2023-03-01_11-49-26.png"></p>
-<h2 id="规则持久化（重点）">规则持久化（重点）</h2>
-<p><img src="Snipaste_2023-03-01_11-52-05.png" alt="Snipaste_2023-03-01_11-52-05.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="Snipaste_2023-03-01_11-49-26.png" alt="Snipaste_2023-03-01_11-49-26.png"></p>
+<h2 id="规则持久化（重点）"><a href="#规则持久化（重点）" class="headerlink" title="规则持久化（重点）"></a>规则持久化（重点）</h2><p><img src="Snipaste_2023-03-01_11-52-05.png" alt="Snipaste_2023-03-01_11-52-05.png"></p>
 <p><img src="Snipaste_2023-03-01_19-15-51.png" alt="Snipaste_2023-03-01_19-15-51.png"></p>
-<h6 id="拉模式可以理解成微服务从控制台拉取我们的配置，而推模式则是控制台向我们的配置中心推送，然后我们的配置中心在向我们的具体服务推送规则">拉模式可以理解成微服务从控制台拉取我们的配置，而推模式则是控制台向我们的配置中心推送，然后我们的配置中心在向我们的具体服务推送规则</h6>
-<h2 id="生产环境">生产环境</h2>
-<p>因为我们的推拉模式各有优缺点，所以我们在常用的生产环境中，我们一般会使用阿里的ahas控制台来进行直接的配置，我们需要整合ahas的依赖，其实底层还是依靠着sentinel</p>
+<h6 id="拉模式可以理解成微服务从控制台拉取我们的配置，而推模式则是控制台向我们的配置中心推送，然后我们的配置中心在向我们的具体服务推送规则"><a href="#拉模式可以理解成微服务从控制台拉取我们的配置，而推模式则是控制台向我们的配置中心推送，然后我们的配置中心在向我们的具体服务推送规则" class="headerlink" title="拉模式可以理解成微服务从控制台拉取我们的配置，而推模式则是控制台向我们的配置中心推送，然后我们的配置中心在向我们的具体服务推送规则"></a>拉模式可以理解成微服务从控制台拉取我们的配置，而推模式则是控制台向我们的配置中心推送，然后我们的配置中心在向我们的具体服务推送规则</h6><h2 id="生产环境"><a href="#生产环境" class="headerlink" title="生产环境"></a>生产环境</h2><p>因为我们的推拉模式各有优缺点，所以我们在常用的生产环境中，我们一般会使用阿里的ahas控制台来进行直接的配置，我们需要整合ahas的依赖，其实底层还是依靠着sentinel</p>
 <p><img src="Snipaste_2023-03-01_19-17-12.png" alt="Snipaste_2023-03-01_19-17-12.png"></p>
-<h2 id="集群流控">集群流控</h2>
-<p><img src="Snipaste_2023-03-01_19-19-18.png" alt="Snipaste_2023-03-01_19-19-18.png"></p>
+<h2 id="集群流控"><a href="#集群流控" class="headerlink" title="集群流控"></a>集群流控</h2><p><img src="Snipaste_2023-03-01_19-19-18.png" alt="Snipaste_2023-03-01_19-19-18.png"></p>
 <p>因为我们使用的是1.6.2的版本，我们的tokenserver。不支持高可用以及故障转移等特性，所以并不能应用于生产环境，所以此时仅作了解。</p>
 <p><img src="Snipaste_2023-03-01_19-19-46.png" alt="Snipaste_2023-03-01_19-19-46.png"></p>
-<h2 id="Sentinel优化（拓展）">Sentinel优化（拓展）</h2>
-<p>拓展一般都是基于CommonFilter接口，这个接口是非常关键的一个接口</p>
-<p>**（1）**我们可以去实现UrlBlockHandler接口去优化我们的错误页展示，去实现对应的block方法，来对具体的异常信息进行返回</p>
-<p>**（2）**我们还可以实现其他接口来实现区分来源，我们在项目的授权规则上开始时使用的是服务名来进行区分来源，在这里我们可以去实现requestOriginParser接口，比如说我们可以将Header中的属性修改，然后我们从request中拿出我们所需要的属性比对，如果符合我们的业务需求属性，那么我们才通过</p>
-<p>**（3）**我们前面的都是对具体的域名资源路径来进行限流，比如IP:端口/share/1，而share是我们的路径名，这样才是我们所需要的限流接口，1只是传入的ID，那么我们如何进行配置呢？</p>
+<h2 id="Sentinel优化（拓展）"><a href="#Sentinel优化（拓展）" class="headerlink" title="Sentinel优化（拓展）"></a>Sentinel优化（拓展）</h2><p>拓展一般都是基于CommonFilter接口，这个接口是非常关键的一个接口</p>
+<p><strong>（1）</strong>我们可以去实现UrlBlockHandler接口去优化我们的错误页展示，去实现对应的block方法，来对具体的异常信息进行返回</p>
+<p><strong>（2）</strong>我们还可以实现其他接口来实现区分来源，我们在项目的授权规则上开始时使用的是服务名来进行区分来源，在这里我们可以去实现requestOriginParser接口，比如说我们可以将Header中的属性修改，然后我们从request中拿出我们所需要的属性比对，如果符合我们的业务需求属性，那么我们才通过</p>
+<p><strong>（3）</strong>我们前面的都是对具体的域名资源路径来进行限流，比如IP:端口/share/1，而share是我们的路径名，这样才是我们所需要的限流接口，1只是传入的ID，那么我们如何进行配置呢？</p>
 <blockquote>
 <p>我们同样去实现我们的UrlCleaner接口，然后去重写他的clean方法，帮我们获取到的原url进行处理，比如说将ID进行删除，或者将其统一修改为String类型的占位符，演示操作如下</p>
 <p><img src="Snipaste_2023-03-01_19-34-46.png" alt="Snipaste_2023-03-01_19-34-46.png"></p>
 </blockquote>
-<h2 id="本质">本质</h2>
-<p><img src="Snipaste_2023-03-01_19-35-08.png" alt="Snipaste_2023-03-01_19-35-08.png"></p>
+<h2 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h2><p><img src="Snipaste_2023-03-01_19-35-08.png" alt="Snipaste_2023-03-01_19-35-08.png"></p>
 <p>其实底层使用的都是我们的过滤器，对我们的内容来进行拦截过滤，我们可以在配置文件中将我们的。sentinel Filter enabled 属性设置为false来进行，关闭我们的commonFilter，然后我们在原有基础上进行修改扩展。</p>
-<h2 id="仓壁模式">仓壁模式</h2>
-<h5 id="还有一种仓壁模式的限流模式没有涉及，对于舱壁模式的基础想法，我们可以认为每一个controller都有它对应的一个线程池来单独对它进行限流，但是无疑如果有很多的请求路径的话，那么就会产生很多的线程池来造成很大的资源浪费">还有一种仓壁模式的限流模式没有涉及，对于舱壁模式的基础想法，我们可以认为每一个controller都有它对应的一个线程池来单独对它进行限流，但是无疑如果有很多的请求路径的话，那么就会产生很多的线程池来造成很大的资源浪费</h5>
-<h5 id="所以我们的思路一般是使用唯一的一个线程池，然后将每一个接口请求分配给定的几个线程，也就是说每个接口不能超过分配给他的线程阈值，这样的设计思想性能就会提升很大">所以我们的思路一般是使用唯一的一个线程池，然后将每一个接口请求分配给定的几个线程，也就是说每个接口不能超过分配给他的线程阈值，这样的设计思想性能就会提升很大</h5>
-
+<h2 id="仓壁模式"><a href="#仓壁模式" class="headerlink" title="仓壁模式"></a>仓壁模式</h2><h5 id="还有一种仓壁模式的限流模式没有涉及，对于舱壁模式的基础想法，我们可以认为每一个controller都有它对应的一个线程池来单独对它进行限流，但是无疑如果有很多的请求路径的话，那么就会产生很多的线程池来造成很大的资源浪费"><a href="#还有一种仓壁模式的限流模式没有涉及，对于舱壁模式的基础想法，我们可以认为每一个controller都有它对应的一个线程池来单独对它进行限流，但是无疑如果有很多的请求路径的话，那么就会产生很多的线程池来造成很大的资源浪费" class="headerlink" title="还有一种仓壁模式的限流模式没有涉及，对于舱壁模式的基础想法，我们可以认为每一个controller都有它对应的一个线程池来单独对它进行限流，但是无疑如果有很多的请求路径的话，那么就会产生很多的线程池来造成很大的资源浪费"></a>还有一种仓壁模式的限流模式没有涉及，对于舱壁模式的基础想法，我们可以认为每一个controller都有它对应的一个线程池来单独对它进行限流，但是无疑如果有很多的请求路径的话，那么就会产生很多的线程池来造成很大的资源浪费</h5><h5 id="所以我们的思路一般是使用唯一的一个线程池，然后将每一个接口请求分配给定的几个线程，也就是说每个接口不能超过分配给他的线程阈值，这样的设计思想性能就会提升很大"><a href="#所以我们的思路一般是使用唯一的一个线程池，然后将每一个接口请求分配给定的几个线程，也就是说每个接口不能超过分配给他的线程阈值，这样的设计思想性能就会提升很大" class="headerlink" title="所以我们的思路一般是使用唯一的一个线程池，然后将每一个接口请求分配给定的几个线程，也就是说每个接口不能超过分配给他的线程阈值，这样的设计思想性能就会提升很大"></a>所以我们的思路一般是使用唯一的一个线程池，然后将每一个接口请求分配给定的几个线程，也就是说每个接口不能超过分配给他的线程阈值，这样的设计思想性能就会提升很大</h5>
 
         <hr>
         <!-- Pager -->
@@ -1031,6 +1003,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       SpringMVC拦截器 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -491,13 +494,11 @@
 <p>拦截器一般用在用户登录处理、权限检查、记录日志等</p>
 <p>拦截器是全局的，可以对多个crontroller进行拦截，过滤器是用来过滤请求参数，设置编码字符集等等</p>
 <hr>
-<h5 id="Controller和Handler有什么区别">Controller和Handler有什么区别</h5>
-<p>一般来说，Controller是Handler，但Handler不一定是Controller。</p>
+<h5 id="Controller和Handler有什么区别"><a href="#Controller和Handler有什么区别" class="headerlink" title="Controller和Handler有什么区别"></a>Controller和Handler有什么区别</h5><p>一般来说，Controller是Handler，但Handler不一定是Controller。</p>
 <p>例如，HttpRequestHandler，WebRequestHandler，MessageHandler都是可以使用DispatcherServlet的处理程序。 （（@）Controller是执行Web请求并返回视图的处理程序。）</p>
 <p>简而言之，Handler只是一个术语，它不是一个类或接口。 它可以执行映射。</p>
 <hr>
-<h5 id="方法上加-ResponseBody">方法上加@ResponseBody</h5>
-<p>加了代表返回数据按照返回值类型直接放到响应体中，和请求时放入请求体是相对的，然后方法从响应体中取，一般是Json，而不加的话就会返回ModelAndView给DispatcherServlet，最后处理完视图进行直接的展示，所以对于前后端分离的业务我们都是加@RestController而不是不加。</p>
+<h5 id="方法上加-ResponseBody"><a href="#方法上加-ResponseBody" class="headerlink" title="方法上加@ResponseBody"></a>方法上加@ResponseBody</h5><p>加了代表返回数据按照返回值类型直接放到响应体中，和请求时放入请求体是相对的，然后方法从响应体中取，一般是Json，而不加的话就会返回ModelAndView给DispatcherServlet，最后处理完视图进行直接的展示，所以对于前后端分离的业务我们都是加@RestController而不是不加。</p>
 
 
         <hr>
@@ -945,6 +946,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

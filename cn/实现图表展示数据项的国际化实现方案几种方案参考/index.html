@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       实现图表展示数据项的国际化实现方案几种方案参考 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,31 +474,31 @@
 
         <p>切面方案</p>
 <ol>
-<li>**定义注解 **<code>**InternationalizedField**</code>：</li>
+<li><strong>定义注解 </strong><code>**InternationalizedField**</code>：</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Target(ElementType.FIELD)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> InternationalizedField &#123;</span><br><span class="line">    <span class="function">String <span class="title">key</span><span class="params">()</span></span>; <span class="comment">// 用于指定国际化资源文件中的键</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
-<li>**创建国际化服务接口 <code>LocalizationService</code>**和实现 <code>LocalizationServiceImpl</code>，与之前保持一致。</li>
-<li><strong>定义DTO类 <strong><code>**MyDTO**</code></strong> 和 <strong><code>**Result**</code></strong>、</strong><code>**B**</code>：</li>
+<li><strong>创建国际化服务接口 <code>LocalizationService</code></strong>和实现 <code>LocalizationServiceImpl</code>，与之前保持一致。</li>
+<li><strong>定义DTO类 </strong><code>**MyDTO**</code><strong> 和 </strong><code>**Result**</code><strong>、</strong><code>**B**</code>：</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyDTO</span> </span>&#123;</span><br><span class="line">    <span class="meta">@InternationalizedField(key = &quot;xxxxDTO.field1&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String field1;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@InternationalizedField(key = &quot;xxxxDTO.field2&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String field2;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getters and setters</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Result</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;MyDTO&gt; a;</span><br><span class="line">    <span class="keyword">private</span> List&lt;B&gt; bList;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getters and setters</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String realName;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getters and setters</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
-<li>**创建国际化切面 **<code>**InternationalizationAspect**</code>：</li>
+<li><strong>创建国际化切面 </strong><code>**InternationalizationAspect**</code>：</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import org.aspectj.lang.annotation.AfterReturning;</span><br><span class="line">import org.aspectj.lang.annotation.Aspect;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Field;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class InternationalizationAspect &#123;</span><br><span class="line"></span><br><span class="line">    private final LocalizationService localizationService;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    public InternationalizationAspect(LocalizationService localizationService) &#123;</span><br><span class="line">        this.localizationService &#x3D; localizationService;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @AfterReturning(pointcut &#x3D; &quot;execution(* com.example.MyService.getResult(..)) &amp;&amp; args(locale)&quot;, returning &#x3D; &quot;result&quot;)</span><br><span class="line">    public void internationalizeResult(Result result, String locale) throws IllegalAccessException &#123;</span><br><span class="line">        if (result &#x3D;&#x3D; null) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 遍历Result对象中的A集合，构建注解的键与字段映射关系</span><br><span class="line">        for (MyDTO item : result.getA()) &#123;</span><br><span class="line">            processLocalization(item, result.getBList(), locale);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void processLocalization(MyDTO dto, List&lt;B&gt; bList, String locale) throws IllegalAccessException &#123;</span><br><span class="line">        Field[] fields &#x3D; dto.getClass().getDeclaredFields();</span><br><span class="line">        for (Field field : fields) &#123;</span><br><span class="line">            if (field.isAnnotationPresent(InternationalizedField.class)) &#123;</span><br><span class="line">                InternationalizedField annotation &#x3D; field.getAnnotation(InternationalizedField.class);</span><br><span class="line">                String key &#x3D; annotation.key();</span><br><span class="line">                String localizedValue &#x3D; localizationService.getLocalizedValue(key, locale);</span><br><span class="line"></span><br><span class="line">                &#x2F;&#x2F; 遍历bList，查找name与注解key匹配的B对象，并设置其realName</span><br><span class="line">                for (B b : bList) &#123;</span><br><span class="line">                    if (b.getName().equals(key)) &#123;</span><br><span class="line">                        b.setRealName(localizedValue);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
-<li>**配置文件 <strong><code>**application-enus.properties**</code></strong> 和 **<code>**application-zhcn.properties**</code>：</li>
+<li><strong>配置文件 </strong><code>**application-enus.properties**</code><strong> 和 </strong><code>**application-zhcn.properties**</code>：</li>
 </ol>
 <p><code>application-enus.properties</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xxxxDTO.field1&#x3D;Field 1 EN</span><br><span class="line">xxxxDTO.field2&#x3D;Field 2 EN</span><br></pre></td></tr></table></figure>
 <p><code>application-zhcn.properties</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xxxxDTO.field1&#x3D;字段 1 中文</span><br><span class="line">xxxxDTO.field2&#x3D;字段 2 中文</span><br></pre></td></tr></table></figure>
 <ol>
-<li>**服务类 **<code>**MyService**</code>：</li>
+<li><strong>服务类 </strong><code>**MyService**</code>：</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Result <span class="title">getResult</span><span class="params">(String locale)</span> </span>&#123;</span><br><span class="line">        MyDTO dto1 = <span class="keyword">new</span> MyDTO();</span><br><span class="line">        MyDTO dto2 = <span class="keyword">new</span> MyDTO();</span><br><span class="line">        List&lt;MyDTO&gt; dtoList = Arrays.asList(dto1, dto2);</span><br><span class="line"></span><br><span class="line">        B b1 = <span class="keyword">new</span> B();</span><br><span class="line">        b1.setName(<span class="string">&quot;xxxxDTO.field1&quot;</span>);</span><br><span class="line"></span><br><span class="line">        B b2 = <span class="keyword">new</span> B();</span><br><span class="line">        b2.setName(<span class="string">&quot;xxxxDTO.field2&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;B&gt; bList = Arrays.asList(b1, b2);</span><br><span class="line"></span><br><span class="line">        Result result = <span class="keyword">new</span> Result();</span><br><span class="line">        result.setA(dtoList);</span><br><span class="line">        result.setBList(bList);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
-<li>**主应用程序 **<code>**MainApplication**</code>：</li>
+<li><strong>主应用程序 </strong><code>**MainApplication**</code>：</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(MainApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
@@ -962,6 +965,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

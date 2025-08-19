@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -522,13 +525,11 @@
       
     </h3>
     <div class="post-content-preview">
-      JMS：一个规范的接口，相当于JDBC
-JMS消息模型有两种：p2p（点对点模式）和pub-sub（发布者-订阅者模式）
+      JMS：一个规范的接口，相当于JDBCJMS消息模型有两种：p2p（点对点模式）和pub-sub（发布者-订阅者模式）
 JMS常用的消息种类我们主要使用BytesMessage
 规范的实现主要有：ActiveMQ，Redis，HornetMQ，RabbitMQ，RocketMQ（没完全遵守JMS规范）
 AMQP：协议，对定了网络交换的数据格式
-ActiveMQ
-MQ都是在配置文件中加配置，......
+ActiveMQMQ都是在配置文件中加配置，依赖......
     </div>
   </a>
   
@@ -561,10 +562,8 @@ MQ都是在配置文件中加配置，......
       
     </h3>
     <div class="post-content-preview">
-      两种方式实现SpringBoot定时任务
-整合quartz：
-首先使用util包下自带的Timmer类
-12345678910111213public class TimerTaskApp &#123;    public static void main(String[] args) &#123;        Timer timer = new Timer();        Timer......
+      两种方式实现SpringBoot定时任务整合quartz：首先使用util包下自带的Timmer类
+12345678910111213public class TimerTaskApp &#123;    public static void main(String[] args) &#123;        Timer timer = new Timer();        TimerTa......
     </div>
   </a>
   
@@ -597,12 +596,9 @@ MQ都是在配置文件中加配置，......
       
     </h3>
     <div class="post-content-preview">
-      Springboot 整合三方（Jetcache，j2cache）的具体演示
-缓存：提高永久存储介质的读取效率，并且提供临时的数据存储空间
-可以用HashMap存储数据，不借用数据库，实现类似的缓存机制
+      Springboot 整合三方（Jetcache，j2cache）的具体演示缓存：提高永久存储介质的读取效率，并且提供临时的数据存储空间可以用HashMap存储数据，不借用数据库，实现类似的缓存机制
 SpringBoot提供了多种缓存,常用的有Ehcache，Redis，memcached，不指定默认为simple
-在引导类中使用@EnableCaching来启用缓存
-在业务层方法上使用......
+在引导类中使用@EnableCaching来启用缓存在业务层方法上使用@Ca......
     </div>
   </a>
   
@@ -635,11 +631,11 @@ SpringBoot提供了多种缓存,常用的有Ehcache，Redis，memcached，不指
       
     </h3>
     <div class="post-content-preview">
-      实现高性能、一致性、高可用
+      实现高性能、一致性、高可用    
 前端进行一次md5加密，传输过程中再进行一次加密，提高安全程度
 利用逆向工程由数据库表和模板来生成对应的实体类、接口、实现类等等，需要的保留，不需要的在后续中删除
 开发登陆功能是为了为后续的秒杀功能提供鉴权，只有用户才能进行秒杀
-登陆页面中校验和前端的返回值不再使用return返回数据枚举或常量类，而是抛出异常来被ControllerAdvice捕获，进行统一的异......
+登陆页面中校验和前端的返回值不再使用return返回数据枚举或常量类，而是抛出异常来被ControllerAdvice捕获，进行......
     </div>
   </a>
   
@@ -673,14 +669,11 @@ SpringBoot提供了多种缓存,常用的有Ehcache，Redis，memcached，不指
     </h3>
     <div class="post-content-preview">
       ES：分布式全文搜索引擎
-
 windiows安装之后运行bat批处理文件执行
-
-
 ES没有数据库的概念，但是有索引的概念
 
 启动Es后，直接对ES发请求，在请求路径之后跟上索引（http://localhost:9200/books），ES全面支持Restful风格的操作
-123456PUT：返回boolean类型的Json数据，字段有acknowledged（操作是否成功），index（你......
+123456PUT：返回boolean类型的Json数据，字段有acknowledged（操作是否成功），index（你提交的......
     </div>
   </a>
   
@@ -713,11 +706,8 @@ ES没有数据库的概念，但是有索引的概念
       
     </h3>
     <div class="post-content-preview">
-      Redis非关系型数据库学习笔记
-单进程
-单进程模型来处理客户端的请求。对读写等事件的响应是通过对epoll函数的包装来做到的。Redis的实际处理速度完全依靠主进程的执行效率；
-epoll是Linux内核为处理大批量文件描述符而作了改进的epoll，是Linux下多路复用IO接口select/poll的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率；
-re......
+      Redis非关系型数据库学习笔记单进程单进程模型来处理客户端的请求。对读写等事件的响应是通过对epoll函数的包装来做到的。Redis的实际处理速度完全依靠主进程的执行效率；epoll是Linux内核为处理大批量文件描述符而作了改进的epoll，是Linux下多路复用IO接口select/poll的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率；
+redis......
     </div>
   </a>
   
@@ -789,14 +779,13 @@ re......
       
     </h3>
     <div class="post-content-preview">
-      Springboot RESTFUL风格
-RESTful风格的url的优点：
+      Springboot RESTFUL风格RESTful风格的url的优点：
 1）隐藏资源的访问行为，无法通过链接地址判断对资源的操作
 2）书写简化
 REST是一种风格不是规范，或是现在已经约定俗成的规范
 描述模块的名称通常使用复数加s，表示此类资源而不是单个资源
 按照REST访问资源时使用行为动作来区分进行何种操作（一般是8种请求方式），这种访问方式叫RESTful
-实现步骤：1）设定ht......
+实现步骤：1）设定htt......
     </div>
   </a>
   
@@ -904,11 +893,11 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
   <div class="tags">
     
     
-    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
-    
-    
-    
     <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
+    
+    
+    
+    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
     
     
     
@@ -916,19 +905,11 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     
     
     
-    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
-    
-    
-    
     <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
     
     
     
-    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
-    
-    
-    
-    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
     
     
     
@@ -936,15 +917,23 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     
     
     
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    
+    
+    
     <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
     
     
     
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
+    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
     
     
     
     <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
     
     
     
@@ -964,11 +953,11 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     
     
     
-    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
-    
-    
-    
     <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
+    
+    
+    
+    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
     
     
     
@@ -976,7 +965,7 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     
     
     
-    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    <a href="/tags/#IO" title="IO" rel="1">IO</a>
     
     
     
@@ -984,7 +973,7 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     
     
     
-    <a href="/tags/#IO" title="IO" rel="1">IO</a>
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
     
     
     
@@ -996,6 +985,10 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     
     
     
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    
+    
+    
     <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
     
     
@@ -1004,19 +997,15 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     
     
     
-    <a href="/tags/#注解" title="注解" rel="2">注解</a>
-    
-    
-    
     <a href="/tags/#Spring" title="Spring" rel="1">Spring</a>
     
     
     
-    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
-    
-    
-    
     <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
     
     
     
@@ -1202,16 +1191,16 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
 <div class="widget">
   <ul>
     
-    <a href="/categories/#多线程">
-      <li>多线程</li>
+    <a href="/categories/#IO">
+      <li>IO</li>
     </a>
     
     <a href="/categories/#Maven">
       <li>Maven</li>
     </a>
     
-    <a href="/categories/#IO">
-      <li>IO</li>
+    <a href="/categories/#多线程">
+      <li>多线程</li>
     </a>
     
     <a href="/categories/#笔试">
@@ -1234,12 +1223,12 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
       <li>Spring</li>
     </a>
     
-    <a href="/categories/#设计模式">
-      <li>设计模式</li>
-    </a>
-    
     <a href="/categories/#索引">
       <li>索引</li>
+    </a>
+    
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
     </a>
     
     <a href="/categories/#项目">
@@ -1484,6 +1473,7 @@ REST是一种风格不是规范，或是现在已经约定俗成的规范
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

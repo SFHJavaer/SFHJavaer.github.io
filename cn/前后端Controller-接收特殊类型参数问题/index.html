@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       前后端Controller--接收特殊类型参数问题 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -470,12 +473,14 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h3 id="C4SpR">数组</h3>
+
 <p>今天在前端发送某个属性值为[]时，后端接收到的为空的ArrayList对象。</p>
 <p>首先清楚，在MVC框架下，后端接收到什么参数，完全取决于序列化框架，原因是参数对象一定是反序列化变为对象的，而对于大多数序列化框架，规则基本是一致的，所以建议记忆。</p>
 <p>这里Jackson的序列化规则就是[],最后被反序列化为ArrayList而不是null;</p>
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1721096702451-9d356ac3-64e3-42c7-b735-14353996908e.png" alt=""></p>
 <p>这些接收到的都是ArayList</p>
 <h3 id="TeNry">枚举</h3>
+
 <p>对于前端传入一个字符串，后台可以直接使用enum接收吗</p>
 <p><strong>答案是分条件</strong></p>
 <p><strong>如果如下图所示是可以的，如第二张图是不可以的</strong></p>
@@ -937,6 +942,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

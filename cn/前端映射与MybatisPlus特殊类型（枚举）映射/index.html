@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       前端映射与MybatisPlus特殊类型（枚举）映射 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -474,6 +477,7 @@
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1724650982907-c1604268-5e52-47b9-97ac-2df9b919db3b.png" alt=""></p>
 <p>那么比如前端传入交易状态这个字段，后端是有可以使用的枚举的，直接使用DealStatusEnum接收，会发生什么？</p>
 <h4 id="KRXnn">首先，能不能接收到？</h4>
+
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1724650731372-27f7e7ce-268e-418c-8925-e0f6514143ec.png" alt=""></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1724650752574-7584053f-f401-4b6d-b247-60e470bd7a97.png" alt=""></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1724650760561-01300a55-2b67-4ba6-b016-075d3728d944.png" alt=""></p>
@@ -482,11 +486,11 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;invType&quot;: [</span><br><span class="line">    &#123; &quot;key&quot;: &quot;I&quot;, &quot;value&quot;: &quot;ISSUE&quot; &#125;,</span><br><span class="line">    &#123; <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;T&quot;</span>, <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;FVTPL&quot;</span> &#125;</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>但是如果你传入的参数为key-value对应的字符串，那么就不能正常反序列化，接收不到，所以需要使用 @JsonCreator  自定义反序列化器。</p>
 <h3 id="Xk3mN">使用</h3>
-<p>注意，枚举就是一种特殊的类，所以在XML中使用起来，获取其属性用.，<a target="_blank" rel="noopener" href="http://xn--ujq128c95er9iiq0a6kd.XXX">调用方法也要.XXX</a>()</p>
-<p>如果我们直接传入枚举到xml，这里的status是一个枚举，那么必然报错，OGNL表达式左边为enum，右边为String，当然类型不一致，所以需要使用 <font style="background-color:#DF2A3F;"> <a target="_blank" rel="noopener" href="http://status.name">status.name</a>()方法</font></p>
+
+<p>注意，枚举就是一种特殊的类，所以在XML中使用起来，获取其属性用.，调用方法也要.XXX()</p>
+<p>如果我们直接传入枚举到xml，这里的status是一个枚举，那么必然报错，OGNL表达式左边为enum，右边为String，当然类型不一致，所以需要使用 <font style="background-color:#DF2A3F;"> status.name()方法</font></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;status == &#x27;OutStanding&#x27;&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 执行逻辑 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>:::success<br>
-但是 <a target="_blank" rel="noopener" href="http://xn--status-2i5lv69e.name">注意status.name</a>()方法，既然调用了方法，就必须先判断其是否为null</p>
+<p>:::success<br>但是 注意status.name()方法，既然调用了方法，就必须先判断其是否为null</p>
 <p>:::</p>
 <p>然后，我使用以下方式，仍然报错：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;invType.name() == &#x27;I&#x27;&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 执行逻辑 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -496,9 +500,10 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&#x27;invType.name() == &quot;I&quot;&#x27;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 执行逻辑 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;a != null and a.equals(&#x27;s&#x27;)&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 执行逻辑 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>可以看到，实例方法是可以直接.使用的，如果是静态方法</p>
-<p><code>@类全名@方法名()</code> 用于调用静态方法。</p>
+<p><code>@类全名@方法名()</code> 用于调用静态方法。  </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;@java.lang.Math@random() &gt; 0.5&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 逻辑 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="IV69G">扩展</h3>
+
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1724652734495-d2fbbd60-d353-4af7-a49b-b55b8fa79178.png" alt=""></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1724652757708-2759a253-778f-410d-8f1c-6eae18add741.png" alt=""></p>
 
@@ -957,6 +962,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

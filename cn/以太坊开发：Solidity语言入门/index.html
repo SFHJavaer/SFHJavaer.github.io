@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       以太坊开发：Solidity语言入门 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -470,11 +473,13 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h3 id="CZjfC">两个前提</h3>
+
 <ul>
 <li>说明软件许可</li>
 <li>声明源文件版本</li>
 </ul>
 <h3 id="WUTBJ">常用基础数据类型</h3>
+
 <blockquote>
 <p>理解上和Java相似</p>
 </blockquote>
@@ -488,11 +493,13 @@
 <li>bytes：定长数组类型，和unit相似有bytes1,bytes8,bytes32等等，一个字节等于一个字母，相当于基础类型的string</li>
 </ul>
 <h3 id="PHVYl">引用数据类型</h3>
+
 <ul>
 <li>数组</li>
 <li></li>
 </ul>
 <h3 id="tupNV">函数</h3>
+
 <p>形式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function &lt;function name&gt;(&lt;parameter types&gt;) &#123;internal|external|public|private&#125; [pure|view|payable] [returns (&lt;return types&gt;)]</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -503,16 +510,25 @@
 <p><strong>可以看出Solidity相对于Java声明方法：</strong></p>
 <p><strong>可以不显式的在方法体中return，而是在方法末尾直接指定返回的变量，同时参数和返回值的类型 变量形式同时起了声明的作用，返回的形式不再严格</strong></p>
 <h3 id="c1NPi">变量</h3>
+
 <p>同样函数上声明的可以认为是Java方法内声明的，而非链上的状态变量。</p>
 <h3 id="EpNyr">返回值   <font style="color:rgb(31, 35, 40);">return 和 returns</font></h3>
+
 <p>如果显式的return了指定的变量名，那么就不需要在函数声明中写清变量名了，只需要写类型即可，引用数据类型书写变量名也是可选的，原因是变量名既可以被外部接收体指明，也可为“命名式返回”</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">contract test&#123;</span><br><span class="line">  function test01(int a) public pure returns (int &lt;a&gt;,bool &lt;_bool&gt;,unit256[3] memory _array)&#123;</span><br><span class="line">    return(1, true, [uint256(1),2,5]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><font style="color:rgb(31, 35, 40);">说明：[1,2,3]</font><font style="color:rgb(31, 35, 40);">会默认为</font><font style="color:rgb(31, 35, 40);">uint8(3)</font><font style="color:rgb(31, 35, 40);">，因此</font><font style="color:rgb(31, 35, 40);">[uint256(1),2,5]</font><font style="color:rgb(31, 35, 40);">中首个元素必须强转</font><font style="color:rgb(31, 35, 40);">uint256</font><font style="color:rgb(31, 35, 40);">来声明该数组内的元素皆为此类型。数组类型返回值默认必须用memory关键字修饰</font></p>
+<font style="color:rgb(31, 35, 40);">说明：[1,2,3]</font><font style="color:rgb(31, 35, 40);">会默认为</font><font style="color:rgb(31, 35, 40);">uint8(3)</font><font style="color:rgb(31, 35, 40);">，因此</font><font style="color:rgb(31, 35, 40);">[uint256(1),2,5]</font><font style="color:rgb(31, 35, 40);">中首个元素必须强转</font><font style="color:rgb(31, 35, 40);">uint256</font><font style="color:rgb(31, 35, 40);">来声明该数组内的元素皆为此类型。数组类型返回值默认必须用memory关键字修饰</font>
+
+
+
 <p><strong>必须在方法中写逻辑，和Java必须在PSVM中运行代码一样！！！</strong></p>
-<p><font style="color:rgb(31, 35, 40);">如果函数中显式的return了，函数声明上必须有returns及返回类型规定</font></p>
-<p><font style="color:rgb(31, 35, 40);"></font></p>
-<p><font style="color:rgb(31, 35, 40);"></font></p>
-<p><font style="color:rgb(31, 35, 40);"></font></p>
+<font style="color:rgb(31, 35, 40);">如果函数中显式的return了，函数声明上必须有returns及返回类型规定</font>
+
+<font style="color:rgb(31, 35, 40);"></font>
+
+<font style="color:rgb(31, 35, 40);"></font>
+
+<font style="color:rgb(31, 35, 40);"></font>
+
 
 
         <hr>
@@ -969,6 +985,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

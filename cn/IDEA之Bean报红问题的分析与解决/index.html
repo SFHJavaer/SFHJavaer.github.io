@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       IDEA之Bean报红问题的分析与解决 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -469,17 +472,14 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h5 id="这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。">这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。</h5>
-<p>现象如下图：</p>
+        <h5 id="这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。"><a href="#这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。" class="headerlink" title="这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。"></a>这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。</h5><p>现象如下图：</p>
 <p><img src="a068de340a224a43a42b113a0782e01b.png" alt="报错"></p>
 <p>比如作为Dao的Bean爆红线但是可以正常注入运行，我们之前知道了使用@Resource解决，原因就是@Autowired是Spring提供的，他只能检测到Spring本身的类，如果你使用Mybatis而不对Mapper类加上@Dao注解</p>
-<h6 id="那么其实就是没有将类加入到容器中，所以使用JDK提供的-Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用-RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。">那么其实就是没有将类加入到容器中，所以使用JDK提供的@Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用@RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。</h6>
-<p>这里涉及到一个注解@RequiedArgsConstructor，该注解最主要的的作用是将加final修饰的属性作为Bean进行IOC注入，注意这是一个Lombok提供的注解，使用该注解默认使用构造器注入，这也是Spring推荐的注入方式，直接不需要手写有参构造方法。</p>
+<h6 id="那么其实就是没有将类加入到容器中，所以使用JDK提供的-Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用-RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。"><a href="#那么其实就是没有将类加入到容器中，所以使用JDK提供的-Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用-RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。" class="headerlink" title="那么其实就是没有将类加入到容器中，所以使用JDK提供的@Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用@RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。"></a>那么其实就是没有将类加入到容器中，所以使用JDK提供的@Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用@RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。</h6><p>这里涉及到一个注解@RequiedArgsConstructor，该注解最主要的的作用是将加final修饰的属性作为Bean进行IOC注入，注意这是一个Lombok提供的注解，使用该注解默认使用构造器注入，这也是Spring推荐的注入方式，直接不需要手写有参构造方法。</p>
 <blockquote>
 <p>@RequiedArgsConstructor适合一个类中调用很多的bean，每一个bean都使用@Autowired修饰很麻烦。</p>
 </blockquote>
-<h4 id="那么为什么4-0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？">那么为什么4.0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？</h4>
-<p>原因是@Autowired可能会产生循环依赖并且多Bean注入不美观。</p>
+<h4 id="那么为什么4-0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？"><a href="#那么为什么4-0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？" class="headerlink" title="那么为什么4.0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？"></a>那么为什么4.0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？</h4><p>原因是@Autowired可能会产生循环依赖并且多Bean注入不美观。</p>
 <p>构造器注入可以保证完全初始化，保证这个注入的Bean一定不是空的，因为调用有参构造不传入参数会报错，Bean加final修饰保证Bean的不可变，只需要写一个有参构造就可以了，注意被注入的属性也就是Bean，是把Bean注入到了当前类。</p>
 <p>Setter同样在很多属性的时候，会显得非常的冗余写很多的构造器。</p>
 
@@ -938,6 +938,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

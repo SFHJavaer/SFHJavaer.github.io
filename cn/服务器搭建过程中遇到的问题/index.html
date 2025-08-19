@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       服务器搭建过程中遇到的数据库问题 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,32 +474,28 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="服务器搭建过程中遇到的问题">服务器搭建过程中遇到的问题</h4>
-<p>最近在维护之前的项目的时候，发现数据库意外连接不上，mysql显示后台运行，但是输入mysql -uroot -p却显示不能连接到sock文件</p>
+        <h4 id="服务器搭建过程中遇到的问题"><a href="#服务器搭建过程中遇到的问题" class="headerlink" title="服务器搭建过程中遇到的问题"></a>服务器搭建过程中遇到的问题</h4><p>最近在维护之前的项目的时候，发现数据库意外连接不上，mysql显示后台运行，但是输入mysql -uroot -p却显示不能连接到sock文件</p>
 <blockquote>
 <p>ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/var/run/mysqld/mysqld.sock’</p>
 </blockquote>
 <p>最初查网上的解法是查看文件夹是否存在，如果不存在就创建一个，结果创建完还是报错。</p>
 <p>打开<code>/etc/my.cnf</code>文件查看mysql的配置文件，其实发现在配置文件的mysqld一栏的socket指向的是var中的sock文件，但是没有找到</p>
-<p><img src="C:%5CUsers%5C24286%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220605190750020.png" alt=""></p>
+<p><img src="C:\Users\24286\AppData\Roaming\Typora\typora-user-images\image-20220605190750020.png" alt=""></p>
 <p>开启全局扫描，查找mysqld.sock文件，即使用find命令</p>
 <blockquote>
-<p>find mysqld.sock</p>
+<p> find mysqld.sock</p>
 </blockquote>
 <p>查找到该文件在tmp文件下而不是var，所以改变文件指向到tmp，重新启动后发现可以正常启动</p>
-<p><img src="C:%5CUsers%5C24286%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220605191059749.png" alt="image-20220605191059749"></p>
+<p><img src="C:\Users\24286\AppData\Roaming\Typora\typora-user-images\image-20220605191059749.png" alt="image-20220605191059749"></p>
 <p>但是后面在登陆时又忘记了MYSQL密码</p>
-<h6 id="所以想要获取mysql的初始密码登录，之后再进行修改，使用如下查找命令">所以想要获取mysql的初始密码登录，之后再进行修改，使用如下查找命令</h6>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grep &#x27;temporary password&#x27; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+<h6 id="所以想要获取mysql的初始密码登录，之后再进行修改，使用如下查找命令"><a href="#所以想要获取mysql的初始密码登录，之后再进行修改，使用如下查找命令" class="headerlink" title="所以想要获取mysql的初始密码登录，之后再进行修改，使用如下查找命令"></a>所以想要获取mysql的初始密码登录，之后再进行修改，使用如下查找命令</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grep &#x27;temporary password&#x27; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
 <p><img src="https://images2017.cnblogs.com/blog/791149/201711/791149-20171104162145888-1827800996.png" alt="查看初始密码"></p>
 <p>将该密码当作密码登录，发现居然报密码错误</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -peejVY2MLgS+e</span><br></pre></td></tr></table></figure>
-<h6 id="结果还是走不通，所以就想能不能跳过密码">结果还是走不通，所以就想能不能跳过密码</h6>
-<p>在[mysqld]后添加skip-grant-tables（登录时跳过权限检查）</p>
+<h6 id="结果还是走不通，所以就想能不能跳过密码"><a href="#结果还是走不通，所以就想能不能跳过密码" class="headerlink" title="结果还是走不通，所以就想能不能跳过密码"></a>结果还是走不通，所以就想能不能跳过密码</h6><p>在[mysqld]后添加skip-grant-tables（登录时跳过权限检查）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysql</span><br></pre></td></tr></table></figure>
 <p>重启之后直接mysql -uroot -p，然后直接回车，进入到mysql命令行了</p>
-<h6 id="此时进行密码的设置">此时进行密码的设置</h6>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> <span class="built_in">set</span> password <span class="keyword">for</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> = password(<span class="string">&#x27;root123&#x27;</span>);</span></span><br></pre></td></tr></table></figure>
+<h6 id="此时进行密码的设置"><a href="#此时进行密码的设置" class="headerlink" title="此时进行密码的设置"></a>此时进行密码的设置</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> <span class="built_in">set</span> password <span class="keyword">for</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> = password(<span class="string">&#x27;root123&#x27;</span>);</span></span><br></pre></td></tr></table></figure>
 <p>设置完之后要进行刷新</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges;</span></span><br></pre></td></tr></table></figure>
 <p>最后进行验证：</p>
@@ -506,8 +505,7 @@
 <p>根据错误提示去通过journalctl -xe进行查看报错信息</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[root@db01 ~]# journalctl -xe</span><br><span class="line">-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel</span><br><span class="line">-- </span><br><span class="line">-- Unit mariadb.service has begun starting up.</span><br><span class="line">Aug 10 10:04:21 db01 systemd[2509]: Failed at step USER spawning /usr/libexec/mariadb-prepare-db-dir: No such pro</span><br><span class="line">-- Subject: Process /usr/libexec/mariadb-prepare-db-dir could not be executed</span><br><span class="line">-- Defined-By: systemd</span><br><span class="line">-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel</span><br><span class="line">-- </span><br><span class="line">-- The process /usr/libexec/mariadb-prepare-db-dir could not be executed and failed.</span><br><span class="line">-- </span><br><span class="line">-- The error number returned by this process is 3.</span><br><span class="line">Aug 10 10:04:21 db01 systemd[1]: mariadb.service: control process exited, code=exited status=217</span><br><span class="line">Aug 10 10:04:21 db01 systemd[1]: Failed to start MariaDB database server.</span><br><span class="line">-- Subject: Unit mariadb.service has failed</span><br><span class="line">-- Defined-By: systemd</span><br><span class="line">-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel</span><br><span class="line">-- </span><br><span class="line">-- Unit mariadb.service has failed.</span><br><span class="line">-- </span><br><span class="line">-- The result is failed.</span><br><span class="line">Aug 10 10:04:21 db01 systemd[1]: Unit mariadb.service entered failed state.</span><br><span class="line">Aug 10 10:04:21 db01 systemd[1]: mariadb.service failed.</span><br><span class="line">Aug 10 10:04:21 db01 polkitd[700]: Unregistered Authentication Agent for unix-process:2503:157501 (system bus nam</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>应该是之前的mariadb没有卸载干净，安装了新的版本导致了不兼容的现象</p>
-<h6 id="解决方法如下：">解决方法如下：</h6>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">首先确保完全删除mariadb</span><br><span class="line">1.yum remove mariad*</span><br><span class="line">卸载mariadb，同时也卸载了mariadb-server</span><br><span class="line">2.yum list installed | grep mariadb</span><br><span class="line">发现在安装mariadb时作为依赖项的mariadb-libs没有被删除。</span><br><span class="line">3.yum remove mariadb-libs</span><br><span class="line">将其卸载</span><br><span class="line">4.rm -rf /etc/my.cnf</span><br><span class="line">5.rm -rf $(find / -name mysql)</span><br><span class="line">删除所有包含mysql的文件（夹）</span><br><span class="line">6.reboot 重启</span><br><span class="line">————————————————</span><br></pre></td></tr></table></figure>
+<h6 id="解决方法如下："><a href="#解决方法如下：" class="headerlink" title="解决方法如下："></a>解决方法如下：</h6><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">首先确保完全删除mariadb</span><br><span class="line">1.yum remove mariad*</span><br><span class="line">卸载mariadb，同时也卸载了mariadb-server</span><br><span class="line">2.yum list installed | grep mariadb</span><br><span class="line">发现在安装mariadb时作为依赖项的mariadb-libs没有被删除。</span><br><span class="line">3.yum remove mariadb-libs</span><br><span class="line">将其卸载</span><br><span class="line">4.rm -rf /etc/my.cnf</span><br><span class="line">5.rm -rf $(find / -name mysql)</span><br><span class="line">删除所有包含mysql的文件（夹）</span><br><span class="line">6.reboot 重启</span><br><span class="line">————————————————</span><br></pre></td></tr></table></figure>
 <p>一定要完全卸载之前的版本再进行安装新版本，不然很可能产生冲突问题或者引擎不兼容的问题。</p>
 
 
@@ -967,6 +965,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

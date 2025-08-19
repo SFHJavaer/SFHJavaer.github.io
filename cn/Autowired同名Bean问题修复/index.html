@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       \@Autowired同名Bean问题修复 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -407,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.5k</span> In Total
+              Words <span class="post-count">1.4k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -469,8 +472,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="Autowired同名Bean问题修复">@Autowired同名Bean问题修复</h3>
-<p>新建一个SpringDemo项目，注意先修改好发行版，出错都是因为出场Setting没设置对，以及自动生成SpringBoot项目时，xml中指定了&lt;java.version&gt;，要将其去掉或修改为8，不然import Maven又会使设置生效。</p>
+        <h3 id="Autowired同名Bean问题修复"><a href="#Autowired同名Bean问题修复" class="headerlink" title="@Autowired同名Bean问题修复"></a>@Autowired同名Bean问题修复</h3><p>新建一个SpringDemo项目，注意先修改好发行版，出错都是因为出场Setting没设置对，以及自动生成SpringBoot项目时，xml中指定了<java.version>，要将其去掉或修改为8，不然import Maven又会使设置生效。</p>
 <p>新建两个不同包下的同名类Test，类结构如图：</p>
 <p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695288946165-9654b0a6-5e79-4c05-a32e-10cb2edc68da.png" alt="a"></p>
 <p>Application：</p>
@@ -478,21 +480,31 @@
 <p>Real类：<img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289158611-edeae84b-0d4c-4d31-9edc-2ce7711efb56.png" alt="a"></p>
 <p>这里不把@autowired写到Application中是因为写了也不会注入，SpringBoot会把Application的注入忽略，</p>
 <p>所以把@Autowired写到了Real类中，new去使用它。</p>
-<p><font style="background-color:#FBDE28;">以上图结构run,返回以下结果，很容易看出是在Bean产生了冲突：</font></p>
+<font style="background-color:#FBDE28;">以上图结构run,返回以下结果，很容易看出是在Bean产生了冲突：</font>
+
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">42</span>:<span class="number">01.596</span>  INFO <span class="number">28712</span> --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication using Java <span class="number">1.8</span><span class="number">.0_333</span> on DESKTOP-7TNR5U5 with PID <span class="number">28712</span> (D:\IdeaProjects\demo\demo2\target\classes started by hspcadmin in D:\IdeaProjects\demo)</span><br><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">42</span>:<span class="number">01.601</span>  INFO <span class="number">28712</span> --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to <span class="number">1</span> <span class="keyword">default</span> profile: <span class="string">&quot;default&quot;</span></span><br><span class="line">2023-09-21 17:42:01.847  WARN 28712 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.DemoApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name &#x27;test&#x27; for bean class [com.example.demo.test2.Test] conflicts with existing, non-compatible bean definition of same name and class [com.example.demo.test.Test]</span><br><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">42</span>:<span class="number">06.009</span> ERROR <span class="number">28712</span> --- [           main] o.s.boot.SpringApplication               : Application run failed</span><br><span class="line"></span><br><span class="line">org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.DemoApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name &#x27;test&#x27; for bean class [com.example.demo.test2.Test] conflicts with existing, non-compatible bean definition of same name and class [com.example.demo.test.Test]</span><br><span class="line">	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:<span class="number">188</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:<span class="number">331</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:<span class="number">247</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:<span class="number">311</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:<span class="number">112</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:<span class="number">746</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:<span class="number">564</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:<span class="number">147</span>) ~[spring-boot-<span class="number">2.7</span><span class="number">.6</span>.jar:<span class="number">2.7</span><span class="number">.6</span>]</span><br><span class="line">	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:<span class="number">731</span>) [spring-boot-<span class="number">2.7</span><span class="number">.6</span>.jar:<span class="number">2.7</span><span class="number">.6</span>]</span><br><span class="line">	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:<span class="number">408</span>) [spring-boot-<span class="number">2.7</span><span class="number">.6</span>.jar:<span class="number">2.7</span><span class="number">.6</span>]</span><br><span class="line">	at org.springframework.boot.SpringApplication.run(SpringApplication.java:<span class="number">307</span>) [spring-boot-<span class="number">2.7</span><span class="number">.6</span>.jar:<span class="number">2.7</span><span class="number">.6</span>]</span><br><span class="line">	at org.springframework.boot.SpringApplication.run(SpringApplication.java:<span class="number">1303</span>) [spring-boot-<span class="number">2.7</span><span class="number">.6</span>.jar:<span class="number">2.7</span><span class="number">.6</span>]</span><br><span class="line">	at org.springframework.boot.SpringApplication.run(SpringApplication.java:<span class="number">1292</span>) [spring-boot-<span class="number">2.7</span><span class="number">.6</span>.jar:<span class="number">2.7</span><span class="number">.6</span>]</span><br><span class="line">	at com.example.demo.DemoApplication.main(DemoApplication.java:<span class="number">11</span>) [classes/:na]</span><br><span class="line">Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name &#x27;test&#x27; for bean class [com.example.demo.test2.Test] conflicts with existing, non-compatible bean definition of same name and class [com.example.demo.test.Test]</span><br><span class="line">	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:<span class="number">349</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:<span class="number">287</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:<span class="number">128</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:<span class="number">295</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:<span class="number">249</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:<span class="number">206</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:<span class="number">174</span>) ~[spring-context-<span class="number">5.3</span><span class="number">.24</span>.jar:<span class="number">5.3</span><span class="number">.24</span>]</span><br><span class="line">	... <span class="number">13</span> common frames omitted</span><br><span class="line"></span><br><span class="line">与目标 VM 断开连接, 地址为: <span class="string">&#x27;&#x27;</span><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">56835</span><span class="string">&#x27;，传输: &#x27;</span>套接字<span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p><font style="color:#01B2BC;">如何判断是@Autowired注入时冲突还是容器都放不进去？</font></p>
-<p><font style="background-color:#FBDE28;">注释掉@Autowired，发现仍然报该错，说明Factory不允许创建同类名Bean不加以区分</font></p>
+<font style="color:#01B2BC;">如何判断是@Autowired注入时冲突还是容器都放不进去？</font>
+
+<font style="background-color:#FBDE28;">注释掉@Autowired，发现仍然报该错，说明Factory不允许创建同类名Bean不加以区分</font>
+
+
+
 <p>现在创建一个子项目，作为demo的依赖模块的demo2，并将test2的类移动到demo2模块下，且添加两模块间的依赖关系，如下图：</p>
 <p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695289684290-a406a39a-a7ab-40c6-bad9-1904f1d5d29b.png" alt="a"></p>
-<p><font style="color:#5C8D07;">不加</font><font style="color:#5C8D07;">执行结果：</font></p>
+<font style="color:#5C8D07;">不加</font><font style="color:#5C8D07;">执行结果：</font>
+
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">49</span>:<span class="number">31.990</span>  INFO <span class="number">34544</span> --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication using Java <span class="number">1.8</span><span class="number">.0_333</span> on DESKTOP-7TNR5U5 with PID <span class="number">34544</span> (D:\IdeaProjects\demo\demo2\target\classes started by hspcadmin in D:\IdeaProjects\demo)</span><br><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">49</span>:<span class="number">31.995</span>  INFO <span class="number">34544</span> --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to <span class="number">1</span> <span class="keyword">default</span> profile: <span class="string">&quot;default&quot;</span></span><br><span class="line"><span class="number">2023</span>-09-<span class="number">21</span> <span class="number">17</span>:<span class="number">49</span>:<span class="number">32.652</span>  INFO <span class="number">34544</span> --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : <span class="function">Tomcat initialized with <span class="title">port</span><span class="params">(s)</span>: 8080 <span class="params">(http)</span></span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.658  INFO 34544 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]</span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.658  INFO 34544 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]</span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.761  INFO 34544 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext</span></span><br><span class="line"><span class="function">2023-09-21 17:49:32.761  INFO 34544 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 720 ms</span></span><br><span class="line"><span class="function">2023-09-21 17:49:33.020  INFO 34544 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on <span class="title">port</span><span class="params">(s)</span>: 8080 <span class="params">(http)</span> with context path &#x27;&#x27;</span></span><br><span class="line"><span class="function">2023-09-21 17:49:33.027  INFO 34544 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 1.401 <span class="title">seconds</span> <span class="params">(JVM running <span class="keyword">for</span> <span class="number">2.902</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p><font style="color:#DF2A3F;">发现并没有报错！说明Factory的错没有报出，但不知道此时bean，添加打印BeanName</font></p>
+<font style="color:#DF2A3F;">发现并没有报错！说明Factory的错没有报出，但不知道此时bean，添加打印BeanName</font>
+
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] beanDefinitionNames = ac.getBeanDefinitionNames();</span><br><span class="line">        <span class="keyword">for</span> (String beanDefinitionName : beanDefinitionNames) &#123;</span><br><span class="line">            System.out.println(beanDefinitionName);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695290435435-c4556cf2-d2f7-4eb7-bb05-977ff9cc9323.png" alt=""></p>
 <p>可以看到确实有一个test对象，但是不知道是test1的还是test2，换个方法ac.getBeanNamesForType(Test.class);注意Test导入的路径要不同</p>
-<p><font style="color:#DF2A3F;">结果发现：</font></p>
-<p><font style="color:#DF2A3F;">test为applicaton本模块的Test类，而子模块没有注入</font></p>
-<p><font style="background-color:#F1A2AB;">加@Autowired调用一下看能否正常用，发现报了空指针，说明没注入进来，Factory中有，但是却没注入，很奇怪：</font></p>
+<font style="color:#DF2A3F;">结果发现：</font>
+
+<font style="color:#DF2A3F;">test为applicaton本模块的Test类，而子模块没有注入</font>
+
+<font style="background-color:#F1A2AB;">加@Autowired调用一下看能否正常用，发现报了空指针，说明没注入进来，Factory中有，但是却没注入，很奇怪：</font>
+
 <p><img src="https://cdn.nlark.com/yuque/0/2023/png/35478834/1695290877248-fcdd1212-61f4-4397-be83-a80c1e422d5f.png" alt=""></p>
 <p><strong>最后可以得出结论。</strong></p>
 <p><strong>对于正常的同名Bean，会直接报错，但是如果存在依赖关系，那么可能会导致报错被吞，并且有时候可能会直接断开VM连接。</strong></p>
@@ -954,6 +966,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

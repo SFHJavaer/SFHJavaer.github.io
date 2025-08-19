@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       ES基本入门操作与SpringBoot整合 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,18 +474,14 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="ES：分布式全文搜索引擎">ES：分布式全文搜索引擎</h3>
-<blockquote>
+        <h3 id="ES：分布式全文搜索引擎"><a href="#ES：分布式全文搜索引擎" class="headerlink" title="ES：分布式全文搜索引擎"></a>ES：分布式全文搜索引擎</h3><blockquote>
 <p>windiows安装之后运行bat批处理文件执行</p>
-</blockquote>
-<blockquote>
 <p>ES没有数据库的概念，但是有索引的概念</p>
 </blockquote>
-<p>启动Es后，直接对ES发请求，在请求路径之后跟上索引（<a target="_blank" rel="noopener" href="http://localhost:9200/books%EF%BC%89%EF%BC%8CES%E5%85%A8%E9%9D%A2%E6%94%AF%E6%8C%81Restful%E9%A3%8E%E6%A0%BC%E7%9A%84%E6%93%8D%E4%BD%9C">http://localhost:9200/books），ES全面支持Restful风格的操作</a></p>
+<p>启动Es后，直接对ES发请求，在请求路径之后跟上索引（<a target="_blank" rel="noopener" href="http://localhost:9200/books），ES全面支持Restful风格的操作">http://localhost:9200/books），ES全面支持Restful风格的操作</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">PUT：返回<span class="keyword">boolean</span>类型的Json数据，字段有acknowledged（操作是否成功），index（你提交的索引名）</span><br><span class="line"></span><br><span class="line">GET：返回索引的json数据</span><br><span class="line"></span><br><span class="line">DELETE：直接加索引删除</span><br></pre></td></tr></table></figure>
 <p>PS:注意索引是不允许重复的，所以不能发起两次put请求，不然报错</p>
-<h6 id="想要创建的索引具有分词效果，因该对索引添加分词器（加入到索引的mappings的属性中），解压后放到ES安装目录的plugins插件目录下">想要创建的索引具有分词效果，因该对索引添加分词器（加入到索引的mappings的属性中），解压后放到ES安装目录的plugins插件目录下</h6>
-<p>直接在创建索引时，将mappings的json格式的数据从请求体的raw中通过Put请求提交</p>
+<h6 id="想要创建的索引具有分词效果，因该对索引添加分词器（加入到索引的mappings的属性中），解压后放到ES安装目录的plugins插件目录下"><a href="#想要创建的索引具有分词效果，因该对索引添加分词器（加入到索引的mappings的属性中），解压后放到ES安装目录的plugins插件目录下" class="headerlink" title="想要创建的索引具有分词效果，因该对索引添加分词器（加入到索引的mappings的属性中），解压后放到ES安装目录的plugins插件目录下"></a>想要创建的索引具有分词效果，因该对索引添加分词器（加入到索引的mappings的属性中），解压后放到ES安装目录的plugins插件目录下</h6><p>直接在创建索引时，将mappings的json格式的数据从请求体的raw中通过Put请求提交</p>
 <p>参考格式：(指定每一个属性的检索策略)</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;mappings&quot;</span>:&#123;</span><br><span class="line">        <span class="attr">&quot;properties&quot;</span>:&#123;</span><br><span class="line">            <span class="attr">&quot;id&quot;</span>:&#123;</span><br><span class="line">                <span class="attr">&quot;type&quot;</span>:<span class="string">&quot;keyword&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>:&#123;</span><br><span class="line">                <span class="attr">&quot;type&quot;</span>:<span class="string">&quot;text&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;analyzer&quot;</span>:<span class="string">&quot;ik_max_word&quot;</span></span><br><span class="line">                <span class="comment">//name字段参与分词</span></span><br><span class="line">                可以设定<span class="string">&quot;copy_to&quot;</span>属性将多属性进行合并检索</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>添加索引的文档，在索引后加/_doc代表添加该索引的文档，另外还有__create，需要制定id，如果不指定id那么会自动分配id</p>
@@ -490,14 +489,12 @@
 <p>get方法必须添加id，不然让ES以为你是post请求，报405错误</p>
 <blockquote>
 <p>也可以查全部，直接使用_search</p>
-<h6 id="按内容进行条件查询：">按内容进行条件查询：</h6>
-<p>类似于：<a target="_blank" rel="noopener" href="http://localhost:9200/books/_search?q=name:spring">http://localhost:9200/books/_search?q=name:spring</a></p>
+<h6 id="按内容进行条件查询："><a href="#按内容进行条件查询：" class="headerlink" title="按内容进行条件查询："></a>按内容进行条件查询：</h6><p>类似于：<a target="_blank" rel="noopener" href="http://localhost:9200/books/_search?q=name:spring">http://localhost:9200/books/_search?q=name:spring</a></p>
 <p>上面按name的值进行查询</p>
 </blockquote>
 <p>修改文档：PUT全量修改，传入完整的请求体</p>
 <p>POST部分修改：指定id，传入doc（确定类型）和要修改的属性即可</p>
-<h4 id="ES整合SpringBoot">ES整合SpringBoot</h4>
-<p>加入maven依赖，注意使用高版本的依赖(elasticsearch-rest-high-level-client)而不是低版本的ES</p>
+<h4 id="ES整合SpringBoot"><a href="#ES整合SpringBoot" class="headerlink" title="ES整合SpringBoot"></a>ES整合SpringBoot</h4><p>加入maven依赖，注意使用高版本的依赖(elasticsearch-rest-high-level-client)而不是低版本的ES</p>
 <p>高版本的ES不支持自动注入，所以需要手动去创建客户端对象，调用ES对象的方法手动操作，手动关闭close客户端client</p>
 <p>通过ES对象的方法和属性的设置，来创建修改索引和文档（数据），一般请求中的就使用对象方法，请求体中的就通过设置属性添加</p>
 <p>这里可以将数据库中的实体类数据通过fastjson转换为json，直接将数据传入</p>
@@ -506,12 +503,9 @@
 </blockquote>
 <p>BulkRequest可以创建一个批处理的请求对象，将该对象传入client.bulk方法中，并且加上请求参数来批处理添加文档，</p>
 <blockquote>
-<h6 id="PS：单个文档需要创建IndexRequest对象之后，传入json数据和类型参数后经client发起请求">PS：单个文档需要创建IndexRequest对象之后，传入json数据和类型参数后经client发起请求</h6>
-</blockquote>
-<h5 id="下面是普通按id查询的代码，直接将request对象传入client的获取响应的方法中并且带上请求的默认参数，获得响应输出即可">下面是普通按id查询的代码，直接将request对象传入client的获取响应的方法中并且带上请求的默认参数，获得响应输出即可</h5>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="comment">//按id查询</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testGet</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    GetRequest request = <span class="keyword">new</span> GetRequest(<span class="string">&quot;books&quot;</span>,<span class="string">&quot;1&quot;</span>);</span><br><span class="line">    GetResponse response = client.get(request, RequestOptions.DEFAULT);</span><br><span class="line">    String json = response.getSourceAsString();</span><br><span class="line">    System.out.println(json);</span><br></pre></td></tr></table></figure>
-<h6 id="将json转换为对象，调用JSON-parseObject-json数据-转换成的目标类型-class">将json转换为对象，调用JSON.parseObject(json数据,转换成的目标类型.class)</h6>
-<p>按条件查询的编码方法：</p>
+<h6 id="PS：单个文档需要创建IndexRequest对象之后，传入json数据和类型参数后经client发起请求"><a href="#PS：单个文档需要创建IndexRequest对象之后，传入json数据和类型参数后经client发起请求" class="headerlink" title="PS：单个文档需要创建IndexRequest对象之后，传入json数据和类型参数后经client发起请求"></a>PS：单个文档需要创建IndexRequest对象之后，传入json数据和类型参数后经client发起请求</h6></blockquote>
+<h5 id="下面是普通按id查询的代码，直接将request对象传入client的获取响应的方法中并且带上请求的默认参数，获得响应输出即可"><a href="#下面是普通按id查询的代码，直接将request对象传入client的获取响应的方法中并且带上请求的默认参数，获得响应输出即可" class="headerlink" title="下面是普通按id查询的代码，直接将request对象传入client的获取响应的方法中并且带上请求的默认参数，获得响应输出即可"></a>下面是普通按id查询的代码，直接将request对象传入client的获取响应的方法中并且带上请求的默认参数，获得响应输出即可</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="comment">//按id查询</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testGet</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    GetRequest request = <span class="keyword">new</span> GetRequest(<span class="string">&quot;books&quot;</span>,<span class="string">&quot;1&quot;</span>);</span><br><span class="line">    GetResponse response = client.get(request, RequestOptions.DEFAULT);</span><br><span class="line">    String json = response.getSourceAsString();</span><br><span class="line">    System.out.println(json);</span><br></pre></td></tr></table></figure>
+<h6 id="将json转换为对象，调用JSON-parseObject-json数据-转换成的目标类型-class"><a href="#将json转换为对象，调用JSON-parseObject-json数据-转换成的目标类型-class" class="headerlink" title="将json转换为对象，调用JSON.parseObject(json数据,转换成的目标类型.class)"></a>将json转换为对象，调用JSON.parseObject(json数据,转换成的目标类型.class)</h6><p>按条件查询的编码方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="comment">//按条件查询</span></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">testSearch</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">      SearchRequest request = <span class="keyword">new</span> SearchRequest(<span class="string">&quot;books&quot;</span>);</span><br><span class="line"><span class="comment">//先创建request对象，下面为它添加builder条件</span></span><br><span class="line">      SearchSourceBuilder builder = <span class="keyword">new</span> SearchSourceBuilder();</span><br><span class="line">      builder.query(QueryBuilders.termQuery(<span class="string">&quot;all&quot;</span>,<span class="string">&quot;spring&quot;</span>));</span><br><span class="line">      request.source(builder);</span><br><span class="line"><span class="comment">//使用client进行操作得到响应</span></span><br><span class="line">      SearchResponse response = client.search(request, RequestOptions.DEFAULT);</span><br><span class="line">      <span class="comment">//对response进行解析输出</span></span><br><span class="line">      SearchHits hits = response.getHits();</span><br><span class="line">      <span class="keyword">for</span> (SearchHit hit : hits) &#123;</span><br><span class="line">          <span class="comment">//getResource的resource是文档的属性，ES文档的属性都是默认的，以_加上名称，如_resouce，_index（索引）</span></span><br><span class="line">          String source = hit.getSourceAsString();</span><br><span class="line">          <span class="comment">//System.out.println(source);</span></span><br><span class="line">          Book book = JSON.parseObject(source, Book.class);</span><br><span class="line">          System.out.println(book);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -960,6 +954,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

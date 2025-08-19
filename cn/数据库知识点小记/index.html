@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       数据库知识点小记 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -470,18 +473,23 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h3 id="I5Jbr">设置主键</h3>
+
 <p>MySQL设置或者后续新增主键，都需要包含主键字段为not null，否则不允许创建</p>
 <p>Oracle后续alter增加主键，如果被设置为主键的字段没有显式设置初始not null，那么新增的主键会自动将该字段设置为not null，在创建表的时候，字段之后直接跟上primary key也是默认隐式的增加了not null约束</p>
 <h3 id="LAeAl">Case-When</h3>
+
 <p>使用数据库原生的判断，case when，判断类似于</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (<span class="keyword">case</span>):</span><br><span class="line">    <span class="keyword">case</span> a:</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> b:</span><br><span class="line">        <span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
 <p>执行到某个分支后跳出，不会继续执行，即if-else if</p>
 <h3 id="UrmBR"><where></h3>
+
 <p>对于<where>条件，开头的and是可以自动去除的，但是仅对于and，其他的or等条件不会进行处理，所以使用其他运算符要处理好使用位置</p>
 <h3 id="Avf30">SQL运算符优先级</h3>
+
 <p><img src="https://cdn.nlark.com/yuque/0/2024/png/35478834/1724808817553-9b5b7059-6313-4cbd-9d24-ee1b82591fbf.png" alt=""></p>
 <p>比如常见的and和or联用，那么 A AND B OR C,相当于 (A AND B) OR C,同优先级则从左往右执行</p>
 <h2 id="SGOZv">in与not in</h2>
+
 <p><strong>今天碰到一个SQL，由于条件很多所以不展示，只关注where的A not in B条件，在本地库测试的时候查询结果正确,但迁移到线上环境反馈查不出数据，手动select查看A数据，发现查出的某数据确实不在B中，那么为什么查不出呢？</strong></p>
 <p>难道是因为char长度的不对应？</p>
 <blockquote>
@@ -947,6 +955,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

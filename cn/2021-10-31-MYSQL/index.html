@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       MYSQL重点知识点梳理 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,14 +474,13 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="MYSQL重点知识点梳理">MYSQL重点知识点梳理</h2>
-<p>distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写</p>
+        <h2 id="MYSQL重点知识点梳理"><a href="#MYSQL重点知识点梳理" class="headerlink" title="MYSQL重点知识点梳理"></a>MYSQL重点知识点梳理</h2><p>distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写</p>
 <p>order by：按某字段进行排序，asc为顺序，多个字段或多个顺序规则，使用逗号分隔，当然先按后面条件的前面的顺序进行排序</p>
 <p>where查询要确定要查询条件的类型。如果是数字可以直接输，如果是字符串需要加引号</p>
 <p>对查询的字段锁定（规定）在某些数据的话，使用in关键字，当用到多个字段属于并列关系时用逗号直接分割，多个条件同时满足时使用and来同时满足</p>
-<p>大于：&gt;= 							小于：&lt;=</p>
+<p>大于：&gt;=                             小于：&lt;=</p>
 <p>模糊查询：</p>
-<p>like: %代表任意长度的通配符，注意不是* （ *代表所有），NOT like代表字符串不匹配时则满足当前条件，_下划线代表单个字符，这个字符的长度不能为0，like默认匹配不区分大小写，如果要精确区分的话在匹配字符串前加 binary字段</p>
+<p>like: %代表任意长度的通配符，注意不是<em> （ </em>代表所有），NOT like代表字符串不匹配时则满足当前条件，_下划线代表单个字符，这个字符的长度不能为0，like默认匹配不区分大小写，如果要精确区分的话在匹配字符串前加 binary字段</p>
 <p>mysql当sum与groupby联合使用时，sum计算的是各个分组的各自的sum</p>
 <p>select from 表名 join 表名 on 条件，注意join和on是两个不同的运算符，只不过可以放一起使用，join和on的运行级别在from之后where之前</p>
 <p><strong>CONCAT</strong> 函数用于将两个字符串连接为一个字符串</p>
@@ -487,37 +489,26 @@
 <p>（主要用于将两张不同的表的结果进行拼接，当然column前提得一致）</p>
 <p><strong>案例；找出工作岗位是salesman和manager的员工</strong></p>
 <p><strong>方法一：select ename,job from emp where job = ‘manager’ or job = ‘salesman’;</strong></p>
-<p><strong>±-------±---------+</strong><br>
-<strong>| ename  | job      |</strong><br>
-<strong>±-------±---------+</strong><br>
-<strong>| ALLEN  | SALESMAN |</strong><br>
-<strong>| WARD   | SALESMAN |</strong><br>
-<strong>| JONES  | MANAGER  |</strong><br>
-<strong>| MARTIN | SALESMAN |</strong><br>
-<strong>| BLAKE  | MANAGER  |</strong><br>
-<strong>| CLARK  | MANAGER  |</strong><br>
-<strong>| TURNER | SALESMAN |</strong><br>
-<strong>±-------±---------+</strong><br>
-<strong>7 rows in set (0.00 sec)</strong></p>
-<p><strong>方法二（使用in或or）：select ename,job from emp where job in (‘manager’,‘salesman’);</strong></p>
+<p><strong>+————+—————+</strong><br><strong>| ename  | job      |</strong><br><strong>+————+—————+</strong><br><strong>| ALLEN  | SALESMAN |</strong><br><strong>| WARD   | SALESMAN |</strong><br><strong>| JONES  | MANAGER  |</strong><br><strong>| MARTIN | SALESMAN |</strong><br><strong>| BLAKE  | MANAGER  |</strong><br><strong>| CLARK  | MANAGER  |</strong><br><strong>| TURNER | SALESMAN |</strong><br><strong>+————+—————+</strong><br><strong>7 rows in set (0.00 sec)</strong></p>
+<p><strong>方法二（使用in或or）：select ename,job from emp where job in (‘manager’,’salesman’);</strong></p>
 <p><strong>select ename,job from emp wher job = ‘manager’ or job = ‘sqlesman’（可以设置取不同字段，区别于in）</strong></p>
 <p><strong>方法三（union将查询结果进行相加）：select ename,job from emp where job = “manager”</strong></p>
 <p><strong>union</strong></p>
 <p><strong>select ename,job from emp where job = ‘salesman’;</strong></p>
 <hr>
-<p>limit关键字：进行分页查询，去结果集中的部分数据                				语法：limit   起始位置	取几个（长度）</p>
+<p>limit关键字：进行分页查询，去结果集中的部分数据                                语法：limit   起始位置    取几个（长度）</p>
 <p>注意limit是mysql中特有的关键字</p>
-<p>示例：select ename,sal from emp order by sal desc; 			(降序)</p>
+<p>示例：select ename,sal from emp order by sal desc;             (降序)</p>
 <p>select ename,sal from emp order by sal desc limit 0,5;</p>
 <p>select ename,sal from emp order by sal desc limit 5;(不写就是默认从零开始取)</p>
 <p>注意：limit关键字的执行顺序优先级最低</p>
-<p>执行顺序：select				5进行查询数据结果</p>
-<p>from				1先从某一张表中取数据</p>
-<p>where				2要取哪一个字段（在分组前进行过滤过滤）</p>
-<p>group by				3先进行分组</p>
-<p>having				4 使用having在分组后进行过滤（having后面可以使用聚合函数（sql基本函数count等））</p>
-<p>order by				6对查询出的数据进行排序</p>
-<p>limit				7最后对数据进行截取</p>
+<p>执行顺序：select                5进行查询数据结果</p>
+<p>from                1先从某一张表中取数据</p>
+<p>where                2要取哪一个字段（在分组前进行过滤过滤）</p>
+<p>group by                3先进行分组</p>
+<p>having                4 使用having在分组后进行过滤（having后面可以使用聚合函数（sql基本函数count等））</p>
+<p>order by                6对查询出的数据进行排序</p>
+<p>limit                7最后对数据进行截取</p>
 <blockquote>
 <p>从上面可以看出SQL的执行顺序和书写顺序大概是一致的，也就是除了select基本都符合顺序。</p>
 </blockquote>
@@ -526,8 +517,8 @@
 <p>——————————————————————————————————————————————————</p>
 <p>创建表</p>
 <p>语法格式：create table 表名(</p>
-<p>​					字段名			数据类型，</p>
-<p>​					…</p>
+<p>​                    字段名            数据类型，</p>
+<p>​                    …………………….</p>
 <p>);</p>
 <p>数据类型：</p>
 <p>varchar：根据存入的数据动态的分配空间</p>
@@ -535,68 +526,53 @@
 <p>date：对应java中的java.sql.date</p>
 <p>BLOB:二进制大对象，类似于java.object，使用io流进行存取</p>
 <p>CLOB：字符大对象（用的不多，图片资源一般不放数据库里）</p>
-<p>表在数据库中：一般以t_或者tbl_开头</p>
+<p>表在数据库中：一般以t<em>或者tbl</em>开头</p>
 <p>学生表：</p>
 <p>create table t_student(</p>
-<p>​		no bigint,</p>
-<p>​		name varchar(255),</p>
-<p>​		sex char(1),</p>
-<p>​		classno varchar(255),</p>
-<p>​		birth char(10)</p>
+<p>​        no bigint,</p>
+<p>​        name varchar(255),</p>
+<p>​        sex char(1),</p>
+<p>​        classno varchar(255),</p>
+<p>​        birth char(10)</p>
 <p>);</p>
-<h4 id="表的复制：">表的复制：</h4>
-<p>create table 表名 as select语句; 									将一张表的查询结果as为一张新的表</p>
+<h4 id="表的复制："><a href="#表的复制：" class="headerlink" title="表的复制："></a>表的复制：</h4><p>create table 表名 as select语句;                                     将一张表的查询结果as为一张新的表</p>
 <p>更新语句：update</p>
 <p>语法格式：update 表名 set 字段名1 = 值1,字段名2 = 值2 where 条件;（根据条件设置（更新）字段的值）</p>
 <p>ps：如果没有条件约束的话，自动会把整张表的字段全部修改为值x</p>
-<h4 id="删除语句：delete">删除语句：delete</h4>
-<p>delete from 表名   约束条件；（同理无约束条件默认删除整张表的所有数据（列级删除））</p>
-<h4 id="表级删除（表被截断或清空）：truncate-table-表名；">表级删除（表被截断或清空）：truncate table 表名；</h4>
-<h4 id="删除整个表（表头以至整个被删除）：drop命令">删除整个表（表头以至整个被删除）：drop命令</h4>
-<p>drop table if exists t_student;</p>
+<h4 id="删除语句：delete"><a href="#删除语句：delete" class="headerlink" title="删除语句：delete"></a>删除语句：delete</h4><p>delete from 表名   约束条件；（同理无约束条件默认删除整张表的所有数据（列级删除））</p>
+<h4 id="表级删除（表被截断或清空）：truncate-table-表名；"><a href="#表级删除（表被截断或清空）：truncate-table-表名；" class="headerlink" title="表级删除（表被截断或清空）：truncate table 表名；"></a>表级删除（表被截断或清空）：truncate table 表名；</h4><h4 id="删除整个表（表头以至整个被删除）：drop命令"><a href="#删除整个表（表头以至整个被删除）：drop命令" class="headerlink" title="删除整个表（表头以至整个被删除）：drop命令"></a>删除整个表（表头以至整个被删除）：drop命令</h4><p>drop table if exists t_student;</p>
 <p>如果 表名  存在的话  那么删除</p>
 <p>先删除，后创建（先删除子目录后删除父目录）</p>
-<h3 id="约束：">约束：</h3>
-<p>非空约束：not null</p>
+<h3 id="约束："><a href="#约束：" class="headerlink" title="约束："></a>约束：</h3><p>非空约束：not null</p>
 <p>唯一约束：unique 唯一性约束可以为null，注意null !=null，unique是列级约束，写在表结构语句上（直接写在字段后面或者在所有字段后面进行指定哪些字段）</p>
 <p>主键约束：primary key（非空且不唯一 = not null + unique）列级约束</p>
 <p>外键约束：foreign key</p>
 <p>检查约束：check(mysql不支持该约束，oracle有)</p>
-<h4 id="主键术语：">主键术语：</h4>
-<p>主键约束：primary key</p>
+<h4 id="主键术语："><a href="#主键术语：" class="headerlink" title="主键术语："></a>主键术语：</h4><p>主键约束：primary key</p>
 <p>主键值:主键字段中的每一个值都是主键值</p>
 <p>主键字段：被添加主键的字段</p>
-<h4 id="特性：只要主键的值不一样，那么这就是完全不同的两条语句">特性：只要主键的值不一样，那么这就是完全不同的两条语句</h4>
-<h5 id="主键分类：">主键分类：</h5>
-<h6 id="单一主键">单一主键</h6>
-<p>复合主键：primary key（字段一，字段二）（复合的意思是只有两个全部想通过才算是同一个，符合的部分只要有一个不同，那么就是不同的主键）（复合主键违背三范式）</p>
+<h4 id="特性：只要主键的值不一样，那么这就是完全不同的两条语句"><a href="#特性：只要主键的值不一样，那么这就是完全不同的两条语句" class="headerlink" title="特性：只要主键的值不一样，那么这就是完全不同的两条语句"></a>特性：只要主键的值不一样，那么这就是完全不同的两条语句</h4><h5 id="主键分类："><a href="#主键分类：" class="headerlink" title="主键分类："></a>主键分类：</h5><h6 id="单一主键"><a href="#单一主键" class="headerlink" title="单一主键"></a>单一主键</h6><p>复合主键：primary key（字段一，字段二）（复合的意思是只有两个全部想通过才算是同一个，符合的部分只要有一个不同，那么就是不同的主键）（复合主键违背三范式）</p>
 <p>自然主键：一般把从1开始的自然数作为主键（最常用）</p>
 <p>业务主键：把某个唯一的数据字段作为主键，比如公民的身份证号，不推荐，因为作为主键后续修改很麻烦</p>
-<h3 id="注意一张表的主键约束只能有一个（重点）">注意一张表的主键约束只能有一个（重点）</h3>
-<h4 id="主键可以设置自增：auto-increment（推荐）">主键可以设置自增：auto_increment（推荐）</h4>
-<p>外键：foreign key</p>
+<h3 id="注意一张表的主键约束只能有一个（重点）"><a href="#注意一张表的主键约束只能有一个（重点）" class="headerlink" title="注意一张表的主键约束只能有一个（重点）"></a>注意一张表的主键约束只能有一个（重点）</h3><h4 id="主键可以设置自增：auto-increment（推荐）"><a href="#主键可以设置自增：auto-increment（推荐）" class="headerlink" title="主键可以设置自增：auto_increment（推荐）"></a>主键可以设置自增：auto_increment（推荐）</h4><p>外键：foreign key</p>
 <p>外键中引用的字段所在的表是子表，而被引用的表是父表（一定注意在操作子父表的时候要注意操作的顺序，不能直接操作）</p>
 <p>外键语法格式：</p>
 <p>create table 表一（</p>
 <p>foreign key (字段名) reference 表二（字段名）</p>
 <p>）；                                                       reference：引用</p>
-<h4 id="父表的被引用的字段值必须包括子表引用的所有字段值">父表的被引用的字段值必须包括子表引用的所有字段值</h4>
-<p>注意注意：外键值可以为null，被引用的字段必须至少具有unique约束，不然在连接时发挥不了外键的连接作用</p>
+<h4 id="父表的被引用的字段值必须包括子表引用的所有字段值"><a href="#父表的被引用的字段值必须包括子表引用的所有字段值" class="headerlink" title="父表的被引用的字段值必须包括子表引用的所有字段值"></a>父表的被引用的字段值必须包括子表引用的所有字段值</h4><p>注意注意：外键值可以为null，被引用的字段必须至少具有unique约束，不然在连接时发挥不了外键的连接作用</p>
 <p>mysql default charset = utf8</p>
 <p>几种常见的存储引擎（了解）：</p>
 <p>innodb：支持事务，并且保证数据安全性（默认engine）</p>
 <p>myisam：常用的engine，速度中等，但是不支持事务和其他功能</p>
 <p>memory：数据存储在内存中，所以易丢失但是速度最快，不支持事务</p>
-<h4 id="事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）">事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）</h4>
-<p>MYSQl中的事务是自动提交的，如果下个要手动开启一段事务，需要输入：start transaction</p>
+<h4 id="事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）"><a href="#事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）" class="headerlink" title="事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）"></a>事务：（注意只有DML才有事务这一概念，因为只有DML才操作了数据）</h4><p>MYSQl中的事务是自动提交的，如果下个要手动开启一段事务，需要输入：start transaction</p>
 <p>后续只有输入了commit才标志了一段事务的结束</p>
-<h4 id="事务的四大特性：ACID">事务的四大特性：ACID</h4>
-<p>原子性：事务是最小的工作单元</p>
+<h4 id="事务的四大特性：ACID"><a href="#事务的四大特性：ACID" class="headerlink" title="事务的四大特性：ACID"></a>事务的四大特性：ACID</h4><p>原子性：事务是最小的工作单元</p>
 <p>一致性：事务必须保证多条DML语句同时成功或者失败（必须）</p>
 <p>隔离性：这里最重要，分为四个等级</p>
 <p>持久性：持久化存储（到硬盘），这里才算是事务的结束</p>
-<h4 id="隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）">隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）</h4>
-<p>读未提交： read uncommited  隔离性最低</p>
+<h4 id="隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）"><a href="#隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）" class="headerlink" title="隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）"></a>隔离等级：（对于一个进行中的事务，同一数据库开启其他事务修改数据对前者的影响）</h4><p>读未提交： read uncommited  隔离性最低</p>
 <p>其他线程未提交就可以看见数据的修改</p>
 <p>读已提交：read commited</p>
 <p>其他事务提交之后才可以看得见</p>
@@ -607,8 +583,7 @@
 <p>但是缺点是效率低，因为要排队</p>
 <p>设置全局的隔离等级: set global transaction isolation level 隔离等级</p>
 <p>事务的两个方法：commit和rollback</p>
-<h4 id="索引：">索引：</h4>
-<p>explain写在语句前，显示该语句的执行计划</p>
+<h4 id="索引："><a href="#索引：" class="headerlink" title="索引："></a>索引：</h4><p>explain写在语句前，显示该语句的执行计划</p>
 <p>创建索引（对象）：create index 索引名称 on 表名（字段名）</p>
 <p>ps：给某一个查询字段设置索引</p>
 <p>索引底层采用的数据结构是：B+ Tree</p>
@@ -1060,6 +1035,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

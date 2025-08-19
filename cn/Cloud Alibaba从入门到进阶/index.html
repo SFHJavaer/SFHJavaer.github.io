@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Cloud Alibaba从入门到进阶 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -469,62 +472,41 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="Cloud-Alibaba从入门到进阶">Cloud Alibaba从入门到进阶</h3>
-<p>对于大型复杂系统、高并发系统、需求变更很快的系统都可以使用Cloud进行搭建。</p>
+        <h3 id="Cloud-Alibaba从入门到进阶"><a href="#Cloud-Alibaba从入门到进阶" class="headerlink" title="Cloud Alibaba从入门到进阶"></a>Cloud Alibaba从入门到进阶</h3><p>对于大型复杂系统、高并发系统、需求变更很快的系统都可以使用Cloud进行搭建。</p>
 <p>Cloud Alibaba属于Cloud的子项目，可以理解成是一直由阿里巴巴维护的新项目，是一个正在孵化的项目，并没有完全进入SpringCloud正式项目中。</p>
-<h6 id="Cloud-Alibaba的主要功能如下（来源于官方文档）">Cloud Alibaba的主要功能如下（来源于官方文档）</h6>
-<p><img src="Snipaste_2023-02-15_11-16-33.png" alt="Cloud Alibaba的主要功能"></p>
-<h4 id="Cloud的版本兼容性（和SpringBoot）">Cloud的版本兼容性（和SpringBoot）</h4>
-<p>这里涉及到一个比较重要的概念那就是版本控制</p>
-<h6 id="有语义化的版本控制-比如我们在安卓上常见的1-2-3-release">有语义化的版本控制,比如我们在安卓上常见的1.2.3.release</h6>
-<blockquote>
+<h6 id="Cloud-Alibaba的主要功能如下（来源于官方文档）"><a href="#Cloud-Alibaba的主要功能如下（来源于官方文档）" class="headerlink" title="Cloud Alibaba的主要功能如下（来源于官方文档）"></a>Cloud Alibaba的主要功能如下（来源于官方文档）</h6><p><img src="Snipaste_2023-02-15_11-16-33.png" alt="Cloud Alibaba的主要功能"></p>
+<h4 id="Cloud的版本兼容性（和SpringBoot）"><a href="#Cloud的版本兼容性（和SpringBoot）" class="headerlink" title="Cloud的版本兼容性（和SpringBoot）"></a>Cloud的版本兼容性（和SpringBoot）</h4><p>这里涉及到一个比较重要的概念那就是版本控制</p>
+<h6 id="有语义化的版本控制-比如我们在安卓上常见的1-2-3-release"><a href="#有语义化的版本控制-比如我们在安卓上常见的1-2-3-release" class="headerlink" title="有语义化的版本控制,比如我们在安卓上常见的1.2.3.release"></a>有语义化的版本控制,比如我们在安卓上常见的1.2.3.release</h6><blockquote>
 <p>1代表主版本,代表了第几代产品,一般在架构上都进行了大的改动</p>
 <p>二代表次版本主要是一些功能的增加,架构没有发生大的变化,都是兼容的</p>
 <p>三代表增量版本,比如一些bug的修复</p>
 <p>Release代表里程碑在release之前呢有M1 M2版本,另外还有snapshot代表开发版</p>
 </blockquote>
-<h6 id="而Spring-cloud的版本控制和普通的语义化的版本控制有一些区别">而Spring cloud的版本控制和普通的语义化的版本控制有一些区别</h6>
-<h6 id="Spring-cloud的版本采用了各个英国伦敦站的地名作为大版本-然后采用release-SR1-2-3-4等来进行具体小版本的表示">Spring cloud的版本采用了各个英国伦敦站的地名作为大版本,然后采用release SR1,2,3,4等来进行具体小版本的表示</h6>
-<h6 id="release代表正式版-Sr代表service-release-bug修复版本">release代表正式版,Sr代表service release(bug修复版本)</h6>
-<p><img src="%E7%89%88%E6%9C%AC%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%92%8C%E7%BB%84%E4%BB%B6%E7%89%88%E6%9C%AC.png" alt="版本依赖关系和组件版本.png"></p>
-<h4 id="在生产环境中的在生产环境中的注意事项版本注意事项">在生产环境中的在生产环境中的注意事项版本注意事项</h4>
-<p><img src="Snipaste_2023-02-15_11-34-51.png" alt="Snipaste_2023-02-15_11-34-51.png"></p>
+<h6 id="而Spring-cloud的版本控制和普通的语义化的版本控制有一些区别"><a href="#而Spring-cloud的版本控制和普通的语义化的版本控制有一些区别" class="headerlink" title="而Spring cloud的版本控制和普通的语义化的版本控制有一些区别"></a>而Spring cloud的版本控制和普通的语义化的版本控制有一些区别</h6><h6 id="Spring-cloud的版本采用了各个英国伦敦站的地名作为大版本-然后采用release-SR1-2-3-4等来进行具体小版本的表示"><a href="#Spring-cloud的版本采用了各个英国伦敦站的地名作为大版本-然后采用release-SR1-2-3-4等来进行具体小版本的表示" class="headerlink" title="Spring cloud的版本采用了各个英国伦敦站的地名作为大版本,然后采用release SR1,2,3,4等来进行具体小版本的表示"></a>Spring cloud的版本采用了各个英国伦敦站的地名作为大版本,然后采用release SR1,2,3,4等来进行具体小版本的表示</h6><h6 id="release代表正式版-Sr代表service-release-bug修复版本"><a href="#release代表正式版-Sr代表service-release-bug修复版本" class="headerlink" title="release代表正式版,Sr代表service release(bug修复版本)"></a>release代表正式版,Sr代表service release(bug修复版本)</h6><p><img src="版本依赖关系和组件版本.png" alt="版本依赖关系和组件版本.png"></p>
+<h4 id="在生产环境中的在生产环境中的注意事项版本注意事项"><a href="#在生产环境中的在生产环境中的注意事项版本注意事项" class="headerlink" title="在生产环境中的在生产环境中的注意事项版本注意事项"></a>在生产环境中的在生产环境中的注意事项版本注意事项</h4><p><img src="Snipaste_2023-02-15_11-34-51.png" alt="Snipaste_2023-02-15_11-34-51.png"></p>
 <p>尽量使用最新一代的版本的原因是release版本是属于第一个正式版，注意我们此时用的是生产环境,release并没有经过一个大量的测试，而SR版本一般经过了大量的企业测试，并且经过了几次的bug修复说明可以得到大范围的一个应用</p>
-<h4 id="微服务项目如何进行拆分？">微服务项目如何进行拆分？</h4>
-<p>业界理论拆分原则：</p>
+<h4 id="微服务项目如何进行拆分？"><a href="#微服务项目如何进行拆分？" class="headerlink" title="微服务项目如何进行拆分？"></a>微服务项目如何进行拆分？</h4><p>业界理论拆分原则：</p>
 <blockquote>
 <p>DDD(Domain Driven Design)：领取驱动设计，相比较面向对象设计分工更复杂，强调各分工使用统一的语言，比如UML</p>
 <p>面向对象，一般是三层的实体架构，byName/byVerb，类似于根据实体的状态和动作设计模式。</p>
 </blockquote>
 <p>在具体实践设计上分为以下两种：</p>
-<h6 id="面向程序职责设计-或者-面向通用性设计">面向程序职责设计  或者   面向通用性设计</h6>
-<h6 id="以下为解读：">以下为解读：</h6>
-<h6 id="比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。">比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。</h6>
-<p>附一下我们设计项目架构的常用思路，有两种：</p>
-<p><img src="QQ%E5%9B%BE%E7%89%8720230213141705.jpg" alt="架构"></p>
+<h6 id="面向程序职责设计-或者-面向通用性设计"><a href="#面向程序职责设计-或者-面向通用性设计" class="headerlink" title="面向程序职责设计  或者   面向通用性设计"></a>面向程序职责设计  或者   面向通用性设计</h6><h6 id="以下为解读："><a href="#以下为解读：" class="headerlink" title="以下为解读："></a>以下为解读：</h6><h6 id="比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。"><a href="#比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。" class="headerlink" title="比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。"></a>比如设计一个电商系统，日志系统为其中一个模块，那么该模块根据职责设计可以设计成日志读和日志写两个服务，当然可以继续拆分或者合并，而面向通用性的粒度更大，直接将日志设计成一个通用模块，不对其中进行细分。</h6><p>附一下我们设计项目架构的常用思路，有两种：</p>
+<p><img src="QQ图片20230213141705.jpg" alt="架构"></p>
 <p>可以看到design数据库等步骤是位于之后的，所以对于我们学习中遇到的首先设计数据库是不对的，要先确定业务流程，后来设计对应的数据库</p>
-<h4 id="微服务之间的调用">微服务之间的调用</h4>
-<p>我们知道微服务之间是通过轻量级的进程进行调用的（比如A服务byId查询出userId来发送给服务B进行获取具体的用户信息），而服务又是通过MVC也就是API调用的，</p>
+<h4 id="微服务之间的调用"><a href="#微服务之间的调用" class="headerlink" title="微服务之间的调用"></a>微服务之间的调用</h4><p>我们知道微服务之间是通过轻量级的进程进行调用的（比如A服务byId查询出userId来发送给服务B进行获取具体的用户信息），而服务又是通过MVC也就是API调用的，</p>
 <p>我们在此项目中使用的是http连接，也就是TCP建立连接基础上访问资源路径也就是接口（即调用服务）。</p>
 <p>前面我们在远程调用服务使用的一般是RPC，也就是将服务进行注册然后Reference调用，是需要一体完全配置好服务的，而我们这里可能只需要get一下接口就好了，不需要对被调用服务进行管理，那么我们直接使用RestTemplate。</p>
-<h4 id="RestTemplate">RestTemplate</h4>
-<h6 id="RestTemplate这个类是-Spring-框架提供的一个工具类，RestTemplate-提供高度封装的接口，RestTemplate-是一个同步的-Rest-API-客户端。">RestTemplate这个类是 Spring 框架提供的一个工具类，RestTemplate 提供高度封装的接口，RestTemplate 是一个同步的 Rest API 客户端。</h6>
-<blockquote>
+<h4 id="RestTemplate"><a href="#RestTemplate" class="headerlink" title="RestTemplate"></a>RestTemplate</h4><h6 id="RestTemplate这个类是-Spring-框架提供的一个工具类，RestTemplate-提供高度封装的接口，RestTemplate-是一个同步的-Rest-API-客户端。"><a href="#RestTemplate这个类是-Spring-框架提供的一个工具类，RestTemplate-提供高度封装的接口，RestTemplate-是一个同步的-Rest-API-客户端。" class="headerlink" title="RestTemplate这个类是 Spring 框架提供的一个工具类，RestTemplate 提供高度封装的接口，RestTemplate 是一个同步的 Rest API 客户端。"></a>RestTemplate这个类是 Spring 框架提供的一个工具类，RestTemplate 提供高度封装的接口，RestTemplate 是一个同步的 Rest API 客户端。</h6><blockquote>
 <p>方法我们大致可以分为三组：</p>
 <ul>
-<li>getForObject — optionsForAllow 分为一组，这类方法是常规的 Rest API（GET、POST、DELETE 等）方法调用；这里只是获取返回对象，如果需要的是一个Response整体，如需要获取StatusCode，那么需要用Entity方法，获取到一个Entity&lt;Object类型&gt;的对象，this.object就相当于getForObject结果。</li>
+<li>getForObject —- optionsForAllow 分为一组，这类方法是常规的 Rest API（GET、POST、DELETE 等）方法调用；这里只是获取返回对象，如果需要的是一个Response整体，如需要获取StatusCode，那么需要用Entity方法，获取到一个Entity<Object类型>的对象，this.object就相当于getForObject结果。</li>
 <li>exchange：接收一个 <code>RequestEntity</code> 参数，可以自己设置 HTTP method，URL，headers 和 body，返回 ResponseEntity；</li>
 <li>execute：通过 callback 接口，可以对请求和返回做更加全面的自定义控制。</li>
 </ul>
 </blockquote>
-<h4 id="普通项目升级微服务项目的三个要点">普通项目升级微服务项目的三个要点</h4>
-<h6 id="服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）">服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）</h6>
-<h6 id="如何实现服务的实例之间的负载均衡？">如何实现服务的实例之间的负载均衡？</h6>
-<h6 id="如果微服务中心挂掉怎么办？（实现高可用）">如果微服务中心挂掉怎么办？（实现高可用）</h6>
-<h4 id="微服务问题优化一般的解决思路：">微服务问题优化一般的解决思路：</h4>
-<p>查看已有问题–&gt;进入微服务组件（拆分微服务）–&gt;架构上的继续优化</p>
-<h5 id="PS：修改Linux环境变量位置">PS：修改Linux环境变量位置</h5>
-<p>全局：/etc/profile</p>
+<h4 id="普通项目升级微服务项目的三个要点"><a href="#普通项目升级微服务项目的三个要点" class="headerlink" title="普通项目升级微服务项目的三个要点"></a>普通项目升级微服务项目的三个要点</h4><h6 id="服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）"><a href="#服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）" class="headerlink" title="服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）"></a>服务之间是进行调用的，那么如果某个服务地址发生变化怎么办？（比如服务器升级换高配很正常，但是调用地址url是写死的）</h6><h6 id="如何实现服务的实例之间的负载均衡？"><a href="#如何实现服务的实例之间的负载均衡？" class="headerlink" title="如何实现服务的实例之间的负载均衡？"></a>如何实现服务的实例之间的负载均衡？</h6><h6 id="如果微服务中心挂掉怎么办？（实现高可用）"><a href="#如果微服务中心挂掉怎么办？（实现高可用）" class="headerlink" title="如果微服务中心挂掉怎么办？（实现高可用）"></a>如果微服务中心挂掉怎么办？（实现高可用）</h6><h4 id="微服务问题优化一般的解决思路："><a href="#微服务问题优化一般的解决思路：" class="headerlink" title="微服务问题优化一般的解决思路："></a>微服务问题优化一般的解决思路：</h4><p>查看已有问题—&gt;进入微服务组件（拆分微服务）—&gt;架构上的继续优化</p>
+<h5 id="PS：修改Linux环境变量位置"><a href="#PS：修改Linux环境变量位置" class="headerlink" title="PS：修改Linux环境变量位置"></a>PS：修改Linux环境变量位置</h5><p>全局：/etc/profile</p>
 <p>个人用户：~/.bash_profile       直接export PATH = “路径”即可添加</p>
 <p>添加完之后source 某文件  刷新一下。</p>
 
@@ -983,6 +965,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

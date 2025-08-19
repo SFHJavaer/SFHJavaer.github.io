@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       关于SpringClassLoader的一些思考 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">251</span> In Total
+              Words <span class="post-count">249</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,11 +474,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="关于SpringClassLoader的一些思考">关于SpringClassLoader的一些思考</h3>
-<h6 id="看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的">看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的</h6>
-<h6 id="看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader">看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader</h6>
-<h6 id="看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactoriesLoader这个自定义加载器，里面是对后面自动装配的properties类的的加载和解析，仔细一看却不是自定义的classloader（没继承）">看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactoriesLoader这个自定义加载器，里面是对后面自动装配的properties类的的加载和解析，仔细一看却不是自定义的classloader（没继承）</h6>
-<blockquote>
+        <h3 id="关于SpringClassLoader的一些思考"><a href="#关于SpringClassLoader的一些思考" class="headerlink" title="关于SpringClassLoader的一些思考"></a>关于SpringClassLoader的一些思考</h3><h6 id="看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的"><a href="#看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的" class="headerlink" title="看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的"></a>看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的</h6><h6 id="看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader"><a href="#看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader" class="headerlink" title="看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader"></a>看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader</h6><h6 id="看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactoriesLoader这个自定义加载器，里面是对后面自动装配的properties类的的加载和解析，仔细一看却不是自定义的classloader（没继承）"><a href="#看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactoriesLoader这个自定义加载器，里面是对后面自动装配的properties类的的加载和解析，仔细一看却不是自定义的classloader（没继承）" class="headerlink" title="看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactoriesLoader这个自定义加载器，里面是对后面自动装配的properties类的的加载和解析，仔细一看却不是自定义的classloader（没继承）"></a>看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactoriesLoader这个自定义加载器，里面是对后面自动装配的properties类的的加载和解析，仔细一看却不是自定义的classloader（没继承）</h6><blockquote>
 <p>严格按照继承体系来说只能算是appclassloader的引用类加载器，从网上找的那种说法，说明在项目以jar的方式运行的时候，springboot内部会使用JarLauncher入口的LaunchedURLClassLoader，说明是有自定义类加载器</p>
 <p>内置tomcat加载的时候也是自定义的，所以就说主要的成员类都是Appclassloader加载的，对于特殊场景下才用springboot自定义的类加载器</p>
 </blockquote>
@@ -938,6 +937,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

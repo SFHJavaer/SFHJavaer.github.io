@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Spring AOP笔记 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,31 +474,21 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="AOP（面向切面编程）">AOP（面向切面编程）</h3>
-<h2 id="1-动态代理">1.动态代理</h2>
-<p>实现方式：jdk动态代理。使用jdk中的Proxy，Method，InvocationHander创建代理对象</p>
+        <h3 id="AOP（面向切面编程）"><a href="#AOP（面向切面编程）" class="headerlink" title="AOP（面向切面编程）"></a>AOP（面向切面编程）</h3><h2 id="1-动态代理"><a href="#1-动态代理" class="headerlink" title="1.动态代理"></a>1.动态代理</h2><p>实现方式：jdk动态代理。使用jdk中的Proxy，Method，InvocationHander创建代理对象</p>
 <p>此种要求目标类必须实现接口</p>
 <p>cglib动态代理：第三方工具库，通过继承来创建代理对象，继承目标类，创建子类（代理对象），要求目标类不能是final，方法也不能是final，因为final不能被继承或修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">动态代理的作用：</span><br><span class="line"></span><br><span class="line">1）在源代码不改变的情况下增加功能</span><br><span class="line"></span><br><span class="line">2）减少代码重复</span><br><span class="line"></span><br><span class="line">3）专注业务逻辑代码</span><br><span class="line"></span><br><span class="line">4）解耦合。业务功能和日志，事务和非事务分离</span><br></pre></td></tr></table></figure>
-<br>
+<p><br></p>
 <blockquote>
 <p>Aspect：给目标类增加的功能就是切面，比如日志，事务，统计信息，权限验证。</p>
 </blockquote>
-<h6 id="切面的特点：一般都是独立使用的非业务方法。">切面的特点：一般都是独立使用的非业务方法。</h6>
-<h5 id="Orient：面向">Orient：面向</h5>
-<h5 id="Programming：编程">Programming：编程</h5>
-<h5 id="OOP：面向对象编程（同理面向切面以切面为核心）">OOP：面向对象编程（同理面向切面以切面为核心）</h5>
-<h4 id="实现AOP：">实现AOP：</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1）分析项目功能时找出切面</span><br><span class="line"></span><br><span class="line">2）合理安排切面的执行时间（方法前还是方法后）</span><br><span class="line"></span><br><span class="line">3）合理安排切面的执行位置，在哪个类哪个方法中增加增强功能</span><br></pre></td></tr></table></figure>
-<h4 id="术语：">术语：</h4>
-<p><strong>Aspect</strong>：切面</p>
+<h6 id="切面的特点：一般都是独立使用的非业务方法。"><a href="#切面的特点：一般都是独立使用的非业务方法。" class="headerlink" title="切面的特点：一般都是独立使用的非业务方法。"></a>切面的特点：一般都是独立使用的非业务方法。</h6><h5 id="Orient：面向"><a href="#Orient：面向" class="headerlink" title="Orient：面向"></a>Orient：面向</h5><h5 id="Programming：编程"><a href="#Programming：编程" class="headerlink" title="Programming：编程"></a>Programming：编程</h5><h5 id="OOP：面向对象编程（同理面向切面以切面为核心）"><a href="#OOP：面向对象编程（同理面向切面以切面为核心）" class="headerlink" title="OOP：面向对象编程（同理面向切面以切面为核心）"></a>OOP：面向对象编程（同理面向切面以切面为核心）</h5><h4 id="实现AOP："><a href="#实现AOP：" class="headerlink" title="实现AOP："></a>实现AOP：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1）分析项目功能时找出切面</span><br><span class="line"></span><br><span class="line">2）合理安排切面的执行时间（方法前还是方法后）</span><br><span class="line"></span><br><span class="line">3）合理安排切面的执行位置，在哪个类哪个方法中增加增强功能</span><br></pre></td></tr></table></figure>
+<h4 id="术语："><a href="#术语：" class="headerlink" title="术语："></a>术语：</h4><p><strong>Aspect</strong>：切面</p>
 <p><strong>JoinPoint</strong>：连接点，连接业务方法和切面的位置，某类中的业务方法</p>
-<p><strong>Pointcut</strong>：切入点，指多个连接点的集合<br>
-<strong>目标对象</strong>：给哪个类的方法增加工功能，这个类是目标对象</p>
+<p><strong>Pointcut</strong>：切入点，指多个连接点的集合<br><strong>目标对象</strong>：给哪个类的方法增加工功能，这个类是目标对象</p>
 <p><strong>目标方法</strong>：添加功能的方法</p>
-<p>**Advice:**通知，通知表示切面功能执行的时间</p>
-<h5 id="切面的三个关键要素：">切面的三个关键要素：</h5>
-<p>1）切面的具体功能代码，切面干什么</p>
+<p><strong>Advice:</strong>通知，通知表示切面功能执行的时间</p>
+<h5 id="切面的三个关键要素："><a href="#切面的三个关键要素：" class="headerlink" title="切面的三个关键要素："></a>切面的三个关键要素：</h5><p>1）切面的具体功能代码，切面干什么</p>
 <p>2）切面的执行位置，使用Pointcut表示切面的执行位置</p>
 <p>3）切面的执行时间，使用Advice表示时间，在目标方法的前后</p>
 <blockquote>
@@ -504,16 +497,15 @@
 <p>AOP的技术实现框架：</p>
 <p>1.spring在内部实现了aop规范。主要在进行事务处理时进行使用aop，项目中很少用</p>
 <p><br>2.aspectJ：开源的aop框架，在spring中集成了aspect</p>
-<h5 id="aspectJ实现aop的方法有两种：">aspectJ实现aop的方法有两种：</h5>
-<p>1）使用xml配置文件配置全局事务</p>
+<h5 id="aspectJ实现aop的方法有两种："><a href="#aspectJ实现aop的方法有两种：" class="headerlink" title="aspectJ实现aop的方法有两种："></a>aspectJ实现aop的方法有两种：</h5><p>1）使用xml配置文件配置全局事务</p>
 <p>2）使用注解，常用五个注解，第一个是切面的执行时间，在规范中叫做Advice（通知，增强）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Before</span>		前置通知</span><br><span class="line"></span><br><span class="line"><span class="meta">@AfterReturning</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Around</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@AfterThrowing</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@After</span></span><br></pre></td></tr></table></figure>
 <p>aspectJ的切入点表达式（表达式可以加入通配符）</p>
-<p>execution(访问权限	方法返回值	方法声明(参数)	异常类型) 				其中的访问权限和异常可以省略</p>
-<p>例：execution(public void com.Service.execution(String name))			com包中Service类中的exexution方法</p>
+<p>execution(访问权限    方法返回值    方法声明(参数)    异常类型)                 其中的访问权限和异常可以省略</p>
+<p>例：execution(public void com.Service.execution(String name))            com包中Service类中的exexution方法</p>
 <p>可以使用符号*任意多个字符</p>
-<p>​	…方法的任意多个参数			或者当前包和子包</p>
-<p>​	+当前类和子类			或接口和实现类</p>
+<p>​    ..方法的任意多个参数            或者当前包和子包</p>
+<p>​    +当前类和子类            或接口和实现类</p>
 <ol>
 <li><code>@Component</code> 注解作用于类，而<code>@Bean</code>注解作用于方法</li>
 <li><code>@Component</code> 注解是通过类路径扫描来自动装配到IOC容器中的，而<code>@Bean</code>注解是将方法返回值作为bean装载到IOC容器中</li>
@@ -526,12 +518,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/2021-11-22-SpringMVC处理器方法的返回值/" data-toggle="tooltip" data-placement="top" title="SpringMVC处理器方法的返回值">&larr; Previous Post</a>
+            <a href="/cn/2021-11-20-SpringMVC笔记/" data-toggle="tooltip" data-placement="top" title="SpringMVC笔记">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/cn/2021-11-20-SpringMVC笔记/" data-toggle="tooltip" data-placement="top" title="SpringMVC笔记">Next Post &rarr;</a>
+            <a href="/cn/2021-11-03-Markdown快速入门/" data-toggle="tooltip" data-placement="top" title="Markdown快速入门">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -966,6 +958,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

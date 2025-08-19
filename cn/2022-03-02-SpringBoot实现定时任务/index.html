@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       SpringBoot实现定时任务 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">965</span> In Total
+              Words <span class="post-count">963</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,28 +474,22 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="两种方式实现SpringBoot定时任务">两种方式实现SpringBoot定时任务</h4>
-<h5 id="整合quartz：">整合quartz：</h5>
-<p>首先使用util包下自带的Timmer类</p>
+        <h4 id="两种方式实现SpringBoot定时任务"><a href="#两种方式实现SpringBoot定时任务" class="headerlink" title="两种方式实现SpringBoot定时任务"></a>两种方式实现SpringBoot定时任务</h4><h5 id="整合quartz："><a href="#整合quartz：" class="headerlink" title="整合quartz："></a>整合quartz：</h5><p>首先使用util包下自带的Timmer类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimerTaskApp</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Timer timer = <span class="keyword">new</span> Timer();</span><br><span class="line">        TimerTask task = <span class="keyword">new</span> TimerTask() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;timer task run...&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        timer.schedule(task,<span class="number">0</span>,<span class="number">2000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>1.导入依赖后定义类继承QuartzJobBean，因为QuartzJobBean是抽象类，所以需要实现它里面的抽象方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyQuartz</span> <span class="keyword">extends</span> <span class="title">QuartzJobBean</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">executeInternal</span><span class="params">(JobExecutionContext context)</span> <span class="keyword">throws</span> JobExecutionException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;quartz task run...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>2.定义工作明细和触发器trigger并绑定对应关系</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuartzConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> JobDetail <span class="title">printJobDetail</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//绑定具体的工作</span></span><br><span class="line">        <span class="keyword">return</span> JobBuilder</span><br><span class="line">                .newJob(MyQuartz.class)</span><br><span class="line">                .storeDurably()</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Trigger <span class="title">printJobTrigger</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ScheduleBuilder schedBuilder = CronScheduleBuilder.cronSchedule(<span class="string">&quot;0/5 * * * * ?&quot;</span>);</span><br><span class="line">        <span class="comment">//绑定对应的工作明细</span></span><br><span class="line">        <span class="keyword">return</span> TriggerBuilder.newTrigger().forJob(printJobDetail()).withSchedule(schedBuilder).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="整合Spring-Task（推荐）：">整合Spring Task（推荐）：</h4>
-<p>1.在引导类上开启@EnableScheduling注解</p>
+<h4 id="整合Spring-Task（推荐）："><a href="#整合Spring-Task（推荐）：" class="headerlink" title="整合Spring Task（推荐）："></a>整合Spring Task（推荐）：</h4><p>1.在引导类上开启@EnableScheduling注解</p>
 <p>2.在具体Service方法上@Scheduled并设置注解参数cron表达式来设置定时任务</p>
-<h6 id="定时任务的配置设置在yml文件中设置，如下：">定时任务的配置设置在yml文件中设置，如下：</h6>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">	<span class="attr">task:</span></span><br><span class="line">		<span class="attr">scheduling:</span></span><br><span class="line">		<span class="attr">pool:</span></span><br><span class="line">			<span class="string">size:1</span> <span class="comment">#任务调度线程池大小</span></span><br><span class="line">		<span class="comment">#定时任务本质上是调用新线程执行任务，所以可以设置thread前缀</span></span><br><span class="line">		<span class="attr">thread-name-prefix:</span> <span class="string">ssm_</span></span><br><span class="line"><span class="comment">#		设置定时任务线程结束时的参数</span></span><br><span class="line">		<span class="attr">shutdown:</span></span><br><span class="line">			<span class="attr">await-termination:</span> <span class="string">flase</span></span><br><span class="line">			<span class="comment">#关闭时是否等待所有任务完成</span></span><br></pre></td></tr></table></figure>
-<p>cron表达式格式：秒 分 时 日 月 年 星期，一般星期和日容易起冲突，所以一般规定日之后，就将星期设置为？，代表不设置看情况匹配，*通配符则代表所有，例如0 0 8 * * ？代表每天8点整指定一次</p>
+<h6 id="定时任务的配置设置在yml文件中设置，如下："><a href="#定时任务的配置设置在yml文件中设置，如下：" class="headerlink" title="定时任务的配置设置在yml文件中设置，如下："></a>定时任务的配置设置在yml文件中设置，如下：</h6><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">	<span class="attr">task:</span></span><br><span class="line">		<span class="attr">scheduling:</span></span><br><span class="line">		<span class="attr">pool:</span></span><br><span class="line">			<span class="string">size:1</span> <span class="comment">#任务调度线程池大小</span></span><br><span class="line">		<span class="comment">#定时任务本质上是调用新线程执行任务，所以可以设置thread前缀</span></span><br><span class="line">		<span class="attr">thread-name-prefix:</span> <span class="string">ssm_</span></span><br><span class="line"><span class="comment">#		设置定时任务线程结束时的参数</span></span><br><span class="line">		<span class="attr">shutdown:</span></span><br><span class="line">			<span class="attr">await-termination:</span> <span class="string">flase</span></span><br><span class="line">			<span class="comment">#关闭时是否等待所有任务完成</span></span><br></pre></td></tr></table></figure>
+<p>cron表达式格式：秒 分 时 日 月 年 星期，一般星期和日容易起冲突，所以一般规定日之后，就将星期设置为？，代表不设置看情况匹配，<em>通配符则代表所有，例如0 0 8 </em> * ？代表每天8点整指定一次</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Scheduled(cron = &quot;0/1 * * * * ?&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">&quot; :spring task run...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h6 id="扩展：链式编程">扩展：链式编程</h6>
-<p>链式编程可以使得代码可读性高，链式编程的原理就是返回一个this对象，就是返回本身，达到链式效果，可以直接return this;</p>
+<h6 id="扩展：链式编程"><a href="#扩展：链式编程" class="headerlink" title="扩展：链式编程"></a>扩展：链式编程</h6><p>链式编程可以使得代码可读性高，链式编程的原理就是返回一个this对象，就是返回本身，达到链式效果，可以直接return this;</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：StudentBean studentBean = StudentBean.builder().name(<span class="string">&quot;ly&quot;</span>).age(<span class="number">11</span>).build();</span><br></pre></td></tr></table></figure>
 <p>SuudentBean类，实体类没有return this;</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentBean</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> StudentBean <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> age;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> StudentBean <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="CRON表达式">CRON表达式</h5>
-<p>cron表达式分为七个域，之间使用空格分隔。其中最后一个域（年）可以为空。每个域都有自己允许的值和一些特殊字符构成。使用这些特殊字符可以使我们定义的表达式更加灵活。</p>
+<h5 id="CRON表达式"><a href="#CRON表达式" class="headerlink" title="CRON表达式"></a>CRON表达式</h5><p>cron表达式分为七个域，之间使用空格分隔。其中最后一个域（年）可以为空。每个域都有自己允许的值和一些特殊字符构成。使用这些特殊字符可以使我们定义的表达式更加灵活。</p>
 <p>下面是对这些特殊字符的介绍：</p>
 <p>逗号（,）：指定一个值列表，例如使用在月域上1,4,5,7表示1月、4月、5月和7月</p>
 <p>横杠（-）：指定一个范围，例如在时域上3-6表示3点到6点（即3点、4点、5点、6点）</p>
@@ -949,6 +946,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

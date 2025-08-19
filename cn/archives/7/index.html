@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -525,18 +528,48 @@ data代表传送的数据（data中多条数据即为列表json）
       
     </h3>
     <div class="post-content-preview">
-      SpringMVC处理器方法的返回值
-1）ModelAndView：传递数据并且跳转到其他资源（视图），对视图进行forward，如果有多余的部分则该该返回值不合适
-2）String：表示视图，可以逻辑名称，也可以是完整视图路径，逻辑名称需要配置视图解析器，可以直接在方法中return“视图名称”
-3）void：多用于响应ajax请求，不需要返回对象，直接前后端分离动态改变
+      SpringMVC处理器方法的返回值1）ModelAndView：传递数据并且跳转到其他资源（视图），对视图进行forward，如果有多余的部分则该该返回值不合适2）String：表示视图，可以逻辑名称，也可以是完整视图路径，逻辑名称需要配置视图解析器，可以直接在方法中return“视图名称”3）void：多用于响应ajax请求，不需要返回对象，直接前后端分离动态改变
 
-处理ajax，......
+处理ajax，使用j......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
     2021-11-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2021-11-20-SpringMVC笔记/">
+    <h2 class="post-title">
+      SpringMVC笔记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Controller：控制器对象，把创建的对象作为控制器使用，并把该对象放入SpringMVC容器中，可以接受请求显示处理结果，当作Servlet来使用，但是使用@Controller注解创建的是一个普通类的对象，不是Servlet，但是SpringMVC赋予了其一些特殊功能中央调度器：DispatcherServlet是SpringMvc中的一个Servlet对象，负责接收用户的所有请求之......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2021-11-08
   </p>
   <div class="tags">
     
@@ -563,12 +596,10 @@ data代表传送的数据（data中多条数据即为列表json）
       
     </h3>
     <div class="post-content-preview">
-      AOP（面向切面编程）
-1.动态代理
-实现方式：jdk动态代理。使用jdk中的Proxy，Method，InvocationHander创建代理对象
+      AOP（面向切面编程）1.动态代理实现方式：jdk动态代理。使用jdk中的Proxy，Method，InvocationHander创建代理对象
 此种要求目标类必须实现接口
 cglib动态代理：第三方工具库，通过继承来创建代理对象，继承目标类，创建子类（代理对象），要求目标类不能是final，方法也不能是final，因为final不能被继承或修改
-123456789动态代理的作用：1）在......
+123456789动态代理的作用：1）在源代......
     </div>
   </a>
   
@@ -593,40 +624,6 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
   <!-- top end -->
   
 
-  <a href="/cn/2021-11-20-SpringMVC笔记/">
-    <h2 class="post-title">
-      SpringMVC笔记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Controller：控制器对象，把创建的对象作为控制器使用，并把该对象放入SpringMVC容器中，可以接受请求显示处理结果，当作Servlet来使用，但是使用@Controller注解创建的是一个普通类的对象，不是Servlet，但是SpringMVC赋予了其一些特殊功能
-中央调度器：DispatcherServlet是SpringMvc中的一个Servlet对象，负责接收用户的所有请求......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
   <a href="/cn/2021-11-03-Markdown快速入门/">
     <h2 class="post-title">
       Markdown快速入门
@@ -635,19 +632,12 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
       
     </h3>
     <div class="post-content-preview">
-      Markdown快速入门
-代码块：
-在英文状态下输入三个漂号，自动转换为代码块,注意要在格式符号和被操作字符之间加一个空格
+      Markdown快速入门代码块：在英文状态下输入三个漂号，自动转换为代码块,注意要在格式符号和被操作字符之间加一个空格
 12​``` java​```python
 
-标题：
-1234标题分从大到小分6级，每一级多加一个## 1## 2### 3
-1
-2
-3
-
-字体修饰
-12345678//加粗**加粗字体**//代码高亮显示(要在偏好中进行设置)==高亮代码==//删除线~~被删除文字~......
+标题：1234标题分从大到小分6级，每一级多加一个## 1## 2### 3
+123
+字体修饰12345678//加粗**加粗字体**//代码高亮显示(要在偏好中进行设置)==高亮代码==//删除线~~被删除文字~~//斜体*斜......
     </div>
   </a>
   
@@ -680,11 +670,10 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
       
     </h3>
     <div class="post-content-preview">
-      MYSQL重点知识点梳理
-distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写
+      MYSQL重点知识点梳理distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写
 order by：按某字段进行排序，asc为顺序，多个字段或多个顺序规则，使用逗号分隔，当然先按后面条件的前面的顺序进行排序
 where查询要确定要查询条件的类型。如果是数字可以直接输，如果是字符串需要加引号
-对查询的字段锁定（规定）在某些数据的话，使用in关键字，当用到多个字段属于并列......
+对查询的字段锁定（规定）在某些数据的话，使用in关键字，当用到多个字段属于并列关......
     </div>
   </a>
   
@@ -717,9 +706,7 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
       
     </h3>
     <div class="post-content-preview">
-      利用HTML和CSS实现简单的淘宝购物车前端
-HTML代码：
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878......
+      利用HTML和CSS实现简单的淘宝购物车前端HTML代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888......
     </div>
   </a>
   
@@ -753,10 +740,9 @@ HTML代码：
     </h3>
     <div class="post-content-preview">
       1.首先导入所需要的库，这里用到的主要是seleinum
-
 请仔细查看代码注释
 
-12345678910from selenium import webdriver  # 从自动化库里导入这个模块from selenium.webdriver.support.ui import WebDriverWait  # 从模块导入显示等待（隐式，强制）from selenium.webdriver.......
+12345678910from selenium import webdriver  # 从自动化库里导入这个模块from selenium.webdriver.support.ui import WebDriverWait  # 从模块导入显示等待（隐式，强制）from selenium.webdriver.s......
     </div>
   </a>
   
@@ -790,20 +776,13 @@ HTML代码：
     </h3>
     <div class="post-content-preview">
       Docker部署项目到服务器上
-
 这里以青龙面板为例，部署青龙面板到服务器的5700端口
 首先自己需要有服务器，公网或内网均可，登录xshell或finalshell
 我这里以Finalshell为例，登录之后为下图
 
 
 
-首先更新下yum源
-
-1sudo yum check-update
-
-安装docker
-
--fsSL| sh12345sudo systemctl start docke......
+首先更新下yum源1sudo yum check-update安装docker-fsSL| sh12345sudo systemctl start docker	&#x2F......
     </div>
   </a>
   
@@ -909,11 +888,11 @@ HTML代码：
   <div class="tags">
     
     
-    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
-    
-    
-    
     <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
+    
+    
+    
+    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
     
     
     
@@ -921,19 +900,11 @@ HTML代码：
     
     
     
-    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
-    
-    
-    
     <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
     
     
     
-    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
-    
-    
-    
-    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
     
     
     
@@ -941,15 +912,23 @@ HTML代码：
     
     
     
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    
+    
+    
     <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
     
     
     
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
+    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
     
     
     
     <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
     
     
     
@@ -969,11 +948,11 @@ HTML代码：
     
     
     
-    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
-    
-    
-    
     <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
+    
+    
+    
+    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
     
     
     
@@ -981,7 +960,7 @@ HTML代码：
     
     
     
-    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    <a href="/tags/#IO" title="IO" rel="1">IO</a>
     
     
     
@@ -989,7 +968,7 @@ HTML代码：
     
     
     
-    <a href="/tags/#IO" title="IO" rel="1">IO</a>
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
     
     
     
@@ -1001,6 +980,10 @@ HTML代码：
     
     
     
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    
+    
+    
     <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
     
     
@@ -1009,19 +992,15 @@ HTML代码：
     
     
     
-    <a href="/tags/#注解" title="注解" rel="2">注解</a>
-    
-    
-    
     <a href="/tags/#Spring" title="Spring" rel="1">Spring</a>
     
     
     
-    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
-    
-    
-    
     <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
     
     
     
@@ -1207,16 +1186,16 @@ HTML代码：
 <div class="widget">
   <ul>
     
-    <a href="/categories/#多线程">
-      <li>多线程</li>
+    <a href="/categories/#IO">
+      <li>IO</li>
     </a>
     
     <a href="/categories/#Maven">
       <li>Maven</li>
     </a>
     
-    <a href="/categories/#IO">
-      <li>IO</li>
+    <a href="/categories/#多线程">
+      <li>多线程</li>
     </a>
     
     <a href="/categories/#笔试">
@@ -1239,12 +1218,12 @@ HTML代码：
       <li>Spring</li>
     </a>
     
-    <a href="/categories/#设计模式">
-      <li>设计模式</li>
-    </a>
-    
     <a href="/categories/#索引">
       <li>索引</li>
+    </a>
+    
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
     </a>
     
     <a href="/categories/#项目">
@@ -1489,6 +1468,7 @@ HTML代码：
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

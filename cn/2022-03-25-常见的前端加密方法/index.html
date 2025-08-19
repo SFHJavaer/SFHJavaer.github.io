@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       常见的前端加密方法 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,27 +474,22 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="对称加密：">对称加密：</h4>
-<p>加密和解密使用的是同一个密钥，计算量小，常见的DES、AES</p>
+        <h4 id="对称加密："><a href="#对称加密：" class="headerlink" title="对称加密："></a>对称加密：</h4><p>加密和解密使用的是同一个密钥，计算量小，常见的DES、AES</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">优点：计算量小，简单快速，适合于对海量数据进行加密处理；</span><br><span class="line"></span><br><span class="line">缺点：加密人和解密人需要拥有同一把秘钥，那秘钥如果通过 不安全的通道进行传输，就存在被黑客窃听的风险，安全性丧失；</span><br><span class="line"></span><br><span class="line">            同时双方还需要好好管理秘钥，不能泄露秘钥，否则也不安全了，管理秘钥成本较高。</span><br></pre></td></tr></table></figure>
-<h4 id="非对称加密：">非对称加密：</h4>
-<p>需要公钥和私钥，公钥对数据进行加密只能用私钥解，常见的：RSA、RCC椭圆曲线加密算法</p>
+<h4 id="非对称加密："><a href="#非对称加密：" class="headerlink" title="非对称加密："></a>非对称加密：</h4><p>需要公钥和私钥，公钥对数据进行加密只能用私钥解，常见的：RSA、RCC椭圆曲线加密算法</p>
 <blockquote>
 <p>ps：所以在实际应用场景中，一般把 秘钥 采用非对称加密，数据采用对称加密。</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">优点：消除了用户交换密钥的需要，安全性提高；</span><br><span class="line"></span><br><span class="line">缺点：加密、解密耗时较长；</span><br></pre></td></tr></table></figure>
-<h4 id="Hash算法：">Hash算法：</h4>
-<h6 id="MD5和SHA。SHA又包括-SHA-1-和-SHA-2-SHA-224、SHA-256、SHA-384、SHA-512-和SHA-3。"><strong>MD5和SHA。SHA又包括 SHA-1 和 SHA-2(SHA-224、SHA-256、SHA-384、SHA-512) 和SHA-3。</strong></h6>
-<p>MD5直接加密 （ Message-Digest Algorithm-信息摘要算法），种被广泛使用的密码散列函数，可以产生出一个128位（16字节）的散列值（hash value），用于确保信息传输完整一致。</p>
+<h4 id="Hash算法："><a href="#Hash算法：" class="headerlink" title="Hash算法："></a>Hash算法：</h4><h6 id="MD5和SHA。SHA又包括-SHA-1-和-SHA-2-SHA-224、SHA-256、SHA-384、SHA-512-和SHA-3。"><a href="#MD5和SHA。SHA又包括-SHA-1-和-SHA-2-SHA-224、SHA-256、SHA-384、SHA-512-和SHA-3。" class="headerlink" title="MD5和SHA。SHA又包括 SHA-1 和 SHA-2(SHA-224、SHA-256、SHA-384、SHA-512) 和SHA-3。"></a><strong>MD5和SHA。SHA又包括 SHA-1 和 SHA-2(SHA-224、SHA-256、SHA-384、SHA-512) 和SHA-3。</strong></h6><p>MD5直接加密 （ Message-Digest Algorithm-信息摘要算法），种被广泛使用的密码散列函数，可以产生出一个128位（16字节）的散列值（hash value），用于确保信息传输完整一致。</p>
 <p>特点：a、压缩性：任意长度的数据，可以算出固定长度；</p>
-<p>​			b、不可逆：只有加密，没有对应的解密算法；</p>
+<p>​            b、不可逆：只有加密，没有对应的解密算法；</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//演示下在vue项目中使用MD5</span><br><span class="line">//step1 安装依赖</span><br><span class="line">npm install js-md5 -S</span><br><span class="line"> </span><br><span class="line">//step2 在main.js 全局引入</span><br><span class="line">import md5 from &#x27;js-md5&#x27;;</span><br><span class="line">Vue.prototype.$md5 = md5;</span><br><span class="line"> </span><br><span class="line">//step3 在逻辑中使用</span><br><span class="line">this.$md5(&#x27;password&#x27;);</span><br><span class="line"> </span><br><span class="line">//实际开发中，可能整个项目只有登录的时候会用到MD5，这时建议采用单页面引用，安装依赖之后，在登录组件引入插件</span><br><span class="line">import md5 from &#x27;js-md5&#x27;;</span><br><span class="line">let pw = md5(&#x27;password&#x27;);//使用</span><br><span class="line"> </span><br><span class="line">//在非vue项目中，下载好md5.js后使用script标签引入即可</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/md5.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="MD5加盐">MD5加盐</h5>
-<blockquote>
+<h5 id="MD5加盐"><a href="#MD5加盐" class="headerlink" title="MD5加盐"></a>MD5加盐</h5><blockquote>
 <p>MD5直接加密虽然不可逆，但抵不住网上大把解密网站，通过事先存储各种字符组合的 Hash 加密结果，然后提供查询；即使是两层的 md5 加密也有可能通过彩虹表的方式进行破译，所以MD5直接加密已经不够安全，这时候就需要给密码加盐，以降低被破译的风险；加盐就是人为的通过一组固定字符或随机字符与用户原密码组合形成一个新的字符。</p>
 </blockquote>
 <p><strong>SHA-256</strong></p>
-<p>SHA256算法使用的哈希值长度是256位。这是一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8A%BD%E8%B1%A1%E7%B1%BB/4748292">抽象类</a>。此类的唯一实现是SHA256Managed;</p>
+<p> SHA256算法使用的哈希值长度是256位。这是一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/抽象类/4748292">抽象类</a>。此类的唯一实现是SHA256Managed;</p>
 <p>ps：这里简单介绍了前端加密，需要注意的是，对于用户密码而言，不能因为前端加密了，后端就直接把前端加密得到的字符串直接存储到数据库，这是很危险的，前后端都要进行加密！比如前端MD5加密之后，后端进行第二次md5加密后再把密码存进数据库，这样即使用户密码在传输过程中被窃听，黑客也无法进行登录，因为被窃听的密码和数据库存储的密码不匹配。</p>
 
 
@@ -940,6 +938,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

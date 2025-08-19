@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       线程并发问题记录 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -470,19 +473,25 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>使用ajax同时对一接口发送两个请求，报文不一样，结果应当不同，但是返回结果却有一定几率相同。</p>
-<p>排查思路：MP SQL是否错误—&gt;Cloud问题------&gt;Client请求是否遗漏</p>
-<p>测试结果：发起双请求——&gt;Controller接收到两个------&gt;Cloud只处理了一个结果，不放掉cloud请求的时候，前端两个结果都不能拿到响应，放掉同时拿到，说明和RPC并发问题有关。</p>
+<p>排查思路：MP SQL是否错误—-&gt;Cloud问题———&gt;Client请求是否遗漏</p>
+<p>测试结果：发起双请求——&gt;Controller接收到两个———&gt;Cloud只处理了一个结果，不放掉cloud请求的时候，前端两个结果都不能拿到响应，放掉同时拿到，说明和RPC并发问题有关。</p>
 <p>两个请求同时拿到的响应结果不一定是原本哪一条请求对应的请求，说明是随即分配的，两个请求只处理了一次。</p>
-<p><font style="color:#000000;background-color:#FBDE28;">初步推断是IAR网关存在屏蔽限流现象，但是之前在十几条请求同时并发时也没有出现响应相同的问题。</font></p>
-<p><font style="color:#000000;background-color:#FBDE28;"></font></p>
+<font style="color:#000000;background-color:#FBDE28;">初步推断是IAR网关存在屏蔽限流现象，但是之前在十几条请求同时并发时也没有出现响应相同的问题。</font>
+
+<font style="color:#000000;background-color:#FBDE28;"></font>
+
 <p><strong><font style="color:#000000;">排查链路日志：</font></strong></p>
 <blockquote>
-<p><font style="color:rgb(37, 41, 51);">服务多的情况下，业务问题也是有些难以排查，只能确定大致时间定位相关日志。因此实现一个请求对应一个traceId，在整个请求的全链路中都可以关联起来，可以极大地帮助我们更方便地查询日志。</font></p>
-<p><font style="color:rgb(37, 41, 51);">每个请求的响应头里都会有个 traceId</font></p>
+<font style="color:rgb(37, 41, 51);">服务多的情况下，业务问题也是有些难以排查，只能确定大致时间定位相关日志。因此实现一个请求对应一个traceId，在整个请求的全链路中都可以关联起来，可以极大地帮助我们更方便地查询日志。</font>
+
+<font style="color:rgb(37, 41, 51);">每个请求的响应头里都会有个 traceId</font>
+
 </blockquote>
 <ul>
 <li><font style="color:rgb(180, 180, 180) !important;background-color:rgb(36, 36, 41) !important;">Trace:是追踪，就是程序推进以下，你就可以写个trace输出，所以trace应该会特别多，不过没关系，我们可以设置最低日志级别不让他输出.</font></li>
-<li><font style="color:rgb(180, 180, 180) !important;background-color:rgb(36, 36, 41) !important;">Trace的级别比debug还要低</font></li>
+<li><font style="color:rgb(180, 180, 180) !important;background-color:rgb(36, 36, 41) !important;">Trace的级别比debug还要低</font>
+
+</li>
 </ul>
 
 
@@ -936,6 +945,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

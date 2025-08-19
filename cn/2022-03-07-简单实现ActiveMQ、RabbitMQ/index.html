@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       简单实现ActiveMQ、RabbitMQ - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">358</span> In Total
+              Words <span class="post-count">356</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,13 +474,11 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="JMS：一个规范的接口，相当于JDBC">JMS：一个规范的接口，相当于JDBC</h4>
-<p>JMS消息模型有两种：p2p（点对点模式）和pub-sub（发布者-订阅者模式）</p>
+        <h4 id="JMS：一个规范的接口，相当于JDBC"><a href="#JMS：一个规范的接口，相当于JDBC" class="headerlink" title="JMS：一个规范的接口，相当于JDBC"></a>JMS：一个规范的接口，相当于JDBC</h4><p>JMS消息模型有两种：p2p（点对点模式）和pub-sub（发布者-订阅者模式）</p>
 <p>JMS常用的消息种类我们主要使用BytesMessage</p>
 <p>规范的实现主要有：ActiveMQ，Redis，HornetMQ，RabbitMQ，RocketMQ（没完全遵守JMS规范）</p>
 <p>AMQP：协议，对定了网络交换的数据格式</p>
-<h5 id="ActiveMQ">ActiveMQ</h5>
-<p>MQ都是在配置文件中加配置，依赖是spring-boot-starter-xxx系列</p>
+<h5 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h5><p>MQ都是在配置文件中加配置，依赖是spring-boot-starter-xxx系列</p>
 <p>配置最重要的是ip地址和端口（broker-url），说清楚MQ服务在哪，分清楚管理端口和服务端口</p>
 <p>配置的是管理端口，自己编程用的是服务端口</p>
 <p>注入JmsMessagingTemplate，ActiveMQ的API接口,调用convertAndSend方法（先转码再发送），同理在消息处理端使用receiveAndConvert方法接收</p>
@@ -489,9 +490,7 @@
 <p>@SendTo注解可以将下面方法的返回值保留，返回给参数中指定的消息，所以可以使用@SendTo做消息队列的链式处理</p>
 <p>生产与消费消息</p>
 </blockquote>
-<h4 id="RabbitMQ：">RabbitMQ：</h4>
-<h6 id="direct：直连模式">direct：直连模式</h6>
-<p>在Service中注入AmqpTemplate而不是RabbitTemplate，命名遵守的是具体实现类而不是接口了</p>
+<h4 id="RabbitMQ："><a href="#RabbitMQ：" class="headerlink" title="RabbitMQ："></a>RabbitMQ：</h4><h6 id="direct：直连模式"><a href="#direct：直连模式" class="headerlink" title="direct：直连模式"></a>direct：直连模式</h6><p>在Service中注入AmqpTemplate而不是RabbitTemplate，命名遵守的是具体实现类而不是接口了</p>
 
 
         <hr>
@@ -939,6 +938,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

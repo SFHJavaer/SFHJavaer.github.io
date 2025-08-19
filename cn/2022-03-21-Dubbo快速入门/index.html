@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Dubbo快速入门 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -473,46 +476,31 @@
 
         <p>Dubbo整合Spring：在xml配置文件中声明Dubbo的配置项</p>
 <p>整合SpringBoot的配置项的名称与Spring中一致，区别是导入starter之后位置不同，直接在配置文件中写就可以</p>
-<h4 id="服务提供方的XML配置项-具体配置标签的属性：">服务提供方的XML配置项,具体配置标签的属性：</h4>
-<p>1.指定当前服务/应用的名称(<a href="dubbo:application">dubbo:application</a>)</p>
-<p>2.指定注册中心位置（<a href="dubbo:registry">dubbo:registry</a>）</p>
+<h4 id="服务提供方的XML配置项-具体配置标签的属性："><a href="#服务提供方的XML配置项-具体配置标签的属性：" class="headerlink" title="服务提供方的XML配置项,具体配置标签的属性："></a>服务提供方的XML配置项,具体配置标签的属性：</h4><p>1.指定当前服务/应用的名称(<dubbo:application>)</p>
+<p>2.指定注册中心位置（<dubbo:registry>）</p>
 <p>3.指定通信规则，duboo支持多种通信协议，一般建议使用dubbo协议</p>
 <blockquote>
-<p>即在dubbo:protocol标签指定name属性和port即可</p>
+<p> 即在dubbo:protocol标签指定name属性和port即可</p>
 </blockquote>
-<p>4.暴露该服务，指定<a href="dubbo:service">dubbo:service</a>的interface属性，本质上是通过接口进行调用</p>
+<p>4.暴露该服务，指定<dubbo:service>的interface属性，本质上是通过接口进行调用</p>
 <p>暴露服务直接加@Service即可。注意包是dubbo的</p>
-<h6 id="配置监控中心：dubbo：monitor属性">配置监控中心：dubbo：monitor属性</h6>
-<h5 id="整合SpringBoot时在引导类上要加-EnableDubbo注解，开启基于注解的Dubbo功能">整合SpringBoot时在引导类上要加@EnableDubbo注解，开启基于注解的Dubbo功能</h5>
-<p>SpringBoot项目变为WEB项目，不需要配置打war包，需要导入SpringBOOT-Starter-web依赖之后，在配置文件中配置好server.port直接tomcat运行即可</p>
+<h6 id="配置监控中心：dubbo：monitor属性"><a href="#配置监控中心：dubbo：monitor属性" class="headerlink" title="配置监控中心：dubbo：monitor属性"></a>配置监控中心：dubbo：monitor属性</h6><h5 id="整合SpringBoot时在引导类上要加-EnableDubbo注解，开启基于注解的Dubbo功能"><a href="#整合SpringBoot时在引导类上要加-EnableDubbo注解，开启基于注解的Dubbo功能" class="headerlink" title="整合SpringBoot时在引导类上要加@EnableDubbo注解，开启基于注解的Dubbo功能"></a>整合SpringBoot时在引导类上要加@EnableDubbo注解，开启基于注解的Dubbo功能</h5><p>SpringBoot项目变为WEB项目，不需要配置打war包，需要导入SpringBOOT-Starter-web依赖之后，在配置文件中配置好server.port直接tomcat运行即可</p>
 <p>常规的Spring项目需要打war包并且使用tomcat插件运行</p>
-<h5 id="暴露服务：-Service消费服务：-Reference-注意这里引用的注解都是dubbo的">暴露服务：@Service				消费服务：@Reference 			注意这里引用的注解都是dubbo的</h5>
-<p>面向接口调用服务</p>
+<h5 id="暴露服务：-Service-消费服务：-Reference-注意这里引用的注解都是dubbo的"><a href="#暴露服务：-Service-消费服务：-Reference-注意这里引用的注解都是dubbo的" class="headerlink" title="暴露服务：@Service                消费服务：@Reference             注意这里引用的注解都是dubbo的"></a>暴露服务：@Service                消费服务：@Reference             注意这里引用的注解都是dubbo的</h5><p>面向接口调用服务</p>
 <p>Duoo还具有负载均衡机制，可以配置选择哪种机制，同时还可以进行服务降级和服务容错，可以直接在admin进行操作，不需要进行参数配置</p>
-<h5 id="查看官网文档来对dubbo的各项参数进行配置">查看官网文档来对dubbo的各项参数进行配置:</h5>
-<p>例如配置当前消费者和生产者的统一规则	&lt;dubbo:consumer /&gt;&lt;dubbo:provider /&gt;</p>
-<h5 id="Dubbo整合SpringBoot配置的其他方法：">Dubbo整合SpringBoot配置的其他方法：</h5>
-<p>1.starter+yml</p>
+<h5 id="查看官网文档来对dubbo的各项参数进行配置"><a href="#查看官网文档来对dubbo的各项参数进行配置" class="headerlink" title="查看官网文档来对dubbo的各项参数进行配置:"></a>查看官网文档来对dubbo的各项参数进行配置:</h5><p>例如配置当前消费者和生产者的统一规则    <dubbo:consumer /><dubbo:provider /></p>
+<h5 id="Dubbo整合SpringBoot配置的其他方法："><a href="#Dubbo整合SpringBoot配置的其他方法：" class="headerlink" title="Dubbo整合SpringBoot配置的其他方法："></a>Dubbo整合SpringBoot配置的其他方法：</h5><p>1.starter+yml</p>
 <p>2.xml+starter+@ImportResource导入配置文件</p>
 <p>3.使用注解API格式，将配置文件编码注入</p>
 <p>@Reference的参数url指定具体的地址，将采用Dubbo的直连模式</p>
 <p>注册中心当即之后，仍然可以调用提供者的服务，原因是消费和服务之间可以通过本地缓存通讯，没有注册中心可以Dubbo直连（类似手动设置缓存）</p>
-<h5 id="Dubbo在内部封装了RPC调用的流程，即在内部使用了RPC框架">Dubbo在内部封装了RPC调用的流程，即在内部使用了RPC框架</h5>
-<h5 id="netty通信框架：netty是基于NIO（非阻塞的IO，同理还有阻塞IO即BIO）通信框架">netty通信框架：netty是基于NIO（非阻塞的IO，同理还有阻塞IO即BIO）通信框架</h5>
-<h3 id="Dubbo原理：">Dubbo原理：</h3>
-<h5 id="1-框架设计">1.框架设计</h5>
-<p>Dubbo将所有的小层分为三个大层，分别是表面层即business（面向接口调用服务实现），RPC层（封装RPC调用框架），Remoting（基于netty通信，netty服务器负责监听端口），框架设计如下图：</p>
+<h5 id="Dubbo在内部封装了RPC调用的流程，即在内部使用了RPC框架"><a href="#Dubbo在内部封装了RPC调用的流程，即在内部使用了RPC框架" class="headerlink" title="Dubbo在内部封装了RPC调用的流程，即在内部使用了RPC框架"></a>Dubbo在内部封装了RPC调用的流程，即在内部使用了RPC框架</h5><h5 id="netty通信框架：netty是基于NIO（非阻塞的IO，同理还有阻塞IO即BIO）通信框架"><a href="#netty通信框架：netty是基于NIO（非阻塞的IO，同理还有阻塞IO即BIO）通信框架" class="headerlink" title="netty通信框架：netty是基于NIO（非阻塞的IO，同理还有阻塞IO即BIO）通信框架"></a>netty通信框架：netty是基于NIO（非阻塞的IO，同理还有阻塞IO即BIO）通信框架</h5><h3 id="Dubbo原理："><a href="#Dubbo原理：" class="headerlink" title="Dubbo原理："></a>Dubbo原理：</h3><h5 id="1-框架设计"><a href="#1-框架设计" class="headerlink" title="1.框架设计"></a>1.框架设计</h5><p>Dubbo将所有的小层分为三个大层，分别是表面层即business（面向接口调用服务实现），RPC层（封装RPC调用框架），Remoting（基于netty通信，netty服务器负责监听端口），框架设计如下图：</p>
 <p><img src="http://r8emoqryl.hb-bkt.clouddn.com/1147548-20170928141450169-1251868962.png" alt="Dubbo架构"></p>
-<h5 id="2-Dubbo的配置文件是如何解析的">2.Dubbo的配置文件是如何解析的</h5>
-<p>Dubbo标签解析器解析对应的配置项，每一项都有对应的类，所以我们在配置的时候可以不选择xml配置，可以自己手动编码配置同理实现了省略标签解析的步骤，将其转换为Dubbo的组件对象，流程图如下：</p>
+<h5 id="2-Dubbo的配置文件是如何解析的"><a href="#2-Dubbo的配置文件是如何解析的" class="headerlink" title="2.Dubbo的配置文件是如何解析的"></a>2.Dubbo的配置文件是如何解析的</h5><p>Dubbo标签解析器解析对应的配置项，每一项都有对应的类，所以我们在配置的时候可以不选择xml配置，可以自己手动编码配置同理实现了省略标签解析的步骤，将其转换为Dubbo的组件对象，流程图如下：</p>
 <p><img src="http://r8emoqryl.hb-bkt.clouddn.com/Snipaste_2022-03-23_17-23-34.png" alt="Duuo标签解析"></p>
-<h4 id="服务暴露过程">服务暴露过程:</h4>
-<p>Netty监听提供方端口，Registry注册中心类使用注册器进行注册服务，哪一种注册中心使用哪一种注册中心实现类,将注册信息写入到注册表中，将注册表中的信息使用静态方法进行注册</p>
-<h4 id="服务引用过程（Reference）：">服务引用过程（Reference）：</h4>
-<blockquote>
-<h5 id="研究Dubbo源码时所需要的调试知识：">研究Dubbo源码时所需要的调试知识：</h5>
-<h6 id="单步调试：程序向下执行一行，有step-over和step-into两种。区别是前者是直接在当前代码块向下执行完全的一行，后者是如果该行有方法会自动进入自定义方法中，（不会进入官方类库的方法）">单步调试：程序向下执行一行，有step over和step into两种。区别是前者是直接在当前代码块向下执行完全的一行，后者是如果该行有方法会自动进入自定义方法中，（不会进入官方类库的方法）</h6>
-<p>以此类推其他方法：</p>
+<h4 id="服务暴露过程"><a href="#服务暴露过程" class="headerlink" title="服务暴露过程:"></a>服务暴露过程:</h4><p>Netty监听提供方端口，Registry注册中心类使用注册器进行注册服务，哪一种注册中心使用哪一种注册中心实现类,将注册信息写入到注册表中，将注册表中的信息使用静态方法进行注册</p>
+<h4 id="服务引用过程（Reference）："><a href="#服务引用过程（Reference）：" class="headerlink" title="服务引用过程（Reference）："></a>服务引用过程（Reference）：</h4><blockquote>
+<h5 id="研究Dubbo源码时所需要的调试知识："><a href="#研究Dubbo源码时所需要的调试知识：" class="headerlink" title="研究Dubbo源码时所需要的调试知识："></a>研究Dubbo源码时所需要的调试知识：</h5><h6 id="单步调试：程序向下执行一行，有step-over和step-into两种。区别是前者是直接在当前代码块向下执行完全的一行，后者是如果该行有方法会自动进入自定义方法中，（不会进入官方类库的方法）"><a href="#单步调试：程序向下执行一行，有step-over和step-into两种。区别是前者是直接在当前代码块向下执行完全的一行，后者是如果该行有方法会自动进入自定义方法中，（不会进入官方类库的方法）" class="headerlink" title="单步调试：程序向下执行一行，有step over和step into两种。区别是前者是直接在当前代码块向下执行完全的一行，后者是如果该行有方法会自动进入自定义方法中，（不会进入官方类库的方法）"></a>单步调试：程序向下执行一行，有step over和step into两种。区别是前者是直接在当前代码块向下执行完全的一行，后者是如果该行有方法会自动进入自定义方法中，（不会进入官方类库的方法）</h6><p>以此类推其他方法：</p>
 <p><strong>Force step into</strong>：强制进入所有方法的操作，可以进入官方方法</p>
 <p><strong>step out</strong>：在进入一个方法调试过程中，进行该操作可以强制跳出该方法，到达调用处下一代码行</p>
 <p><strong>Drop frame</strong>:跳转到当前方法的调用处重新执行，上下文变量也会重置，可以跳转到调用链中任何一个方法</p>
@@ -964,6 +952,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

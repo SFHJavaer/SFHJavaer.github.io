@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       SpringBoot RESTful风格 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -409,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">609</span> In Total
+              Words <span class="post-count">608</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,8 +474,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Springboot-RESTFUL风格">Springboot RESTFUL风格</h2>
-<p>RESTful风格的url的优点：</p>
+        <h2 id="Springboot-RESTFUL风格"><a href="#Springboot-RESTFUL风格" class="headerlink" title="Springboot RESTFUL风格"></a>Springboot RESTFUL风格</h2><p>RESTful风格的url的优点：</p>
 <p>1）隐藏资源的访问行为，无法通过链接地址判断对资源的操作</p>
 <p>2）书写简化</p>
 <p>REST是一种风格不是规范，或是现在已经约定俗成的规范</p>
@@ -480,15 +482,12 @@
 <p>按照REST访问资源时使用行为动作来区分进行何种操作（一般是8种请求方式），这种访问方式叫RESTful</p>
 <p>实现步骤：1）设定http请求动作（RequestMapping中指定value和method）</p>
 <p>2）设置请求参数（路径变量），value的路径上占位符参数要和方法的形参一致，形参上加上@PathVariable，将路径中的占位符的值当作形参变量传入方法中</p>
-<h3 id="方法形参的注解：">方法形参的注解：</h3>
-<h4 id="重点：">重点：</h4>
-<p>@RequestParam:接收url地址传参或表单传参</p>
+<h3 id="方法形参的注解："><a href="#方法形参的注解：" class="headerlink" title="方法形参的注解："></a>方法形参的注解：</h3><h4 id="重点："><a href="#重点：" class="headerlink" title="重点："></a>重点：</h4><p>@RequestParam:接收url地址传参或表单传参</p>
 <p>@RequestBoby：接收Json数据</p>
 <p>@PathVariable：接收路径参数</p>
 <p>后期应用：当发送参数不超过一个时使用@PathVariable，超过一个使用Json格式，即使用@RequestBoby，少数情况非json的数据使用@RequestParam</p>
-<h5 id="所以原来的注解是写在方法上或方法内的，可以直接移动到类的上面来使所有的controller生效">所以原来的注解是写在方法上或方法内的，可以直接移动到类的上面来使所有的controller生效</h5>
-<p>所以在类上的@Controller和@Response可合并成为@RestController</p>
-<p>方法动作的指定:将RequestMapping(method = …)简化为形如@PostMapping</p>
+<h5 id="所以原来的注解是写在方法上或方法内的，可以直接移动到类的上面来使所有的controller生效"><a href="#所以原来的注解是写在方法上或方法内的，可以直接移动到类的上面来使所有的controller生效" class="headerlink" title="所以原来的注解是写在方法上或方法内的，可以直接移动到类的上面来使所有的controller生效"></a>所以原来的注解是写在方法上或方法内的，可以直接移动到类的上面来使所有的controller生效</h5><p>所以在类上的@Controller和@Response可合并成为@RestController</p>
+<p>方法动作的指定:将RequestMapping(method = …..)简化为形如@PostMapping</p>
 <p>Springboot配置文件加载顺序：</p>
 <p>properties &gt; yml &gt;yaml</p>
 <p>常用的配置文件是yml格式，当多个配置文件共存时，相同的配置按优先级，不同的配置都会生效</p>
@@ -944,6 +943,7 @@
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

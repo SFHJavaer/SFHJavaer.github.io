@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
   <!-- Google Analytics -->
@@ -145,7 +148,7 @@
       Linux手动搭建MinIo分布式存储步骤 - 一入Java深似海
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -244,19 +247,6 @@
 
           
           
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
           <li>
             <a href="/archive/">
               
@@ -268,10 +258,23 @@
           
           
           
+          
+          
           <li>
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
               
               
             </a>
@@ -471,8 +474,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="Linux搭建MinIo环境详细步骤">Linux搭建MinIo环境详细步骤</h4>
-<blockquote>
+        <h4 id="Linux搭建MinIo环境详细步骤"><a href="#Linux搭建MinIo环境详细步骤" class="headerlink" title="Linux搭建MinIo环境详细步骤"></a>Linux搭建MinIo环境详细步骤</h4><blockquote>
 <p>1.去minIO官网下载安装包，或者使用wget直接进行下载,选择自己合适的版本</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://dl.min.io/server/minio/release/linux-amd64/minio</span><br></pre></td></tr></table></figure>
@@ -491,7 +493,7 @@
 <p>PS：上述步骤可直接进行环境变量的添加，也可以手动打开profile进行添加</p>
 <p>使用 vi /etc/profile在末尾将上述代码添加即可</p>
 <blockquote>
-<p>5.后台运行MioIOserver</p>
+<p> 5.后台运行MioIOserver</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">后台运行</span></span><br><span class="line">nohup ./minio server /usr/software/minio/data  &gt;  /usr/software/minio/minio.log 2&gt;&amp;1 &amp;#</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -499,24 +501,21 @@
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@ww minio]# MINIO_ACCESS_KEY=myminioadmin MINIO_SECRET_KEY=myminioadmin ./minio server --config-dir /usr/software/minio/config /usr/software/minio/data</span><br><span class="line">Attempting encryption of all config, IAM users and policies on MinIO backend</span><br><span class="line">Endpoint:  http://192.168.51.80:9000http://127.0.0.1:9000    </span><br><span class="line">AccessKey: myminioadmin </span><br><span class="line">SecretKey: myminioadmin </span><br><span class="line"></span><br><span class="line">Browser Access:</span><br><span class="line">   http://192.168.51.80:9000http://127.0.0.1:9000    </span><br><span class="line"></span><br><span class="line">Command-line Access: https://docs.min.io/docs/minio-client-quickstart-guide</span><br><span class="line"><span class="meta">   $</span><span class="bash"> mc <span class="built_in">alias</span> <span class="built_in">set</span> myminio http://192.168.51.80:9000 myminioadmin myminioadmin</span></span><br><span class="line"></span><br><span class="line">Object API (Amazon S3 compatible):</span><br><span class="line">   Go:         https://docs.min.io/docs/golang-client-quickstart-guide</span><br><span class="line">   Java:       https://docs.min.io/docs/java-client-quickstart-guide</span><br><span class="line">   Python:     https://docs.min.io/docs/python-client-quickstart-guide</span><br><span class="line">   JavaScript: https://docs.min.io/docs/javascript-client-quickstart-guide</span><br><span class="line">   .NET:       https://docs.min.io/docs/dotnet-client-quickstart-guide</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>7.打开访问地址展示下列情况<br>
-PS:如果打不开服务器具体地址，说明防火墙没有打开，如果是端口被占用那么启动时就会提示报错，所以需要手动打开防火墙，在文章末尾进行添加步骤</p>
+<p>7.打开访问地址展示下列情况<br>PS:如果打不开服务器具体地址，说明防火墙没有打开，如果是端口被占用那么启动时就会提示报错，所以需要手动打开防火墙，在文章末尾进行添加步骤</p>
 </blockquote>
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzM1Mjc1MEU4QkZFOTQ4MDdBRUU3M0NBNDU4MDE0NUIzLzc4NQ?x-oss-process=image/format,png" alt="9000端口"></p>
 <p>登录之后展示以下界面</p>
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzAwOTJFNDQ4QTgwRTQ5OEU4M0YyMTNBNzA4QjZBN0E5Lzc5MA?x-oss-process=image/format,png" alt="登陆展示视图"></p>
 <p>进入系统后，我们先要点击右下角的“+”按钮，创建一个文件桶（输入名称后，回车即可），在上传文件到这个文件桶中。Create bucket（创建文件桶）、Upload file（上传文件）。</p>
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzVDNzkxQTFDOUU4MjQ3MDlCQzg4NTA2QkRBNkJEODc4LzgwMQ?x-oss-process=image/format,png" alt="上传完成"></p>
-<h6 id="在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）">在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）</h6>
-<blockquote>
+<h6 id="在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）"><a href="#在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）" class="headerlink" title="在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）"></a>在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）</h6><blockquote>
 <p>8.将桶中的图片进行分享，注意要先将桶设置中的分享设置为public，否则为私有资源不能分享，分享的资源可以设置过期时间</p>
 </blockquote>
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzhFMjUxNTMwQTMwMjRCNjU4RjNBQUVCQzY3OTA5QUI0LzgxOQ?x-oss-process=image/format,png" alt="分享时间设置"></p>
 <p>将分享链接在后端进行提取，进行业务层的运转就可以了（可以当作简单的图床）</p>
 <p>PS：</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">我们的minio之前是通过命令行直接启动的，并没有指定后台运行，而且端口跟AccessKey和SecretKey都还是使用默认的，这里需要在启动的时候指定一下。</span><br><span class="line">#指定环境变量</span><br><span class="line">export MINIO_ACCESS_KEY=username</span><br><span class="line">export MINIO_SECRET_KEY=password</span><br><span class="line">#脚本中添加后台运行执行后</span><br><span class="line">nohup sudo /usr/local/minio/minio server --address=0.0.0.0:9000 --config-dir /etc/minio /data/minioData &gt; /usr/local/minio/minio.log 2&gt;&amp;1&amp;</span><br><span class="line">可以将上面的命令放在一个自己新建的.sh可执行文件中，记得给当前用户加上执行权限</span><br><span class="line"></span><br><span class="line">chmod u+x *.sh</span><br><span class="line">每一次启动MioIO直接启动sh脚本即可</span><br><span class="line">这样我们的minio服务端基本的配置算是ok了。</span><br></pre></td></tr></table></figure>
-<h5 id="开启防火墙端口步骤">开启防火墙端口步骤;</h5>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#1、编辑ssh.xml</span><br><span class="line">vim /usr/lib/firewalld/services/ssh.xml</span><br><span class="line"></span><br><span class="line">#2、开放43855、9090端口</span><br><span class="line">&lt;port protocol=&quot;tcp&quot; port=&quot;43855&quot;/&gt;</span><br><span class="line">&lt;port protocol=&quot;tcp&quot; port=&quot;9090&quot;/&gt;</span><br><span class="line"></span><br><span class="line">#3、重启防火墙 </span><br><span class="line">systemctl restart firewalld</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="开启防火墙端口步骤"><a href="#开启防火墙端口步骤" class="headerlink" title="开启防火墙端口步骤;"></a>开启防火墙端口步骤;</h5><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#1、编辑ssh.xml</span><br><span class="line">vim /usr/lib/firewalld/services/ssh.xml</span><br><span class="line"></span><br><span class="line">#2、开放43855、9090端口</span><br><span class="line">&lt;port protocol=&quot;tcp&quot; port=&quot;43855&quot;/&gt;</span><br><span class="line">&lt;port protocol=&quot;tcp&quot; port=&quot;9090&quot;/&gt;</span><br><span class="line"></span><br><span class="line">#3、重启防火墙 </span><br><span class="line">systemctl restart firewalld</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
         <hr>
@@ -975,6 +974,7 @@ PS:如果打不开服务器具体地址，说明防火墙没有打开，如果�
     }
   )
 </script>
+
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
