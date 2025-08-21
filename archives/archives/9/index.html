@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- 添加这行代码解决所有图片防盗链问题 -->
+	<meta name="referrer" content="no-referrer">
+<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="java,Futari,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- gitment start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+      <!-- gitment end -->
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://www.sfhjavaer.github.io/archives/archives/9/">
+  <title>
+    
+      一入Java深似海
+    
+  </title>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          <!-- LangSelect start -->
+          <!-- LangSelect -->
+<li>
+  <a id="lang-select-label"><i class="fa fa-globe"></i>
+    <span>
+      简体中文
+    </span>
+    <select id="lang-select" data-canonical="archives/archives/9/index.html">
+      
+      
+      <option value="cn"  selected >
+        简体中文
+      </option>
+      
+      <option value="en" >
+        English
+      </option>
+      
+    </select>
+  </a>
+</li>
+
+          <!-- LangSelect end -->
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/archive_bg2.jpg');
+    }
+    header.intro-header {
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/img/header_img/archive_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="site-heading">
+            <h1>Live My Life</h1>
+            <!--<hr class="small">-->
+            <span class="subheading">一入Java深似海</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    
+
+    <!-- USE SIDEBAR -->
+    <!-- Post Container -->
+    <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+      <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
+
+      
+
+      <!-- 归档列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2025">
+          <span class="tag-text">2025</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/MybatisPlus（类型控制器TypeHandler的常规应用）/" style="color: #0085a1">
+              <span>
+                MybatisPlus（类型控制器TypeHandler的常规应用）
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/线程并发问题记录/" style="color: #0085a1">
+              <span>
+                线程并发问题记录
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/字节码入门和反编译理解策略/" style="color: #0085a1">
+              <span>
+                字节码入门和反编译理解策略
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-01
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/无状态的轻量级状态机Cola理解/" style="color: #0085a1">
+              <span>
+                无状态的轻量级状态机Cola理解
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-06
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/maven加速之官方推荐：mavend使用踩坑/" style="color: #0085a1">
+              <span>
+                maven加速之官方推荐：mavend使用踩坑
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/Idea字段颜色与Lambda深度研究/" style="color: #0085a1">
+              <span>
+                Idea字段颜色与Lambda深度研究
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-13
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/以太坊开发：Solidity语言入门/" style="color: #0085a1">
+              <span>
+                以太坊开发：Solidity语言入门
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/IDEA构建、启动流程的意义/" style="color: #0085a1">
+              <span>
+                mapstruct分析IDEA构建、启动流程的意义
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/EasyExcel注意事项和发现bug/" style="color: #0085a1">
+              <span>
+                EasyExcel注意事项和发现bug
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-13
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/504超时-CPU100-内存泄漏-问题简要排查/" style="color: #0085a1">
+              <span>
+                504超时-CPU100%-内存泄漏-问题简要排查
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/信创过程中Char和索引问题/" style="color: #0085a1">
+              <span>
+                信创过程中Char和索引问题
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-01
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/Explain执行计划分析和表驱动/" style="color: #0085a1">
+              <span>
+                Explain执行计划分析和表驱动
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-27
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/误导性日志：三方中间件启动失败日志和普通异常/" style="color: #0085a1">
+              <span>
+                误导性日志：三方中间件启动失败日志和普通异常
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于对Java语法糖的理解/" style="color: #0085a1">
+              <span>
+                关于对Java语法糖的理解
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2024">
+          <span class="tag-text">2024</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/Git出现大量Push内容-推送失败问题/" style="color: #0085a1">
+              <span>
+                Git出现大量Push内容+推送失败问题
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            12-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/MQ基础之消息流转模型/" style="color: #0085a1">
+              <span>
+                MQ基础之消息流转模型
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/No-qualifying-bean-of-type-Bean-available深度思考/" style="color: #0085a1">
+              <span>
+                No qualifying bean of type 'Bean' available深度思考
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-30
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/MyBatisPlus内部SQL如何格式化和total字段产生原因/" style="color: #0085a1">
+              <span>
+                MyBatisPlus内部SQL如何格式化和total字段产生原因
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-30
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/银行业务基础：什么是会计分录/" style="color: #0085a1">
+              <span>
+                银行业务基础：什么是会计分录
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-15
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/启动失败Idea大坑/" style="color: #0085a1">
+              <span>
+                启动失败Idea大坑
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-14
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Java文件上传基础原理/" style="color: #0085a1">
+              <span>
+                Java文件上传基础原理
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/SaaS开发模式：一般化前后端开发约定与提示/" style="color: #0085a1">
+              <span>
+                SaaS开发模式：一般化前后端开发约定与提示
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/基础思维：内外网排查思路/" style="color: #0085a1">
+              <span>
+                基础思维：内外网排查思路
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-15
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/简单理解什么是协程/" style="color: #0085a1">
+              <span>
+                简单理解什么是协程
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/如何进行逆向分析与破解网络验证/" style="color: #0085a1">
+              <span>
+                如何进行逆向分析与破解网络验证
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/bind标签优化模糊查询/" style="color: #0085a1">
+              <span>
+                Mybatis-bind标签优化模糊查询
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-11
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/使用Jackson反序列化时的一些注意点/" style="color: #0085a1">
+              <span>
+                使用Jackson反序列化时的一些注意点
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-02
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Oracle连接串解读/" style="color: #0085a1">
+              <span>
+                Oracle连接串解读
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-06
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/策略模式代码怎么简化/" style="color: #0085a1">
+              <span>
+                策略模式代码怎么简化
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-16
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/Linq如何进行数据的聚合和度量/" style="color: #0085a1">
+              <span>
+                Linq如何进行数据的聚合和度量
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/国产数据库信创：多数据库对比/" style="color: #0085a1">
+              <span>
+                国产数据库信创：多数据库对比
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/本地打包时的一些疑问/" style="color: #0085a1">
+              <span>
+                本地打包时的一些疑问
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-11
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/前端映射与MybatisPlus特殊类型（枚举）映射/" style="color: #0085a1">
+              <span>
+                前端映射与MybatisPlus特殊类型（枚举）映射
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Serializable接口的实际意义/" style="color: #0085a1">
+              <span>
+                Serializable接口的实际意义
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/实现图表展示数据项的国际化实现方案几种方案参考/" style="color: #0085a1">
+              <span>
+                实现图表展示数据项的国际化实现方案几种方案参考
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/前后端Controller-接收特殊类型参数问题/" style="color: #0085a1">
+              <span>
+                前后端Controller--接收特殊类型参数问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-11
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/NIO和IO多路复用/" style="color: #0085a1">
+              <span>
+                NIO和IO多路复用
+                
+                -- undefined
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2023">
+          <span class="tag-text">2023</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-26
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/实际业务例子：SWPT死锁问题/" style="color: #0085a1">
+              <span>
+                实际业务例子：SWPT死锁问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            12-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/AOP使用经验和基础知识总结/" style="color: #0085a1">
+              <span>
+                AOP使用经验和基础知识总结
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            12-11
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/数据库知识点小记/" style="color: #0085a1">
+              <span>
+                数据库知识点小记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/区块快速入门笔记/" style="color: #0085a1">
+              <span>
+                区块快速入门笔记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-04
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Optional基础使用/" style="color: #0085a1">
+              <span>
+                Optional基础使用
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Autowired同名Bean问题修复/" style="color: #0085a1">
+              <span>
+                \@Autowired同名Bean问题修复
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/爬虫之Python异步与多线程/" style="color: #0085a1">
+              <span>
+                爬虫之Python异步与多线程
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/注解-JsonTypeInfo坑/" style="color: #0085a1">
+              <span>
+                注解@JsonTypeInfo坑
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/uni-app/" style="color: #0085a1">
+              <span>
+                uni-app
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-01
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Rocket/" style="color: #0085a1">
+              <span>
+                Rocket
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-23
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Sentinel/" style="color: #0085a1">
+              <span>
+                Sentinel
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/IDEA之Bean报红问题的分析与解决/" style="color: #0085a1">
+              <span>
+                IDEA之Bean报红问题的分析与解决
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Cloud Alibaba从入门到进阶/" style="color: #0085a1">
+              <span>
+                Cloud Alibaba从入门到进阶
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Nacos和Ribbon小记/" style="color: #0085a1">
+              <span>
+                Nacos和Ribbon小记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Feign/" style="color: #0085a1">
+              <span>
+                Feign
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2022">
+          <span class="tag-text">2022</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/景区抢票平台爬虫以及对美团的破解思路/" style="color: #0085a1">
+              <span>
+                景区抢票平台爬虫以及对美团的破解思路
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-16
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/对Process构建的思考和项目调试中的理解与问题/" style="color: #0085a1">
+              <span>
+                对Process构建的思考和项目调试中的理解与问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于SpringClassLoader的一些思考/" style="color: #0085a1">
+              <span>
+                关于SpringClassLoader的一些思考
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-11
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/服务器搭建过程中遇到的问题/" style="color: #0085a1">
+              <span>
+                服务器搭建过程中遇到的数据库问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/贪心和动态规划/" style="color: #0085a1">
+              <span>
+                贪心与动态规划
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/算法模板：BFS和DFS问题/" style="color: #0085a1">
+              <span>
+                算法模板：BFS和DFS问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Docker与微服务/" style="color: #0085a1">
+              <span>
+                Docker与微服务小记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/企业开发中遇到的常用注解/" style="color: #0085a1">
+              <span>
+                企业开发中遇到的常用注解
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-04
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/回溯算法/" style="color: #0085a1">
+              <span>
+                回溯问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Git和Repo项目管理/" style="color: #0085a1">
+              <span>
+                Git和Repo项目管理
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-23
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Summary of written test questions/" style="color: #0085a1">
+              <span>
+                Summary of written test questions
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-10
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/算法：链表相加和大数相加/" style="color: #0085a1">
+              <span>
+                算法：链表相加和大数相加
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/树-算法做题总结/" style="color: #0085a1">
+              <span>
+                树-算法做题总结
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/滑动窗口和双指针/" style="color: #0085a1">
+              <span>
+                滑动窗口和双指针
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/操作系统上的进程与线程/" style="color: #0085a1">
+              <span>
+                操作系统上的进程与线程
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-06
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/服务器搭建MinIo环境/" style="color: #0085a1">
+              <span>
+                Linux手动搭建MinIo分布式存储步骤
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Maven依赖冲突解决方法/" style="color: #0085a1">
+              <span>
+                Maven依赖冲突解决方法
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于单例设计模式/" style="color: #0085a1">
+              <span>
+                常见单例模式五种设计方式
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于Mybatis二级缓存/" style="color: #0085a1">
+              <span>
+                关于Mybatis二级缓存
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/正确理解MVCC/" style="color: #0085a1">
+              <span>
+                正确理解MVCC
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于数据库索引/" style="color: #0085a1">
+              <span>
+                关于数据库索引
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于JVM/" style="color: #0085a1">
+              <span>
+                JVM内存结构的探索
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-02
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于Mybatis分页的回顾/" style="color: #0085a1">
+              <span>
+                关于Mybatis分页的详细回顾
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-07-简单实现ActiveMQ、RabbitMQ/" style="color: #0085a1">
+              <span>
+                简单实现ActiveMQ、RabbitMQ
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-02
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-02-SpringBoot实现定时任务/" style="color: #0085a1">
+              <span>
+                SpringBoot实现定时任务
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-25-SpringBoot高并发秒杀项目实录/" style="color: #0085a1">
+              <span>
+                SpringBoot高并发秒杀
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-25-SpringBoot-整合Jetcache，j2cache/" style="color: #0085a1">
+              <span>
+                SpringBoot-整合Jetcache，j2cache
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-22-ES基本入门操作/" style="color: #0085a1">
+              <span>
+                ES基本入门操作与SpringBoot整合
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-09-Redis快速入门/" style="color: #0085a1">
+              <span>
+                Redis学习笔记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-29
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-01-29-SpringBoot开发和运维问题/" style="color: #0085a1">
+              <span>
+                SpringBoot运维测试和配置问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-01-20-SpringBoot-REST风格/" style="color: #0085a1">
+              <span>
+                SpringBoot RESTful风格
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
+          <span class="tag-text">2021</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-29
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-12-29-SpringMVC拦截器/" style="color: #0085a1">
+              <span>
+                SpringMVC拦截器
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            12-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-12-19-SpringBoot表现层消息一致性处理/" style="color: #0085a1">
+              <span>
+                SpringBoot表现层消息一致性处理
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-22-SpringMVC处理器方法的返回值/" style="color: #0085a1">
+              <span>
+                SpringMVC处理器方法的返回值
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-08-Spring_AOP/" style="color: #0085a1">
+              <span>
+                Spring AOP笔记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-20-SpringMVC笔记/" style="color: #0085a1">
+              <span>
+                SpringMVC笔记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-03-Markdown快速入门/" style="color: #0085a1">
+              <span>
+                Markdown快速入门
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-31
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-31-MYSQL/" style="color: #0085a1">
+              <span>
+                MYSQL重点知识点梳理
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-30
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-30-HTML CSS/" style="color: #0085a1">
+              <span>
+                利用HTML和CSS实现简单的淘宝购物车前端
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-14
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-14-Spider/" style="color: #0085a1">
+              <span>
+                基于搜狗微信的seleinum公众号爬虫
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-03-Docker搭建项目/" style="color: #0085a1">
+              <span>
+                Docker部署项目到服务器上
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/spring报错：提示找不到mapper文件/" style="color: #0085a1">
+              <span>
+                spring报错：提示找不到mapper文件
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-27
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-25-常见的前端加密方法/" style="color: #0085a1">
+              <span>
+                常见的前端加密方法
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-22-移动端开发之页面静态化 - 副本/" style="color: #0085a1">
+              <span>
+                移动端开发之页面静态化.
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-21-Dubbo快速入门/" style="color: #0085a1">
+              <span>
+                Dubbo快速入门
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-10-SSM项目Curd过程中出现的问题/" style="color: #0085a1">
+              <span>
+                SSM医疗后台Curd过程中出现的问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
+          <span class="tag-text">2020</span>
+        </span>
+        <ul>
+          
+          <li>
+            08-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/近期对多线程的深入理解/" style="color: #0085a1">
+              <span>
+                近期对多线程的深入理解
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Java 多线程/" style="color: #0085a1">
+              <span>
+                Java 多线程中的线程池
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-31
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Java IO流、集合类重要知识/" style="color: #0085a1">
+              <span>
+                Java IO流
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+      <!-- 如果开启评论功能 -->
+      
+    </div>
+
+    <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Visitors -->
+<h5><a href="/">来访者</a></h5>
+
+<div class="widget">
+  <span>
+    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+  </span>
+  <br />
+  <span>
+    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
+  </span>
+</div>
+
+
+        <hr>
+    
+        <!-- Featured Tags -->
+
+<section>
+  <h5><a href="/tags/">特色标签</a></h5>
+  <div class="tags">
+    
+    
+    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
+    
+    
+    
+    <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
+    
+    
+    
+    <a href="/tags/#HTML CSS" title="HTML CSS" rel="1">HTML CSS</a>
+    
+    
+    
+    <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
+    
+    
+    
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    
+    
+    
+    <a href="/tags/#Java SpringMVC" title="Java SpringMVC" rel="2">Java SpringMVC</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
+    
+    
+    
+    <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
+    
+    
+    
+    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
+    
+    
+    
+    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
+    
+    
+    
+    <a href="/tags/#Elasticsearch" title="Elasticsearch" rel="1">Elasticsearch</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RabbitMQ Redis" title="SpringBoot RabbitMQ Redis" rel="1">SpringBoot RabbitMQ Redis</a>
+    
+    
+    
+    <a href="/tags/#Spring quarrz task" title="Spring quarrz task" rel="1">Spring quarrz task</a>
+    
+    
+    
+    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
+    
+    
+    
+    <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
+    
+    
+    
+    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
+    
+    
+    
+    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    
+    
+    
+    <a href="/tags/#IO" title="IO" rel="1">IO</a>
+    
+    
+    
+    <a href="/tags/#Maven" title="Maven" rel="1">Maven</a>
+    
+    
+    
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    
+    
+    
+    <a href="/tags/#笔试" title="笔试" rel="1">笔试</a>
+    
+    
+    
+    <a href="/tags/#Java spring" title="Java spring" rel="1">Java spring</a>
+    
+    
+    
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    
+    
+    
+    <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
+    
+    
+    
+    <a href="/tags/#Mybatis" title="Mybatis" rel="2">Mybatis</a>
+    
+    
+    
+    <a href="/tags/#Spring" title="Spring" rel="1">Spring</a>
+    
+    
+    
+    <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
+    
+    
+    
+    <a href="/tags/#项目" title="项目" rel="1">项目</a>
+    
+    
+    
+    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
+    
+    
+    
+    <a href="/tags/#MinIO" title="MinIO" rel="1">MinIO</a>
+    
+    
+    
+    <a href="/tags/#Linux" title="Linux" rel="1">Linux</a>
+    
+    
+    
+    <a href="/tags/#算法" title="算法" rel="2">算法</a>
+    
+    
+    
+    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
+    
+    
+    
+    <a href="/tags/#滑动窗口" title="滑动窗口" rel="1">滑动窗口</a>
+    
+    
+    
+    <a href="/tags/#BFS" title="BFS" rel="1">BFS</a>
+    
+    
+    
+    <a href="/tags/#贪心 动态规划" title="贪心 动态规划" rel="1">贪心 动态规划</a>
+    
+    
+  </div>
+</section>
+
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+  <h5><a href="/about/">关于自己</a></h5>
+  <div class="short-about">
+
+    
+    <img id="avatar_pic" src="/img/avatar/fatpeople.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
+    
+
+    
+    <p>Fat people have no future, either thin or die...</p>
+    
+
+    <!-- SNS Link -->
+    <ul class="list-inline">
+      
+
+      
+      <li>
+        <a target="_blank" href="https://github.com/SFHJavaer">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a target="_blank" href="https://twitter.com/SFHJavaer">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a target="_blank" href="https://www.instagram.com/SFHJavaer">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a target="_blank" href="http://weibo.com/SFHJavaer">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+    </ul>
+  </div>
+</section>
+
+        <hr>
+    
+        <!-- RECENT POSTS -->
+
+<h5><a href="/">最近博文</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="../../../undefined/MybatisPlus%EF%BC%88%E7%B1%BB%E5%9E%8B%E6%8E%A7%E5%88%B6%E5%99%A8TypeHandler%E7%9A%84%E5%B8%B8%E8%A7%84%E5%BA%94%E7%94%A8%EF%BC%89/">
+      <li>MybatisPlus（类型控制器TypeHandler的常规应用）</li>
+    </a>
+    
+    <a href="../../../cn/%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+      <li>线程并发问题记录</li>
+    </a>
+    
+    <a href="../../../undefined/%E5%AD%97%E8%8A%82%E7%A0%81%E5%85%A5%E9%97%A8%E5%92%8C%E5%8F%8D%E7%BC%96%E8%AF%91%E7%90%86%E8%A7%A3%E7%AD%96%E7%95%A5/">
+      <li>字节码入门和反编译理解策略</li>
+    </a>
+    
+    <a href="../../../undefined/%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%8A%B6%E6%80%81%E6%9C%BACola%E7%90%86%E8%A7%A3/">
+      <li>无状态的轻量级状态机Cola理解</li>
+    </a>
+    
+    <a href="../../../undefined/maven%E5%8A%A0%E9%80%9F%E4%B9%8B%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90%EF%BC%9Amavend%E4%BD%BF%E7%94%A8%E8%B8%A9%E5%9D%91/">
+      <li>maven加速之官方推荐：mavend使用踩坑</li>
+    </a>
+    
+  </ul>
+</div>
+
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5><a href="/">链友</a></h5>
+<ul class="list-inline">
+  
+  <li><a href="https://SFHJavaer.github.io/" target="_blank">Futari</a></li>
+  
+  <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
+  
+  <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+  
+  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
+  
+</ul>
+
+
+        <hr>
+    
+        <!-- Archives -->
+
+<h5><a href="/archives/">archives</a></h5>
+<div class="widget">
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../2025/12/">December 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2025/06/">June 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2025/05/">May 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2025/04/">April 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/12/">December 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/09/">September 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/08/">August 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+</div>
+
+
+        <hr>
+    
+        <!-- Categories -->
+
+<h5><a href="/categories/">categories</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="/categories/#IO">
+      <li>IO</li>
+    </a>
+    
+    <a href="/categories/#Maven">
+      <li>Maven</li>
+    </a>
+    
+    <a href="/categories/#多线程">
+      <li>多线程</li>
+    </a>
+    
+    <a href="/categories/#笔试">
+      <li>笔试</li>
+    </a>
+    
+    <a href="/categories/#Java spring">
+      <li>Java spring</li>
+    </a>
+    
+    <a href="/categories/#JVM">
+      <li>JVM</li>
+    </a>
+    
+    <a href="/categories/#Mybatis">
+      <li>Mybatis</li>
+    </a>
+    
+    <a href="/categories/#Spring">
+      <li>Spring</li>
+    </a>
+    
+    <a href="/categories/#索引">
+      <li>索引</li>
+    </a>
+    
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
+    </a>
+    
+    <a href="/categories/#项目">
+      <li>项目</li>
+    </a>
+    
+    <a href="/categories/#操作系统">
+      <li>操作系统</li>
+    </a>
+    
+    <a href="/categories/#MinIO">
+      <li>MinIO</li>
+    </a>
+    
+    <a href="/categories/#Linux">
+      <li>Linux</li>
+    </a>
+    
+    <a href="/categories/#MVCC">
+      <li>MVCC</li>
+    </a>
+    
+    <a href="/categories/#滑动窗口">
+      <li>滑动窗口</li>
+    </a>
+    
+    <a href="/categories/#BFS">
+      <li>BFS</li>
+    </a>
+    
+    <a href="/categories/#贪心 动态规划">
+      <li>贪心 动态规划</li>
+    </a>
+    
+  </ul>
+</div>
+
+
+        <hr>
+    
+</div>
+
+
+    
+  </div>
+</div>
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/SFHJavaer">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          SFHJavaer
+          2025
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/mouseclick.js"  content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "SFHJavaer";
+    let ghPages = gh + ".github.io";
+    let pagePath = "archives/archives/9/index.html";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+
+      // 添加判断：只处理不以http/https开头的相对路径图片
+      if (!oldUrl.startsWith('http://') && !oldUrl.startsWith('https://')) {
+        let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+        item.setAttribute("src", newUrl);
+      }
+      // 如果是绝对路径的图片，不做任何处理
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://www.sfhjavaer.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              if (!imgUrl.startsWith('http://') && !imgUrl.startsWith('https://')) {
+                imgUrl = 'https://cdn.jsdelivr.net/gh/SFHJavaer/SFHJavaer.github.io' + imgUrl;
+              }
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

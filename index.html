@@ -482,6 +482,44 @@
   <!-- top end -->
   
 
+  <a href="/undefined/MybatisPlus（类型控制器TypeHandler的常规应用）/">
+    <h2 class="post-title">
+      MybatisPlus（类型控制器TypeHandler的常规应用）
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      通过继承BaseTypeHandler，想要实现和JdbcTemplate回调处理相同的效果，比如根据英文字符串转中文
+DTO：
+
+xml指定字段：
+
+最后发现没生效，原因是必须指定handler的扫描路径
+
+加入后就可以注册上handler了，但是对于中英文转换填充这种都是属于业务处理，不应当写在同一基础架构中，所以配置文件加范围不符合统一维护原则，维护在原扫描范围内又不符合代码职责原则。......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-12-28
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/线程并发问题记录/">
     <h2 class="post-title">
       线程并发问题记录
@@ -500,6 +538,156 @@
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
     2025-09-25
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/字节码入门和反编译理解策略/">
+    <h2 class="post-title">
+      字节码入门和反编译理解策略
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+
+
+
+Hex Editor查看class文件
+
+javap
+
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-07-03
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/无状态的轻量级状态机Cola理解/">
+    <h2 class="post-title">
+      无状态的轻量级状态机Cola理解
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Spring StateMachine采用重量级锁保证线程安全，有状态
+
+这里的有无状态是指：
+有状态：实例内部保存当前状态（&lt;font style=&quot;color:rgb(0, 0, 0);&quot;&gt;current state&lt;/font&gt;）和上下文信息。状态转换时，实例内部状态会自动更新。如果不使用线程池，那么每次都会创建new一个状态机对象，然后默认......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-06-01
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/maven加速之官方推荐：mavend使用踩坑/">
+    <h2 class="post-title">
+      maven加速之官方推荐：mavend使用踩坑
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      重点修改mvnd.properties配置，解决：
+安装mavend之后， 将配置修改为原maven的settings.xml文件
+
+指定mavend启动的JVM参数，解决乱码
+
+解决默认心跳超时时间
+
+指定内存参数
+
+出现报错都可以与以上内容匹配，比较特殊的是适配问题，因为mavend是Java开发的，而且release版本的适配Java是不向下兼容的，我这里用的JDK1.8，仅能使用
+
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-05-06
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/Idea字段颜色与Lambda深度研究/">
+    <h2 class="post-title">
+      Idea字段颜色与Lambda深度研究
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      网上的答案一知半解，还是要看IDEA文档找答案
+首先IDEA定义了多种类型的变量都可以为紫色，比如实例变量、常量等，注意，标注为紫色和紫色下划线没有被包含或组合的关系
+被重新分配地址的变量，官方叫reassigned paramster，指的是栈中也就是方法传入的引用副本，被重新赋值即指向了新的地址(对象)，此时IDEA为了标注此变量，会在白色普通变量的基础上加入下划线进行标注，因为入参被改......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-04-21
   </p>
   <div class="tags">
     
@@ -564,23 +752,25 @@ address：EVM地址类型，......
   <!-- top end -->
   
 
-  <a href="/cn/关于对Java语法糖的理解/">
+  <a href="/undefined/IDEA构建、启动流程的意义/">
     <h2 class="post-title">
-      关于对Java语法糖的理解
+      mapstruct分析IDEA构建、启动流程的意义
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      
-switch 在1.8支持case String类型，class中其实是根据hashCode和equals判断的，为什么需要equals，因为仅凭hashCode可能发生哈希碰撞。
-泛型，没有泛型对应的class类型，java阶段的泛型都会在class阶段擦除，如HashMap会被擦除为Hash Map.Class，而...
+      今天使用mapstruct遇到了很奇怪的问题，我构建某个包，发现target/classes目录生成了XConvertor的实现类class
+此时可以正常编译启动，但是我此时又单独install该包，发现有生成了和classes同级的generated-sources/annotations目录
+里面是XConvertor的实现类java文件，导致项目编译提示类重复？
+
+将target删除之......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2025-02-05
+    Posted by SFHJavaer on
+    2025-03-25
   </p>
   <div class="tags">
     
@@ -597,26 +787,26 @@ switch 在1.8支持case String类型，class中其实是根据hashCode和equals�
   <!-- top end -->
   
 
-  <a href="/cn/No-qualifying-bean-of-type-Bean-available深度思考/">
+  <a href="/undefined/EasyExcel注意事项和发现bug/">
     <h2 class="post-title">
-      No qualifying bean of type 'Bean' available深度思考
+      EasyExcel注意事项和发现bug
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      在多工程项目中，我们常常遇到这个问题。
- No qualifying bean of type 'XXXXBean' available  ，其实首先要理解错误的意思，这里的XXXXBean一般是具体某个接口或抽象类，如IXXXService，翻译过来就是    没有可用的   满足IOpicsService接口类型的Bean
-
-
-
-:::info解读：也就是说Bean确实是没有，但是并不是......
+      注意事项：
+直接写入可以和@Excelproperty配合，就可以根据注解的value定位
+但是对于填充，注解可以不使用（使用也无效），但是填充占位符必须在excel模板文件中指明，所以如果对于单元格有数据校验的，不支持输入{.格式}，那么就需要去掉数据校验
+但是去掉校验的单元格，在导出后还是没有数据校验或下拉框，所以就有问题，这个时候只能手动加下拉框。
+同时碰到了一些问题
+:::succe......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-11-18
+    Posted by SFHJavaer on
+    2025-03-22
   </p>
   <div class="tags">
     
@@ -633,213 +823,32 @@ switch 在1.8支持case String类型，class中其实是根据hashCode和equals�
   <!-- top end -->
   
 
-  <a href="/cn/Java文件上传基础原理/">
+  <a href="/undefined/504超时-CPU100-内存泄漏-问题简要排查/">
     <h2 class="post-title">
-      Java文件上传基础原理
+      504超时-CPU100%-内存泄漏-问题简要排查
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      POST请求前端form表单在最初只能提交文本数据，即为application/x-www-form-urlencoded(默认值)
-在1995年multipart/form-data，在form表单的enctype属性进行指定
+      前端请求F12：
+
+根据错误码：上游前端（网关）未接收到下游服务端返回的数据，这里是网关接收数据超时了，而不是后端超时
+后端仍在死循环运行中或死锁
+
+打开arthas，使用thread -b查看死锁线程
+
+注意到服务器CPU飙升，top发现确实是Java存在异常：
 
 
-
-在一个HTML文档中，一个表单的标准格式如下：
-12345&lt;form action=&quot;http://localhost:8080/reposi......
+thread -n 3，查看最占用CPU的线程,发现前三个都是同一逻辑调用，下面只站是一个
+1234567891011121......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-09-14
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/基础思维：内外网排查思路/">
-    <h2 class="post-title">
-      基础思维：内外网排查思路
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      内网报错：先查看响应的具体错误和查内网日志，打印栈信息直接定位到目标代码位置。
-内网直接连debug，如果有人展占用端口了，启动本地debug
-外网报错
-
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-08-18
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Oracle连接串解读/">
-    <h2 class="post-title">
-      Oracle连接串解读
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      我们在常常在SpringBoot配置文件中配置连接数据库，如图:
-
-首先：Oracle JDBC连接一共有三种方式，分别是：SERVICE_NAME、SID和TNSName。
-
-我们常常使用的是服务名，只有在旧版本使用SID，原因是一个SID对应一个一个Oracle实例，而服务名是在集群多实例的情况下诞生的，所以一个服务对应多个实例，我们连接串port后的默认就是服务名
-
-:::succes......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-07-02
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/国产数据库信创：多数据库对比/">
-    <h2 class="post-title">
-      国产数据库信创：多数据库对比
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      脚本
-
-TDSQL：
-
-腾讯MySQL内核，语法通用
-MySQL：
-
-12345678910DELIMITER $$DROP FUNCTION IF EXISTS NVL;CREATE FUNCTION NVL (expression VARCHAR(255), replacement VARCHAR(255))    RETURNS VARCHAR(255)    DETERMINISTI......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-05-12
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/本地打包时的一些疑问/">
-    <h2 class="post-title">
-      本地打包时的一些疑问
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      注意一点，debug的非本工程的代码，也就是jar包中的代码，有可能不是最新的，所以有时候开发仓库没有最新包也没人打的时候，可以打本地的，切换到对应工程拉最新代码，install即可。
-所以由于可能具有不一致性，所以报错如果没有蓝标，即非本工程代码，那么代码行数即使从IDEA中点进去，和实际的执行行数的内容也是对不上的。
-问题
-
-
-可是本地启动的工程，引本地的包应该也没错啊？为什么对不上呢？......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-05-09
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/前端映射与MybatisPlus特殊类型（枚举）映射/">
-    <h2 class="post-title">
-      前端映射与MybatisPlus特殊类型（枚举）映射
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      我们处理后端Crud时，如果直接将前端的报文应用到数据库动态SQL拼接时，如果传入的RequestDTO某些属性使用枚举接收，那么往往容易报错。
-我们知道，这样是可以映射的：
-
-那么比如前端传入交易状态这个字段，后端是有可以使用的枚举的，直接使用DealStatusEnum接收，会发生什么？
-首先，能不能接收到？
-
-
-
-
-如果枚举如上图所示，invType是可以映射到枚举对象上的，原因是枚举......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-04-11
+    Posted by SFHJavaer on
+    2025-03-13
   </p>
   <div class="tags">
     
@@ -1135,24 +1144,24 @@ MySQL：
 <div class="widget">
   <ul>
     
+    <a href="undefined/MybatisPlus%EF%BC%88%E7%B1%BB%E5%9E%8B%E6%8E%A7%E5%88%B6%E5%99%A8TypeHandler%E7%9A%84%E5%B8%B8%E8%A7%84%E5%BA%94%E7%94%A8%EF%BC%89/">
+      <li>MybatisPlus（类型控制器TypeHandler的常规应用）</li>
+    </a>
+    
     <a href="cn/%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
       <li>线程并发问题记录</li>
     </a>
     
-    <a href="cn/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
-      <li>以太坊开发：Solidity语言入门</li>
+    <a href="undefined/%E5%AD%97%E8%8A%82%E7%A0%81%E5%85%A5%E9%97%A8%E5%92%8C%E5%8F%8D%E7%BC%96%E8%AF%91%E7%90%86%E8%A7%A3%E7%AD%96%E7%95%A5/">
+      <li>字节码入门和反编译理解策略</li>
     </a>
     
-    <a href="cn/%E5%85%B3%E4%BA%8E%E5%AF%B9Java%E8%AF%AD%E6%B3%95%E7%B3%96%E7%9A%84%E7%90%86%E8%A7%A3/">
-      <li>关于对Java语法糖的理解</li>
+    <a href="undefined/%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%8A%B6%E6%80%81%E6%9C%BACola%E7%90%86%E8%A7%A3/">
+      <li>无状态的轻量级状态机Cola理解</li>
     </a>
     
-    <a href="cn/No-qualifying-bean-of-type-Bean-available%E6%B7%B1%E5%BA%A6%E6%80%9D%E8%80%83/">
-      <li>No qualifying bean of type &#39;Bean&#39; available深度思考</li>
-    </a>
-    
-    <a href="cn/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/">
-      <li>Java文件上传基础原理</li>
+    <a href="undefined/maven%E5%8A%A0%E9%80%9F%E4%B9%8B%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90%EF%BC%9Amavend%E4%BD%BF%E7%94%A8%E8%B8%A9%E5%9D%91/">
+      <li>maven加速之官方推荐：mavend使用踩坑</li>
     </a>
     
   </ul>
@@ -1183,7 +1192,7 @@ MySQL：
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/09/">September 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/08/">August 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/05/">May 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/12/">December 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/06/">June 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/05/">May 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/04/">April 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/12/">December 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/09/">September 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/08/">August 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1477,7 +1486,6 @@ MySQL：
     }
   )
 </script>
-
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->

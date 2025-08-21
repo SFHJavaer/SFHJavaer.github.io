@@ -482,169 +482,30 @@
   <!-- top end -->
   
 
-  <a href="/cn/关于SpringClassLoader的一些思考/">
+  <a href="/cn/国产数据库信创：多数据库对比/">
     <h2 class="post-title">
-      关于SpringClassLoader的一些思考
-    </h2>
-    <h3 class="post-subtitle">
-      关于SpringClassLoader的一些思考
-    </h3>
-    <div class="post-content-preview">
-      关于SpringClassLoader的一些思考看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactories......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-09-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/服务器搭建过程中遇到的问题/">
-    <h2 class="post-title">
-      服务器搭建过程中遇到的数据库问题
-    </h2>
-    <h3 class="post-subtitle">
-      Linux搭建过程中的Mysql问题
-    </h3>
-    <div class="post-content-preview">
-      服务器搭建过程中遇到的问题最近在维护之前的项目的时候，发现数据库意外连接不上，mysql显示后台运行，但是输入mysql -uroot -p却显示不能连接到sock文件
-
-ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/var/run/mysqld/mysqld.sock’
-
-最初查网上的解法是......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-08-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/贪心和动态规划/">
-    <h2 class="post-title">
-      贪心与动态规划
+      国产数据库信创：多数据库对比
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      贪心例题：跳跃游戏题干：    给定一个非负整数数组，假定你的初始位置为数组第一个下标，数组中的每个元素代表你在那个位置能够跳跃的最大长度，请确认你是否能够跳跃到数组的最后一个下标。
+      脚本
 
-从起点开始选择第二个，并不是说第一步跳就选最远的，而是寻找一种一定能满足的关系，就像数学归纳法一样，每一步的贪心都能保证最终的结果，所以只有都满足递推关系了才进行贪心。
-所以第一步选最远的那个只是保证了起点这......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-08-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#贪心 动态规划" title="贪心 动态规划">贪心 动态规划</a>
-    
-  </div>
-  
+TDSQL：
 
-</div>
-<hr>
+腾讯MySQL内核，语法通用
+MySQL：
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/算法模板：BFS和DFS问题/">
-    <h2 class="post-title">
-      算法模板：BFS和DFS问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      BFS和DFS问题广度优先遍历是利用队列实现的搜索算法，一层一层的进行递归，典型例题是之字形遍历树和树的层序遍历以及前中后序遍历
-BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），回溯可以理解成是DFS的一种应用，只要是不撞南墙不回头都是DFS。
-应用上：123BFS 常用于找单一的最短路线，它的特点是 &quot;搜到就是最优解&quot;而 DFS 用于找所有解的问题，它的空间......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-07-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#BFS" title="BFS">BFS</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Docker与微服务/">
-    <h2 class="post-title">
-      Docker与微服务小记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Docker与微服务在软件开发的最初是单体架构，那么服务都耦合在一起，进行服务升级、部署都要整体的进行瀑布式的开发模型。
-在发展一段时间后，面向服务架构产生了，也就是我们常用的将服务进行分散，分散到不同的机器上，单独维护某一个服务。所以说面向服务架构也就是分布式，不管是水平拆分还是垂直拆分都算是分布式。
-
-水平拆分的话就像是我们用Dubbo调服务一样，把service层放进一个服务器，请求层......
+12345678910DELIMITER $$DROP FUNCTION IF EXISTS NVL;CREATE FUNCTION NVL (expression VARCHAR(255), replacement VARCHAR(255))    RETURNS VARCHAR(255)    DETERMINISTI......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
-    2022-07-12
+    2024-05-12
   </p>
   <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
     
   </div>
   
@@ -659,25 +520,28 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
   <!-- top end -->
   
 
-  <a href="/cn/企业开发中遇到的常用注解/">
+  <a href="/cn/本地打包时的一些疑问/">
     <h2 class="post-title">
-      企业开发中遇到的常用注解
+      本地打包时的一些疑问
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      @Builder实现建造者模式建造者模式。简单来说，就是一步步创建一个对象，它对用户屏蔽了里面构建的细节，但却可以精细地控制对象的构造过程，而不是一次性的完成对象构建。这个注解提供了一种优雅的编程方式，用来创建对象，原理上通过以下来实现（Ps：父类的属性不能产于builder）12345678@Builderpublic class Demo &#123;    private final ......
+      注意一点，debug的非本工程的代码，也就是jar包中的代码，有可能不是最新的，所以有时候开发仓库没有最新包也没人打的时候，可以打本地的，切换到对应工程拉最新代码，install即可。
+所以由于可能具有不一致性，所以报错如果没有蓝标，即非本工程代码，那么代码行数即使从IDEA中点进去，和实际的执行行数的内容也是对不上的。
+问题
+
+
+可是本地启动的工程，引本地的包应该也没错啊？为什么对不上呢？......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
-    2022-07-07
+    2024-05-09
   </p>
   <div class="tags">
-    
-    <a href="/tags/#注解" title="注解">注解</a>
     
   </div>
   
@@ -692,32 +556,32 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
   <!-- top end -->
   
 
-  <a href="/cn/回溯算法/">
+  <a href="/cn/前端映射与MybatisPlus特殊类型（枚举）映射/">
     <h2 class="post-title">
-      回溯问题
+      前端映射与MybatisPlus特殊类型（枚举）映射
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      回溯问题回溯问题可以理解为树搜索问题，之所以回溯可以剪枝就是基于树的概念，不断的深度遍历到叶子端，然后返回上一节点进行递归（回溯）
-对于回溯的时间复杂度的分析，可能从树的角度不好分析，那么就先找到应该有多少种结果的情况，每一种情况的消耗复杂度（这里均指O的量级复杂度）是多少，最后相乘
+      我们处理后端Crud时，如果直接将前端的报文应用到数据库动态SQL拼接时，如果传入的RequestDTO某些属性使用枚举接收，那么往往容易报错。
+我们知道，这样是可以映射的：
 
-空间复杂度如果没有额外的空间开辟，那么就是树的深度>
+那么比如前端传入交易状态这个字段，后端是有可以使用的枚举的，直接使用DealStatusEnum接收，会发生什么？
+首先，能不能接收到？
 
-## 比如：子集问题
 
-##### 其时间复杂度是......
+
+
+如果枚举如上图所示，invType是可以映射到枚举对象上的，原因是枚举......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
-    2022-07-04
+    2024-04-11
   </p>
   <div class="tags">
-    
-    <a href="/tags/#注解" title="注解">注解</a>
     
   </div>
   
@@ -732,26 +596,26 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
   <!-- top end -->
   
 
-  <a href="/cn/Git和Repo项目管理/">
+  <a href="/cn/Serializable接口的实际意义/">
     <h2 class="post-title">
-      Git和Repo项目管理
+      Serializable接口的实际意义
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      Git提交问题git commit 时可以加 -f代表强制提交，因为对于某些设置的文件是可忽略的，如果要强行提交的话，可以使用上面的命令。1git commit -f #强制commit
-忽略提交的文件：比如某些重要的配置文件、或者是测试文件不想被提交的情况。Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓库，git目录以及他的下层目录才是可以被识别的，不然凭空的话只会报下面......
+      在项目中我们看到实体类都实现了Serializable接口，为什么有的时候不实现也可以正常执行、返回报文呢？
+原因在于该对象需不需要进行序列化（或者更准确的来说是     ：       非本地传输）
+
+注意：这里的序列化 ≠ 转Json，如果通过MVC的@RequestBody，那么会先自动把对象转为Json（String），再通过网络发送（此时是JDK自带序列化），先转成的本地Json其......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
-    2022-07-03
+    2024-03-22
   </p>
   <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
     
   </div>
   
@@ -766,30 +630,101 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
   <!-- top end -->
   
 
-  <a href="/cn/Summary of written test questions/">
+  <a href="/cn/实现图表展示数据项的国际化实现方案几种方案参考/">
     <h2 class="post-title">
-      Summary of written test questions
+      实现图表展示数据项的国际化实现方案几种方案参考
     </h2>
     <h3 class="post-subtitle">
-      笔试
+      
     </h3>
     <div class="post-content-preview">
-      滴滴6.26笔试编程题出现的问题：
-第一题         难度：Easy
-小明下载同时下载多个游戏，每个游戏下载速度为vi，剩余下载时间ti。
-下载完一个游戏后他的下载速度会分配到其他任务上，问下载完所有游戏需要的时间
+      切面方案
 
-思路一：你可能觉得解决方式就应该是顺着思路，建立两个容器，将数组1速度依次放进去，再将数组二剩余时间依次放进去，然后找出数组二中剩余时间最小的一个游戏，将他进行去除，然后......
+定义注解 **InternationalizedField**：
+
+12345678910import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.annotat......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-03-08
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/前后端Controller-接收特殊类型参数问题/">
+    <h2 class="post-title">
+      前后端Controller--接收特殊类型参数问题
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      数组
+
+今天在前端发送某个属性值为[]时，后端接收到的为空的ArrayList对象。
+首先清楚，在MVC框架下，后端接收到什么参数，完全取决于序列化框架，原因是参数对象一定是反序列化变为对象的，而对于大多数序列化框架，规则基本是一致的，所以建议记忆。
+这里Jackson的序列化规则就是[],最后被反序列化为ArrayList而不是null;
+
+这些接收到的都是ArayList
+枚举
+
+对于前......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-01-21
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/NIO和IO多路复用/">
+    <h2 class="post-title">
+      NIO和IO多路复用
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+
+
+...
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by SFHJavaer on
-    2022-06-23
+    2024-01-11
   </p>
   <div class="tags">
-    
-    <a href="/tags/#笔试" title="笔试">笔试</a>
     
   </div>
   
@@ -804,25 +739,102 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
   <!-- top end -->
   
 
-  <a href="/cn/算法：链表相加和大数相加/">
+  <a href="/cn/实际业务例子：SWPT死锁问题/">
     <h2 class="post-title">
-      算法：链表相加和大数相加
+      实际业务例子：SWPT死锁问题
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      BM11 链表相加(二)题目描述123456假设链表中每一个节点的值都在 0 - 9 之间，那么链表整体就可以代表一个整数。给定两个这种链表，请生成代表两个整数相加值的结果链表。数据范围：0 \le n,m \le 10000000≤*n*,*m*≤1000000，链表任意值 0 \le val \le 90≤*v**a**l*≤9要求：空间复杂度 O(n)*O*(*n*)，时间复杂度 O(......
+      首先明确一点，SpringBoot中的隐式事务，都是在执行sql（如mapper）时创建的，属于既定规范。
+方法级别管理事务（原子性）
+
+另外有一些不熟悉的，如果sql调用触发器、使用消息队列， JTA（Java Transaction API）分布式事务  等会新开事务
+
+默认当方法正常执行完毕时，事务会自动提交并且关闭事务，但是有时候通过DEBUG时SQL查询发现事务仍存在，未被提交，还......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
-    2022-06-10
+    2023-12-26
   </p>
   <div class="tags">
     
-    <a href="/tags/#算法" title="算法">算法</a>
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/AOP使用经验和基础知识总结/">
+    <h2 class="post-title">
+      AOP使用经验和基础知识总结
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      很简单的，五种通知类型，主要注意的是环绕通知，也就是符合切入点表达式的切入点，会根据通知内容即自定义方法自定义执行。
+切面类中写着通知方法，通知方法上用注解标明其类型，当被执行的切点符合注解的表达式范围时，执行通知。
+不光是记录前后日志，在执行动作前后校验权限，执行数据库操作（触发器）等等都可以使用AOP。
+执行条件的限定主要取决于切入点表达式
+
+
+execution：一般用于指定方法的执行......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2023-12-18
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/数据库知识点小记/">
+    <h2 class="post-title">
+      数据库知识点小记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      设置主键
+
+MySQL设置或者后续新增主键，都需要包含主键字段为not null，否则不允许创建
+Oracle后续alter增加主键，如果被设置为主键的字段没有显式设置初始not null，那么新增的主键会自动将该字段设置为not null，在创建表的时候，字段之后直接跟上primary key也是默认隐式的增加了not null约束
+Case-When
+
+使用数据库原生的判断，case w......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2023-12-11
+  </p>
+  <div class="tags">
     
   </div>
   
@@ -1120,24 +1132,24 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
 <div class="widget">
   <ul>
     
+    <a href="../../undefined/MybatisPlus%EF%BC%88%E7%B1%BB%E5%9E%8B%E6%8E%A7%E5%88%B6%E5%99%A8TypeHandler%E7%9A%84%E5%B8%B8%E8%A7%84%E5%BA%94%E7%94%A8%EF%BC%89/">
+      <li>MybatisPlus（类型控制器TypeHandler的常规应用）</li>
+    </a>
+    
     <a href="../../cn/%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
       <li>线程并发问题记录</li>
     </a>
     
-    <a href="../../cn/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
-      <li>以太坊开发：Solidity语言入门</li>
+    <a href="../../undefined/%E5%AD%97%E8%8A%82%E7%A0%81%E5%85%A5%E9%97%A8%E5%92%8C%E5%8F%8D%E7%BC%96%E8%AF%91%E7%90%86%E8%A7%A3%E7%AD%96%E7%95%A5/">
+      <li>字节码入门和反编译理解策略</li>
     </a>
     
-    <a href="../../cn/%E5%85%B3%E4%BA%8E%E5%AF%B9Java%E8%AF%AD%E6%B3%95%E7%B3%96%E7%9A%84%E7%90%86%E8%A7%A3/">
-      <li>关于对Java语法糖的理解</li>
+    <a href="../../undefined/%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%8A%B6%E6%80%81%E6%9C%BACola%E7%90%86%E8%A7%A3/">
+      <li>无状态的轻量级状态机Cola理解</li>
     </a>
     
-    <a href="../../cn/No-qualifying-bean-of-type-Bean-available%E6%B7%B1%E5%BA%A6%E6%80%9D%E8%80%83/">
-      <li>No qualifying bean of type &#39;Bean&#39; available深度思考</li>
-    </a>
-    
-    <a href="../../cn/Java%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/">
-      <li>Java文件上传基础原理</li>
+    <a href="../../undefined/maven%E5%8A%A0%E9%80%9F%E4%B9%8B%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90%EF%BC%9Amavend%E4%BD%BF%E7%94%A8%E8%B8%A9%E5%9D%91/">
+      <li>maven加速之官方推荐：mavend使用踩坑</li>
     </a>
     
   </ul>
@@ -1168,7 +1180,7 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/12/">December 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/09/">September 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/06/">June 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/05/">May 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/12/">December 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1462,7 +1474,6 @@ BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），�
     }
   )
 </script>
-
 
 <!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
 https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
