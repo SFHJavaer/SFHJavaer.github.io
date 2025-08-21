@@ -153,7 +153,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -187,7 +187,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -398,7 +398,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by SFHJavaer on
-              2025-12-28
+              2024-12-28
             </span>
 
 
@@ -495,9 +495,13 @@
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/cn/关于对Java语法糖的理解/" data-toggle="tooltip" data-placement="top" title="关于对Java语法糖的理解">&larr; Previous Post</a>
+          </li>
+          
           
           <li class="next">
-            <a href="/cn/线程并发问题记录/" data-toggle="tooltip" data-placement="top" title="线程并发问题记录">Next Post &rarr;</a>
+            <a href="/undefined/Git出现大量Push内容-推送失败问题/" data-toggle="tooltip" data-placement="top" title="Git出现大量Push内容+推送失败问题">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -602,7 +606,7 @@
     }
 
     const gitment = new Gitment({
-      id: 'Sun Dec 28 2025 17:40:16 GMT+0800', // optional
+      id: 'Sat Dec 28 2024 17:40:16 GMT+0800', // optional
       owner: 'SFHJavaer',
       repo: 'SFHJavaer',
       oauth: {

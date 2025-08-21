@@ -153,7 +153,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -187,7 +187,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -398,7 +398,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Futari on
-              2025-09-25
+              2024-09-25
             </span>
 
 
@@ -473,25 +473,19 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>使用ajax同时对一接口发送两个请求，报文不一样，结果应当不同，但是返回结果却有一定几率相同。</p>
-<p>排查思路：MP SQL是否错误—-&gt;Cloud问题———&gt;Client请求是否遗漏</p>
-<p>测试结果：发起双请求——&gt;Controller接收到两个———&gt;Cloud只处理了一个结果，不放掉cloud请求的时候，前端两个结果都不能拿到响应，放掉同时拿到，说明和RPC并发问题有关。</p>
+<p>排查思路：MP SQL是否错误—&gt;Cloud问题------&gt;Client请求是否遗漏</p>
+<p>测试结果：发起双请求——&gt;Controller接收到两个------&gt;Cloud只处理了一个结果，不放掉cloud请求的时候，前端两个结果都不能拿到响应，放掉同时拿到，说明和RPC并发问题有关。</p>
 <p>两个请求同时拿到的响应结果不一定是原本哪一条请求对应的请求，说明是随即分配的，两个请求只处理了一次。</p>
-<font style="color:#000000;background-color:#FBDE28;">初步推断是IAR网关存在屏蔽限流现象，但是之前在十几条请求同时并发时也没有出现响应相同的问题。</font>
-
-<font style="color:#000000;background-color:#FBDE28;"></font>
-
+<p><font style="color:#000000;background-color:#FBDE28;">初步推断是IAR网关存在屏蔽限流现象，但是之前在十几条请求同时并发时也没有出现响应相同的问题。</font></p>
+<p><font style="color:#000000;background-color:#FBDE28;"></font></p>
 <p><strong><font style="color:#000000;">排查链路日志：</font></strong></p>
 <blockquote>
-<font style="color:rgb(37, 41, 51);">服务多的情况下，业务问题也是有些难以排查，只能确定大致时间定位相关日志。因此实现一个请求对应一个traceId，在整个请求的全链路中都可以关联起来，可以极大地帮助我们更方便地查询日志。</font>
-
-<font style="color:rgb(37, 41, 51);">每个请求的响应头里都会有个 traceId</font>
-
+<p><font style="color:rgb(37, 41, 51);">服务多的情况下，业务问题也是有些难以排查，只能确定大致时间定位相关日志。因此实现一个请求对应一个traceId，在整个请求的全链路中都可以关联起来，可以极大地帮助我们更方便地查询日志。</font></p>
+<p><font style="color:rgb(37, 41, 51);">每个请求的响应头里都会有个 traceId</font></p>
 </blockquote>
 <ul>
 <li><font style="color:rgb(180, 180, 180) !important;background-color:rgb(36, 36, 41) !important;">Trace:是追踪，就是程序推进以下，你就可以写个trace输出，所以trace应该会特别多，不过没关系，我们可以设置最低日志级别不让他输出.</font></li>
-<li><font style="color:rgb(180, 180, 180) !important;background-color:rgb(36, 36, 41) !important;">Trace的级别比debug还要低</font>
-
-</li>
+<li><font style="color:rgb(180, 180, 180) !important;background-color:rgb(36, 36, 41) !important;">Trace的级别比debug还要低</font></li>
 </ul>
 
 
@@ -500,12 +494,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/undefined/MybatisPlus（类型控制器TypeHandler的常规应用）/" data-toggle="tooltip" data-placement="top" title="MybatisPlus（类型控制器TypeHandler的常规应用）">&larr; Previous Post</a>
+            <a href="/undefined/银行业务基础：什么是会计分录/" data-toggle="tooltip" data-placement="top" title="银行业务基础：什么是会计分录">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/undefined/字节码入门和反编译理解策略/" data-toggle="tooltip" data-placement="top" title="字节码入门和反编译理解策略">Next Post &rarr;</a>
+            <a href="/undefined/启动失败Idea大坑/" data-toggle="tooltip" data-placement="top" title="启动失败Idea大坑">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -610,7 +604,7 @@
     }
 
     const gitment = new Gitment({
-      id: 'Thu Sep 25 2025 22:10:25 GMT+0800', // optional
+      id: 'Wed Sep 25 2024 22:10:25 GMT+0800', // optional
       owner: 'SFHJavaer',
       repo: 'SFHJavaer',
       oauth: {
