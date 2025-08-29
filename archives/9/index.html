@@ -482,6 +482,349 @@
   <!-- top end -->
   
 
+  <a href="/cn/关于数据库索引/">
+    <h2 class="post-title">
+      关于数据库索引
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      从数据结构的角度对索引进行分类
+
+B+tree
+Hash
+Full-texts索引
+
+从物理存储的角度对索引进行分类
+
+聚簇索引
+二级索引(辅助索引)
+
+从索引字段特性角度分类
+
+主键索引
+唯一索引
+普通索引
+前缀索引
+
+从组成索引的字段个数角度分类
+
+单列索引
+联合索引（复合索引）
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2022-04-07
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#索引" title="索引">索引</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/正确理解MVCC/">
+    <h2 class="post-title">
+      正确理解MVCC
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      MVCC详解MVCC也就是多版本并发控制，也就是一种并发控制的方法
+快照读和当前读当前读是指比如共享锁和独占锁这些操作，读取的是最新的版本，保证其他事务不能修改当前事务，对读取事务进行加锁
+快照锁是指不进行加（读写）锁的非阻塞的操作，一定不是可串行的隔离级别，因为可串行的级别下会退化成当前读，也就是阻塞操作，快照读是为了提高并发性能，基于MVCC，避免加锁的开销，也就是基于多版本，相当于一个......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2022-04-07
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#MVCC" title="MVCC">MVCC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/关于JVM/">
+    <h2 class="post-title">
+      JVM内存结构的探索
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      JVM内存结构
+
+先将java代码转换为java字节码，然后通过类加载的机制将字节码加载到内存中的方法区中，执行中类的加载类似于懒加载（延迟加载），即只有当线程执行时调用到了没有的类才会通过双亲委派区查找需要的类去加载，由类new出来的成员对象存储在JVM内存的堆中，而局部变量和方法参数等占用的内存在虚拟机栈中，一个线程一个栈（比如main）
+方法分为两类：一类是普通的java方法，另一类是......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2022-04-05
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JVM" title="JVM">JVM</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/关于Mybatis分页的回顾/">
+    <h2 class="post-title">
+      关于Mybatis分页的详细回顾
+    </h2>
+    <h3 class="post-subtitle">
+      关于Mybatis分页和PageHelper
+    </h3>
+    <div class="post-content-preview">
+      Mybatis分页有几种方法：
+（1）可以直接使用limit语句，在sql语句中使用#{}进行占位，传入的参数调用DAO进行在数据库层面的分页操作
+（2）使用mybatis提供的PageHelper第三方插件，通过调用PageHelper的静态方法startPage（current，size），两个参数前面是具体展示第几页，第二个是展示的页码，在Springboot导入依赖并在yml文件中配......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2022-04-02
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Mybatis" title="Mybatis">Mybatis</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-03-07-简单实现ActiveMQ、RabbitMQ/">
+    <h2 class="post-title">
+      简单实现ActiveMQ、RabbitMQ
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      JMS：一个规范的接口，相当于JDBCJMS消息模型有两种：p2p（点对点模式）和pub-sub（发布者-订阅者模式）
+JMS常用的消息种类我们主要使用BytesMessage
+规范的实现主要有：ActiveMQ，Redis，HornetMQ，RabbitMQ，RocketMQ（没完全遵守JMS规范）
+AMQP：协议，对定了网络交换的数据格式
+ActiveMQMQ都是在配置文件中加配置，依赖......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-03-07
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ">Spring RabbitMQ</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-03-02-SpringBoot实现定时任务/">
+    <h2 class="post-title">
+      SpringBoot实现定时任务
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      两种方式实现SpringBoot定时任务整合quartz：首先使用util包下自带的Timmer类
+12345678910111213public class TimerTaskApp &#123;    public static void main(String[] args) &#123;        Timer timer = new Timer();        TimerTa......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-03-02
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Spring quarrz task" title="Spring quarrz task">Spring quarrz task</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-02-25-SpringBoot-整合Jetcache，j2cache/">
+    <h2 class="post-title">
+      SpringBoot-整合Jetcache，j2cache
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Springboot 整合三方（Jetcache，j2cache）的具体演示缓存：提高永久存储介质的读取效率，并且提供临时的数据存储空间可以用HashMap存储数据，不借用数据库，实现类似的缓存机制
+SpringBoot提供了多种缓存,常用的有Ehcache，Redis，memcached，不指定默认为simple
+在引导类中使用@EnableCaching来启用缓存在业务层方法上使用@Ca......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-02-25
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot">SpringBoot</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-02-25-SpringBoot高并发秒杀项目实录/">
+    <h2 class="post-title">
+      SpringBoot高并发秒杀
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      实现高性能、一致性、高可用    
+前端进行一次md5加密，传输过程中再进行一次加密，提高安全程度
+利用逆向工程由数据库表和模板来生成对应的实体类、接口、实现类等等，需要的保留，不需要的在后续中删除
+开发登陆功能是为了为后续的秒杀功能提供鉴权，只有用户才能进行秒杀
+登陆页面中校验和前端的返回值不再使用return返回数据枚举或常量类，而是抛出异常来被ControllerAdvice捕获，进行......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-02-25
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#SpringBoot RabbitMQ Redis" title="SpringBoot RabbitMQ Redis">SpringBoot RabbitMQ Redis</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-02-22-ES基本入门操作/">
+    <h2 class="post-title">
+      ES基本入门操作与SpringBoot整合
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      ES：分布式全文搜索引擎
+windiows安装之后运行bat批处理文件执行
+ES没有数据库的概念，但是有索引的概念
+
+启动Es后，直接对ES发请求，在请求路径之后跟上索引（http://localhost:9200/books），ES全面支持Restful风格的操作
+123456PUT：返回boolean类型的Json数据，字段有acknowledged（操作是否成功），index（你提交的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-02-22
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Elasticsearch" title="Elasticsearch">Elasticsearch</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/2022-02-09-Redis快速入门/">
     <h2 class="post-title">
       Redis学习笔记
@@ -502,338 +845,6 @@ redis......
   <div class="tags">
     
     <a href="/tags/#Redis" title="Redis">Redis</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2022-01-29-SpringBoot开发和运维问题/">
-    <h2 class="post-title">
-      SpringBoot运维测试和配置问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      application配置文件优先级：properties &gt; yml &gt;yaml
-配置文件所在目录所决定的配置优先级要大于本身文件属性决定的优先级
-环境简写：
-设置：pro
-开发：dev
-测试：test
-12345678SpringBootApplication扫描注解的默认规则是：扫描@SpringBootApplication注解所在类（引导类）所在的包和其子包中的注解BU......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2022-01-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#SpringBoot" title="SpringBoot">SpringBoot</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2022-01-20-SpringBoot-REST风格/">
-    <h2 class="post-title">
-      SpringBoot RESTful风格
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Springboot RESTFUL风格RESTful风格的url的优点：
-1）隐藏资源的访问行为，无法通过链接地址判断对资源的操作
-2）书写简化
-REST是一种风格不是规范，或是现在已经约定俗成的规范
-描述模块的名称通常使用复数加s，表示此类资源而不是单个资源
-按照REST访问资源时使用行为动作来区分进行何种操作（一般是8种请求方式），这种访问方式叫RESTful
-实现步骤：1）设定htt......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2022-01-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL">SpringBoot RESTFUL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-12-29-SpringMVC拦截器/">
-    <h2 class="post-title">
-      SpringMVC拦截器
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      springmvc使用的是统一的全局的异常处理机制
-把crontroller中的所有异常集中处理，采用aop的思想
-
-使用两个注解：
-@ExpextionHandler：使用在具体的方法上，作为异常处理crontroller，value属性用来指定异常的类型属于哪个类，如果不写则代表全局处理异常
-@ControllerAdvice：控制器增强（即给控制器增加异常处理功能），在类上添加，当然要......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-12-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#SpringMVC" title="SpringMVC">SpringMVC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-12-19-SpringBoot表现层消息一致性处理/">
-    <h2 class="post-title">
-      SpringBoot表现层消息一致性处理
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      对表现层返回的数据封装为json格式,前后端数据传送统一
-统一定义为两个字段：data和flag（不管是CORD功能还是查询单挑或多条的功能）
-flag代表请求是否成功：比如区分数据不存在还是查询过程抛异常
-data代表传送的数据（data中多条数据即为列表json）
-解决方案为设置一个前后端数据协议（处理类）
-123456@Datapublic class R&#123;    priva......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-12-19
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#SpringBoot" title="SpringBoot">SpringBoot</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-22-SpringMVC处理器方法的返回值/">
-    <h2 class="post-title">
-      SpringMVC处理器方法的返回值
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      SpringMVC处理器方法的返回值1）ModelAndView：传递数据并且跳转到其他资源（视图），对视图进行forward，如果有多余的部分则该该返回值不合适2）String：表示视图，可以逻辑名称，也可以是完整视图路径，逻辑名称需要配置视图解析器，可以直接在方法中return“视图名称”3）void：多用于响应ajax请求，不需要返回对象，直接前后端分离动态改变
-
-处理ajax，使用j......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-20-SpringMVC笔记/">
-    <h2 class="post-title">
-      SpringMVC笔记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Controller：控制器对象，把创建的对象作为控制器使用，并把该对象放入SpringMVC容器中，可以接受请求显示处理结果，当作Servlet来使用，但是使用@Controller注解创建的是一个普通类的对象，不是Servlet，但是SpringMVC赋予了其一些特殊功能中央调度器：DispatcherServlet是SpringMvc中的一个Servlet对象，负责接收用户的所有请求之......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-08-Spring_AOP/">
-    <h2 class="post-title">
-      Spring AOP笔记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      AOP（面向切面编程）1.动态代理实现方式：jdk动态代理。使用jdk中的Proxy，Method，InvocationHander创建代理对象
-此种要求目标类必须实现接口
-cglib动态代理：第三方工具库，通过继承来创建代理对象，继承目标类，创建子类（代理对象），要求目标类不能是final，方法也不能是final，因为final不能被继承或修改
-123456789动态代理的作用：1）在源代......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java Spring" title="Java Spring">Java Spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-03-Markdown快速入门/">
-    <h2 class="post-title">
-      Markdown快速入门
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Markdown快速入门代码块：在英文状态下输入三个漂号，自动转换为代码块,注意要在格式符号和被操作字符之间加一个空格
-12​``` java​```python
-
-标题：1234标题分从大到小分6级，每一级多加一个## 1## 2### 3
-123
-字体修饰12345678//加粗**加粗字体**//代码高亮显示(要在偏好中进行设置)==高亮代码==//删除线~~被删除文字~~//斜体*斜......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Markdown" title="Markdown">Markdown</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-10-31-MYSQL/">
-    <h2 class="post-title">
-      MYSQL重点知识点梳理
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      MYSQL重点知识点梳理distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写
-order by：按某字段进行排序，asc为顺序，多个字段或多个顺序规则，使用逗号分隔，当然先按后面条件的前面的顺序进行排序
-where查询要确定要查询条件的类型。如果是数字可以直接输，如果是字符串需要加引号
-对查询的字段锁定（规定）在某些数据的话，使用in关键字，当用到多个字段属于并列关......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-10-31
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#MYSQL" title="MYSQL">MYSQL</a>
     
   </div>
   
@@ -1135,20 +1146,20 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
       <li>字节码入门和反编译理解策略</li>
     </a>
     
+    <a href="../../undefined/Jres%E6%A1%86%E6%9E%B6%E4%B8%AD%E5%AF%B9Dubbo%E5%B0%81%E8%A3%85%E5%90%8E%E7%9A%84%E6%B3%A8%E8%A7%A3%E6%8B%86%E8%A7%A3%EF%BC%9A%E8%BF%9C%E8%B0%83%E8%A7%84%E5%88%99%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%EF%BC%9F/">
+      <li>Jres框架中对Dubbo封装后的注解拆解：远调规则如何设置？</li>
+    </a>
+    
+    <a href="../../undefined/Centos%E7%AB%AF%E5%8F%A3%E7%AE%A1%E7%90%86%E4%B9%8B%E5%A6%82%E4%BD%95%E6%9D%80%E6%8E%89%E5%85%B6%E4%BB%96%E5%9C%A8%E8%BF%9C%E7%A8%8BDebug%E7%9A%84%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%93%BE%E6%8E%A5/">
+      <li>Centos端口管理之如何杀掉其他在远程Debug的开发环境的链接</li>
+    </a>
+    
+    <a href="../../undefined/CAS%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0/">
+      <li>CAS的底层实现</li>
+    </a>
+    
     <a href="../../undefined/%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%8A%B6%E6%80%81%E6%9C%BACola%E7%90%86%E8%A7%A3/">
       <li>无状态的轻量级状态机Cola理解</li>
-    </a>
-    
-    <a href="../../undefined/maven%E5%8A%A0%E9%80%9F%E4%B9%8B%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90%EF%BC%9Amavend%E4%BD%BF%E7%94%A8%E8%B8%A9%E5%9D%91/">
-      <li>maven加速之官方推荐：mavend使用踩坑</li>
-    </a>
-    
-    <a href="../../undefined/Idea%E5%AD%97%E6%AE%B5%E9%A2%9C%E8%89%B2%E4%B8%8ELambda%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/">
-      <li>Idea字段颜色与Lambda深度研究</li>
-    </a>
-    
-    <a href="../../cn/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
-      <li>以太坊开发：Solidity语言入门</li>
     </a>
     
   </ul>
@@ -1179,7 +1190,7 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/06/">June 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/05/">May 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/12/">December 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/06/">June 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/05/">May 2025</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/12/">December 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 

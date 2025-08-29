@@ -482,6 +482,267 @@
   <!-- top end -->
   
 
+  <a href="/undefined/工具使用踩坑篇：IDEA-Optimizing-Imports大坑/">
+    <h2 class="post-title">
+      工具使用踩坑篇：IDEA-Optimizing-Imports大坑
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      足足踩了两次坑
+第一次：
+
+可以看到fixedincome引的三个包被干掉两个
+提交方式为IDEA的&quot;推送并提交&quot;
+第二次
+   也就是说如果是通配符导入，大于5个的导入会被合并，小于5个的导入会被拆分为多个单导入
+看下主要变更部分：
+
+
+:::info 首先怀疑是通配符退化，但是根据idea的auto import配置（前图）
+根据退化逻辑，假设是退化通配没有生成对应的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-04-13
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/ClassPathResource不能正常获取文件资源/">
+    <h2 class="post-title">
+      ClassPathResource不能正常获取文件资源
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      今天在线上部署jar包之后，发现在本地正常的ClassPathResource不能正常获取文件了，提示文件找不到
+12Resource resource = new ClassPathResource(&quot;data/test/txt&quot;);  String path = resource.getFile().getPath());
+12Caused by: java.io.F......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-04-01
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/IDEA构建、启动流程的意义/">
+    <h2 class="post-title">
+      mapstruct分析IDEA构建、启动流程的意义
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      今天使用mapstruct遇到了很奇怪的问题，我构建某个包，发现target/classes目录生成了XConvertor的实现类class
+此时可以正常编译启动，但是我此时又单独install该包，发现有生成了和classes同级的generated-sources/annotations目录
+里面是XConvertor的实现类java文件，导致项目编译提示类重复？
+
+将target删除之......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-03-25
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/EasyExcel注意事项和发现bug/">
+    <h2 class="post-title">
+      EasyExcel注意事项和发现bug
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      注意事项：
+直接写入可以和@Excelproperty配合，就可以根据注解的value定位
+但是对于填充，注解可以不使用（使用也无效），但是填充占位符必须在excel模板文件中指明，所以如果对于单元格有数据校验的，不支持输入{.格式}，那么就需要去掉数据校验
+但是去掉校验的单元格，在导出后还是没有数据校验或下拉框，所以就有问题，这个时候只能手动加下拉框。
+同时碰到了一些问题
+:::succe......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-03-22
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/504超时-CPU100-内存泄漏-问题简要排查/">
+    <h2 class="post-title">
+      504超时-CPU100%-内存泄漏-问题简要排查
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      前端请求F12：
+
+根据错误码：上游前端（网关）未接收到下游服务端返回的数据，这里是网关接收数据超时了，而不是后端超时
+后端仍在死循环运行中或死锁
+
+打开arthas，使用thread -b查看死锁线程
+
+注意到服务器CPU飙升，top发现确实是Java存在异常：
+
+
+thread -n 3，查看最占用CPU的线程,发现前三个都是同一逻辑调用，下面只站是一个
+1234567891011121......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-03-13
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/信创过程中Char和索引问题/">
+    <h2 class="post-title">
+      信创过程中Char和索引问题
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      继上次索引优化之后，线上出现一个问题，char11 in char10，因为空格不一致，不加trim所以不可能in到数据？
+但是实际上会忽略空格吗？
+（cust的cno为11，brrd的cust字段为10）
+
+提前结论：
+
+暂时先不改，因为这里是数据库执行，不确定应用层执行还是否能查出？
+另外需求：trim存在导致索引失效（SQL特性，不管什么数据库）
+实践：
+
+将msd这里的trim去掉，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-03-12
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/Explain执行计划分析和表驱动/">
+    <h2 class="post-title">
+      Explain执行计划分析和表驱动
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      外网SQL
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061SELECT	a.* FROM	(	SELECT		b.* 	FROM		(		SELECT DISTINCT			SA.BR,			S.SECID,			......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2025-03-01
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/误导性日志：三方中间件启动失败日志和普通异常/">
     <h2 class="post-title">
       误导性日志：三方中间件启动失败日志和普通异常
@@ -572,266 +833,6 @@ xml指定字段：
   <p class="post-meta" style="margin: 10px 0;">
     Posted by SFHJavaer on
     2024-12-28
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/Git出现大量Push内容-推送失败问题/">
-    <h2 class="post-title">
-      Git出现大量Push内容+推送失败问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      今天在一个2025.000分支上开发，因为临时有个任务，所以切换到2025.001上开发，并提交掉任务
-然后切回2025.000，拉取代码（貌似在没有切回的时候，左下角分支概况就出现了推送99+的提示，不确定），反正切回原分支分支之后拉取代码，每次拉代码都会出现一条合并提示
-
-但是我在原分支还没提交任何代码呀？怎么会有合并操作？
-尝试push掉大量提交，但是显示推送失败。Git钩子检测到不合......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2024-12-25
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/MQ基础之消息流转模型/">
-    <h2 class="post-title">
-      MQ基础之消息流转模型
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      virtual代表一个资源隔离独立的虚拟空间
-
-:::info
-不管是生产还是消费都是Connection，一个连接对应n个通道Channel（一般只用一个），同时Channel对应到某个虚拟空间的某个交换机上
-当然也可以直接发送到queue上，exchange支持路由策略
-:::
-两方都有connection（Channel），只不过生产者连接负责消息的发送，消费者连接负责消息的监听与消费......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2024-12-12
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/No-qualifying-bean-of-type-Bean-available深度思考/">
-    <h2 class="post-title">
-      No qualifying bean of type 'Bean' available深度思考
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      在多工程项目中，我们常常遇到这个问题。
- No qualifying bean of type 'XXXXBean' available  ，其实首先要理解错误的意思，这里的XXXXBean一般是具体某个接口或抽象类，如IXXXService，翻译过来就是    没有可用的   满足IOpicsService接口类型的Bean
-
-
-
-:::info解读：也就是说Bean确实是没有，但是并不是......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-11-18
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/MyBatisPlus内部SQL如何格式化和total字段产生原因/">
-    <h2 class="post-title">
-      MyBatisPlus内部SQL如何格式化和total字段产生原因
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      1.标识符错误
-今天碰到一个很简单的SQL报错：标识符无效
-
-
-可以看到所有的字段都变成了count(),不应该保留原来字段的基础上括起来再加count()吗？
-
-难道是因为错误的将其优化没了？
-实际上这就是MP的SQL日志表达形式，改成count（*）本质上还是查的你指定的数据
-如果报错了：
-一定是你SQL写错了，很明显，intxxxname是select的as完的字段名，所以明显不能用于......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2024-10-30
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/银行业务基础：什么是会计分录/">
-    <h2 class="post-title">
-      银行业务基础：什么是会计分录
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      什么是会计分录，下面是官方解释：
-
-会计分录就是按照借、贷（复式记账原理）把企业经济活动产生的各种业务按照会计科目分开记录的做法。
-
-说白了就是把收支的账按科目（也就是收支业务类型）进行分开记录（账目）。
-
-科目也就是业务种类：
-
-对于开发，不需要记忆各种科目的具体业务，明白逻辑即可
-
-会计分录：
-
-
-在Mangos中，也是这样设计的，重点在于会计事件这个属性，也就是对于某个交易来说，他的会......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2024-09-30
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/线程并发问题记录/">
-    <h2 class="post-title">
-      线程并发问题记录
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      使用ajax同时对一接口发送两个请求，报文不一样，结果应当不同，但是返回结果却有一定几率相同。
-排查思路：MP SQL是否错误—&gt;Cloud问题------&gt;Client请求是否遗漏
-测试结果：发起双请求——&gt;Controller接收到两个------&gt;Cloud只处理了一个结果，不放掉cloud请求的时候，前端两个结果都不能拿到响应，放掉同时拿到，说明和RPC并发问......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-09-25
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/启动失败Idea大坑/">
-    <h2 class="post-title">
-      启动失败Idea大坑
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      可以看到容器启动失败，原因是zookeeper注册失败，原因是MQ组件配置异常
-
-首先想到的是application中mq是不是改密码了或者配置不对，但是比对之后发现没问题
-仔细分析报错：
-1MQ组件报异常，异常信息：rabbit output [MQ_PUBLISHER] cannot instance the callback [com.hundsun.lirong.mangos.mq.......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2024-09-15
   </p>
   <div class="tags">
     
@@ -1135,20 +1136,20 @@ xml指定字段：
       <li>字节码入门和反编译理解策略</li>
     </a>
     
+    <a href="../../undefined/Jres%E6%A1%86%E6%9E%B6%E4%B8%AD%E5%AF%B9Dubbo%E5%B0%81%E8%A3%85%E5%90%8E%E7%9A%84%E6%B3%A8%E8%A7%A3%E6%8B%86%E8%A7%A3%EF%BC%9A%E8%BF%9C%E8%B0%83%E8%A7%84%E5%88%99%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%EF%BC%9F/">
+      <li>Jres框架中对Dubbo封装后的注解拆解：远调规则如何设置？</li>
+    </a>
+    
+    <a href="../../undefined/Centos%E7%AB%AF%E5%8F%A3%E7%AE%A1%E7%90%86%E4%B9%8B%E5%A6%82%E4%BD%95%E6%9D%80%E6%8E%89%E5%85%B6%E4%BB%96%E5%9C%A8%E8%BF%9C%E7%A8%8BDebug%E7%9A%84%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%93%BE%E6%8E%A5/">
+      <li>Centos端口管理之如何杀掉其他在远程Debug的开发环境的链接</li>
+    </a>
+    
+    <a href="../../undefined/CAS%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0/">
+      <li>CAS的底层实现</li>
+    </a>
+    
     <a href="../../undefined/%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%8A%B6%E6%80%81%E6%9C%BACola%E7%90%86%E8%A7%A3/">
       <li>无状态的轻量级状态机Cola理解</li>
-    </a>
-    
-    <a href="../../undefined/maven%E5%8A%A0%E9%80%9F%E4%B9%8B%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90%EF%BC%9Amavend%E4%BD%BF%E7%94%A8%E8%B8%A9%E5%9D%91/">
-      <li>maven加速之官方推荐：mavend使用踩坑</li>
-    </a>
-    
-    <a href="../../undefined/Idea%E5%AD%97%E6%AE%B5%E9%A2%9C%E8%89%B2%E4%B8%8ELambda%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/">
-      <li>Idea字段颜色与Lambda深度研究</li>
-    </a>
-    
-    <a href="../../cn/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
-      <li>以太坊开发：Solidity语言入门</li>
     </a>
     
   </ul>
@@ -1179,7 +1180,7 @@ xml指定字段：
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/06/">June 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/05/">May 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/12/">December 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/06/">June 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/05/">May 2025</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/12/">December 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 

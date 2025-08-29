@@ -482,6 +482,336 @@
   <!-- top end -->
   
 
+  <a href="/undefined/SaaS开发模式：一般化前后端开发约定与提示/">
+    <h2 class="post-title">
+      SaaS开发模式：一般化前后端开发约定与提示
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      接手开发的时候，错误码五花八门，不知道如何传，且错误提示不规范，每次都是在联调的时候，如果不合适前后端再改正，不了解其对接原理
+第一种
+发现字段可以高亮且对8进行了国际化（8为必填通用型错误码）
+
+无法解析，可以看到不是errortext作为高亮约定
+
+MgError国际化字符会被流处理赋值到mgdto的errortext上，但是直接赋webapierror的message上，不走流，也会最......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2024-08-21
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/基础思维：内外网排查思路/">
+    <h2 class="post-title">
+      基础思维：内外网排查思路
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      内网报错：先查看响应的具体错误和查内网日志，打印栈信息直接定位到目标代码位置。
+内网直接连debug，如果有人展占用端口了，启动本地debug
+外网报错
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-08-18
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/简单理解什么是协程/">
+    <h2 class="post-title">
+      简单理解什么是协程
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      1. 多线程中的切换：
+假设有两个线程：
+
+线程 A：负责播放歌曲。
+线程 B：负责下载歌曲。
+
+如果 线程 B 由于 I/O 阻塞（比如下载过程中等待服务器响应）而暂停，那么操作系统会进行 线程切换。操作系统会将 CPU 的控制权交给 线程 A，这样 线程 A 就可以继续播放歌曲，不会因为 线程 B 的 I/O 阻塞而浪费 CPU 资源。
+这种切换是操作系统层面的，通常是由 时间片耗尽 或......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2024-08-15
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/如何进行逆向分析与破解网络验证/">
+    <h2 class="post-title">
+      如何进行逆向分析与破解网络验证
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      关于基础的破解网络验证，这里有一个经验帖
+https://www.52pojie.cn/thread-343419-1-1.html
+抓包我们的软件，可以看到login请求指向了某个域名，百度这个域名可以很快的找到对应的卡密验证系统。
+:::info
+只要不是作者自己写的验证，一般都是开源公开的，直接搜抓出来的域名即可
+:::
+可以看到是华网验证系统
+首先看登录功能
+尝试抓包拦截请求和响应，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2024-08-08
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/bind标签优化模糊查询/">
+    <h2 class="post-title">
+      Mybatis-bind标签优化模糊查询
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      今天在写模糊查询的时候，想使用bind标签替换掉旧的concat拼接方式
+1concat(&#x27;%&#x27;,concat(&#x27;%&#x27;,&#123;#paream&#125;))
+结果发现报错：
+
+提示bind类型标签必须匹配空？这是怎么回事，查看例子：
+发现bind其实是一个自闭合标签，和Html等Xml语法一致，分为 成对标签  和 自闭合标签
+:::succes......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2024-07-19
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/使用Jackson反序列化时的一些注意点/">
+    <h2 class="post-title">
+      使用Jackson反序列化时的一些注意点
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      今天碰到一个问题，后端使用LocalDate mDate接收，看起来很正常，但是后台一直接收不到参数，猜想是DateFormat（pattern = ‘yyyy-MM-dd’），结果还是不生效
+发现是Jackson反序列化失败了
+
+这里不会提示报错信息，仅仅映射不上值为null而已
+
+:::info
+我们知道，boolean属性使用is开头会存在冲突，原因就是boolean的set方法（比如......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2024-07-11
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Oracle连接串解读/">
+    <h2 class="post-title">
+      Oracle连接串解读
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      我们在常常在SpringBoot配置文件中配置连接数据库，如图:
+
+首先：Oracle JDBC连接一共有三种方式，分别是：SERVICE_NAME、SID和TNSName。
+
+我们常常使用的是服务名，只有在旧版本使用SID，原因是一个SID对应一个一个Oracle实例，而服务名是在集群多实例的情况下诞生的，所以一个服务对应多个实例，我们连接串port后的默认就是服务名
+
+:::succes......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2024-07-02
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/策略模式代码怎么简化/">
+    <h2 class="post-title">
+      策略模式代码怎么简化
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      策略模式可以避免大量的if-else或者switch，因为相当于直接传入了策略标识，一般使用map作为存储策略的容器。
+而可以使用函数式接口继续改进，仍然是使用map作为函数式接口的存储容器。
+什么时候使用函数式接口Function&lt;&gt;？
+函数式接口当然最多只能有一个抽象方法，当我们需要使用某个“动作”的时候，就需要使用函数式接口，因为再调用apply方法就相当于执行对应的动作。......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2024-06-06
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/Linq如何进行数据的聚合和度量/">
+    <h2 class="post-title">
+      Linq如何进行数据的聚合和度量
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+
+
+问题演示：
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2024-05-16
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/国产数据库信创：多数据库对比/">
     <h2 class="post-title">
       国产数据库信创：多数据库对比
@@ -504,335 +834,6 @@ MySQL：
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Futari on
     2024-05-12
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/本地打包时的一些疑问/">
-    <h2 class="post-title">
-      本地打包时的一些疑问
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      注意一点，debug的非本工程的代码，也就是jar包中的代码，有可能不是最新的，所以有时候开发仓库没有最新包也没人打的时候，可以打本地的，切换到对应工程拉最新代码，install即可。
-所以由于可能具有不一致性，所以报错如果没有蓝标，即非本工程代码，那么代码行数即使从IDEA中点进去，和实际的执行行数的内容也是对不上的。
-问题
-
-
-可是本地启动的工程，引本地的包应该也没错啊？为什么对不上呢？......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-05-09
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/前端映射与MybatisPlus特殊类型（枚举）映射/">
-    <h2 class="post-title">
-      前端映射与MybatisPlus特殊类型（枚举）映射
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      我们处理后端Crud时，如果直接将前端的报文应用到数据库动态SQL拼接时，如果传入的RequestDTO某些属性使用枚举接收，那么往往容易报错。
-我们知道，这样是可以映射的：
-
-那么比如前端传入交易状态这个字段，后端是有可以使用的枚举的，直接使用DealStatusEnum接收，会发生什么？
-首先，能不能接收到？
-
-
-
-
-如果枚举如上图所示，invType是可以映射到枚举对象上的，原因是枚举......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-04-11
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Serializable接口的实际意义/">
-    <h2 class="post-title">
-      Serializable接口的实际意义
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      在项目中我们看到实体类都实现了Serializable接口，为什么有的时候不实现也可以正常执行、返回报文呢？
-原因在于该对象需不需要进行序列化（或者更准确的来说是     ：       非本地传输）
-
-注意：这里的序列化 ≠ 转Json，如果通过MVC的@RequestBody，那么会先自动把对象转为Json（String），再通过网络发送（此时是JDK自带序列化），先转成的本地Json其......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-03-22
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/实现图表展示数据项的国际化实现方案几种方案参考/">
-    <h2 class="post-title">
-      实现图表展示数据项的国际化实现方案几种方案参考
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      切面方案
-
-定义注解 **InternationalizedField**：
-
-12345678910import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.annotat......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-03-08
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/前后端Controller-接收特殊类型参数问题/">
-    <h2 class="post-title">
-      前后端Controller--接收特殊类型参数问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      数组
-
-今天在前端发送某个属性值为[]时，后端接收到的为空的ArrayList对象。
-首先清楚，在MVC框架下，后端接收到什么参数，完全取决于序列化框架，原因是参数对象一定是反序列化变为对象的，而对于大多数序列化框架，规则基本是一致的，所以建议记忆。
-这里Jackson的序列化规则就是[],最后被反序列化为ArrayList而不是null;
-
-这些接收到的都是ArayList
-枚举
-
-对于前......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2024-01-21
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/NIO和IO多路复用/">
-    <h2 class="post-title">
-      NIO和IO多路复用
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-
-
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2024-01-11
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/实际业务例子：SWPT死锁问题/">
-    <h2 class="post-title">
-      实际业务例子：SWPT死锁问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      首先明确一点，SpringBoot中的隐式事务，都是在执行sql（如mapper）时创建的，属于既定规范。
-方法级别管理事务（原子性）
-
-另外有一些不熟悉的，如果sql调用触发器、使用消息队列， JTA（Java Transaction API）分布式事务  等会新开事务
-
-默认当方法正常执行完毕时，事务会自动提交并且关闭事务，但是有时候通过DEBUG时SQL查询发现事务仍存在，未被提交，还......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2023-12-26
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/AOP使用经验和基础知识总结/">
-    <h2 class="post-title">
-      AOP使用经验和基础知识总结
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      很简单的，五种通知类型，主要注意的是环绕通知，也就是符合切入点表达式的切入点，会根据通知内容即自定义方法自定义执行。
-切面类中写着通知方法，通知方法上用注解标明其类型，当被执行的切点符合注解的表达式范围时，执行通知。
-不光是记录前后日志，在执行动作前后校验权限，执行数据库操作（触发器）等等都可以使用AOP。
-执行条件的限定主要取决于切入点表达式
-
-
-execution：一般用于指定方法的执行......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2023-12-18
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/数据库知识点小记/">
-    <h2 class="post-title">
-      数据库知识点小记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      设置主键
-
-MySQL设置或者后续新增主键，都需要包含主键字段为not null，否则不允许创建
-Oracle后续alter增加主键，如果被设置为主键的字段没有显式设置初始not null，那么新增的主键会自动将该字段设置为not null，在创建表的时候，字段之后直接跟上primary key也是默认隐式的增加了not null约束
-Case-When
-
-使用数据库原生的判断，case w......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2023-12-11
   </p>
   <div class="tags">
     
@@ -1136,20 +1137,20 @@ Case-When
       <li>字节码入门和反编译理解策略</li>
     </a>
     
+    <a href="../../undefined/Jres%E6%A1%86%E6%9E%B6%E4%B8%AD%E5%AF%B9Dubbo%E5%B0%81%E8%A3%85%E5%90%8E%E7%9A%84%E6%B3%A8%E8%A7%A3%E6%8B%86%E8%A7%A3%EF%BC%9A%E8%BF%9C%E8%B0%83%E8%A7%84%E5%88%99%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%EF%BC%9F/">
+      <li>Jres框架中对Dubbo封装后的注解拆解：远调规则如何设置？</li>
+    </a>
+    
+    <a href="../../undefined/Centos%E7%AB%AF%E5%8F%A3%E7%AE%A1%E7%90%86%E4%B9%8B%E5%A6%82%E4%BD%95%E6%9D%80%E6%8E%89%E5%85%B6%E4%BB%96%E5%9C%A8%E8%BF%9C%E7%A8%8BDebug%E7%9A%84%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%93%BE%E6%8E%A5/">
+      <li>Centos端口管理之如何杀掉其他在远程Debug的开发环境的链接</li>
+    </a>
+    
+    <a href="../../undefined/CAS%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0/">
+      <li>CAS的底层实现</li>
+    </a>
+    
     <a href="../../undefined/%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%8A%B6%E6%80%81%E6%9C%BACola%E7%90%86%E8%A7%A3/">
       <li>无状态的轻量级状态机Cola理解</li>
-    </a>
-    
-    <a href="../../undefined/maven%E5%8A%A0%E9%80%9F%E4%B9%8B%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90%EF%BC%9Amavend%E4%BD%BF%E7%94%A8%E8%B8%A9%E5%9D%91/">
-      <li>maven加速之官方推荐：mavend使用踩坑</li>
-    </a>
-    
-    <a href="../../undefined/Idea%E5%AD%97%E6%AE%B5%E9%A2%9C%E8%89%B2%E4%B8%8ELambda%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/">
-      <li>Idea字段颜色与Lambda深度研究</li>
-    </a>
-    
-    <a href="../../cn/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%EF%BC%9ASolidity%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
-      <li>以太坊开发：Solidity语言入门</li>
     </a>
     
   </ul>
@@ -1180,7 +1181,7 @@ Case-When
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/06/">June 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/05/">May 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/12/">December 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2025/07/">July 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/06/">June 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/05/">May 2025</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/04/">April 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/03/">March 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/02/">February 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/12/">December 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/11/">November 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/10/">October 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/09/">September 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/08/">August 2024</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/07/">July 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/06/">June 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/05/">May 2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/04/">April 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/03/">March 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/12/">December 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/11/">November 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/10/">October 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/08/">August 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
